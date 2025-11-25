@@ -45,3 +45,11 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.font-hel {
+  font-family: Helvetica, sans-serif;
+}
+
+.font-fks {
+  font-family: "FKScreamerTrial";
+}
