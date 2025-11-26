@@ -1,10 +1,13 @@
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./components/hero-section";
+import SecondSection from "./components/second-section";
+
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      {/* Add more sections below as needed */}
+      <SecondSection />
+     
     </>
   );
 }

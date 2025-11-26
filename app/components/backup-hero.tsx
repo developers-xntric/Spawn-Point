@@ -35,7 +35,7 @@ function Model({ scrollProgress }: { scrollProgress: number }) {
             // Adjust size: [X, Y, Z] - Use same values for uniform scaling
             // Larger values = bigger model, smaller values = smaller model
             // Example: [2, 2, 2] = double size, [0.5, 0.5, 0.5] = half size
-            scale={[4, 4, 4]}
+            scale={[4.7, 4.7, 4.7]}
 
             // ========== MODEL POSITION ==========
             // Position in 3D space: [X, Y, Z]
@@ -43,7 +43,7 @@ function Model({ scrollProgress }: { scrollProgress: number }) {
             // Y: Down (-) to Up (+)
             // Z: Away (-) to Closer (+)
             // Example: [0, -1, 0] moves model down, [2, 0, 0] moves model right
-            position={[0, -6.5, 0]} // Centered position
+            position={[0, -8, 0]} // Centered position
         />
     );
 }
@@ -139,13 +139,13 @@ export default function HeroSection() {
                     {/* FOV: Field of view (35-75 typical, lower = more zoomed in) */}
                     <PerspectiveCamera
                         makeDefault
-                        position={[0, 3, 8]} // Moved camera back for better view
+                        position={[0.20, 6, 8]} // Moved camera back for better view
                         fov={45} // Field of view - adjust for zoom level
                     />
 
                     {/* ========== LIGHTING SETUP ========== */}
                     {/* Ambient light: Overall scene brightness */}
-                    <ambientLight intensity={0.3} />                 {/* Base soft light */}
+                    <ambientLight intensity={0} />
                     <directionalLight position={[0, 5, 10]} intensity={1} />
                     <directionalLight position={[10, 0, -5]} intensity={0.5} />
 
@@ -154,12 +154,12 @@ export default function HeroSection() {
 
                     {/* Rect area light for soft even illumination */}
                     {/* <rectAreaLight
-                        position={[0, 5, 5]}
-                        width={20}
-                        height={20}
-                        intensity={1.2}
-                        color={"#ffffff"}
-                        lookAt={[0, 0, 0]}
+                        position={[0, 2, 5]}
+                        width={200}
+                        height={200}
+                        intensity={0.2}
+                        color={"#d80000ff"}
+                        lookAt={[0, 10, 0]}
                     /> */}
 
                     {/* Environment for reflections */}
@@ -169,7 +169,7 @@ export default function HeroSection() {
 
 
                     {/* Point light: Accent light with brand color */}
-                    
+
                     {/* <pointLight position={[0, 0, 0]} intensity={0.8} color="#fc0047ff" /> */}
 
                     {/* ========== 3D MODEL ========== */}
@@ -187,8 +187,6 @@ export default function HeroSection() {
                         enableRotate={true}
                     />
                 </Canvas>
-
-
 
             </div>
 
