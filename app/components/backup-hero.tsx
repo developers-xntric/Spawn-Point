@@ -1,29 +1,48 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useGLTF, PerspectiveCamera, Environment } from "@react-three/drei";
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
+// ==================== CAMERA ANIMATOR COMPONENT ====================
+function AnimatedCamera({ scrollProgress }: { scrollProgress: number }) {
+  const { camera } = useThree();
+
+  useFrame(() => {
+    // ================= CAMERA SCROLL ANIMATION =================
+    // Zoom out effect (Z-axis)
+    const targetZ = THREE.MathUtils.lerp(8, 25, scrollProgress);
+    camera.position.z = THREE.MathUtils.lerp(camera.position.z, targetZ, 0.1);
+
+    // ================= CAMERA Y SCROLL ANIMATION =================
+    // Move camera Y from -15 → -2 as user scrolls
+    const targetY = THREE.MathUtils.lerp(-17, 20, scrollProgress);
+    camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.1);
+
+    camera.lookAt(0, 0, 0); // Always look at center
+  });
+
+  return null;
+}
+
+
 // ==================== 3D MODEL COMPONENT ====================
-// This component loads and displays your GLB 3D model
 function Model({ scrollProgress }: { scrollProgress: number }) {
     const modelRef = useRef<THREE.Group>(null);
-    const { scene } = useGLTF("/home/hero.glb"); // Path to your GLB file in public folder
+    const { scene } = useGLTF("/home/hero.glb");
 
-    // ========== SCROLL-BASED ROTATION ANIMATION ==========
-    // Animate rotation based on scroll progress (0 to 1)
     useFrame(() => {
         if (modelRef.current) {
-            // Y-axis rotation (horizontal spin): Increase multiplier for faster rotation
-            // Example: scrollProgress * Math.PI * 4 = 2 full rotations
-            modelRef.current.rotation.y = scrollProgress * Math.PI * 20; // Full 360° rotation
-
-            // X-axis rotation (vertical tilt): Creates up/down tilting effect
-            modelRef.current.rotation.x = Math.sin(scrollProgress * Math.PI) * 0.9; // ±17° tilt
-
-            // Z-axis rotation (roll): Creates slight rolling effect
-            modelRef.current.rotation.z = Math.cos(scrollProgress * Math.PI) * 0.02; // ±6° roll
+            // ================= MODEL ANIMATION (OPTIONAL) =================
+            // Here you can add subtle scroll-based rotation or movement if needed
+            // Example: rotate model as user scrolls
+            // modelRef.current.rotation.y = scrollProgress * Math.PI * 4;
+            <primitive
+                ref={modelRef}
+                object={scene}
+                position={[20, -10, 0]}
+            />
         }
     });
 
@@ -31,68 +50,40 @@ function Model({ scrollProgress }: { scrollProgress: number }) {
         <primitive
             ref={modelRef}
             object={scene}
-            // ========== MODEL SCALE ==========
-            // Adjust size: [X, Y, Z] - Use same values for uniform scaling
-            // Larger values = bigger model, smaller values = smaller model
-            // Example: [2, 2, 2] = double size, [0.5, 0.5, 0.5] = half size
-            scale={[4.7, 4.7, 4.7]}
+            // ================= MODEL SCALING =================
+            // The model is initially scaled to 12x12x12
+            // Can be modified based on scrollProgress for zoom-in/out effect
+            scale={[12, 12, 12]}
 
-            // ========== MODEL POSITION ==========
-            // Position in 3D space: [X, Y, Z]
-            // X: Left (-) to Right (+)
-            // Y: Down (-) to Up (+)
-            // Z: Away (-) to Closer (+)
-            // Example: [0, -1, 0] moves model down, [2, 0, 0] moves model right
-            position={[0, -8, 0]} // Centered position
+            // ================= MODEL POSITION =================
+            // Positioned slightly below center (Y = -20) to fit nicely in camera view
+            position={[0, -17, 0]}
         />
-    );
-}
-
-// Fallback placeholder if GLB doesn't load
-function PlaceholderModel({ scrollProgress }: { scrollProgress: number }) {
-    const meshRef = useRef<THREE.Mesh>(null);
-
-    useFrame(() => {
-        if (meshRef.current) {
-            meshRef.current.rotation.y = scrollProgress * Math.PI * 2;
-            meshRef.current.rotation.x = Math.sin(scrollProgress * Math.PI) * 0.3;
-        }
-    });
-
-    return (
-        <mesh ref={meshRef}>
-            <torusKnotGeometry args={[1, 0.3, 128, 16]} />
-            <meshStandardMaterial
-                color="#BBFC00"
-                metalness={0.8}
-                roughness={0.2}
-                emissive="#BBFC00"
-                emissiveIntensity={0}
-            />
-        </mesh>
     );
 }
 
 export default function HeroSection() {
     const [scrollProgress, setScrollProgress] = useState(0);
-    // const [modelLoaded, setModelLoaded] = useState(false);
-    const heroRef = useRef<HTMLDivElement>(null);
+    const heroRef = useRef<HTMLDivElement>(null); // Reference to hero section
 
     useEffect(() => {
-        // Preload the GLB model
+        // Preload the GLB model to avoid loading delay
         useGLTF.preload("/home/hero.glb");
 
         const handleScroll = () => {
             if (!heroRef.current) return;
 
-            const heroHeight = window.innerHeight * 2; // 2x viewport height for scroll range
-            const scrollY = window.scrollY;
-            const progress = Math.min(scrollY / heroHeight, 1); // Clamp between 0 and 1
+            const rect = heroRef.current.getBoundingClientRect();
+            const heroHeight = window.innerHeight * 2;
+            const scrolledIntoView = Math.max(0, window.innerHeight - rect.top);
+            const progress = Math.min(scrolledIntoView / heroHeight, 1);
 
+            // ================= SCROLL PROGRESS =================
+            // scrollProgress = 0 → top of hero, scrollProgress = 1 → scrolled past hero
             setScrollProgress(progress);
         };
 
-        // Throttle scroll events for performance
+        // ================= THROTTLED SCROLL HANDLER =================
         let ticking = false;
         const throttledScroll = () => {
             if (!ticking) {
@@ -105,91 +96,42 @@ export default function HeroSection() {
         };
 
         window.addEventListener("scroll", throttledScroll);
-        handleScroll(); // Initial call
+        handleScroll(); // Initial call to set progress on load
 
         return () => window.removeEventListener("scroll", throttledScroll);
     }, []);
 
     return (
-        <>
-            {/* Hero Section - Pinned */}
+        <div className="relative w-full">
+            {/* ================= HERO SECTION ================= */}
             <div
                 ref={heroRef}
-                className="relative w-full h-screen overflow-hidden"
-                style={{
-                    position: scrollProgress < 1 ? "sticky" : "relative",
-                    top: 0,
-                }}
+                className="sticky top-0 w-full h-screen overflow-hidden"
             >
-                {/* Background Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#031347] via-[#051a5c] to-[#0a2472] -z-10" />
-
-                {/* 3D Canvas */}
                 <Canvas
-                    className="w-full h-full"
+                    camera={{ fov: 45 }}
                     gl={{ antialias: true, alpha: true }}
-                    scene={{ environmentIntensity: 0.2 }}
-                    dpr={[10, 2]} // Responsive pixel ratio
+                    dpr={[1, 2]}
                 >
-                    {/* ========== CAMERA SETTINGS ========== */}
-                    {/* Camera position: [X, Y, Z] */}
-                    {/* X: Left (-) to Right (+) */}
-                    {/* Y: Down (-) to Up (+) */}
-                    {/* Z: Distance from model (higher = further away) */}
-                    {/* FOV: Field of view (35-75 typical, lower = more zoomed in) */}
-                    <PerspectiveCamera
-                        makeDefault
-                        position={[0.20, 6, 8]} // Moved camera back for better view
-                        fov={45} // Field of view - adjust for zoom level
-                    />
+                    {/* ================= CAMERA ANIMATION ================= */}
+                    <AnimatedCamera scrollProgress={scrollProgress} />
 
-                    {/* ========== LIGHTING SETUP ========== */}
-                    {/* Ambient light: Overall scene brightness */}
-                    <ambientLight intensity={0} />
+                    {/* ================= LIGHTING ================= */}
+                    <ambientLight intensity={0.4} />
                     <directionalLight position={[0, 5, 10]} intensity={1} />
                     <directionalLight position={[10, 0, -5]} intensity={0.5} />
-
                     <directionalLight position={[-10, 10, 10]} intensity={0.8} />
-                    <directionalLight position={[0, -10, -10]} intensity={0.5} />
 
-                    {/* Rect area light for soft even illumination */}
-                    {/* <rectAreaLight
-                        position={[0, 2, 5]}
-                        width={200}
-                        height={200}
-                        intensity={0.2}
-                        color={"#d80000ff"}
-                        lookAt={[0, 10, 0]}
-                    /> */}
-
-                    {/* Environment for reflections */}
+                    {/* ================= ENVIRONMENT ================= */}
                     <group rotation={[0.698, Math.PI, 0.698]}>
                         <Environment preset="studio" background={false} />
                     </group>
 
-
-                    {/* Point light: Accent light with brand color */}
-
-                    {/* <pointLight position={[0, 0, 0]} intensity={0.8} color="#fc0047ff" /> */}
-
-                    {/* ========== 3D MODEL ========== */}
+                    {/* ================= 3D MODEL ================= */}
                     <Model scrollProgress={scrollProgress} />
-
-                    {/* ========== ORBIT CONTROLS (USER INTERACTION) ========== */}
-                    {/* Allows users to manually rotate, zoom, and pan the model */}
-                    {/* enableZoom: Mouse wheel to zoom in/out */}
-                    {/* enablePan: Right-click drag to move camera */}
-                    {/* enableRotate: Left-click drag to rotate view */}
-                    {/* Set to false to disable user interaction and use only scroll animation */}
-                    <OrbitControls
-                        enableZoom={true}
-                        enablePan={true}
-                        enableRotate={true}
-                    />
+                    {/* Note: Currently model scale is fixed, scroll-based zoom handled via camera Z */}
                 </Canvas>
-
             </div>
-
-        </>
+        </div>
     );
 }
