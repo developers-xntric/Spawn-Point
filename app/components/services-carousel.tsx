@@ -78,7 +78,7 @@ export function ServicesCarousel() {
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
                 {/* Header */}
                 <div className="mb-16 text-center">
-                    <p className="mb-4 text-[21px] tracking-[14px] text-[#FF1586] font-hel">
+                    <p className="mb-4 text-[20px] tracking-[12px] text-[#FF1586] font-hel">
                         SERVICES
                     </p>
                     <h2 className="text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto leading-[65px] tracking-[2px]">

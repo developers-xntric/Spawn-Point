@@ -83,3 +83,18 @@ body {
 .animate-scroll-right {
   animation: scroll-right 30s linear infinite;
 }
+
+
+
+/* FOR STICKY CARDS */
+
+.slider {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

@@ -110,8 +110,8 @@ export function CaseStudies() {
                 <div className="flex flex-col gap-4">
                   <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-fks">{study.title}</h2>
 
-                  <p className="text-white text-sm md:text-base  max-w-2xl font-hel">{study.description}</p>
-                  <p className="text-white text-sm md:text-base font-hel">{study.stat}</p>
+                  <p className="text-white text-sm md:text-[20px] max-w-[70%] font-hel">{study.description}</p>
+                  <p className="text-white text-sm md:text-[20px] font-hel">{study.stat}</p>
                 </div>
 
 
