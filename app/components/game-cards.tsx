@@ -18,7 +18,7 @@ type Game = {
 
 export default function GameCard({ game }: { game: Game }) {
   return (
-    <div className="relative rounded-[20px] border-[2px] border-[#273561] bg-white/5 backdrop-blur-[30px] h-[530px] overflow-hidden">
+    <div className="relative rounded-[20px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] h-[530px] overflow-hidden">
       {/* Background image */}
       {game.image && (
         <Image

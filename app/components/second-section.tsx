@@ -2,8 +2,8 @@ import MoveableBalls from "./moveable-balls"
 
 export default function ContentSection() {
     return (
-        <section id="second-section" className="w-full py-20 text-black">
-            <div className="2xl:max-w-[1500px] w-[95%] md:w-[90%] mx-auto flex flex-col items-center justify-center space-y-10">
+        <section id="second-section" className="w-full py-16 text-black">
+            <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto flex flex-col items-center justify-center space-y-10">
                 <div className="flex flex-col items-center justify-center space-y-3">
                     <h2 className="text-[60px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto text-center leading-[65px] text-balance">
                         Create <span className="text-[#BBFC00]">Whatever </span> You Want We'll Build the World{" "}
