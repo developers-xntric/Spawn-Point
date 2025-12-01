@@ -88,7 +88,7 @@ export default function GameBrands() {
       </div>
 
       {/* Cards Container */}
-      <div className="relative z-10 2xl:max-w-[1500px] w-[95%] md:w-[90%] mx-auto">
+      <div className="relative z-10 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {games.map((game) => (
             <GameCard key={game.id} game={game} />
