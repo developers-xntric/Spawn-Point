@@ -71,6 +71,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
+                {/* Footer */}
 
                 {/* Large SPAWNPOINT Watermark - Background */}
           {/* Spawnpoint Logo - Bottom Center */}
