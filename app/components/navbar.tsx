@@ -29,8 +29,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`w-full py-4 fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#031347] shadow-lg" : "bg-gradient-to-b from-[#0e1630] to-[#031347]"}`}>
-      <div className="2xl:max-w-[1500px] w-[95%] md:w-[90%] mx-auto flex items-center justify-between">
+    <nav className={`w-full py-4 fixed top-0 left-0 z-[9999] transition-all duration-300 ${scrolled ? "bg-[#031347] shadow-lg" : "bg-linear-to-b from-[#0e1630] to-[#031347]"}`}>
+      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto flex items-center justify-between"> 
 
         {/* Logo */}
         <div className="flex items-center">

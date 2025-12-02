@@ -40,7 +40,7 @@ export default function MoveableBalls() {
       render.canvas.style.height = "100%"
       render.canvas.style.display = "block"
       render.canvas.style.pointerEvents = "auto"
-      render.canvas.style.zIndex = "9999"
+      render.canvas.style.zIndex = "50"
     }
 
     Matter.Render.run(render)
