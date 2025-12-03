@@ -1,0 +1,88 @@
+"use client"
+
+const partners = [
+    { name: "PLAYSTATION NETWORK", icon: "/icons/ps.png" },
+    { name: "SPOTIFY", icon: "/icons/spotify.png" },
+    { name: "WARNER MUSIC GROUP", icon: "/icons/wmg.png" },
+    { name: "PARAMOUNT", icon: "/icons/paramount.png" },
+    { name: "SKECHER", icon: "/icons/sketcher.png" },
+]
+
+export default function PartnersSection() {
+    // Duplicate partners for seamless infinite scroll
+    const duplicatedPartners = [...partners, ...partners, ...partners, ...partners]
+
+    return (
+        <section className="bg-[#031347] py-16 overflow-hidden">
+            {/* Section Heading */}
+            <h2 className="text-center text-3xl md:text-6xl font-black font-fks tracking-wide mb-10">
+                <span className="text-[#BBFC00]">OUR</span> <span className="text-white">PARTNERS</span>
+            </h2>
+
+            {/* Slider Container */}
+            <div className="flex flex-col gap-4">
+                {/* Row 1 - Moves Left */}
+                <div className="relative">
+                    <div className="flex animate-scroll-left gap-4">
+                        {duplicatedPartners.map((partner, index) => (
+                            <div
+                                key={`row1-${index}`}
+                                className="shrink-0 flex items-center gap-4 bg-[#001763] text-white px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap"
+                            >
+                                <span className="font-fks text-3xl tracking-wider">{partner.name}</span>
+                                <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Row 2 - Moves Right (opposite direction) */}
+                <div className="relative">
+                    <div className="flex animate-scroll-right gap-4">
+                        {duplicatedPartners.map((partner, index) => {
+                            const isHighlighted = partner.name === "PARAMOUNT" && index === 3
+                            return (
+                                <div
+                                    key={`row2-${index}`}
+                                    className={`shrink-0 flex items-center gap-4 px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap ${isHighlighted ? "bg-[#BBFC00] text-[#001763] border-2 border-[#BBFC00]" : "bg-[#001763] text-white"
+                                        }`}
+                                >
+                                    <span className="font-fks text-3xl tracking-wider">{partner.name}</span>
+                                    <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
+
+            <style jsx>{`
+            @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+            }
+
+            @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+            }
+
+            .animate-scroll-left {
+            animation: scroll-left 20s linear infinite;
+            }
+
+            .animate-scroll-right {
+            animation: scroll-right 20s linear infinite;
+            }
+      `}</style>
+        </section>
+    )
+}
