@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function CaseStudySection() {
+export default function CaseStudySection2() {
     return (
         <section className="bg-[#031347] py-16 px-8 md:px-16 lg:px-24">
             <div className="max-w-7xl mx-auto">
@@ -67,7 +67,7 @@ export default function CaseStudySection() {
                 <div className="relative mt-8">
                     <div className="rounded-xl overflow-hidden">
                         <Image
-                            src="/icons/valo.png"
+                            src="/icons/cod.png"
                             alt="Netflix Next World gameplay showcase"
                             width={1200}
                             height={1200}

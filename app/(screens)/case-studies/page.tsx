@@ -1,10 +1,13 @@
+import CaseStudySection from '@/app/components/common/case-study-2';
+import CaseStudySection2 from '@/app/components/common/case-study-3';
 import HeroSection from '@/app/components/common/hero';
-import React from 'react'
 
 const CaseStudies = () => {
     return (
         <div>
             <HeroSection />
+            <CaseStudySection />
+            <CaseStudySection2 />
         </div>
     )
 }
