@@ -15,7 +15,7 @@ export default function Home() {
       <CaseStudies />
       <StickyCards />
       <Footer/>
-
+      
     </>
   );
 }
