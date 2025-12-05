@@ -20,23 +20,23 @@ export function Achievements() {
           {/* Left Stats Cards */}
           <div className="space-y-6 md:col-span-3">
             {/* Card 1 */}
-            <div className="rounded-lg border border-blue-700 bg-blue-900/40 p-6 backdrop-blur-sm">
-              <div className="mb-2 text-3xl font-bold text-white">#1</div>
-              <p className="text-sm text-blue-200">in branded activations on Roblox</p>
+            <div className="rounded-lg border border-blue-700 bg-blue-900/40 pt-10 pb-4 pl-4 backdrop-blur-sm">
+              <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">#1</div>
+              <p className="text-white/80 text-md  max-w-sm mx-auto">in branded activations on Roblox</p>
             </div>
 
             {/* Card 2 */}
-            <div className="rounded-lg border border-blue-700 bg-blue-900/40 p-6 backdrop-blur-sm">
-              <div className="mb-2 text-3xl font-bold text-white">
-                2.5 BILLION<span className="text-lg">+</span>
+            <div className="rounded-lg border border-blue-700 bg-blue-900/40 pt-10 pb-4 pl-4 backdrop-blur-sm">
+              <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">
+                2.5 BILLION<span className="text-[45px]">+</span>
               </div>
-              <p className="text-sm text-blue-200">Visits across our experiences to date</p>
+              <p className="text-white/80 text-md  max-w-sm mx-auto">Visits across our experiences to date</p>
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-lg border border-blue-700 bg-blue-900/40 p-6 backdrop-blur-sm">
-              <div className="mb-2 text-xl font-bold uppercase text-white">Award Winning</div>
-              <p className="text-sm text-blue-200">Recognized globally for excellence in brand activations</p>
+            <div className="rounded-lg border border-blue-700 bg-blue-900/40 pt-10 pb-4 pl-4 backdrop-blur-sm">
+              <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">Award Winning</div>
+              <p className="text-white/80 text-md  max-w-sm mx-auto">Recognized globally for excellence in brand activations</p>
             </div>
           </div>
 
@@ -49,12 +49,12 @@ export function Achievements() {
 
           {/* Right Info Card */}
           <div className="rounded-lg h-full border border-blue-700 bg-blue-900/40 p-8 backdrop-blur-sm md:col-span-3 flex flex-col justify-end">
-            <h3 className="mb-4 text-2xl font-bold uppercase text-white">
+            <h3 className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px]  leading-[55px] text-balance">
               Roblox Partner
               <br />
               Program:
             </h3>
-            <p className="text-sm leading-relaxed text-blue-100">
+            <p className="text-white/80 text-md  max-w-sm mx-auto">
               As an exclusive member, we hold built the leading experiences within Roblox Advertising Solutions, giving
               us access to in-platform ads and the latest innovations for creating winning experiences.
             </p>
