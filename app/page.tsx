@@ -4,22 +4,21 @@ import HeroSection from "./components/hero-section";
 import SecondSection from "./components/second-section";
 import { ServicesCarousel } from "./components/services-carousel";
 import StickyCards from "./components/sticky-cards";
-import Footer from "./components/footer";
 import PartnersSection from "./components/common/partners-section";
 import HOMEGSP from "./components/home-gsp";
+import MapSection from "./components/map-section";
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <SecondSection />
       <ServicesCarousel />
       <PartnersSection />
-      <HOMEGSP />
+      <HOMEGSP /> */}
       <GameCardsSection />
       <CaseStudies />
       <StickyCards />
-      <Footer />
-
+      <MapSection/>
     </>
   );
 }

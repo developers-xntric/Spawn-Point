@@ -92,7 +92,7 @@ export default function StickyCards() {
               <div
                 key={index}
                 className="slider opacity-0 transition-all duration-700 translate-y-12
-    relative rounded-[20px] bg-white/5 backdrop-blur-[30px] p-5 overflow-hidden"
+    relative rounded-[20px] bg-white/5 backdrop-blur-[30px] p-5 overflow-hidden border border-[#FFFFFF1A]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -126,13 +126,13 @@ export default function StickyCards() {
                   <path
                     d="M486.725 45.9194C490.284 52.1561 496.914 56.0059 504.095 56.0059H689C700.046 56.0059 709 64.9602 709 76.0059V274C709 285.046 700.046 294 689 294H24C12.9543 294 4 285.046 4 274V20C4 8.9543 12.9543 0 24 0H448.904C456.085 0 462.715 3.84976 466.274 10.0865L486.725 45.9194Z"
                     stroke="#BBFC00"
-                    strokeWidth="2"
+                    strokeWidth="1"
                     fill="transparent"
                     filter="url(#drop)"
                   />
 
                   {/* MAKE CARD CONTENT FIT INSIDE SVG */}
-                  <foreignObject x="40" y="40" width="640" height="230">
+                  <foreignObject x="30" y="30" width="640" height="230">
                     <div className="flex flex-col space-y-3 text-white leading-tight">
                       <p className="text-[#BBFC00] text-[16px] md:text-[20px] lg:text-[22px]">
                         TIER {index + 1}
@@ -144,7 +144,7 @@ export default function StickyCards() {
           font-bold uppercase font-fks tracking-wide"
                       />
 
-                      <p className="text-white text-sm md:text-[18px] font-hel">
+                      <p className="text-white text-sm md:text-[18px] font-hel tracking-[1px]">
                         {card.para}
                       </p>
                     </div>

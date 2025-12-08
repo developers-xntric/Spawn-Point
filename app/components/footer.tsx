@@ -66,17 +66,17 @@ export default function Footer() {
 
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
-            <div className="relative w-full max-w-7xl px-8 py-20 mx-auto">
-                <div className="flex justify-between items-start gap-8">
+            <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-20">
+                <div className="flex justify-between items-center gap-8">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
-                        <h1 className="font-fks font-bold text-white text-[95px] leading-tight uppercase">
+                        <h1 className="font-fks font-bold text-white text-[95px] leading-[95px] uppercase">
                             Engineering<br />The New Age Of<br />Brand Play
                         </h1>
                     </div>
 
                     {/* Right Side - Column with BUILD WITH US, Logos, Nav, Social */}
-                    <div className="flex flex-col items-start gap-6 my-10 ">
+                    <div className="flex flex-col items-start gap-10  ">
                         {/* BUILD WITH US */}
                         <h2 className="text-lime-400 text-xl font-bold font-fks tracking-wider">BUILD WITH US</h2>
 
@@ -88,7 +88,7 @@ export default function Footer() {
                         </div>
 
                         {/* Navigation Links */}
-                        <div className="flex gap-8">
+                        <div className="flex justify-between items-center w-full">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.label}
@@ -101,7 +101,7 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex gap-6">
+                        <div className="flex justify-between items-center w-[70%]">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}
