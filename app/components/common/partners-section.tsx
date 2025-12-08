@@ -3,6 +3,7 @@
 const partners = [
     { name: "PLAYSTATION NETWORK", icon: "/icons/ps.png" },
     { name: "SPOTIFY", icon: "/icons/spotify.png" },
+    { name: "NETFLIX", icon: "/icons/netflix.png" },
     { name: "WARNER MUSIC GROUP", icon: "/icons/wmg.png" },
     { name: "PARAMOUNT", icon: "/icons/paramount.png" },
     { name: "SKECHER", icon: "/icons/sketcher.png" },
@@ -14,10 +15,7 @@ export default function PartnersSection() {
 
     return (
         <section className="bg-[#031347] py-16 overflow-hidden">
-            {/* Section Heading */}
-            <h2 className="text-center text-3xl md:text-6xl font-black font-fks tracking-wide mb-10">
-                <span className="text-[#BBFC00]">OUR</span> <span className="text-white">PARTNERS</span>
-            </h2>
+           
 
             {/* Slider Container */}
             <div className="flex flex-col gap-4">
@@ -27,7 +25,7 @@ export default function PartnersSection() {
                         {duplicatedPartners.map((partner, index) => (
                             <div
                                 key={`row1-${index}`}
-                                className="shrink-0 flex items-center gap-4 bg-[#001763] text-white px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap"
+                                className="shrink-0 flex items-center gap-4 bg-[#001763] text-white px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A]"
                             >
                                 <span className="font-fks text-3xl tracking-wider">{partner.name}</span>
                                 <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
@@ -44,7 +42,7 @@ export default function PartnersSection() {
                             return (
                                 <div
                                     key={`row2-${index}`}
-                                    className={`shrink-0 flex items-center gap-4 px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap ${isHighlighted ? "bg-[#BBFC00] text-[#001763] border-2 border-[#BBFC00]" : "bg-[#001763] text-white"
+                                    className={`shrink-0 flex items-center gap-4 px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A] ${isHighlighted ? "bg-[#BBFC00] text-[#001763] border-2 border-[#BBFC00]" : "bg-[#001763] text-white"
                                         }`}
                                 >
                                     <span className="font-fks text-3xl tracking-wider">{partner.name}</span>

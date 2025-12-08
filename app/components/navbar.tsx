@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto flex items-center justify-between"> 
 
         {/* Logo */}
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image
             src="/home/spawn-logo.png"
             width={2000}
@@ -41,7 +41,7 @@ export default function Navbar() {
             alt="logo"
             className="w-[100px]"
           />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex bg-white/5 backdrop-blur-md px-6 py-3 rounded-lg border border-white/10 space-x-10  font-hel text-[16px]">
