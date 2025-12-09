@@ -4,6 +4,7 @@ import GamingHero from '@/app/components/about/gaming-hero';
 import { CaseStudies } from '@/app/components/case-studies';
 import MapSection from '@/app/components/map-section';
 import CelebrationSection from '@/app/components/about/celeberaitng-section';
+import Fearless from '@/app/components/about/fearless';
 
 const About = () => {
     return (
@@ -14,6 +15,7 @@ const About = () => {
             <CaseStudies />
             <MapSection />
             <CelebrationSection />
+            <Fearless   />
         </div>
     )
 }

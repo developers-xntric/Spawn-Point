@@ -6,120 +6,133 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 
 export default function CelebrationSection() {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const wrapperRef = useRef<HTMLDivElement>(null);
-    const topImageRef = useRef<HTMLImageElement>(null);
-    const bottomImageRef = useRef<HTMLImageElement>(null);
+  const sectionRef = useRef(null);
+  const lineRef = useRef(null);
+  const topImgRef = useRef(null);
+  const bottomImgRef = useRef(null);
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-        const wrapper = wrapperRef.current;
-        const section = sectionRef.current;
-        const topImg = topImageRef.current;
-        const bottomImg = bottomImageRef.current;
+    // PIN SECTION
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "+=100%",
+      pin: true,
+      scrub: 1.7,
+      markers:false,
+    });
 
-        // Guard clause: ensure all refs are attached before proceeding
-        if (!wrapper || !section || !topImg || !bottomImg) return;
+    // TEXT MOVEMENT + IMAGES MOVING WITH TEXT
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 2.7,
 
-        const wrapperWidth = wrapper.scrollWidth;
-        const containerWidth = section.offsetWidth;
+      },
+    });
 
-        // Animate text
-        gsap.fromTo(
-            wrapper,
-            { x: containerWidth, rotateY: 20 },
-            {
-                x: -wrapperWidth,
-                rotateY: -20,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: `+=${wrapperWidth}`,
-                    scrub: true,
-                    pin: true,
-                }
-            }
-        );
-
-        // Animate top image rotation
-        gsap.fromTo(
-            topImg,
-            { rotation: 0 },
-            {
-                rotation: 360,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: `+=${wrapperWidth}`,
-                    scrub: true,
-                }
-            }
-        );
-
-        // Animate bottom image rotation
-        gsap.fromTo(
-            bottomImg,
-            { rotation: 0 },
-            {
-                rotation: -360,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: `+=${wrapperWidth}`,
-                    scrub: true,
-                }
-            }
-        );
-
-    }, []);
-
-    return (
-        <div className="bg-[#031347]">
-            <section
-                ref={sectionRef}
-                className="h-screen flex items-center justify-center overflow-hidden relative px-4"
-            >
-                <div
-                    ref={wrapperRef}
-                    style={{
-                        transformStyle: "preserve-3d",
-                        willChange: "transform",
-                    }}
-                    className="whitespace-nowrap flex flex-col items-center gap-10 relative"
-                >
-                    {/* 🔼 TOP IMAGE */}
-                    <Image
-                        ref={topImageRef}
-                        src="/icons/OMG.svg"
-                        alt="Top Decoration"
-                        width={200}
-                        height={200}
-                        className="pointer-events-none select-none absolute -top-10 left-0 -translate-x-1/2"
-                    />
-
-                    {/* 📝 TEXT */}
-                    <h1
-                        className="text-[90px] md:text-[160px] font-fks font-extrabold uppercase text-white whitespace-nowrap mb-20"
-                        style={{ transform: "skewY(-7deg)" }}
-                    >
-                        CELEBRATING <span className="text-[#BBFC00]">ALL OUR GLOBAL </span> COMMUNITY & PARTNERS WHO MADE <span className="text-[#BBFC00]"> HISTORY</span>  WITH US
-                    </h1>
-
-                    {/* 🔽 BOTTOM IMAGE */}
-                    <Image
-                        ref={bottomImageRef}
-                        src="/icons/OMG.svg"
-                        alt="Bottom Decoration"
-                        width={200}
-                        height={200}
-                        className="pointer-events-none select-none absolute -bottom-72 left-0 -translate-x-1/2"
-                    />
-                </div>
-            </section>
-        </div>
+    // Move text left
+    timeline.fromTo(
+      lineRef.current,
+      { x: "100%" },
+      { x: "-120%",
+        ease: "none" },
+      0
     );
+
+    // Move top image along with text
+    timeline.fromTo(
+      topImgRef.current,
+      { x: "510%" },
+      { x: "-540%", ease: "none" },
+      0
+    );
+
+    // Move bottom image along with text
+    timeline.fromTo(
+      bottomImgRef.current,
+      { x: "510%" },
+      { x: "-600%", ease: "none" },
+      0
+    );
+
+    // Image rotations
+    gsap.fromTo(
+      topImgRef.current,
+      { rotate: -25 },
+      {
+        rotate: 25,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      bottomImgRef.current,
+      { rotate: 25 },
+      {
+        rotate: -25,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
+  return (
+    <div
+      ref={sectionRef}
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center"
+    >
+      {/* TOP IMAGE — NOW INSIDE THE TEXT */}
+      <div
+        ref={topImgRef}
+        className="absolute top-[20%] z-30 pointer-events-none select-none"
+      >
+        <Image
+          src="/icons/movingline-icon2.svg"
+          alt="Top graphic"
+          width={240}
+          height={240}
+        />
+      </div>
+
+      {/* MOVING TEXT LINE */}
+      <div
+        ref={lineRef}
+        className="absolute inset-0 flex items-center whitespace-nowrap z-20"
+        style={{ transform: "skewY(-6deg)" }}
+      >
+        <span className="text-[120px] font-fks uppercase font-bold text-white px-8 leading-none tracking-[1.7px]">
+          Turning imagination into interactive worlds that bring your brand closer to the next generation
+        </span>
+      </div>
+
+      {/* BOTTOM IMAGE — NOW INSIDE THE TEXT */}
+      <div
+        ref={bottomImgRef}
+        className="absolute bottom-[20%] z-30 pointer-events-none select-none"
+      >
+        <Image
+          src="/icons/movingline-icon.svg"
+          alt="Bottom graphic"
+          width={180}
+          height={260}
+        />
+      </div>
+    </div>
+  );
 }

@@ -10,11 +10,11 @@ import MapSection from "./components/map-section";
 export default function Home() {
   return (
     <>
-      {/* <HeroSection />
+      <HeroSection />
       <SecondSection />
       <ServicesCarousel />
       <PartnersSection />
-      <HOMEGSP /> */}
+      <HOMEGSP />
       <GameCardsSection />
       <CaseStudies />
       <StickyCards />

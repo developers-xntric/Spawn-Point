@@ -16,13 +16,13 @@ export function Achievements() {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid items-center gap-2 md:grid-cols-3 lg:gap-0">
+        <div className="grid items-center gap-2 md:grid-cols-3 lg:gap-0 place-items-center justify-between">
           {/* Left Stats Cards */}
-          <div className="space-y-6 flex flex-col">
+          <div className="space-y-6 flex flex-col w-full">
             {/* Card 1 */}
             <div className="rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-10 pb-4 pl-4 ">
               <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">#1</div>
-              <p className="text-white/80 text-md  max-w-sm mx-auto">in branded activations on Roblox</p>
+              <p className="text-white/80 text-md  max-w-sm ">in branded activations on Roblox</p>
             </div>
 
             {/* Card 2 */}
@@ -30,13 +30,13 @@ export function Achievements() {
               <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">
                 2.5 BILLION<span className="text-[45px]">+</span>
               </div>
-              <p className="text-white/80 text-md  max-w-sm mx-auto">Visits across our experiences to date</p>
+              <p className="text-white/80 text-md  max-w-sm ">Visits across our experiences to date</p>
             </div>
 
             {/* Card 3 */}
             <div className="rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-10 pb-4 pl-4 ">
               <div className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">Award Winning</div>
-              <p className="text-white/80 text-md  max-w-sm mx-auto">Recognized globally for excellence in brand activations</p>
+              <p className="text-white/80 text-md  max-w-sm">Recognized globally for excellence in brand activations</p>
             </div>
           </div>
 
@@ -46,19 +46,19 @@ export function Achievements() {
               src="/about/achievements.png"
               alt="Roblox 3D Icon"
               fill
-              className="object-contain"
+              className="object-contain w-full"
               priority
             />
           </div>
 
           {/* Right Info Card */}
-          <div className="rounded-lg h-full border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 p-8 flex flex-col justify-end space-y-6">
+          <div className="w-full rounded-lg h-full border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 p-8 flex flex-col justify-end space-y-6">
             <h3 className="text-[55px] font-fks font-bold uppercase text-white max-w-[570px]  leading-[55px] text-balance">
               Roblox Partner
               <br />
               Program:
             </h3>
-            <p className="text-white/80 text-md  max-w-sm mx-auto">
+            <p className="text-white/80 text-md  max-w-sm">
               As an exclusive member, we hold built the leading experiences within Roblox Advertising Solutions, giving
               us access to in-platform ads and the latest innovations for creating winning experiences.
             </p>
