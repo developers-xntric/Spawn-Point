@@ -7,6 +7,7 @@ import StickyCards from "./components/sticky-cards";
 import PartnersSection from "./components/common/partners-section";
 import HOMEGSP from "./components/home-gsp";
 import MapSection from "./components/map-section";
+import ContactSection from "./components/contact-section";
 export default function Home() {
   return (
     <>
@@ -18,7 +19,8 @@ export default function Home() {
       <GameCardsSection />
       <CaseStudies />
       <StickyCards />
-      <MapSection/>
+      <MapSection />
+      <ContactSection />
     </>
   );
 }
