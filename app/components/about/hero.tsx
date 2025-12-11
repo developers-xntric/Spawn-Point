@@ -1,8 +1,8 @@
 import Image from "next/image"
 
 export default function HeroSection() {
-    const topLineText = "GEN ALPHA TO GEN Z"
-    const bottomLineText = "GEN ALPHA TO GEN Z"
+    const topLineText = "ABOUT US"
+    const bottomLineText = "ABOUT US"
     return (
         <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative py-16">
             {/* Pizza image - left side */}
@@ -34,7 +34,7 @@ export default function HeroSection() {
             >
                 <div className="flex w-max animate-scroll-left bg-[#BBFC00]">
                     {[...Array(20)].map((_, i) => (
-                        <span key={i} className="text-[38px] font-fks uppercase font-bold text-[#031347] whitespace-nowrap px-4">
+                        <span key={i} className="text-[38px] font-fks uppercase font-bold text-[#031347] whitespace-nowrap px-8">
                             {topLineText}    {/* GREENISH LINE */}
                         </span>
                     ))}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             >
                 <div className="flex w-max animate-scroll-right bg-white">
                     {[...Array(20)].map((_, i) => (
-                        <span key={i} className="text-[38px] font-fks uppercase text-[#031347] font-bold whitespace-nowrap px-4">
+                        <span key={i} className="text-[38px] font-fks uppercase text-[#031347] font-bold whitespace-nowrap px-8">
                             {bottomLineText}      {/* WHITE LINE */}
                         </span>
                     ))}
