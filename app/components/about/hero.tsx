@@ -4,7 +4,7 @@ export default function HeroSection() {
     const topLineText = "ABOUT US"
     const bottomLineText = "ABOUT US"
     return (
-        <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative py-16">
+        <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative pt-16 mb-12">
             {/* Pizza image - left side */}
             <div className="absolute left-[30%] top-[30%]">
                 <Image src="/icons/yes.png" alt="Pizza decoration" width={50} height={50} className="object-contain" />

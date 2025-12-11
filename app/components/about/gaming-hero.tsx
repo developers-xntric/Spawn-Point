@@ -5,15 +5,15 @@ import Image from "next/image"
 export default function GamingHero() {
   return (
     <section className=" text-white overflow-hidden">
-      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-20">
+      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto pt-20 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
 
           {/* Left side - Image + glass background */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full max-w-lg">
 
               {/* Background behind ONLY the girl image */}
-              <div className="absolute top-12 left-0 w-full h-[450px] rounded-xl overflow-hidden ">
+              <div className="absolute top-12 left-0 w-full h-[540px] rounded-xl overflow-hidden ">
                 <Image
                   alt="gaming-bg"
                   width={1200}
@@ -30,7 +30,7 @@ export default function GamingHero() {
                 height={1200}
                 src="/about/gaming-girl.png"
                 alt="Gaming character"
-                className="relative z-10 w-full h-auto rounded-xl object-cover pl-4 pr-4"
+                className="relative z-50 w-full h-auto rounded-xl object-cover pl-4 pr-4"
               />
             </div>
           </div>
