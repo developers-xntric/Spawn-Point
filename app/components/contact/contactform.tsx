@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div className="bg-[#031347] text-white pb-16 pt-10 px-10 font-sans flex justify-center items-start min-h-screen relative">
       <div className="max-w-[1200px] w-full flex flex-row gap-10">
         {/* Left Column: Form */}
-        <div className="flex-[3] flex flex-col gap-5">
+        <div className="flex-3 flex flex-col gap-5">
           {/* Row 1: Title, First name, Last name */}
           <div className="flex gap-5">
             <div className="flex-1">
@@ -17,7 +17,7 @@ const ContactForm = () => {
               </select>
             </div>
 
-            <div className="flex-[2]">
+            <div className="flex-2">
               <label className="block mb-2 text-sm">First name</label>
               <input
                 type="text"
@@ -26,7 +26,7 @@ const ContactForm = () => {
               />
             </div>
 
-            <div className="flex-[2]">
+            <div className="flex-2">
               <label className="block mb-2 text-sm">Last name</label>
               <input
                 type="text"
@@ -38,7 +38,7 @@ const ContactForm = () => {
 
           {/* Row 2: Email, Country */}
           <div className="flex gap-5">
-            <div className="flex-[2]">
+            <div className="flex-2">
               <label className="block mb-2 text-sm ">Email address</label>
               <input
                 type="email"
@@ -46,7 +46,7 @@ const ContactForm = () => {
                 className="w-full p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
-            <div className="flex-[2]">
+            <div className="flex-2">
               <label className="block mb-2 text-sm">Country of residence</label>
               <select className="w-full p-3 pr-10 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl">
                 <option>Select your country</option>
@@ -85,7 +85,7 @@ const ContactForm = () => {
             <label className="block mb-2 text-sm">Message</label>
             <textarea
               placeholder="I would like to know..."
-              className="w-full p-3  border-none rounded-lg text-white text-base min-h-[150px]  p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+              className="w-full p-3  border-none rounded-lg text-white text-base min-h-[150px]  placeholder:text-white/50 h-18 bg-white/5 border-2 border-white/10 backdrop-blur-xl"
             ></textarea>
           </div>
 
@@ -100,7 +100,7 @@ const ContactForm = () => {
 
         {/* Right Column: Company Info */}
         <div className="flex-1 flex flex-col items-start gap-5">
-          <h2 className="text-white text-4xl  font-fks font-bold text-3xl md:text-5xl uppercase tracking-wider">
+          <h2 className="text-white text-4xl  font-fks font-bold md:text-5xl uppercase tracking-wider">
             Our Corporate Headquarters
           </h2>
           <p className="m-0 text-base ">
