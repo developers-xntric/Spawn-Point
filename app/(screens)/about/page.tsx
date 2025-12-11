@@ -14,10 +14,10 @@ const About = () => {
             <HeroSection />
             <GamingHero />
             <Achievements />
-            <CaseStudies />
-            <MapSection />
             <CelebrationSection />
             <Fearless />
+            <CaseStudies />
+            <MapSection />
             <ContactSection />
             <NewsletterSection />
         </div>

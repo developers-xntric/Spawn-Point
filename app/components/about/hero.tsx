@@ -27,7 +27,7 @@ export default function HeroSection() {
                 </button>
             </div>
             <div
-                className={`absolute top-[85%] left-0 right-0 h-24 flex items-center overflow-hidden z-12 transition-all duration-300`}
+                className={`absolute top-[90%] left-0 right-0 h-24 flex items-center overflow-hidden z-12 transition-all duration-300`}
                 style={{
                     transform: "skewY(-6deg)",
                 }}
@@ -43,7 +43,7 @@ export default function HeroSection() {
 
             {/* WHITE LINE */}
             <div
-                className={`absolute top-[85%] left-0 right-0 h-24 flex items-center overflow-hidden z-5 transition-all duration-300`}
+                className={`absolute top-[90%] left-0 right-0 h-24 flex items-center overflow-hidden z-5 transition-all duration-300`}
                 style={{
                     transform: "skewY(6deg)",
                 }}
