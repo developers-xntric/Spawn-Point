@@ -34,7 +34,7 @@ export default function MapSection() {
     ];
 
     return (
-        <div className="relative w-full min-h-screen bg-[#031347] overflow-hidden py-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
+        <div className="relative w-full min-h-screen bg-[#031347] overflow-hidden pt-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
 
             {/* Centered MAP Background  */}
             <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
