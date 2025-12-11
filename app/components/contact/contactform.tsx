@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className="bg-[#031347] text-white py-16 px-10 font-sans flex justify-center items-start min-h-screen relative">
+    <div className="bg-[#031347] text-white pb-16 pt-10 px-10 font-sans flex justify-center items-start min-h-screen relative">
       <div className="max-w-[1200px] w-full flex flex-row gap-10">
         {/* Left Column: Form */}
         <div className="flex-[3] flex flex-col gap-5">

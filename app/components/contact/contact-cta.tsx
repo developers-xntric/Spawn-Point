@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 const ContactCTA = () => {
   return (
-    <section className="bg-[#031347] min-h-[600] flex items-center justify-center relative py-16">
+    <section className="bg-[#031347] min-h-[500] flex items-center justify-center relative pt-16">
       {/* OMG icon - left side */}
-      <div className="absolute left-[30%] top-[30%]">
-        <Image src="/icons/OMG.svg" alt="OMG Icon" width={100} height={100} className="object-contain"/>
+      <div className="absolute left-[30%] top-[32%]">
+        <Image src="/icons/OMG.svg" alt="OMG Icon" width={80} height={100} className="object-contain"/>
       </div>
 
       {/* Dollar icon - right side */}
-      <div className="absolute right-[28%] top-[59%]">
-        <Image src="/icons/Dollar.svg" alt="Dollar" width={100} height={100} className="object-contain"  />
+      <div className="absolute right-[28%] top-[69%]">
+        <Image src="/icons/Dollar.svg" alt="Dollar" width={70} height={100} className="object-contain"  />
       </div>
 
       {/* Center content */}
