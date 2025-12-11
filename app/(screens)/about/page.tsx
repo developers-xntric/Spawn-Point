@@ -5,6 +5,8 @@ import { CaseStudies } from '@/app/components/case-studies';
 import MapSection from '@/app/components/map-section';
 import CelebrationSection from '@/app/components/about/celeberaitng-section';
 import Fearless from '@/app/components/about/fearless';
+import ContactSection from '@/app/components/contact-section';
+import NewsletterSection from '@/app/components/newsletter';
 
 const About = () => {
     return (
@@ -15,7 +17,9 @@ const About = () => {
             <CaseStudies />
             <MapSection />
             <CelebrationSection />
-            <Fearless   />
+            <Fearless />
+            <ContactSection />
+            <NewsletterSection />
         </div>
     )
 }
