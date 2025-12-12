@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Achievements() {
   return (
-    <section className="py-10 md:py-16">
+    <section className="pb-10 md:pb-16 pt-10">
       <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">

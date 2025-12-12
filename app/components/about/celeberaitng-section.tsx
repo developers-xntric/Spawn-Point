@@ -30,7 +30,7 @@ export default function CelebrationSection() {
         trigger: sectionRef.current,
         start: "top top",
         end: "bottom top",
-        scrub: 2.7,
+        scrub: 3.7,
 
       },
     });
@@ -38,8 +38,10 @@ export default function CelebrationSection() {
     // Move text left
     timeline.fromTo(
       lineRef.current,
-      { x: "100%" },
-      { x: "-120%",
+      { x: "70%" },
+      { x: "-190%",
+        y: "40%",
+        duration: 0.7,
         ease: "none" },
       0
     );
@@ -47,7 +49,7 @@ export default function CelebrationSection() {
     // Move top image along with text
     timeline.fromTo(
       topImgRef.current,
-      { x: "510%" },
+      { x: "140%" },
       { x: "-540%", ease: "none" },
       0
     );
@@ -55,7 +57,7 @@ export default function CelebrationSection() {
     // Move bottom image along with text
     timeline.fromTo(
       bottomImgRef.current,
-      { x: "510%" },
+      { x: "140%" },
       { x: "-600%", ease: "none" },
       0
     );
@@ -65,7 +67,7 @@ export default function CelebrationSection() {
       topImgRef.current,
       { rotate: -25 },
       {
-        rotate: 25,
+        rotate: 55,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -80,7 +82,7 @@ export default function CelebrationSection() {
       bottomImgRef.current,
       { rotate: 25 },
       {
-        rotate: -25,
+        rotate: -55,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -124,7 +126,7 @@ export default function CelebrationSection() {
       {/* BOTTOM IMAGE — NOW INSIDE THE TEXT */}
       <div
         ref={bottomImgRef}
-        className="absolute bottom-[20%] z-30 pointer-events-none select-none"
+        className="absolute bottom-[1%] z-30 pointer-events-none select-none"
       >
         <Image
           src="/icons/movingline-icon.svg"

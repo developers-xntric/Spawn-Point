@@ -41,8 +41,8 @@ export default function GamingHero() {
               <h2 className="text-[60px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
                 WHO <span className="text-[#BBFC00]">WE ARE </span>
               </h2>
-              <p className="text-lg font-bold text-gray-300 uppercase tracking-wider">
-                Your Gaming Community Started with One Belief
+              <p className="text-xl font-bold text-gray-300 uppercase tracking-wider font-fks">
+                SpawnPoint started with one belief
               </p>
             </div>
 

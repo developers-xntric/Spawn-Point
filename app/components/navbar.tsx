@@ -63,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Connect Button */}
-        <button className="hidden md:block bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-lg font-hel">
+        <button className="hidden md:block bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel">
           Lets Connect
         </button>
 

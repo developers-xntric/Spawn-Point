@@ -7,28 +7,28 @@ export default function MapSection() {
             id: 1,
             name: 'PINKY "THE CREATOR"',
             image: '/home/map-man-1.svg',
-            position: 'top-[-210px] 2xl:top-[1%] left-[150px] 2xl:left-[8%]',
+            position: 'top-[-210px] 2xl:top-[-140px] left-[150px] 2xl:left-[170px]',
             pinPosition: 'bottom-[-30px] left-[100%] -translate-x-1/2'
         },
         {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
             image: '/home/map-man-2.svg',
-            position: 'top-[-250px] 2xl:top-[0%] right-[12%]',
+            position: 'top-[-250px] 2xl:top-[-140px] right-[12%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
         {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[200px] 2xl:bottom-[25%] left-[15%]',
+            position: 'bottom-[200px] 2xl:bottom-[210px] left-[15%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {
             id: 4,
             name: 'C-SLACK "THE CULTURE"',
             image: '/home/map-man-4.svg',
-            position: 'bottom-[27%] 2xl:bottom-[25%] right-[12%]',
+            position: 'bottom-[27%] 2xl:bottom-[200px] right-[12%]',
             pinPosition: 'top-[-20px] right-[100%] -translate-x-1/2'
         }
     ];
@@ -71,7 +71,7 @@ export default function MapSection() {
                         </div>
 
                         {/* Card */}
-                        <div className="group relative w-72 h-[295px] rounded-[10px] overflow-hidden border border-[#FFFFFF1A] shadow-2xl transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(191,255,0,0.3)] cursor-pointer bg-white/5 backdrop-blur-[30px] p-2">
+                        <div className="group relative z-30 w-72 h-[295px] 2xl:w-[350px] 2xl:h-[350px] rounded-[10px] overflow-hidden border border-[#FFFFFF1A] shadow-2xl transition-all duration-300 hover:scale-150 hover:shadow-[0_0_30px_rgba(191,255,0,0.3)] cursor-pointer bg-white/5 backdrop-blur-[30px] p-2 ">
 
                             {/* REC ICON */}
                             <div className="absolute top-2 right-3 z-30 flex items-center gap-2">
