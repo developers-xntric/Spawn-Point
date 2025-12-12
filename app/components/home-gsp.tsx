@@ -64,15 +64,15 @@ export default function HOMEGSP() {
                 <Image width={2000} height={2000} src="/home/hg1.png" alt="hg1" className="w-full h-auto" />
             </div>
 
-            <div className="absolute top-5 right-10 w-48 md:w-60 lg:w-80 z-10 floating-img">
+            <div className="absolute -top-4 2xl:top-5 right-2 2xl:right-10 w-48 md:w-60 lg:w-80 z-10 floating-img">
                 <Image width={2000} height={2000} src="/home/hg8.png" alt="hg2" className="w-full h-auto" />
             </div>
 
-            <div className="absolute bottom-52 left-16 w-52 md:w-64 lg:w-90 z-10 floating-img">
+            <div className="absolute bottom-14 2xl:bottom-52 left-16 w-52 md:w-64 lg:w-90 z-10 floating-img">
                 <Image width={2000} height={2000} src="/home/hg3.png" alt="hg3" className="w-full h-auto" />
             </div>
 
-            <div className="absolute bottom-56 right-16 w-52 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
+            <div className="absolute bottom-10 2xl:bottom-56 right-16 w-52 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
                 <Image width={2000} height={2000} src="/home/hg6.png" alt="hg4" className="w-full h-auto" />
             </div>
 
@@ -81,15 +81,15 @@ export default function HOMEGSP() {
                 <Image width={2000} height={2000} src="/icons/hg1-overlay.svg" alt="hg1-overlay" className="w-full h-auto" />
             </div>
 
-            <div className="absolute top-20 right-20 w-32 md:w-44 lg:w-48 z-20 floating-img-overlay">
+            <div className="absolute top-10 2xl:top-20 right-20 w-32 md:w-44 lg:w-48 z-20 floating-img-overlay">
                 <Image width={2000} height={2000} src="/icons/hg3-overlay.svg" alt="hg2-overlay" className="w-full h-auto" />
             </div>
 
-            <div className="absolute bottom-72 left-28 w-36 md:w-48 lg:w-60 z-20 floating-img-overlay">
+            <div className="absolute bottom-36 2xl:bottom-72 left-28 w-36 md:w-48 lg:w-60 z-20 floating-img-overlay">
                 <Image width={2000} height={2000} src="/icons/hg2-overlay.svg" alt="hg3-overlay" className="w-full h-auto" />
             </div>
 
-            <div className="absolute bottom-56 right-24 w-36 md:w-48 lg:w-60 z-20 floating-img-overlay">
+            <div className="absolute bottom-32 2xl:bottom-56 right-24 w-36 md:w-48 lg:w-60 z-20 floating-img-overlay">
                 <Image width={2000} height={2000} src="/icons/hg4-overlay.svg" alt="hg4-overlay" className="w-full h-auto" />
             </div>
 
