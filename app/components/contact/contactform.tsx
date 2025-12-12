@@ -8,30 +8,40 @@ const ContactForm = () => {
         <div className="flex-3 flex flex-col gap-5">
           {/* Row 1: Title, First name, Last name */}
           <div className="flex gap-5">
-            <div className="flex-1">
-              <label className="block mb-2 text-sm">Title</label>
-              <select className="w-full p-3 pr-10 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl">
-                <option>Mr</option>
-                <option>Mrs</option>
-                <option>Ms</option>
+            <div className="flex-1 relative">
+              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Title</label>
+              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
+                <option className='bg-[#031347]'>Mr</option>
+                <option className='bg-[#031347]'>Mrs</option>
+                <option className='bg-[#031347]'>Ms</option>
               </select>
+              <div className="pointer-events-none absolute top-[55%] right-3 flex items-center">
+                <svg
+                  className="w-4 h-4 text-[#D5D5D5]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
+                    d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
-
             <div className="flex-2">
-              <label className="block mb-2 text-sm">First name</label>
+              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">First name</label>
               <input
                 type="text"
                 placeholder="John"
-                className="w-full p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
 
             <div className="flex-2">
-              <label className="block mb-2 text-sm">Last name</label>
+              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Last name</label>
               <input
                 type="text"
                 placeholder="Doe"
-                className="w-full p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
           </div>
@@ -39,53 +49,67 @@ const ContactForm = () => {
           {/* Row 2: Email, Country */}
           <div className="flex gap-5">
             <div className="flex-2">
-              <label className="block mb-2 text-sm ">Email address</label>
+              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold ">Email address</label>
               <input
                 type="email"
                 placeholder="johndoe@mail.com"
-                className="w-full p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
-            <div className="flex-2">
-              <label className="block mb-2 text-sm">Country of residence</label>
-              <select className="w-full p-3 pr-10 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl">
+            <div className="flex-2 relative">
+              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Country of residence</label>
+              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
                 <option>Select your country</option>
               </select>
+              <div className="pointer-events-none absolute top-[55%] right-4 flex items-center">
+                <svg
+                  className="w-4 h-4 text-[#D5D5D5]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
+                    d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
             </div>
           </div>
 
           {/* I want to... */}
-          <div>
-            <label className="block mb-2 text-sm">I want to...</label>
-            <select className="w-full p-3 pr-10 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl">
-              <option>I want to...</option>
+          <div className="flex-2 relative">
+            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">I want to..</label>
+            <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
+              <option>Select your Subject</option>
             </select>
-          </div>
-
-          {/* Select the subject */}
-          <div>
-            <label className="block mb-2 text-sm">Select the subject</label>
-            <select className="w-full p-3 pr-10 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl">
-              <option>Select the subject</option>
-            </select>
+            <div className="pointer-events-none absolute top-[55%] right-4 flex items-center">
+              <svg
+                className="w-4 h-4 text-[#D5D5D5]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
+                  d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
 
           {/* Message title */}
           <div>
-            <label className="block mb-2 text-sm">Message title</label>
+            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Message title</label>
             <input
               type="text"
               placeholder="Message title"
-              className="w-full p-3 text-white text-base placeholder:text-white/50 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+              className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
             />
           </div>
 
           {/* Message */}
           <div>
-            <label className="block mb-2 text-sm">Message</label>
+            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Message</label>
             <textarea
               placeholder="I would like to know..."
-              className="w-full p-3  border-none rounded-lg text-white text-base min-h-[150px]  placeholder:text-white/50 h-18 bg-white/5 border-2 border-white/10 backdrop-blur-xl"
+              className="w-full p-3  border-none rounded-lg text-white text-base min-h-[150px]  placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 border-2 border-white/10 backdrop-blur-xl"
             ></textarea>
           </div>
 
@@ -116,9 +140,9 @@ const ContactForm = () => {
           <p className="m-0 text-base">+971 52 345 6789</p>
           <p className="m-0 text-base">play@spawnpointstudio.com</p>
 
-         <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none">
-  <path d="M0 0.5H441.5" stroke="#273561"/>
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none">
+            <path d="M0 0.5H441.5" stroke="#273561" />
+          </svg>
 
           {/* Social Icons */}
           <div className="flex gap-5 mt-5">
