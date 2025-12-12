@@ -57,9 +57,9 @@ export default function FearlessProgress() {
             const secondNextTitle = secondNextBlock?.querySelector(".title"); 
 
             if (i === 0) {
-                gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 });
-                gsap.set([nextTitle], { y: "40px", scale: 1, });
-                gsap.set([secondNextTitle], { y: "20px", scale: 1, });
+                gsap.to([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1, duration: 1, ease: "power2.out" });
+                gsap.to([nextTitle], { y: "40px", scale: 1, duration: 1, ease: "power2.out" });
+                gsap.to([secondNextTitle], { y: "20px", scale: 1, duration: 1, ease: "power2.out" });
             } else {
                 gsap.set([title], { opacity: 0.1, });
                 gsap.set([desc, left, right], { opacity: 0, y: 15, height: 0 });
@@ -70,7 +70,7 @@ export default function FearlessProgress() {
         // Pin the container
         ScrollTrigger.create({
             trigger: container,
-            start: "top 0%",
+            start: "top 6%",
             end: `bottom center`,
             pin: true,
             scrub: 1.8,
