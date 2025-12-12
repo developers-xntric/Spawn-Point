@@ -7,21 +7,21 @@ export default function MapSection() {
             id: 1,
             name: 'PINKY "THE CREATOR"',
             image: '/home/map-man-1.svg',
-            position: 'top-[-25%] 2xl:top-[1%] left-[4%] 2xl:left-[8%]',
+            position: 'top-[-210px] 2xl:top-[1%] left-[150px] 2xl:left-[8%]',
             pinPosition: 'bottom-[-30px] left-[100%] -translate-x-1/2'
         },
         {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
             image: '/home/map-man-2.svg',
-            position: 'top-[-30%] 2xl:top-[0%] right-[15%]',
+            position: 'top-[-250px] 2xl:top-[0%] right-[12%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
         {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[25%] left-[15%]',
+            position: 'bottom-[200px] 2xl:bottom-[25%] left-[15%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {
