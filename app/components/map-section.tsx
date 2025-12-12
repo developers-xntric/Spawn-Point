@@ -34,7 +34,7 @@ export default function MapSection() {
     ];
 
     return (
-        <div className="relative w-full min-h-screen bg-[#031347] overflow-hidden pt-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
+        <div className="relative w-full  bg-[#031347] overflow-hidden pt-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
 
             {/* Centered MAP Background  */}
             <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
@@ -58,7 +58,7 @@ export default function MapSection() {
 
 
             {/* Crew Cards */}
-            <div className="relative 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto h-screen">
+            <div className="relative 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto h-[95vh]">
                 {crewMembers.map((member) => (
                     <div key={member.id} className={`absolute ${member.position}`}>
 

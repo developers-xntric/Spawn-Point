@@ -67,12 +67,12 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
             <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-20">
-                <div className="flex justify-between items-center gap-8">
+                <div className="flex justify-between items-center gap-8 mb-10">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
-                        <h1 className="font-fks font-bold text-white text-[95px] leading-[95px] uppercase">
+                        <h2 className="font-fks font-bold text-white text-[95px] leading-[95px] uppercase">
                             Engineering<br />The New Age Of<br />Brand Play
-                        </h1>
+                        </h2>
                     </div>
 
                     {/* Right Side - Column with BUILD WITH US, Logos, Nav, Social */}
@@ -101,7 +101,7 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex justify-between items-center w-[70%]">
+                        <div className="flex justify-between items-center w-[50%]">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}
@@ -116,6 +116,8 @@ export default function Footer() {
                     </div>
                 </div>
                 {/* Footer */}
+
+                <div className="w-full border-t border-white/20  "></div>
 
                 {/* Large SPAWNPOINT Watermark - Background */}
                 {/* Spawnpoint Logo - Bottom Center */}
