@@ -53,14 +53,16 @@ export default function FearlessProgress() {
             const desc = block?.querySelector(".desc");
             const nextBlock = blocksRef.current[i + 1]
             const nextTitle = nextBlock?.querySelector(".title")
+            const secondNextBlock = blocksRef.current[i + 2]; 
+            const secondNextTitle = secondNextBlock?.querySelector(".title"); 
 
             if (i === 0) {
-                // First block fully visible
                 gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 });
                 gsap.set([nextTitle], { y: "40px", scale: 1, });
+                gsap.set([secondNextTitle], { y: "20px", scale: 1, });
             } else {
                 gsap.set([title], { opacity: 0.1, });
-                gsap.set([desc, left, right], { opacity: 0, y: 20, height: 0 });
+                gsap.set([desc, left, right], { opacity: 0, y: 15, height: 0 });
 
             }
         });
@@ -85,6 +87,8 @@ export default function FearlessProgress() {
 
             const nextBlock = blocksRef.current[i + 1]
             const nextTitle = nextBlock?.querySelector(".title")
+            const secondNextBlock = blocksRef.current[i + 2]; 
+            const secondNextTitle = secondNextBlock?.querySelector(".title"); 
 
             const prevBlock = i > 0 ? blocksRef.current[i - 1] : null;
             const prevLeft = i > 0 ? leftRefs.current[i - 1] : null;
@@ -92,13 +96,14 @@ export default function FearlessProgress() {
             const prevDesc = prevBlock?.querySelector(".desc");
             const prevTitle = prevBlock?.querySelector(".title");
 
-            if (i === 0) return; // first block already visible
+            if (i === 0) return;
 
             ScrollTrigger.create({
                 trigger: block,
-                start: "top center",
+                start: "top 30%",
                 end: "bottom center",
                 scrub: 1,
+                markers: false,
                 onEnter: () => {
                     // Hide previous block completely
                     if (prevBlock) gsap.set([prevDesc, prevLeft, prevRight], { opacity: 0, y: 0 });
@@ -106,7 +111,8 @@ export default function FearlessProgress() {
 
                     // Show current block
                     gsap.set([title, desc, left, right], { opacity: 1, y: 0, height: "auto", scale: 1 });
-                    gsap.set([nextTitle], { y: "50px", scale: 1, });
+                    gsap.set([nextTitle], { y: "22px", scale: 1, });
+                    gsap.set([secondNextTitle], { y: "22px", scale: 1, });
                 },
                 onLeaveBack: () => {
                     // Hide current when scrolling back
