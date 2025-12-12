@@ -7,14 +7,14 @@ export default function MapSection() {
             id: 1,
             name: 'PINKY "THE CREATOR"',
             image: '/home/map-man-1.svg',
-            position: 'top-[-15%] 2xl:top-[1%] left-[4%] 2xl:left-[8%]',
+            position: 'top-[-25%] 2xl:top-[1%] left-[4%] 2xl:left-[8%]',
             pinPosition: 'bottom-[-30px] left-[100%] -translate-x-1/2'
         },
         {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
             image: '/home/map-man-2.svg',
-            position: 'top-[-20%] 2xl:top-[0%] right-[15%]',
+            position: 'top-[-30%] 2xl:top-[0%] right-[15%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
         {
