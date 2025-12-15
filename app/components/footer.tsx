@@ -66,34 +66,34 @@ export default function Footer() {
 
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
-            <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-20">
-                <div className="flex justify-between items-center gap-8 mb-10">
+            <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-10 md:py-20">
+                <div className="flex md:flex-row flex-col justify-between md:items-center gap-8 mb-10">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
-                        <h2 className="font-fks font-bold text-white text-[95px] leading-[95px] uppercase">
-                            Engineering<br />The New Age Of<br />Brand Play
+                        <h2 className="font-fks font-bold text-white text-[40px] md:text-[60px] xl:text-[95px] leading-[50px] md:leading-[60px] xl:leading-[95px] uppercase max-w-[400px]">
+                            Engineering The New Age Of Brand Play
                         </h2>
                     </div>
 
                     {/* Right Side - Column with BUILD WITH US, Logos, Nav, Social */}
                     <div className="flex flex-col items-start gap-10  ">
                         {/* BUILD WITH US */}
-                        <h2 className="text-lime-400 text-xl font-bold font-fks tracking-wider">BUILD WITH US</h2>
+                        <h2 className="text-lime-400 text-xl font-bold font-fks tracking-wider md:block hidden">BUILD WITH US</h2>
 
                         {/* Game Logos */}
-                        <div className="flex items-center gap-12">
-                            <Image src="/Roblox.svg" alt="Roblox" width={198} height={87} className="w-auto h-auto" priority />
-                            <Image src="/Fortnite.svg" alt="Fortnite" width={198} height={87} className="w-auto h-auto" priority />
-                            <Image src="/Minecraft.svg" alt="Minecraft" width={198} height={87} className="w-auto h-auto" priority />
+                        <div className="flex items-center gap-4 lg:gap-12">
+                            <Image src="/Roblox.svg" alt="Roblox" width={198} height={87} className="w-[100px] h-[50px] lg:w-auto lg:h-auto" priority />
+                            <Image src="/Fortnite.svg" alt="Fortnite" width={198} height={87} className="w-[100px]  h-[50px] lg:w-auto lg:h-auto" priority />
+                            <Image src="/Minecraft.svg" alt="Minecraft" width={198} height={87} className="w-[100px] h-[50px] lg:w-auto lg:h-auto" priority />
                         </div>
 
                         {/* Navigation Links */}
-                        <div className="flex justify-between items-center w-full">
+                        <div className="flex md:flex-row flex-wrap justify-between items-center w-full gap-4">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.label}
                                     href={link.href}
-                                    className="text-white text-sm hover:text-lime-400 transition-colors"
+                                    className="text-white text-[12px] md:text-sm hover:text-lime-400 transition-colors"
                                 >
                                     {link.label}
                                 </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex justify-between items-center w-[50%]">
+                        <div className="flex justify-between items-center lg:w-[50%] gap-5 lg:gap-0">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}

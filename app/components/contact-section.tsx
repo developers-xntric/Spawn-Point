@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 
 const services = [
@@ -22,9 +23,9 @@ export default function ContactSection() {
     }
 
     return (
-        <section className="bg-[#031347] pb-16 md:pb-24 px-6 md:px-12 lg:px-20">
+        <section className="bg-[#031347] pb-16 md:pb-24 px-4 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-[rgba(255,255,255,0.05)] rounded-2xl p-8 md:p-12 lg:p-10">
+                <div className="bg-[rgba(255,255,255,0.05)] rounded-2xl p-6 md:p-12 lg:p-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         {/* Left Side */}
                         <div className="flex flex-col justify-between">
@@ -32,21 +33,21 @@ export default function ContactSection() {
                                 <h2 className="text-white text-4xl md:text-7xl font-fks font-bold tracking-wide mb-8">LET'S COLLAB</h2>
 
                                 {/* Video Player */}
-                                <div className="flex items-center border border-[#BBFC00] rounded-md w-[330px] ps-3 py-3 gap-2 relative mb-8">
-                                    <div className="relative w-[50px] h-[50px] aspect-square overflow-hidden bg-[#0d2156]">
+                                <div className="flex items-center border border-[#BBFC00] rounded-md md:w-[330px] ps-3 py-3 gap-2 relative md:mb-8">
+                                    <div className="relative md:w-[50px] md:h-[50px] w-[30px] h-[30px] aspect-square overflow-hidden bg-[#0d2156]">
                                         <video src="/robo.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
                                     </div>
                                     {/* Book a call badge */}
                                     <div className="flex items-center gap-2 text-[#ffffff] px-3 py-2 rounded-lg">
-                                        <span className="text-md font-medium tracking-wide font-hel">Book a call with spawnpoint</span>
+                                        <span className="md:text-[14px] text-[4vw] font-medium tracking-wide font-hel">Book a call with spawnpoint</span>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Email */}
-                            <div className="mt-8">
+                            <Link href="mailto:COLLAB@SPAWNPOINT.COM" className="mt-8 md:block hidden">
                                 <p className="text-white text-2xl md:text-5xl font-fks font-bold tracking-wide">COLLAB@SPAWNPOINT.COM</p>
-                            </div>
+                            </Link>
                         </div>
 
                         {/* Right Side - Form */}
@@ -59,7 +60,7 @@ export default function ContactSection() {
                                         <button
                                             key={service}
                                             onClick={() => toggleService(service)}
-                                            className={`px-4 py-2 font-hel bg-[#031347] rounded-[5px] text-sm transition-all ${selectedServices.includes(service)
+                                            className={`px-4 py-2 font-hel bg-[#031347] rounded-[5px] text-[12px] md:text-sm transition-all ${selectedServices.includes(service)
                                                 ? "bg-white text-[#031347] border-white"
                                                 : "bg-[#031347] text-white border-white hover:border-white"
                                                 }`}
@@ -117,7 +118,7 @@ export default function ContactSection() {
                             </div>
 
                             {/* Privacy and Submit */}
-                            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mt-4">
+                            <div className="flex  flex-col-reverse md:flex-row md:items-center md:justify-between gap-4 mt-4">
                                 <p className="text-white text-xs">
                                     Curious how we handle your data with care? Scoop into our{" "}
                                     <a href="#" className="underline hover:text-white">
@@ -129,6 +130,11 @@ export default function ContactSection() {
                                     SUBMIT
                                 </button>
                             </div>
+
+                            {/* Email */}
+                            <Link href="mailto:COLLAB@SPAWNPOINT.COM" className="mt-2 md:hidden block">
+                                <p className="text-white text-2xl md:text-5xl font-fks font-bold tracking-wide">COLLAB@SPAWNPOINT.COM</p>
+                            </Link>
                         </div>
                     </div>
                 </div>

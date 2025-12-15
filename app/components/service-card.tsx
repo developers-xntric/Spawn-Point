@@ -15,12 +15,12 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className="group h-full">
-      <div className="relative flex h-[90%] 2xl:h-full flex-col rounded-[20px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] p-6 transition-all duration-300 hover:shadow-2xl overflow-hidden">
+      <div className="relative flex h-[65%] md:h-[90%] 2xl:h-full flex-col rounded-[10px] md:rounded-[20px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] p-3 md:p-6 transition-all duration-300 hover:shadow-2xl overflow-hidden">
 
         {/* -------------------------------------------------- */}
         {/*                 FIRST SECTION (HEADER)             */}
         {/* -------------------------------------------------- */}
-        <div className="relative w-full h-[250px] 2xl:h-[450px] flex flex-col items-center rounded-[20px] overflow-hidden">
+        <div className="relative w-[100%] md:w-full h-[250px] 2xl:h-[450px] flex flex-col items-center rounded-[20px] overflow-hidden">
 
           {/* Background curve */}
           <Image
@@ -37,13 +37,13 @@ export function ServiceCard({ service }: ServiceCardProps) {
           />
 
           {/* Icons (absolute top-right) */}
-          <div className="absolute top-2 right-2 2xl:right-6 z-20">
+          <div className="absolute top-1 md:top-2 xl:right-2 md:right-0 2xl:right-6 -right-0 z-20">
             <Image
               src="/home/gif-icons.svg"
               alt="icons"
               width={150}
               height={20}
-              className="w-[120px] 2xl:w-[150px]"
+              className="w-[80px] md:w-[120px] 2xl:w-[150px]"
             />
           </div>
         </div>
@@ -52,10 +52,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
         {/*             SECOND SECTION (CONTENT)               */}
         {/* -------------------------------------------------- */}
         <div className="mt-6 relative z-20">
-          <h3 className="mb-2 text-[32px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-[42px] tracking-[2px]">
+          <h3 className="mb-2 text-[20px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-[20px] md:leading-[42px] tracking-[2px]">
             {service.title}
           </h3>
-          <p className="text-white text-sm md:text-[15px] 2xl:text-[18px] font-hel">
+          <p className="text-white text-[13px] md:text-[15px] 2xl:text-[18px] font-hel">
             {service.description}
           </p>
         </div>

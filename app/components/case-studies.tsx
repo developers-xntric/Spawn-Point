@@ -57,15 +57,15 @@ export function CaseStudies() {
   const study = caseStudies[currentSlide]
 
   return (
-    <section className="py-16">
-      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
+    <section className="md:py-16">
+      <div className="2xl:max-w-[1440px] w-[100%] md:w-[85%] mx-auto">
 
         {/* Hero Header */}
-        <div className=" mb-16">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className=" mb-8 md:mb-16">
+          <div className="grid md:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-[100%] mx-auto">
             {/* Left Content */}
             <div>
-              <h2 className="text-[60px] font-fks font-bold uppercase text-white text-left leading-[65px] tracking-[2px]">
+              <h2 className=" text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-[40px] tracking-[1.5px] md:tracking-[2px]">
                 Where <span className="text-[#BBFC00]">Brands </span> Become <br />{" "}
                 playable<span className="text-[#BBFC00]"> Stories</span>
               </h2>
@@ -73,18 +73,18 @@ export function CaseStudies() {
 
             {/* Right Content */}
             <div className="flex flex-col gap-8">
-              <p className="text-white text-sm md:text-[20px] ">
+              <p className="text-white text-[16px] md:text-[20px] ">
                 We design immersive in-game experiences that drive engagement across every screen, space, and platform.
               </p>
 
               <div className="flex gap-4 font-hel">
                 <Link href="/case-studies">
-                  <button className="px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border-2 transition cursor-pointer">
+                  <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border-2 transition cursor-pointer">
                     Case Studies
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="px-8 py-3 rounded-[5px] border-2 border-white text-white font-bold hover:bg-white hover:text-[#031347] transition cursor-pointer">
+                  <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] border-2 border-white text-white font-bold hover:bg-white hover:text-[#031347] transition cursor-pointer">
                     Lets Connect
                   </button>
                 </Link>
@@ -96,7 +96,7 @@ export function CaseStudies() {
         {/* Carousel Section */}
         <div className="">
           {/* Image Carousel */}
-          <div className="relative w-full h-[560px] 2xl:h-[650px] rounded-2xl overflow-hidden mb-8 group">
+          <div className="relative w-full h-[400px] md:h-[560px] 2xl:h-[650px] md:rounded-2xl overflow-hidden mb-8 group">
             {/* Image with overlay */}
             <div
               className="w-full h-full bg-cover bg-center transition-all duration-500"
@@ -106,17 +106,16 @@ export function CaseStudies() {
               <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent" />
 
               {/* Content Overlay */}
-              <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end space-y-6">
+              <div className="absolute inset-0 p-5 md:p-10 flex flex-col justify-end space-y-4 md:space-y-6">
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-fks">{study.title}</h2>
-
-                  <p className="text-white text-sm md:text-[20px] max-w-[70%] font-hel">{study.description}</p>
+                  <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-fks tracking-[1.5px]">{study.title}</h2>
+                  <p className="text-white text-sm md:text-[20px] md:max-w-[70%] font-hel">{study.description}</p>
                   <p className="text-white text-sm md:text-[20px] font-hel">{study.stat}</p>
                 </div>
 
 
                 <Link href={study.url}>
-                  <button className="px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition cursor-pointer">
+                  <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition cursor-pointer">
                     View Case Study 
                   </button>
                 </Link>
@@ -126,27 +125,27 @@ export function CaseStudies() {
           </div>
 
           {/* Navigation Controls */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mr-8 md:mr-0">
             {/* Progress Bar */}
-            <div className="w-[10%] h-1.5 bg-gray-700 rounded-full overflow-hidden">
+            <div className="w-[30%] md:w-[15%] h-1.5 bg-gray-700 rounded-full overflow-hidden ml-5 md:ml-0">
               <div className="h-full rounded-full bg-[#CCFF00] transition-all duration-500" style={{ width: `${progress}%` }} />
             </div>
 
             {/* Arrow Buttons */}
-            <div className="flex gap-4 ml-8">
+            <div className="flex gap-2 md:gap-4 ml-8">
 
               <button
                 onClick={prevSlide}
-                className=" rounded-full border-2 border-[#273561] p-2 text-[#CCFF00] w-14 h-14 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
+                className=" rounded-full border-2 border-[#273561] p-2 text-[#CCFF00] md:w-14 md:h-14 w-10 h-10 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
               >
-                <Image src="/home/left-arrow.svg" alt="Left Arrow" width={20} height={20} />
+                <Image src="/home/left-arrow.svg" alt="Left Arrow" width={20} height={20} className="w-5 h-5 md:w-6 md:h-6 mr-1 md:mr-0" />
               </button>
 
               <button
                 onClick={nextSlide}
-                className="rounded-full border-2 border-[#273561] p-2 w-14 h-14 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
+                className="rounded-full border-2 border-[#273561] p-2 md:w-14 md:h-14 w-10 h-10 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
               >
-                <Image src="/home/right-arrow.svg" alt="Right Arrow" width={20} height={20} />
+                <Image src="/home/right-arrow.svg" alt="Right Arrow" width={20} height={20} className="w-5 h-5 md:w-6 md:h-6 ml-1 md:ml-0" />
               </button>
             </div>
           </div>

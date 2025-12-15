@@ -18,7 +18,7 @@ type Game = {
 
 export default function GameCard({ game }: { game: Game }) {
   return (
-    <div className="relative rounded-[20px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] h-[530px] overflow-hidden">
+    <div className="relative rounded-[15px] md:rounded-[20px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] h-[450px] md:h-[530px] overflow-hidden">
       {/* Background image */}
       {game.image && (
         <Image
@@ -34,10 +34,10 @@ export default function GameCard({ game }: { game: Game }) {
       <div className="absolute inset-0 bg-linear-to-b from-transparent  to-[#031347]" />
 
       {/* Overlay content at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col gap-3">
+      <div className="absolute bottom-0 left-0 right-0 p-4 flex flex-col gap-1 md:gap-3">
         {/* Title image (logo) overlapping bottom edge of background */}
         {game.titleImage && (
-          <div className="flex items-end">
+          <div className="flex items-end w-[90%] md:w-full">
             <Image
               src={game.titleImage}
               alt={game.title}

@@ -27,7 +27,7 @@ export default function PartnersSection() {
                                 key={`row1-${index}`}
                                 className="shrink-0 flex items-center gap-4 bg-[#001763] text-white px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A]"
                             >
-                                <span className="font-fks text-3xl tracking-wider">{partner.name}</span>
+                                <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>
                                 <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
                             </div>
                         ))}
@@ -45,7 +45,7 @@ export default function PartnersSection() {
                                     className={`shrink-0 flex items-center gap-4 px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A] ${isHighlighted ? "bg-[#BBFC00] text-[#001763] border-2 border-[#BBFC00]" : "bg-[#001763] text-white"
                                         }`}
                                 >
-                                    <span className="font-fks text-3xl tracking-wider">{partner.name}</span>
+                                    <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>
                                     <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
                                 </div>
                             )
@@ -73,12 +73,23 @@ export default function PartnersSection() {
             }
             }
 
+            @media (max-width: 768px) {
+            .animate-scroll-left {
+            animation: scroll-left 8s linear infinite;
+            }
+            .animate-scroll-right {
+            animation: scroll-right 8s linear infinite;
+            }
+            }
+
+            @media (min-width: 768px) {
             .animate-scroll-left {
             animation: scroll-left 20s linear infinite;
             }
 
             .animate-scroll-right {
             animation: scroll-right 20s linear infinite;
+            }
             }
       `}</style>
         </section>

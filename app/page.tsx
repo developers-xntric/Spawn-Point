@@ -11,7 +11,7 @@ import ContactSection from "./components/contact-section";
 import NewsletterSection from "./components/newsletter";
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <SecondSection />
       <ServicesCarousel />
@@ -23,6 +23,6 @@ export default function Home() {
       <MapSection />
       <ContactSection />
       <NewsletterSection />
-    </>
+    </div>
   );
 }
