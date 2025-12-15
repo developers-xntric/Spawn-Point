@@ -21,7 +21,7 @@ export default function MapSection() {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[50px] md:bottom-[300px] xl:bottom-[200px] 2xl:bottom-[210px] lg:left-[1%] xl:left-[15%]',
+            position: 'bottom-[50px] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[210px] lg:left-[1%] xl:left-[15%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {

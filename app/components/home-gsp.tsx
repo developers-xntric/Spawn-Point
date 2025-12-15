@@ -99,7 +99,7 @@ export default function HOMEGSP() {
       className="bg-white/5 min-h-screen relative overflow-hidden py-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
     >
       {/* Floating Images */}
-      <div className="absolute -top-10 md:left-22 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
+      <div className="absolute -top-10 md:left-10 xl:left-22 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -109,7 +109,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute -top-4 2xl:top-5 -right-2 2xl:right-10 w-30 md:w-60 lg:w-80 z-10 floating-img">
+      <div className="absolute -top-4 2xl:top-5 -right-2 2xl:right-10 w-30 md:w-60 xl:w-80 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -119,7 +119,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-44 2xl:bottom-52 -left-6 md:left-10 w-36 md:w-64 lg:w-90 z-10 floating-img">
+      <div className="absolute bottom-44 md:bottom-20 xl:bottom-44 2xl:bottom-52 -left-6 md:left-2 xl:left-10 w-36 md:w-64 lg:w-90 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -129,7 +129,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 md:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
         <Image
           width={2000}
           height={2000}
@@ -140,7 +140,7 @@ export default function HOMEGSP() {
       </div>
 
       {/* Overlay Images */}
-      <div className="absolute -top-4 md:-top-8 left-4 md:left-28 w-16 md:w-44 lg:w-48 z-20 floating-img-overlay">
+      <div className="absolute -top-4 md:-top-8 left-4 md:left-20 xl:left-28 w-16 md:w-44 xl:w-48 z-20 floating-img-overlay">
         <Image
           width={2000}
           height={2000}
@@ -150,7 +150,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute -top-4 md:top-10 2xl:top-20 right-2 md:right-20 w-20 md:w-44 lg:w-48 z-20 floating-img-overlay">
+      <div className="absolute -top-4 xl:top-10 2xl:top-20 right-2 md:right-10 xl:right-20 w-20 md:w-44 xl:w-48 z-20 floating-img-overlay">
         <Image
           width={2000}
           height={2000}
@@ -170,7 +170,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-32 2xl:bottom-56 -right-1 md:right-24 w-28 md:w-48 lg:w-60 z-20 floating-img-overlay">
+      <div className="absolute bottom-32 2xl:bottom-56 -right-1 xl:right-24 w-28 md:w-48 lg:w-60 z-20 floating-img-overlay">
         <Image
           width={2000}
           height={2000}

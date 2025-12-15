@@ -95,7 +95,7 @@ export default function StickyCards() {
                 <span className="text-[#BBFC00]"> System</span>
               </h2>
             )}
-            <p className="text-white text-sm md:text-[20px] font-hel mt-5">
+            <p className="text-white text-sm md:text-[16px] xl:text-[20px] font-hel mt-5">
               We implement a proprietary 4-Phase annual framework to ensure continuous relevance,
               maximize audience commitment, and deliver measurable Lifetime Lift. We transform
               short-term activations into long-term, compounding value.
@@ -160,7 +160,7 @@ export default function StickyCards() {
                   alt="icons"
                   width={140}
                   height={50}
-                  className="absolute md:top-5 -top-1 right-4 md:right-12 z-30 w-[70px] md:w-[140px] h-[50px]"
+                  className="absolute xl:top-5 md:top-2 -top-1 right-4 md:right-12 z-30 w-[70px] md:w-[100px] xl:w-[140px] h-[50px]"
                 />
               </div>
             ))}
