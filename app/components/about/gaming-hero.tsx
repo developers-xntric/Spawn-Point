@@ -6,14 +6,15 @@ export default function GamingHero() {
   return (
     <section className=" text-white overflow-hidden">
       <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto pt-20 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+<div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center xl:gap-0 gap-5">
+
 
           {/* Left side - Image + glass background */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative w-full max-w-lg">
 
               {/* Background behind ONLY the girl image */}
-              <div className="absolute top-12 left-0 w-full h-[540px] rounded-xl overflow-hidden ">
+              <div className="absolute top-8 lg:top-12 left-0 w-full xl:h-[540px] rounded-xl overflow-hidden ">
                 <Image
                   alt="gaming-bg"
                   width={1200}
@@ -46,7 +47,7 @@ export default function GamingHero() {
               </p>
             </div>
 
-            <div className="space-y-4 text-gray-200 leading-relaxed">
+            <div className="space-y-4 text-gray-200 leading-relaxed text-sm xl:text-base">
               <p>
                 Brands shouldn’t talk at players they should build with them. We are a collective of creators, designers, strategists, developers, and culture experts who understand the rhythm of gaming communities. Our experience spans across Roblox, Fortnite, esports, streaming, virtual production, and brand experience design.
               </p>
