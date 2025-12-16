@@ -44,7 +44,7 @@ export default function TechStackSection() {
                             </h3>
 
                             {/* Description */}
-                            <p className="text-white tracking-wide px-8 text-[10px] md:text-xs leading-tight">{item.description}</p>
+                            <p className="text-white tracking-wide px-8 text-[10px] md:text-sm leading-tight">{item.description}</p>
                         </div>
                     ))}
                 </div>
