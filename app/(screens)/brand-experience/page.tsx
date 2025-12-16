@@ -11,7 +11,9 @@ const BrandExperience = () => {
                 img1="/icons/pacman.png"
                 img2="/icons/burger.png"
             />
-            <PartnersSection isSecond={false} />
+            <div className="-mt-24">
+                <PartnersSection isSecond={false} />
+            </div>
         </div>
     )
 }
