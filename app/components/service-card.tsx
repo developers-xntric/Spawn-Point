@@ -20,7 +20,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         {/* -------------------------------------------------- */}
         {/*                 FIRST SECTION (HEADER)             */}
         {/* -------------------------------------------------- */}
-        <div className="relative w-[100%] md:w-full h-[250px] 2xl:h-[450px] flex flex-col items-center rounded-[20px] overflow-hidden">
+        <div className="relative w-full md:w-full h-[250px] 2xl:h-[450px] flex flex-col items-center rounded-[20px] overflow-hidden">
 
           {/* Background curve */}
           <Image
@@ -37,13 +37,13 @@ export function ServiceCard({ service }: ServiceCardProps) {
           />
 
           {/* Icons (absolute top-right) */}
-          <div className="absolute top-1 xl:top-2 xl:right-2 md:right-0 2xl:right-6 -right-0 z-20">
+          <div className="absolute top-1 xl:top-2 xl:right-2 md:right-0 2xl:right-6 right-0 z-20">
             <Image
               src="/home/gif-icons.svg"
               alt="icons"
               width={150}
               height={20}
-              className="w-[80px] xl:w-[120px] 2xl:w-[150px]"
+              className="w-20 xl:w-[120px] 2xl:w-[150px]"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         {/*             SECOND SECTION (CONTENT)               */}
         {/* -------------------------------------------------- */}
         <div className="mt-6 relative z-20">
-          <h3 className="mb-2 text-[20px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-[20px] md:leading-[42px] tracking-[2px]">
+          <h3 className="mb-2 text-[20px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-5 md:leading-[42px] tracking-[2px]">
             {service.title}
           </h3>
           <p className="text-white text-[13px] xl:text-[15px] 2xl:text-[18px] font-hel">
