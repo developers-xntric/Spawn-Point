@@ -1,3 +1,5 @@
+import Star from "../icons/star";
+
 export default function ExpertiseSection() {
     return (
         <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-24"
@@ -25,19 +27,19 @@ export default function ExpertiseSection() {
                             <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-sm">+</span>
+                                    <Star />
                                     <span className="text-white text-sm">Creator campaigns</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-sm">+</span>
+                                    <Star />
                                     <span className="text-white text-sm">Reaction-based brand moments</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-sm">+</span>
+                                    <Star />
                                     <span className="text-white text-sm">Play-test activations</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-sm">+</span>
+                                    <Star />
                                     <span className="text-white text-sm">TikTok + IG Reels gaming formats</span>
                                 </div>
                             </div>
