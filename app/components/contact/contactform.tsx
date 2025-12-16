@@ -2,15 +2,15 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className="bg-[#031347] text-white pb-16 pt-10 px-10 font-sans flex justify-center items-start min-h-screen relative">
-      <div className="max-w-[1200px] w-full flex flex-row gap-10">
+    <div className="bg-[#031347] text-white pb-16 pt-10 px-5 md:px-10 font-sans flex justify-center items-start min-h-screen relative">
+      <div className="2xl:max-w-[1440px] w-[100%] lg:w-[85%] mx-auto flex flex-col flex-col-reverse lg:flex-row gap-14">
         {/* Left Column: Form */}
         <div className="flex-3 flex flex-col gap-5">
           {/* Row 1: Title, First name, Last name */}
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <div className="flex-1 relative">
-              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Title</label>
-              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
+              <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">Title</label>
+              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5  text-[#D5D5D5] appearance-none rounded-[10px] md:rounded-[20px] border-2  border-[#FFFFFF1A] backdrop-blur-xl cursor-pointer">
                 <option className='bg-[#031347]'>Mr</option>
                 <option className='bg-[#031347]'>Mrs</option>
                 <option className='bg-[#031347]'>Ms</option>
@@ -28,37 +28,37 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="flex-2">
-              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">First name</label>
+              <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">First name</label>
               <input
                 type="text"
                 placeholder="John"
-                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
 
             <div className="flex-2">
-              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Last name</label>
+              <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">Last name</label>
               <input
                 type="text"
                 placeholder="Doe"
-                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
           </div>
 
           {/* Row 2: Email, Country */}
-          <div className="flex gap-5">
+          <div className="md:flex flex-col gap-5">
             <div className="flex-2">
-              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold ">Email address</label>
+              <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold ">Email address</label>
               <input
                 type="email"
                 placeholder="johndoe@mail.com"
-                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+                className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
               />
             </div>
-            <div className="flex-2 relative">
-              <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Country of residence</label>
-              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
+            <div className="flex-2 relative md:mt-0 mt-5">
+              <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">Country of residence</label>
+              <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
                 <option>Select your country</option>
               </select>
               <div className="pointer-events-none absolute top-[55%] right-4 flex items-center">
@@ -77,8 +77,8 @@ const ContactForm = () => {
 
           {/* I want to... */}
           <div className="flex-2 relative">
-            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">I want to..</label>
-            <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
+            <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">I want to..</label>
+            <select className="w-full p-3 pr-10 text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 text-[#D5D5D5] appearance-none rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl cursor-pointer">
               <option>Select your Subject</option>
             </select>
             <div className="pointer-events-none absolute top-[55%] right-4 flex items-center">
@@ -96,17 +96,17 @@ const ContactForm = () => {
 
           {/* Message title */}
           <div>
-            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Message title</label>
+            <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">Message title</label>
             <input
               type="text"
               placeholder="Message title"
-              className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
+              className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-[20px] border-2 border-white/10 backdrop-blur-xl"
             />
           </div>
 
           {/* Message */}
           <div>
-            <label className="block mb-2 text-sm relative left-1 tracking-wide font-bold">Message</label>
+            <label className="block mb-2 text-[16px] relative left-1tracking-wide font-bold">Message</label>
             <textarea
               placeholder="I would like to know..."
               className="w-full p-3  border-none rounded-lg text-white text-base min-h-[150px]  placeholder:text-[#D5D5D5] opacity-60 h-18 bg-white/5 border-2 border-white/10 backdrop-blur-xl"
@@ -114,9 +114,9 @@ const ContactForm = () => {
           </div>
 
           {/* Footer: Mandatory and Button */}
-          <div className="flex items-center gap-20 mt-5">
+          <div className="flex-col md:flex-row flex md:items-center  gap-5 md:gap-20 mt-5 ">
             <span className="text-md tracking-wide font-bold">All fields are mandatory</span>
-            <button className="bg-[#BBFC00] text-black px-6 py-3 border-none rounded-lg font-bold cursor-pointer hover:bg-[#a8e600] transition-colors">
+            <button className="bg-[#BBFC00] text-black w-full md:w-fit px-6 py-3 border-none rounded-lg font-bold cursor-pointer hover:bg-[#a8e600] transition-colors">
               Send Message
             </button>
           </div>
@@ -127,8 +127,8 @@ const ContactForm = () => {
           <h2 className="text-white text-4xl  font-fks font-bold md:text-5xl uppercase tracking-wider">
             Our Corporate Headquarters
           </h2>
-          <p className="m-0 text-base ">
-            <span className="font-helvetica font-bold tracking-wide text-xl whitespace-nowrap">
+          <p className="m-0 text-base  ">
+            <span className="font-helvetica font-bold tracking-wide text-xl whitespace-nowrap ">
               Spawn Point Creative Labs ↗
             </span>
 
@@ -138,14 +138,14 @@ const ContactForm = () => {
             Dubai, United Arab Emirates
           </p>
           <p className="m-0 text-base">+971 52 345 6789</p>
-          <p className="m-0 text-base">play@spawnpointstudio.com</p>
+          <p className="m-0 text-base tracking-[1px]">play@spawnpointstudio.com</p>
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none" className= "w-full md:w-[224px]">
             <path d="M0 0.5H441.5" stroke="#273561" />
           </svg>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-5 mt-5">
+          <div className="flex items-center gap-5 md:mt-5 mt-2">
             <span className="text-xl"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 25 25" fill="none">
               <path d="M12.4673 0C5.58187 0 0 5.58187 0 12.4673C0 18.314 4.02545 23.2202 9.45572 24.5676V16.2773H6.88496V12.4673H9.45572V10.8256C9.45572 6.58225 11.3762 4.61541 15.5423 4.61541C16.3322 4.61541 17.6951 4.7705 18.2527 4.92509V8.37854C17.9584 8.34763 17.4473 8.33217 16.8124 8.33217C14.7683 8.33217 13.9784 9.10664 13.9784 11.1199V12.4673H18.0507L17.351 16.2773H13.9784V24.8434C20.1517 24.0979 24.9352 18.8416 24.9352 12.4673C24.9347 5.58187 19.3528 0 12.4673 0Z" fill="white" />
             </svg></span> {/* Facebook */}
