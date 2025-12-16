@@ -1,0 +1,60 @@
+import Image from "next/image"
+
+export default function BrandsPlayableSection() {
+    const stats = [
+        { value: "80M+", label: "Gamers in MENA" },
+        { value: "4X", label: "higher recall vs traditional ads" },
+        { value: "5X", label: "engagement during moment-reactive streams" },
+        { value: "6+", label: "Worlds that retain users 6-10 hours/week" },
+    ]
+
+    return (
+        <section className="bg-[#031347] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+            <div className="max-w-6xl mx-auto">
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    {/* Left - Image */}
+                    <div className="w-full lg:w-1/2">
+                        <div className="relative rounded-2xl overflow-hidden">
+                            <Image
+                                src="/game/mobile-legends.png"
+                                alt="Mobile gaming"
+                                width={600}
+                                height={400}
+                                className="w-full h-auto object-cover rounded-2xl"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Right - Content */}
+                    <div className="w-full lg:w-1/2">
+                        {/* Headline */}
+                        <h2 className="font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight mb-4">
+                            <span className="text-white">Brands </span>
+                            <span className="text-[#BBFC00]">Need </span>
+                            <span className="text-white">To Be</span>
+                            <br />
+                            <span className="text-white">Playable, Not </span>
+                            <span className="text-[#BBFC00] italic">Scrollable.</span>
+                        </h2>
+
+                        {/* Description */}
+                        <p className="text-gray-400 text-sm md:text-base mb-8 leading-relaxed">
+                            Gaming is now the largest attention economy across MENA. We help brands enter this space with credibility,
+                            creativity, and measurable impact.
+                        </p>
+
+                        {/* Stats Grid */}
+                        <div className="grid grid-cols-2 gap-6">
+                            {stats.map((stat, index) => (
+                                <div key={index}>
+                                    <p className="text-white font-black text-3xl md:text-4xl lg:text-5xl">{stat.value}</p>
+                                    <p className="text-gray-400 text-xs md:text-sm mt-1">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
