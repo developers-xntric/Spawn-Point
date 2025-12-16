@@ -32,19 +32,19 @@ export default function TechStackSection() {
                     {techItems.map((item, index) => (
                         <div
                             key={index}
-                            className="relative w-40 h-40 md:w-44 md:h-44 lg:w-72 lg:h-72 rounded-full border-2 border-[#BBFC00]/40 bg-white/5 backdrop-blur-2xl flex flex-col items-center justify-center text-center p-4"
+                            className="relative w-40 h-40 md:w-44 md:h-44 lg:w-72 lg:h-72 rounded-full border-2 border-[#BBFC00]/40 bg-white/5 backdrop-blur-2xl flex flex-col items-center justify-center text-center py-4 px-"
                             style={{ zIndex: techItems.length - index }}
                         >
                             {/* Asterisk Icon */}
-                            <span className="text-[#BBFC00] text-xl md:text-2xl mb-2">*</span>
+                            <span className="text-[#BBFC00] text-xl md:text-5xl mb-2 absolute top-8">*</span>
 
                             {/* Title */}
-                            <h3 className="text-white font-bold text-xs md:text-sm uppercase tracking-wide mb-2 leading-tight">
+                            <h3 className="text-white font-fks font-bold text-xs md:text-3xl uppercase tracking-wider mb-2 leading-tight px-5">
                                 {item.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-400 text-[10px] md:text-xs leading-tight">{item.description}</p>
+                            <p className="text-white tracking-wide px-8 text-[10px] md:text-xs leading-tight">{item.description}</p>
                         </div>
                     ))}
                 </div>
