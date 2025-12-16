@@ -46,6 +46,13 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: light;
+}
+
 .font-hel {
   font-family: Helvetica, sans-serif;
 }
@@ -62,6 +69,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -71,6 +79,7 @@ body {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
