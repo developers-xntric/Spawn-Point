@@ -104,7 +104,7 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex flex-wrap justify-between lg:w-[100%] gap-2 lg:gap-3 w-full">
+                        <div className="flex flex-wrap md:justify-between lg:w-[100%] gap-2 lg:gap-3  w-full">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}

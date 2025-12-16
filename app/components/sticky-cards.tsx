@@ -160,7 +160,7 @@ export default function StickyCards() {
                   alt="icons"
                   width={140}
                   height={50}
-                  className="absolute xl:top-5 md:top-2 -top-1 right-4 md:right-12 z-30 w-[70px] md:w-[100px] xl:w-[140px] h-[50px]"
+                  className="absolute xl:top-3 md:top-2 2xl:top-5 -top-1 right-4 md:right-12 xl:right-10 2xl:right-12 z-30 w-[70px] md:w-[100px] xl:w-[140px] h-[50px]"
                 />
               </div>
             ))}
