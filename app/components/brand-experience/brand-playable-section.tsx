@@ -9,7 +9,7 @@ export default function BrandsPlayableSection() {
     ]
 
     return (
-        <section className="bg-[#031347] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <section className="bg-[#031347] pt-8 pb-20 px-4 md:px-8 lg:px-16">
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     {/* Left - Image */}
@@ -26,9 +26,9 @@ export default function BrandsPlayableSection() {
                     </div>
 
                     {/* Right - Content */}
-                    <div className="w-full lg:w-1/2">
+                    <div className="w-full lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl p-8">
                         {/* Headline */}
-                        <h2 className="font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight mb-4">
+                        <h2 className="font-black font-fks text-2xl md:text-3xl lg:text-5xl uppercase tracking-wide mb-4">
                             <span className="text-white">Brands </span>
                             <span className="text-[#BBFC00]">Need </span>
                             <span className="text-white">To Be</span>
@@ -38,7 +38,7 @@ export default function BrandsPlayableSection() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-gray-400 text-sm md:text-base mb-8 leading-relaxed">
+                        <p className="text-white tracking-wide text-sm md:text-md mb-8 leading-relaxed">
                             Gaming is now the largest attention economy across MENA. We help brands enter this space with credibility,
                             creativity, and measurable impact.
                         </p>
@@ -48,7 +48,7 @@ export default function BrandsPlayableSection() {
                             {stats.map((stat, index) => (
                                 <div key={index}>
                                     <p className="text-white font-black text-3xl md:text-4xl lg:text-5xl">{stat.value}</p>
-                                    <p className="text-gray-400 text-xs md:text-sm mt-1">{stat.label}</p>
+                                    <p className="text-white tracking-wide text-xs md:text-sm mt-1">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
