@@ -116,7 +116,7 @@ const ContactForm = () => {
           {/* Footer: Mandatory and Button */}
           <div className="flex-col md:flex-row flex md:items-center  gap-5 md:gap-20 mt-5 ">
             <span className="text-md tracking-wide font-bold">All fields are mandatory</span>
-            <button className="bg-[#BBFC00] text-black w-full md:w-fit px-6 py-3 border-none rounded-lg font-bold cursor-pointer hover:bg-[#a8e600] transition-colors">
+            <button className="bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white w-full md:w-fit">
               Send Message
             </button>
           </div>

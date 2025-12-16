@@ -18,7 +18,7 @@ export default function CaseStudySection2() {
                             storytelling, interactive missions, and continuous content updates including the massively successful
                             Squid Game expansion.
                         </p>
-                        <button className="mt-8 border border-[#BBFC00] text-[#031347] font-semibold text-sm px-6 py-2.5 rounded-md bg-[#BBFC00] hover:text-black transition-colors">
+                        <button className="mt-8 bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
                             View Case Studies
                         </button>
                     </div>

@@ -32,8 +32,7 @@ const items = [
         leftClass: "left-[14%] md:left-[26%] top-[10%] rotate-[-20deg] xl:left-[12rem] xl:top-[12%] 2xl:left-[5rem] 2xl:top-[14%]",
         rightClass: "right-[5%] md:right-[20%] top-[11%] md:top-[6%] xl:right-[9rem] xl:top-[8%] 2xl:right-[5rem] 2xl:top-[10%]"
     }
-];
-
+]
 
 export default function FearlessProgress() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -42,92 +41,121 @@ export default function FearlessProgress() {
     const rightRefs = useRef<(HTMLDivElement | null)[]>([])
 
     useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
+        const container = containerRef.current
+        if (!container) return
 
-        // Set initial states for all blocks
+        const SHOW = { duration: 0.55, ease: "power2.out", overwrite: "auto" }
+        const HIDE = { duration: 0.45, ease: "power2.in", overwrite: "auto" }
+
+        // ---------- INITIAL STATE ----------
         blocksRef.current.forEach((block, i) => {
-            const left = leftRefs.current[i];
-            const right = rightRefs.current[i];
-            const title = block?.querySelector(".title");
-            const desc = block?.querySelector(".desc");
+            if (!block) return
+
+            const left = leftRefs.current[i]
+            const right = rightRefs.current[i]
+            const title = block.querySelector(".title")
+            const desc = block.querySelector(".desc")
             const nextBlock = blocksRef.current[i + 1]
             const nextTitle = nextBlock?.querySelector(".title")
-            const secondNextBlock = blocksRef.current[i + 2]; 
-            const secondNextTitle = secondNextBlock?.querySelector(".title"); 
-
+            const secondNextBlock = blocksRef.current[i + 2];
+            const secondNextTitle = secondNextBlock?.querySelector(".title");
+            
             if (i === 0) {
                 gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 });
                 gsap.set([nextTitle], { y: "40px", scale: 1, });
                 gsap.set([secondNextTitle], { y: "20px", scale: 1, });
             } else {
-                gsap.set([title], { opacity: 0.1, });
-                gsap.set([desc, left, right], { opacity: 0, y: 15, height: 0 });
-
+                gsap.set(title, { opacity: 0.1, y: 10, scale: 1, height: "auto" })
+                 gsap.set(nextTitle, { y: "40px", scale: 1, });
+                gsap.set([desc, left, right], {
+                    opacity: 0,
+                    y: "-200px",
+                    height: 0,
+                    scale: 1
+                })
             }
-        });
+        })
 
-        // Pin the container
+        // ---------- PIN ----------
         ScrollTrigger.create({
             trigger: container,
             start: "top 6%",
-            end: `bottom center`,
+            end: "bottom center",
             pin: true,
-            scrub: 1.8,
-            markers: false,
-        });
+            scrub: 2.8,
+            markers: false
+        })
 
+        // ---------- BLOCK LOGIC ----------
         blocksRef.current.forEach((block, i) => {
-            if (!block) return;
+            if (!block || i === 0) return
 
-            const left = leftRefs.current[i];
-            const right = rightRefs.current[i];
-            const title = block.querySelector(".title");
-            const desc = block.querySelector(".desc");
+            const left = leftRefs.current[i]
+            const right = rightRefs.current[i]
+            const title = block.querySelector(".title")
+            const desc = block.querySelector(".desc")
 
-            const nextBlock = blocksRef.current[i + 1]
-            const nextTitle = nextBlock?.querySelector(".title")
-            const secondNextBlock = blocksRef.current[i + 2]; 
-            const secondNextTitle = secondNextBlock?.querySelector(".title"); 
-
-            const prevBlock = i > 0 ? blocksRef.current[i - 1] : null;
-            const prevLeft = i > 0 ? leftRefs.current[i - 1] : null;
-            const prevRight = i > 0 ? rightRefs.current[i - 1] : null;
-            const prevDesc = prevBlock?.querySelector(".desc");
-            const prevTitle = prevBlock?.querySelector(".title");
-
-            if (i === 0) return;
+            const prevBlock = blocksRef.current[i - 1]
+            const prevTitle = prevBlock?.querySelector(".title")
+            const prevDesc = prevBlock?.querySelector(".desc")
+            const prevLeft = leftRefs.current[i - 1]
+            const prevRight = rightRefs.current[i - 1]
 
             ScrollTrigger.create({
                 trigger: block,
                 start: "top 30%",
                 end: "bottom center",
-                scrub: 1,
+                scrub: 2.8,
                 markers: false,
+
                 onEnter: () => {
-                    // Hide previous block completely
-                    if (prevBlock) gsap.set([prevDesc, prevLeft, prevRight], { opacity: 0, y: 0 });
-                    if (prevTitle) gsap.set(prevTitle, { opacity: 0.1 });
+                    // hide others
+                    blocksRef.current.forEach((b, idx) => {
+                        if (idx !== i && b) {
+                            const t = b.querySelector(".title")
+                            const d = b.querySelector(".desc")
+                            gsap.to([d, leftRefs.current[idx], rightRefs.current[idx]], {
+                                opacity: 0,
+                                height: 0,
+                                ...HIDE
+                            })
+                            gsap.to(t, { opacity: 0.1, ...HIDE })
+                        }
+                    })
 
-                    // Show current block
-                    gsap.set([title, desc, left, right], { opacity: 1, y: 0, height: "auto", scale: 1 });
-                    gsap.set([nextTitle], { y: "22px", scale: 1, });
-                    gsap.set([secondNextTitle], { y: "22px", scale: 1, });
+                    // show current (NO y TOUCH)
+                    gsap.to([title, desc, left, right], {
+                        opacity: 1,
+                        y: 30,
+                        height: "auto",
+                        ...SHOW
+                    })
                 },
+
                 onLeaveBack: () => {
-                    // Hide current when scrolling back
+                    // hide current
+                    gsap.to([desc, left, right], {
+                        opacity: 0,
+                        height: 0,
+                        ...HIDE
+                    })
+                    gsap.to(title, { opacity: 0.1, ...HIDE })
 
-                    gsap.set([title], { opacity: 0.1, y: 1, height: 0 });
-                    gsap.set([desc, left, right], { opacity: 0, y: 10, height: 0 });
-                    // Restore previous
-                    if (prevTitle) gsap.set(prevTitle, { opacity: 1 });
-                    if (prevDesc && prevLeft && prevRight) gsap.set([prevDesc, prevLeft, prevRight], { opacity: 1, y: 0, height: "auto" });
+                    // restore previous
+                    if (prevTitle && prevDesc && prevLeft && prevRight) {
+                        gsap.to(prevTitle, { opacity: 1, ...SHOW })
+                        gsap.to([prevDesc, prevLeft, prevRight], {
+                            opacity: 1,
+                            height: "auto",
+                            ...SHOW
+                        })
+                    }
                 }
-            });
-        });
-    }, []);
+            })
+        })
 
-
+        return () => ScrollTrigger.getAll().forEach(t => t.kill())
+    }, [])
 
     return (
         <div
@@ -151,14 +179,17 @@ export default function FearlessProgress() {
                         ref={(el) => { rightRefs.current[i] = el }}
                         className={`absolute w-32 h-32 rounded-full flex items-center justify-center text-white font-bold opacity-0 ${item.rightClass}`}
                     >
-                        <Image src="/icons/about-sp.svg" alt="" width={2000} height={2000} className="2xl:w-full 2xl:h-full md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
+                        <Image src="/icons/about-sp.svg" alt="" width={2000} height={2000}
+                            className="2xl:w-full 2xl:h-full md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
                     </div>
 
                     <div className="text-center max-w-3xl flex items-center justify-center flex-col">
-                        <h3 className="title text-[70px] md:text-7xl lg:text-[8vw] 2xl:text-[10vw] font-bold font-fks mb-1 opacity-30 tracking-[0.3px] ">
+                        <h3 className="title text-[70px] md:text-7xl lg:text-[8vw] 2xl:text-[10vw] font-bold font-fks mb-1 opacity-30 tracking-[0.3px]">
                             {item.title}
                         </h3>
-                        <p className="desc text-[15px] md:text-xl leading-relaxed opacity-0 max-w-[700px] mx-auto mb-1 font-helvetica">{item.desc}</p>
+                        <p className="desc text-[15px] md:text-xl leading-relaxed opacity-0 max-w-[700px] mx-auto mb-1 font-helvetica">
+                            {item.desc}
+                        </p>
                     </div>
                 </div>
             ))}

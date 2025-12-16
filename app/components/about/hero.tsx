@@ -22,7 +22,7 @@ export default function HeroSection() {
                 <p className="text-white text-md mt-2 md:mt-6 max-w-sm mx-auto">
                     We help brands enter the gaming universe through immersive experiences, in-game activations, creators, and virtual worlds
                 </p>
-                <button className="mt-6 bg-[#BBFC00] text-[#031347] font-semibold text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors">
+                <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors font-bold">
                     Lets Connect
                 </button>
             </div>
@@ -32,7 +32,7 @@ export default function HeroSection() {
                     transform: "skewY(-6deg)",
                 }}
             >
-                <div className="flex w-max animate-scroll-left bg-[#BBFC00]">
+                <div className="flex md:gap-14 w-max animate-scroll-left bg-[#BBFC00]">
                     {[...Array(20)].map((_, i) => (
                         <span key={i} className="text-[20px] md:text-[38px] font-fks uppercase font-bold text-[#031347] whitespace-nowrap px-8">
                             {topLineText}    {/* GREENISH LINE */}
@@ -48,7 +48,7 @@ export default function HeroSection() {
                     transform: "skewY(6deg)",
                 }}
             >
-                <div className="flex w-max animate-scroll-right bg-white">
+                <div className="flex md:gap-14 w-max animate-scroll-right bg-white">
                     {[...Array(20)].map((_, i) => (
                         <span key={i} className="text-[20px] md:text-[38px] font-fks uppercase text-[#031347] font-bold whitespace-nowrap px-8">
                             {bottomLineText}      {/* WHITE LINE */}
