@@ -1,5 +1,6 @@
 import BrandsPlayableSection from "@/app/components/brand-experience/brand-playable-section";
 import ExpertiseSection from "@/app/components/brand-experience/expertise-section";
+import TechStackSection from "@/app/components/brand-experience/tech-stack-section";
 import HeroSection from "@/app/components/common/hero";
 import PartnersSection from "@/app/components/common/partners-section";
 
@@ -18,6 +19,7 @@ const BrandExperience = () => {
             </div>
             <BrandsPlayableSection />
             <ExpertiseSection />
+            <TechStackSection />
         </div>
     )
 }
