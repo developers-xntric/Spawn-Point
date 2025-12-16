@@ -38,7 +38,7 @@ export default function BrandsPlayableSection() {
                         </h2>
 
                         {/* Description */}
-                        <p className="text-white tracking-wide text-sm md:text-md mb-8 leading-relaxed">
+                        <p className="text-white tracking-wide text-sm md:text-[17px] mb-10 leading-tight">
                             Gaming is now the largest attention economy across MENA. We help brands enter this space with credibility,
                             creativity, and measurable impact.
                         </p>
@@ -47,8 +47,8 @@ export default function BrandsPlayableSection() {
                         <div className="grid grid-cols-2 gap-6">
                             {stats.map((stat, index) => (
                                 <div key={index}>
-                                    <p className="text-white font-mortend font-black text-3xl md:text-4xl lg:text-5xl">{stat.value}</p>
-                                    <p className="text-white font-hel tracking-wide text-xs md:text-sm">{stat.label}</p>
+                                    <p className="text-white font-mortend font-black text-3xl md:text-4xl lg:text-[44px]">{stat.value}</p>
+                                    <p className="text-white font-hel tracking-wider text-xs md:text-xs -mb-1 relative bottom-1">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
