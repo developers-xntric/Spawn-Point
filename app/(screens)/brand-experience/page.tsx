@@ -4,6 +4,7 @@ import NumbersTalkSection from "@/app/components/brand-experience/numbers-talk-s
 import TechStackSection from "@/app/components/brand-experience/tech-stack-section";
 import HeroSection from "@/app/components/common/hero";
 import PartnersSection from "@/app/components/common/partners-section";
+import ContactSection from "@/app/components/contact-section";
 
 const BrandExperience = () => {
     return (
@@ -22,6 +23,7 @@ const BrandExperience = () => {
             <ExpertiseSection />
             <TechStackSection />
             <NumbersTalkSection />
+            <ContactSection />
         </div>
     )
 }
