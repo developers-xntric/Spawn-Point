@@ -79,7 +79,7 @@ export function CaseStudies() {
 
               <div className="flex gap-4 font-hel">
                 <Link href="/case-studies">
-                  <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border-2 transition cursor-pointer">
+                  <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border border-transparent transition cursor-pointer">
                     Case Studies
                   </button>
                 </Link>
