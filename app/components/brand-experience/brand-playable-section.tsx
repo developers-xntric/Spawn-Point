@@ -11,7 +11,7 @@ export default function BrandsPlayableSection() {
     return (
         <section className="bg-[#031347] pt-8 pb-20 md:px-8 lg:px-16">
             <div className="max-w-6xl mx-auto">
-                <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
+                <div className="flex flex-col-reverse lg:flex-row items-center gap-5 lg:gap-12">
                     {/* Left - Image */}
                     <div className="w-full lg:w-1/2">
                         <div className="relative rounded-2xl overflow-hidden">
