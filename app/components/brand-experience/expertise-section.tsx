@@ -16,11 +16,11 @@ export default function ExpertiseSection() {
                         </h2>
 
                         {/* Campaigns & Activations Card */}
-                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-8">
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
                                 Campaigns & Activations
                             </h3>
-                            <p className="text-white text-md tracking-wide mb-2">
+                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
                                 Turn brand stories into playable creator moments. Creators lead the narrative. Audiences shape the
                                 outcome.
                             </p>
@@ -46,28 +46,28 @@ export default function ExpertiseSection() {
                         </div>
 
                         {/* In-Stream Adtech Card */}
-                        <div className="bg-white/5 rounded-2xl p-6 md:p-8">
-                            <h3 className="text-white font-black text-xl md:text-2xl uppercase tracking-wide mb-3">
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
+                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
                                 In-Stream Adtech
                             </h3>
-                            <p className="text-gray-400 text-sm mb-4">AI-powered ad overlays that adapt in real-time.</p>
-                            <p className="text-gray-400 text-sm mb-3">We build:</p>
+                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
+                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Dynamic live ads</span>
+                                    <span className="text-white text-sm">Dynamic live ads</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Rich-media panels</span>
+                                    <span className="text-white text-sm">Rich-media panels</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">QR-triggered CTAs</span>
+                                    <span className="text-white text-sm">QR-triggered CTAs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Full-funnel analytics via DataForge</span>
+                                    <span className="text-white text-sm">Full-funnel analytics via DataForge</span>
                                 </div>
                             </div>
                         </div>
@@ -76,61 +76,61 @@ export default function ExpertiseSection() {
                     {/* Right Column */}
                     <div className="flex flex-col gap-6">
                         {/* Esports Partnerships Card */}
-                        <div className="bg-[#0a1a4a] rounded-2xl p-6 md:p-8">
-                            <h3 className="text-white font-black text-xl md:text-2xl uppercase tracking-wide mb-3">
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
+                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
                                 Esports Partnerships
                             </h3>
-                            <p className="text-gray-400 text-sm mb-4">
+                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
                                 Your brand inside the biggest cultural moments across UAE, KSA, Egypt.
                             </p>
-                            <p className="text-gray-400 text-sm mb-3">We build:</p>
+                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Tournament IPs</span>
+                                    <span className="text-white text-sm">Tournament IPs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Finals events</span>
+                                    <span className="text-white text-sm">Finals events</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Team-branded partnerships</span>
+                                    <span className="text-white text-sm">Team-branded partnerships</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">PR + social amplification</span>
+                                    <span className="text-white text-sm">PR + social amplification</span>
                                 </div>
                             </div>
                         </div>
 
                         {/* Virtual Worlds Card */}
-                        <div className="bg-[#0a1a4a] rounded-2xl p-6 md:p-8">
-                            <h3 className="text-white font-black text-xl md:text-2xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
-                            <p className="text-gray-400 text-sm mb-4">
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
+                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
+                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
                                 Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
                             </p>
-                            <p className="text-gray-400 text-sm mb-3">We build:</p>
+                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Branded maps</span>
+                                    <span className="text-white text-sm">Branded maps</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Gameplay loops</span>
+                                    <span className="text-white text-sm">Gameplay loops</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Virtual stores (Shopify integrated)</span>
+                                    <span className="text-white text-sm">Virtual stores (Shopify integrated)</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Seasonal updates</span>
+                                    <span className="text-white text-sm">Seasonal updates</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-gray-300 text-xs">Streamer-driven traffic</span>
+                                    <span className="text-white text-sm">Streamer-driven traffic</span>
                                 </div>
                             </div>
                         </div>
