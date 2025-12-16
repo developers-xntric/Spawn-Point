@@ -62,7 +62,7 @@ export function CaseStudies() {
 
         {/* Hero Header */}
         <div className=" mb-8 md:mb-16">
-          <div className="grid md:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-[100%] mx-auto">
+          <div className="grid lg:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-[100%] mx-auto">
             {/* Left Content */}
             <div>
               <h2 className=" text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-[40px] tracking-[1.5px] md:tracking-[2px]">

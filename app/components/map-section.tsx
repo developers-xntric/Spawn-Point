@@ -21,14 +21,14 @@ export default function MapSection() {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[50px] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[210px] lg:left-[1%] xl:left-[15%]',
+            position: 'bottom-[50px] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[150px] lg:left-[1%] xl:left-[15%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {
             id: 4,
             name: 'C-SLACK "THE CULTURE"',
             image: '/home/map-man-4.svg',
-            position: 'md:bottom-[45%] lg:bottom-[27%] 2xl:bottom-[200px] right-[1%] lg:right-[12%]',
+            position: 'md:bottom-[45%] lg:bottom-[27%] 2xl:bottom-[150px] right-[1%] lg:right-[12%]',
             pinPosition: 'top-[-20px] right-[100%] -translate-x-1/2'
         }
     ];
@@ -58,7 +58,7 @@ export default function MapSection() {
 
 
             {/* Crew Cards */}
-            <div className="relative 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto md:h-[95vh] h-[280px]">
+            <div className="relative 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto md:h-[95vh] h-[280px] 2xl:h-[800px]">
                 {crewMembers.map((member) => (
                     <div key={member.id} className={`absolute ${member.position}`}>
 

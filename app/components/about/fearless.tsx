@@ -29,7 +29,7 @@ const items = [
     {
         title: "OPEN",
         desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.",
-        leftClass: "left-[10%] md:left-[26%] top-[10%] rotate-[-20deg] xl:left-[12rem] xl:top-[12%] 2xl:left-[5rem] 2xl:top-[14%]",
+        leftClass: "left-[14%] md:left-[26%] top-[10%] rotate-[-20deg] xl:left-[12rem] xl:top-[12%] 2xl:left-[5rem] 2xl:top-[14%]",
         rightClass: "right-[5%] md:right-[20%] top-[11%] md:top-[6%] xl:right-[9rem] xl:top-[8%] 2xl:right-[5rem] 2xl:top-[10%]"
     }
 ];
