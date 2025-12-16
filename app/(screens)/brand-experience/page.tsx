@@ -21,9 +21,9 @@ const BrandExperience = () => {
                 <PartnersSection isSecond={false} />
             </div> */}
             {/* <BrandsPlayableSection /> */}
-            <ExpertiseSection />
-            {/* 
+            {/* <ExpertiseSection /> */}
             <TechStackSection />
+            {/* 
             <NumbersTalkSection />
             <ContactSection />
             <NewsletterSection /> */}
