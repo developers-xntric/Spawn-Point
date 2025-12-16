@@ -66,7 +66,7 @@ export default function Footer() {
 
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
-            <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-10 md:py-20">
+            <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-10 md:pt-20">
                 <div className="flex md:flex-row flex-col justify-between md:items-center gap-8 mb-10">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
@@ -101,15 +101,15 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex justify-between items-center lg:w-[50%] gap-5 lg:gap-0">
+                        <div className="flex flex-wrap lg:w-[100%] gap-2 lg:gap-3">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}
                                     href={social.href}
-                                    className="text-white hover:text-lime-400 transition-colors"
+                                    className="text-white hover:text-lime-400 transition-colors border border-white rounded-[5px] px-8 md:px-6 py-2 capitalize text-[12px] tracking-[1px]"
                                     aria-label={social.icon}
                                 >
-                                    {getSocialIcon(social.icon)}
+                                    {social.icon}
                                 </Link>
                             ))}
                         </div>
@@ -119,11 +119,15 @@ export default function Footer() {
 
                 <div className="w-full border-t border-white/20  "></div>
 
-                {/* Large SPAWNPOINT Watermark - Background */}
                 {/* Spawnpoint Logo - Bottom Center */}
-                <div className="flex justify-center items-center pt-8">
-                    <Image src="/Spawnpoint_name.svg" alt="Spawnpoint" width={120} height={80} className="w-auto h-auto" />
+                <div className=" hidden md:flex justify-center items-center pt-8">
+                    <Image src="/Spawnpoint_name.svg" alt="Spawnpoint" width={120} height={80} className="w-[620px] h-[20px] md:w-auto md:h-auto" />
                 </div>
+                <div className="flex justify-center items-center pt-4 md:hidden">
+                    <Image src="/spawnpoint-mob.svg" alt="Spawnpoint" width={120} height={80} className="w-[620px] h-auto md:w-auto md:h-auto" />
+                </div>
+
+                <p className="text-white text-[12px] md:text-[13px] text-center mt-5 md:mt-10 uppercase">©  ALL RIGHTS RESERVED, spawnpointstudiO {new Date().getFullYear()}.</p>
             </div>
 
         </footer>

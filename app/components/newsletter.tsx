@@ -49,7 +49,7 @@ export default function NewsletterSection() {
             <div className="relative max-w-5xl mx-auto mt-20  text-center">
                 {/* Character Image */}
                 <div className="relative w-full max-w-5xl mx-auto -mt-4 mb-0">
-                    <Image src="/nl.png" alt="Game Characters" width={1000} height={1000} className="w-full h-auto object-cover relative z-0 mr-20 mx-auto md:right-4 lg:right-8" />
+                    <Image src="/nl.png" alt="Game Characters" width={1000} height={1000} className="w-full h-auto object-cover relative z-0 mr-20 mx-auto right-2 md:right-4 lg:right-8" />
                 </div>
 
                 {/* Email Form - Overlapping the image */}

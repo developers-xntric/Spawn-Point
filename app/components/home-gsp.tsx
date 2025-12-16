@@ -99,7 +99,7 @@ export default function HOMEGSP() {
       className="bg-white/5 min-h-screen relative overflow-hidden py-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
     >
       {/* Floating Images */}
-      <div className="absolute -top-10 md:left-10 xl:left-22 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
+      <div className="absolute -top-10 md:left-10 xl:left-10 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -140,7 +140,7 @@ export default function HOMEGSP() {
       </div>
 
       {/* Overlay Images */}
-      <div className="absolute -top-4 md:-top-8 left-4 md:left-20 xl:left-28 w-16 md:w-44 xl:w-48 z-20 floating-img-overlay">
+      <div className="absolute -top-4 md:-top-8 left-4 md:left-20 xl:left-20 w-16 md:w-44 xl:w-48 z-20 floating-img-overlay">
         <Image
           width={2000}
           height={2000}
