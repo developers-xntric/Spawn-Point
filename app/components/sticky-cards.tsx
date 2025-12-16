@@ -105,12 +105,6 @@ export default function StickyCards() {
                 From <span className="text-[#BBFC00]">Insight </span> to Immortality: Our 4-Quarter
                 <span className="text-[#BBFC00]"> System</span>
               </h2>
-            ) : (
-              <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white leading-[40px] md:leading-[60px] tracking-[2px]">
-                From <span className="text-[#BBFC00]">Insight </span> to Immortality: Our 4-Quarter
-                <span className="text-[#BBFC00]"> System</span>
-              </h2>
-            )}
             <p className="text-white text-sm md:text-[16px] xl:text-[20px] font-hel mt-5">
               We implement a proprietary 4-Phase annual framework to ensure continuous relevance,
               maximize audience commitment, and deliver measurable Lifetime Lift. We transform
@@ -121,16 +115,6 @@ export default function StickyCards() {
                 Explore Services
               </button>
             </Link>
-              <p className="text-white text-sm md:text-[16px] xl:text-[20px] mt-5 max-w-2xl font-hel">
-                We implement a proprietary 4-Phase annual framework to ensure continuous relevance, maximize audience
-                commitment, and deliver measurable Lifetime Lift. We transform short-term activations into long-term,
-                compounding value.
-              </p>
-              <Link href="/contact">
-                <button className="px-5 md:px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border-2 border-[#BBFC00] transition cursor-pointer mt-5 md:text-base text-[14px]">
-                  Explore Services
-                </button>
-              </Link>
             </div>
           </div>
 
