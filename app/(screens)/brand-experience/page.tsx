@@ -1,3 +1,4 @@
+import ExpertiseSection from "@/app/components/brand-experience/expertise-section";
 import HeroSection from "@/app/components/common/hero";
 import PartnersSection from "@/app/components/common/partners-section";
 
@@ -14,6 +15,7 @@ const BrandExperience = () => {
             <div className="-mt-24">
                 <PartnersSection isSecond={false} />
             </div>
+            <ExpertiseSection />
         </div>
     )
 }
