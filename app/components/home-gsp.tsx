@@ -201,7 +201,7 @@ export default function HOMEGSP() {
           <span className="text-white">and Beyond</span>
         </h2>
 
-        <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-semibold px-8 py-3 rounded-md hover:bg-[#a8e600] transition-colors text-sm md:text-base">
+        <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
           Book a Strategy Sprint
         </button>
       </div>
