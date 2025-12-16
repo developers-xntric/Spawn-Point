@@ -1,15 +1,19 @@
 "use client"
 
+// ==================== R3F & THREE IMPORTS ====================
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useGLTF, Environment } from "@react-three/drei"
 import { useEffect, useRef, useState } from "react"
 import * as THREE from "three"
+
+// ==================== GSAP SCROLL ====================
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-
 gsap.registerPlugin(ScrollTrigger)
 
-// ==================== BREAKPOINT HOOK ====================
+// =====================================================
+// BREAKPOINT HOOK (detect mobile / tablet / desktop)
+// =====================================================
 function useBreakpoint() {
   const [isMobile, setIsMobile] = useState(false)
   const [isTablet, setIsTablet] = useState(false)
@@ -29,7 +33,9 @@ function useBreakpoint() {
   return { isMobile, isTablet }
 }
 
-// ==================== CAMERA ANIMATOR ====================
+// =====================================================
+// CAMERA ANIMATION BASED ON SCROLL
+// =====================================================
 function AnimatedCamera({
   scrollProgress,
   isMobile,
@@ -42,11 +48,15 @@ function AnimatedCamera({
   const { camera } = useThree()
 
   useFrame(() => {
-    // Desktop defaults (UNCHANGED)
+    // --------------------
+    // DEFAULT CAMERA VALUES (DESKTOP)
+    // --------------------
     let targetY = 10
     let targetZ = 80
 
-    // Responsive overrides
+    // --------------------
+    // RESPONSIVE OVERRIDES
+    // --------------------
     if (isMobile) {
       targetY = 5
       targetZ = 35
@@ -55,6 +65,9 @@ function AnimatedCamera({
       targetZ = 55
     }
 
+    // --------------------
+    // SCROLL-BASED CAMERA MOVE
+    // --------------------
     if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
       const t = (scrollProgress - 0.33) / 0.33
 
@@ -76,15 +89,22 @@ function AnimatedCamera({
       targetZ = isMobile ? 10 : 0
     }
 
+    // --------------------
+    // SMOOTH CAMERA MOVEMENT
+    // --------------------
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.08)
     camera.position.z = THREE.MathUtils.lerp(camera.position.z, targetZ, 0.08)
+
+    // Always look at center
     camera.lookAt(0, 0, 0)
   })
 
   return null
 }
 
-// ==================== 3D MODEL ====================
+// =====================================================
+// 3D MODEL (UNLIT + COLOR PRESERVED)
+// =====================================================
 function Model({
   isMobile,
   isTablet,
@@ -95,6 +115,26 @@ function Model({
   const modelRef = useRef<THREE.Group>(null)
   const { scene } = useGLTF("/home/hero.glb")
 
+  // --------------------
+  // FORCE UNLIT MATERIALS
+  // --------------------
+  useEffect(() => {
+    scene.traverse((child: any) => {
+      if (child.isMesh && child.material) {
+        child.material = new THREE.MeshStandardMaterial({
+          map: child.material.map || null,
+          color: child.material.color,          // keep original color
+          emissive: child.material.color,       // locks color
+          emissiveIntensity: 0,                // prevents washout
+          roughness: 0.6,                        // matte look
+          metalness: 0,                        // no metallic shift
+          envMapIntensity: 2,                 // HDR influence (LOW)
+        })
+      }
+    })
+
+  }, [scene])
+
   return (
     <primitive
       ref={modelRef}
@@ -103,25 +143,30 @@ function Model({
         isMobile
           ? [8, 28, 8]
           : isTablet
-          ? [45, 45, 45]
-          : [60, 60, 60] // DESKTOP UNCHANGED
+            ? [45, 45, 45]
+            : [60, 60, 60] // DESKTOP SCALE
       }
       position={[
         0,
-        isMobile ? -45 : isTablet ? -70 : -100, // DESKTOP UNCHANGED
+        isMobile ? -45 : isTablet ? -70 : -100, // RESPONSIVE POSITION
         0,
       ]}
     />
   )
 }
 
-// ==================== HERO SECTION ====================
+// =====================================================
+// HERO SECTION (MAIN)
+// =====================================================
 export default function HeroSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
   const hasAutoScrolled = useRef(false)
   const { isMobile, isTablet } = useBreakpoint()
 
+  // --------------------
+  // SCROLLTRIGGER SETUP
+  // --------------------
   useEffect(() => {
     useGLTF.preload("/home/hero.glb")
 
@@ -131,7 +176,7 @@ export default function HeroSection() {
       trigger: containerRef.current,
       start: "top top",
       end: "bottom top",
-      pin: true, // 🔑 Disable pin on mobile only
+      pin: true, // PIN HERO SECTION
       markers: false,
       onUpdate: (self) => {
         const p = self.progress
@@ -139,6 +184,7 @@ export default function HeroSection() {
 
         if (p < 0.2) hasAutoScrolled.current = false
 
+        // Auto-scroll to next section (DESKTOP ONLY)
         if (p >= 0.66 && !hasAutoScrolled.current && !isMobile) {
           hasAutoScrolled.current = true
           const target = document.getElementById("second-section")
@@ -161,32 +207,52 @@ export default function HeroSection() {
       className="relative w-full h-screen overflow-hidden"
     >
       <Canvas
+        // --------------------
+        // CAMERA SETUP
+        // --------------------
         camera={{
-          position: isMobile ? [0, -5, 25] : [0, -20, 8], // DESKTOP UNCHANGED
+          position: isMobile ? [0, -5, 25] : [0, -20, 8],
           fov: isMobile ? 55 : 45,
         }}
-        gl={{ antialias: true, alpha: true }}
+
+        // --------------------
+        // COLOR MANAGEMENT (CRITICAL)
+        // --------------------
+        gl={{
+          antialias: true,
+          alpha: true,
+          outputColorSpace: THREE.SRGBColorSpace,
+          toneMapping: THREE.NoToneMapping, // PREVENT COLOR WASHOUT
+        }}
+
         dpr={[1, 2]}
       >
+        {/* Camera animation */}
         <AnimatedCamera
           scrollProgress={scrollProgress}
           isMobile={isMobile}
           isTablet={isTablet}
         />
 
-        {/* Lighting */}
-        <ambientLight intensity={0.4} />
-        <directionalLight position={[0, 5, 10]} intensity={1} />
-        <directionalLight position={[10, 0, -5]} intensity={0.5} />
-        <directionalLight position={[-10, 10, 10]} intensity={0.8} />
+        {/* For Now Light OFF becuase of coloring */}
 
-        {/* Environment */}
-        <group rotation={[0.698, Math.PI, 0.698]}>
-          <Environment preset="studio" background={false} />
-        </group>
 
-        {/* Model */}
+        <directionalLight position={[0, 5, 10]} intensity={0.2} />
+        <directionalLight position={[10, 0, -5]} intensity={0.2} />
+        <directionalLight position={[-10, 10, 10]} intensity={0.2} />
+
+        {/* 
+          ENVIRONMENT (OPTIONAL)
+          - Does NOT affect unlit materials
+          - Safe to keep for subtle depth
+        */}
+
+        <Environment files="/my.hdr" preset="studio" environmentIntensity={0.9} />
+
+        {/* 3D Model */}
         <Model isMobile={isMobile} isTablet={isTablet} />
+
+        {/* Background color */}
       </Canvas>
     </div>
   )

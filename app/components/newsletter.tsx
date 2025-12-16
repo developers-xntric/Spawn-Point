@@ -65,7 +65,7 @@ export default function NewsletterSection() {
                                 backdropFilter: "blur(17px)"
                             }}
                         />
-                        <button className="absolute md:right-1 right-2 w-auto sm:w-auto bg-white text-[#031347] font-hel text-[11px] md:text-sm font-semibold px-4 md:px-8 py-3 rounded-[10px] md:mt-2 sm:mt-0 transition-colors">
+                        <button className="absolute md:right-2 right-2 lg:bottom-2 w-auto sm:w-auto bg-white text-[#031347] font-hel text-[11px] md:text-sm font-semibold px-4 md:px-8 py-3 rounded-[10px] md:mt-2 sm:mt-0 transition-colors">
                             Subscribe
                         </button>
                     </div>
