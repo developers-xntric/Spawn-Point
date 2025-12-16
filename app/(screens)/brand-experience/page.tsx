@@ -10,7 +10,7 @@ import NewsletterSection from "@/app/components/newsletter";
 const BrandExperience = () => {
     return (
         <div>
-            <HeroSection
+            {/* <HeroSection
                 h1="Where brands"
                 h2="meet play"
                 p="We design campaigns, creators, esports moments, and virtual worlds that move culture and performance at the same time."
@@ -19,13 +19,13 @@ const BrandExperience = () => {
             />
             <div className="-mt-24">
                 <PartnersSection isSecond={false} />
-            </div>
+            </div> */}
             <BrandsPlayableSection />
-            <ExpertiseSection />
+            {/* <ExpertiseSection />
             <TechStackSection />
             <NumbersTalkSection />
             <ContactSection />
-            <NewsletterSection />
+            <NewsletterSection /> */}
         </div>
     )
 }
