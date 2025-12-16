@@ -73,7 +73,7 @@ export default function FearlessProgress() {
             start: "top 6%",
             end: `bottom center`,
             pin: true,
-            scrub: 1.8,
+            scrub: 2.8,
             markers: false,
         });
 
@@ -102,7 +102,7 @@ export default function FearlessProgress() {
                 trigger: block,
                 start: "top 30%",
                 end: "bottom center",
-                scrub: 1,
+                scrub: 2.8,
                 markers: false,
                 onEnter: () => {
                     // Hide previous block completely
