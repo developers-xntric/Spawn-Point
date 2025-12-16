@@ -168,6 +168,7 @@ export default function HeroSection() {
   // SCROLLTRIGGER SETUP
   // --------------------
   useEffect(() => {
+    
     useGLTF.preload("/home/hero.glb")
 
     if (!containerRef.current) return
@@ -176,7 +177,7 @@ export default function HeroSection() {
       trigger: containerRef.current,
       start: "top top",
       end: "bottom top",
-      pin: true, // PIN HERO SECTION
+      pin: true,
       markers: false,
       onUpdate: (self) => {
         const p = self.progress
