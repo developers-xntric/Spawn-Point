@@ -3,7 +3,7 @@ export default function NumbersTalkSection() {
         <section className="bg-[#031347] pb-16 md:pb-24 px-4 md:px-8 lg:px-16">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
-                <h2 className="text-center font-black text-2xl md:text-3xl lg:text-4xl uppercase tracking-wide mb-12 md:mb-16">
+                <h2 className="text-center font-fks font-black text-2xl md:text-3xl lg:text-7xl uppercase tracking-wide mb-12 md:mb-16">
                     <span className="text-white">Let The </span>
                     <span className="text-[#BBFC00]">Numbers </span>
                     <span className="text-white">Talk</span>
