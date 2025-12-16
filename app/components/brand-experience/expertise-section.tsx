@@ -2,14 +2,13 @@ import Star from "../icons/star";
 
 export default function ExpertiseSection() {
     return (
-        <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-28"
-            style={{ borderRadius: "140px 0 0 0" }}>
+        <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-28 rounded-tl-[50px] md:rounded-tl-[140px]">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Left Column */}
                     <div className="flex flex-col gap-6">
                         {/* Header */}
-                        <h2 className="font-black font-fks text-3xl md:text-4xl lg:text-6xl uppercase tracking-wider mb-4">
+                        <h2 className="font-black font-fks text-5xl md:text-4xl lg:text-6xl uppercase tracking-wider mb-4">
                             <span className="text-white">Expertise That Drives</span>
                             <br />
                             <span className="text-[#BBFC00]">Engagement</span>
@@ -17,57 +16,57 @@ export default function ExpertiseSection() {
 
                         {/* Campaigns & Activations Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 Campaigns & Activations
                             </h3>
-                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
                                 Turn brand stories into playable creator moments. Creators lead the narrative. Audiences shape the
                                 outcome.
                             </p>
                             <p className="text-white text-lg tracking-wide mb-2">We build:</p>
-                            <div className="grid grid-cols-2 gap-2">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Creator campaigns</span>
+                                    <span className="text-white text-md lg:text-sm">Creator campaigns</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Reaction-based brand moments</span>
+                                    <span className="text-white text-md lg:text-sm">Reaction-based brand moments</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Play-test activations</span>
+                                    <span className="text-white text-md lg:text-sm">Play-test activations</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">TikTok + IG Reels gaming formats</span>
+                                    <span className="text-white text-md lg:text-sm">TikTok + IG Reels gaming formats</span>
                                 </div>
                             </div>
                         </div>
 
                         {/* In-Stream Adtech Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 In-Stream Adtech
                             </h3>
-                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
                             <p className="text-white text-lg tracking-wide mb-2">We build:</p>
-                            <div className="grid grid-cols-2 gap-2">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Dynamic live ads</span>
+                                    <span className="text-white text-md lg:text-sm">Dynamic live ads</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Rich-media panels</span>
+                                    <span className="text-white text-md lg:text-sm">Rich-media panels</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">QR-triggered CTAs</span>
+                                    <span className="text-white text-md lg:text-sm">QR-triggered CTAs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Full-funnel analytics via DataForge</span>
+                                    <span className="text-white text-md lg:text-sm">Full-funnel analytics via DataForge</span>
                                 </div>
                             </div>
                         </div>
@@ -77,60 +76,60 @@ export default function ExpertiseSection() {
                     <div className="flex flex-col gap-6">
                         {/* Esports Partnerships Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 Esports Partnerships
                             </h3>
-                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
                                 Your brand inside the biggest cultural moments across UAE, KSA, Egypt.
                             </p>
                             <p className="text-white text-lg tracking-wide mb-2">We build:</p>
-                            <div className="grid grid-cols-2 gap-2">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Tournament IPs</span>
+                                    <span className="text-white text-md lg:text-sm">Tournament IPs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Finals events</span>
+                                    <span className="text-white text-md lg:text-sm">Finals events</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Team-branded partnerships</span>
+                                    <span className="text-white text-md lg:text-sm">Team-branded partnerships</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">PR + social amplification</span>
+                                    <span className="text-white text-md lg:text-sm">PR + social amplification</span>
                                 </div>
                             </div>
                         </div>
 
                         {/* Virtual Worlds Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
-                            <p className="text-white text-md tracking-wide mb-2 max-w-[70%]">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
                                 Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
                             </p>
                             <p className="text-white text-lg tracking-wide mb-2">We build:</p>
-                            <div className="grid grid-cols-2 gap-2">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Branded maps</span>
+                                    <span className="text-white text-md lg:text-sm">Branded maps</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Gameplay loops</span>
+                                    <span className="text-white text-md lg:text-sm">Gameplay loops</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Virtual stores (Shopify integrated)</span>
+                                    <span className="text-white text-md lg:text-sm">Virtual stores (Shopify integrated)</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Seasonal updates</span>
+                                    <span className="text-white text-md lg:text-sm">Seasonal updates</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-sm">Streamer-driven traffic</span>
+                                    <span className="text-white text-md lg:text-sm">Streamer-driven traffic</span>
                                 </div>
                             </div>
                         </div>
@@ -139,10 +138,9 @@ export default function ExpertiseSection() {
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4">
                             <p className="text-white text-lg md:text-2xl font-medium">
                                 Let's Build Your Next In
-                                <br />
                                 Game Power Move.
                             </p>
-                            <button className="bg-[#BBFC00] text-[#031347] px-7 py-3 rounded-lg font-bold text-sm hover:bg-[#a8e600] transition-colors">
+                            <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-lg font-bold text-md lg:text-sm hover:bg-[#a8e600] transition-colors">
                                 Activate Strategy
                             </button>
                         </div>

@@ -20,8 +20,9 @@ const BrandExperience = () => {
             <div className="-mt-24">
                 <PartnersSection isSecond={false} />
             </div> */}
-            <BrandsPlayableSection />
-            {/* <ExpertiseSection />
+            {/* <BrandsPlayableSection /> */}
+            <ExpertiseSection />
+            {/* 
             <TechStackSection />
             <NumbersTalkSection />
             <ContactSection />
