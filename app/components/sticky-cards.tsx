@@ -47,8 +47,6 @@ export default function StickyCards() {
       const right = sectionRef.current!.querySelector(".right") as HTMLElement
       const cardEls = Array.from(right.children) as HTMLElement[]
 
-      console.log("[v0] Initializing sticky cards animation")
-      console.log("[v0] Found cards:", cardEls.length)
 
       gsap.set(cardEls, {
         opacity: 0,
@@ -58,7 +56,7 @@ export default function StickyCards() {
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
-        end: "bottom top",
+        end: "bottom bottom",
         pin: left,
         pinSpacing: false,
         markers: false, 
@@ -67,23 +65,21 @@ export default function StickyCards() {
       cardEls.forEach((card, index) => {
         gsap.to(card, {
           opacity: 1,
-          y: 0,
+          y: 40,
           duration: 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
             start: "top 80%",
-            end: "top 50%",
-            scrub: 0.5,
+            end: "top 100%",
+            scrub: 1.7,
             markers: false, 
-            onEnter: () => console.log(`[v0] Card ${index + 1} entering`),
           },
         })
       })
     }, sectionRef)
 
     return () => {
-      console.log("[v0] Cleaning up animations")
       ctx.revert()
     }
   }, [])
@@ -96,7 +92,7 @@ export default function StickyCards() {
       <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* LEFT SECTION */}
-          <div className="left w-full lg:w-[40%] xl:w-[55%] lg:h-screen lg:flex lg:flex-col lg:justify-center lg:pt-20">
+          <div className="left w-full lg:w-[40%] xl:w-[55%] lg:h-screen lg:flex lg:flex-col lg:justify-center ">
             <div>
               <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                 How We Work
