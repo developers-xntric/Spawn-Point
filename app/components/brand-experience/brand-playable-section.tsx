@@ -47,8 +47,8 @@ export default function BrandsPlayableSection() {
                         <div className="grid grid-cols-2 gap-6">
                             {stats.map((stat, index) => (
                                 <div key={index}>
-                                    <p className="text-white font-black text-3xl md:text-4xl lg:text-5xl">{stat.value}</p>
-                                    <p className="text-white tracking-wide text-xs md:text-sm mt-1">{stat.label}</p>
+                                    <p className="text-white font-mortend font-black text-3xl md:text-4xl lg:text-5xl">{stat.value}</p>
+                                    <p className="text-white font-hel tracking-wide text-xs md:text-sm">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
