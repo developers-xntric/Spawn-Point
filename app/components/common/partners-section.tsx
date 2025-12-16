@@ -9,13 +9,13 @@ const partners = [
     { name: "SKECHER", icon: "/icons/sketcher.png" },
 ]
 
-export default function PartnersSection() {
+export default function PartnersSection({ isSecond = true }: { isSecond?: boolean }) {
     // Duplicate partners for seamless infinite scroll
     const duplicatedPartners = [...partners, ...partners, ...partners, ...partners]
 
     return (
         <section className="bg-[#031347] py-16 overflow-hidden">
-           
+
 
             {/* Slider Container */}
             <div className="flex flex-col gap-4">
@@ -35,7 +35,7 @@ export default function PartnersSection() {
                 </div>
 
                 {/* Row 2 - Moves Right (opposite direction) */}
-                <div className="relative">
+                {isSecond && <div className="relative">
                     <div className="flex animate-scroll-right gap-4">
                         {duplicatedPartners.map((partner, index) => {
                             const isHighlighted = partner.name === "PARAMOUNT" && index === 3
@@ -51,7 +51,7 @@ export default function PartnersSection() {
                             )
                         })}
                     </div>
-                </div>
+                </div>}
             </div>
 
             <style jsx>{`

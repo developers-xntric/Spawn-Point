@@ -1,4 +1,5 @@
 import HeroSection from "@/app/components/common/hero";
+import PartnersSection from "@/app/components/common/partners-section";
 
 const BrandExperience = () => {
     return (
@@ -10,6 +11,7 @@ const BrandExperience = () => {
                 img1="/icons/pacman.png"
                 img2="/icons/burger.png"
             />
+            <PartnersSection isSecond={false} />
         </div>
     )
 }
