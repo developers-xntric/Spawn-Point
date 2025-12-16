@@ -1,16 +1,16 @@
 import Image from "next/image"
 
-export default function HeroSection({ h1, h2, p }: { h1?: string; h2?: string; p?: string }) {
+export default function HeroSection({ h1, h2, p, img1, img2 }: { h1?: string; h2?: string; p?: string; img1?: string; img2?: string }) {
     return (
         <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative py-16">
             {/* Pizza image - left side */}
             <div className="absolute left-[30%] top-[30%]">
-                <Image src="/icons/pizza.png" alt="Pizza decoration" width={50} height={50} className="object-contain" />
+                <Image src={img1 ? img1 : "/icons/pizza.png"} alt="Pizza decoration" width={50} height={50} className="object-contain" />
             </div>
 
             {/* Robot image - right side */}
             <div className="absolute right-[30%] top-[55%]">
-                <Image src="/icons/robo.png" alt="Robot decoration" width={50} height={50} className="object-contain" />
+                <Image src={img2 ? img2 : "/icons/robo.png"} alt="Robot decoration" width={50} height={50} className="object-contain" />
             </div>
 
             {/* Center content */}
