@@ -5,7 +5,7 @@ import Image from "next/image"
 export default function GamingHero() {
   return (
     <section className=" text-white overflow-hidden">
-      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto pt-20 pb-12">
+      <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto pt-6 md:pt-20 pb-12">
 <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center xl:gap-0 gap-5">
 
 
@@ -39,7 +39,7 @@ export default function GamingHero() {
           {/* Right side content */}
           <div className="flex flex-col gap-8">
             <div>
-              <h2 className="text-[60px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
+              <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
                 WHO <span className="text-[#BBFC00]">WE ARE </span>
               </h2>
               <p className="text-xl font-bold text-gray-300 uppercase tracking-wider font-fks">
@@ -60,8 +60,8 @@ export default function GamingHero() {
               </p>
             </div>
 
-            <div className="pt-4">
-              <button className=" bg-[#BBFC00] text-[#031347] font-semibold text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors">
+            <div className=" pt-0 md:pt-4">
+              <button className=" bg-[#BBFC00] text-[#031347] font-semibold text-ms px-4 md:px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors">
                 Lets Connect
               </button>
             </div>

@@ -57,7 +57,7 @@ export function CaseStudies() {
   const study = caseStudies[currentSlide]
 
   return (
-    <section className="md:py-16">
+    <section className="pt-14 md:pt-16 pb-1 md:pb-16">
       <div className="2xl:max-w-[1440px] w-[100%] md:w-[85%] mx-auto">
 
         {/* Hero Header */}
@@ -96,7 +96,7 @@ export function CaseStudies() {
         {/* Carousel Section */}
         <div className="">
           {/* Image Carousel */}
-          <div className="relative w-full h-[400px] md:h-[560px] 2xl:h-[650px] md:rounded-2xl overflow-hidden mb-8 group">
+          <div className="relative w-full h-[470px] md:h-[560px] 2xl:h-[650px] md:rounded-2xl overflow-hidden mb-8 group">
             {/* Image with overlay */}
             <div
               className="w-full h-full bg-cover bg-center transition-all duration-500"
