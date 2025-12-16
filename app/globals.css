@@ -67,6 +67,13 @@ body {
   font-style: bold;
 }
 
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: extrabold;
+}
+
 .font-hel {
   font-family: Helvetica, sans-serif;
 }
