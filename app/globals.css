@@ -46,12 +46,44 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Mortend";
+  src: url("/fonts/Mortend-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: extrabold;
+}
+
 .font-hel {
   font-family: Helvetica, sans-serif;
 }
 
 .font-fks {
   font-family: "FKScreamerTrial";
+}
+
+.font-mortend {
+  font-family: "Mortend";
 }
 
 
@@ -62,6 +94,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -71,6 +104,7 @@ body {
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
