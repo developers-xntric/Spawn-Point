@@ -2,14 +2,14 @@ import Star from "../icons/star";
 
 export default function ExpertiseSection() {
     return (
-        <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-24"
+        <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-28"
             style={{ borderRadius: "140px 0 0 0" }}>
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Left Column */}
                     <div className="flex flex-col gap-6">
                         {/* Header */}
-                        <h2 className="font-black font-fks text-3xl md:text-4xl lg:text-6xl uppercase tracking-wider">
+                        <h2 className="font-black font-fks text-3xl md:text-4xl lg:text-6xl uppercase tracking-wider mb-4">
                             <span className="text-white">Expertise That Drives</span>
                             <br />
                             <span className="text-[#BBFC00]">Engagement</span>
@@ -137,12 +137,12 @@ export default function ExpertiseSection() {
 
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4">
-                            <p className="text-white text-lg md:text-xl font-medium">
+                            <p className="text-white text-lg md:text-2xl font-medium">
                                 Let's Build Your Next In
                                 <br />
                                 Game Power Move.
                             </p>
-                            <button className="bg-[#BBFC00] text-[#031347] px-6 py-3 rounded-lg font-bold text-sm hover:bg-[#a8e600] transition-colors">
+                            <button className="bg-[#BBFC00] text-[#031347] px-7 py-3 rounded-lg font-bold text-sm hover:bg-[#a8e600] transition-colors">
                                 Activate Strategy
                             </button>
                         </div>
