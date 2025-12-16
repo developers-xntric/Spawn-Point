@@ -54,19 +54,19 @@ export default function ExpertiseSection() {
                             <p className="text-gray-400 text-sm mb-3">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Dynamic live ads</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Rich-media panels</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">QR-triggered CTAs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Full-funnel analytics via DataForge</span>
                                 </div>
                             </div>
@@ -86,19 +86,19 @@ export default function ExpertiseSection() {
                             <p className="text-gray-400 text-sm mb-3">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Tournament IPs</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Finals events</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Team-branded partnerships</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">PR + social amplification</span>
                                 </div>
                             </div>
@@ -113,23 +113,23 @@ export default function ExpertiseSection() {
                             <p className="text-gray-400 text-sm mb-3">We build:</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Branded maps</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Gameplay loops</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Virtual stores (Shopify integrated)</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Seasonal updates</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <span className="text-[#BBFC00] text-xs">+</span>
+                                    <Star />
                                     <span className="text-gray-300 text-xs">Streamer-driven traffic</span>
                                 </div>
                             </div>
