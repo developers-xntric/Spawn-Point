@@ -106,6 +106,7 @@
 .font-mortend {
   font-family: "Mortend";
 }
+
 body {
   background-color: #031347;
 }
@@ -230,7 +231,27 @@ button {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 640px) {
+  .setpos {
+    width: 250px !important;
+    height: 250px !important;
+  }
+
+  .setpos span {
+    font-size: 40px !important;
+  }
+
+  .setpos h3 {
+    font-size: 20px !important;
+  }
+
+  .setpos p {
+    font-size: 13px !important;
   }
 }
