@@ -137,7 +137,7 @@ export default function ExpertiseSection() {
                         {/* CTA */}
                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4">
                             <p className="text-white text-lg md:text-2xl font-medium">
-                                Let's Build Your Next In
+                                Let's Build Your Next In <br />
                                 Game Power Move.
                             </p>
                             <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-lg font-bold text-md lg:text-sm hover:bg-[#a8e600] transition-colors">
