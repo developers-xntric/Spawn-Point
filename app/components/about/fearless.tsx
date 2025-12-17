@@ -7,32 +7,11 @@ import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const items = [
-    {
-        title: "FEARLESS",
-        desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.",
-        leftClass: "left-[5%] md:left-[20%] top-[2rem] rotate-[-20deg] xl:left-[8rem] xl:top-[2rem] 2xl:left-[-1rem] 2xl:top-[2rem]",
-        rightClass: "right-[-2%] md:right-[17%] top-[17%] md:top-[6%] xl:right-[5rem] xl:top-[10%] 2xl:right-[-2rem] 2xl:top-[14%]"
-    },
-    {
-        title: "INNOVATIVE",
-        desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.",
-        leftClass: "left-[2%] md:left-[18%] top-[10%] rotate-[-20deg] xl:left-[6rem] xl:top-[12%] 2xl:left-[-5rem] 2xl:top-[10%]",
-        rightClass: "right-[-6%] md:right-[15%] top-[12%] md:top-[6%] xl:right-[3rem] xl:top-[9%] 2xl:right-[-5rem] 2xl:top-[10%]"
-    },
-    {
-        title: "RELENTLESS",
-        desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.",
-        leftClass: "left-[2%] md:left-[18%] top-[10%] rotate-[-20deg] xl:left-[6rem] xl:top-[12%] 2xl:left-[-6rem] 2xl:top-[10%]",
-        rightClass: "right-[-6%] md:right-[13%] top-[12%] md:top-[6%] xl:right-[3rem] xl:top-[9%] 2xl:right-[-6rem] 2xl:top-[10%]"
-    },
-    {
-        title: "OPEN",
-        desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.",
-        leftClass: "left-[14%] md:left-[26%] top-[10%] rotate-[-20deg] xl:left-[12rem] xl:top-[12%] 2xl:left-[5rem] 2xl:top-[14%]",
-        rightClass: "right-[5%] md:right-[20%] top-[11%] md:top-[6%] xl:right-[9rem] xl:top-[8%] 2xl:right-[5rem] 2xl:top-[10%]"
-    }
-]
+const items = [{ title: "FEARLESS", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[5%] md:left-[23%] lg:left-[20%] top-[0rem] lg:top-[1%] rotate-[-20deg] xl:left-[8rem] xl:top-[1rem] 2xl:left-[-1rem] 2xl:top-[2rem]", rightClass: "right-[-2%] md:right-[17%] top-[5%] md:top-[-4%] xl:right-[6rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-1rem] 2xl:top-[5%]" },
+{ title: "INNOVATIVE", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] rotate-[-20deg] xl:left-[6rem] md:top-[0%] lg:top-[0%] xl:top-[2%] 2xl:left-[-5rem] 2xl:top-[5%]", rightClass: "right-[-6%] md:right-[15%] top-[4%] md:top-[-4%] xl:right-[4rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-4rem] 2xl:top-[5%]" },
+{ title: "RELENTLESS", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[5.5rem] xl:top-[1%] 2xl:left-[-6rem] 2xl:top-[6%]", rightClass: "right-[-6%] md:right-[16%] lg:right-[13%] top-[5%] md:top-[-3%] xl:right-[3.5rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-5rem] 2xl:top-[5%]" },
+{ title: "OPEN", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[14%] md:left-[28%] lg:left-[26%] top-[4%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[12rem] xl:top-[1%] 2xl:left-[5rem] 2xl:top-[6%]", rightClass: "right-[8%] lg:right-[20%] md:right-[25%] top-[4%] md:top-[-4%] lg:top-[0%] lg:right-[11rem] xl:right-[10rem] lg:top-[0%] xl:top-[1%] 2xl:right-[6rem] 2xl:top-[5%]" }]
+
 
 export default function FearlessProgress() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -57,21 +36,21 @@ export default function FearlessProgress() {
             const desc = block.querySelector(".desc")
             const nextBlock = blocksRef.current[i + 1]
             const nextTitle = nextBlock?.querySelector(".title")
-            const secondNextBlock = blocksRef.current[i + 2];
-            const secondNextTitle = secondNextBlock?.querySelector(".title");
-            
+            const secondNextBlock = blocksRef.current[i + 2]
+            const secondNextTitle = secondNextBlock?.querySelector(".title")
+            const moveY = gsap.utils.mapRange(0, 1, 14, 4, self.progress)
             if (i === 0) {
-                gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 });
-                gsap.set([nextTitle], { y: "40px", scale: 1, });
-                gsap.set([secondNextTitle], { y: "20px", scale: 1, });
+                gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 })
+                gsap.set([nextTitle], { y: "40px", scale: 1 })
+                gsap.set([secondNextTitle], { y: "20px", scale: 1 })
             } else {
                 gsap.set(title, { opacity: 0.1, y: 10, scale: 1, height: "auto" })
-                 gsap.set(nextTitle, { y: "40px", scale: 1, });
+                gsap.set(nextTitle, { y: "40px", scale: 1 })
                 gsap.set([desc, left, right], {
                     opacity: 0,
                     y: "-200px",
                     height: 0,
-                    scale: 1
+                    scale: 1,
                 })
             }
         })
@@ -83,8 +62,50 @@ export default function FearlessProgress() {
             end: "bottom center",
             pin: true,
             scrub: 2.8,
-            markers: false
+            markers: false,
         })
+
+        blocksRef.current.forEach((block, i) => {
+            const icon = rightRefs.current[i]
+            if (!block || !icon) return
+
+            // initial state for EACH block
+            gsap.set(icon, {
+                rotation: 0,
+                y: 0,
+                transformOrigin: "50% 50%",
+            })
+
+            ScrollTrigger.create({
+                trigger: block,
+                start: "top 20%",
+                end: "bottom center",
+                scrub: 20,
+                markers: true,
+                onUpdate: (self) => {
+                    const direction = self.direction
+                    const moveY = gsap.utils.mapRange(0, 1, 30, 8, self.progress)
+
+                    gsap.to(icon, {
+                        rotation: gsap.utils.interpolate(0, 25, self.progress),
+                          y: 20 + (direction === 1 ? -moveY : moveY),
+                        ease: "none",
+                        overwrite: "auto",
+                    })
+                },
+
+                onLeave: () => {
+                    // freeze when block ends
+                    gsap.to(icon, { y: 0, duration: 0.2 })
+                },
+
+                onLeaveBack: () => {
+                    gsap.to(icon, { y: 0, duration: 0.2 })
+                },
+            })
+        })
+
+
 
         // ---------- BLOCK LOGIC ----------
         blocksRef.current.forEach((block, i) => {
@@ -117,7 +138,7 @@ export default function FearlessProgress() {
                             gsap.to([d, leftRefs.current[idx], rightRefs.current[idx]], {
                                 opacity: 0,
                                 height: 0,
-                                ...HIDE
+                                ...HIDE,
                             })
                             gsap.to(t, { opacity: 0.1, ...HIDE })
                         }
@@ -128,7 +149,7 @@ export default function FearlessProgress() {
                         opacity: 1,
                         y: 30,
                         height: "auto",
-                        ...SHOW
+                        ...SHOW,
                     })
                 },
 
@@ -137,7 +158,7 @@ export default function FearlessProgress() {
                     gsap.to([desc, left, right], {
                         opacity: 0,
                         height: 0,
-                        ...HIDE
+                        ...HIDE,
                     })
                     gsap.to(title, { opacity: 0.1, ...HIDE })
 
@@ -147,14 +168,14 @@ export default function FearlessProgress() {
                         gsap.to([prevDesc, prevLeft, prevRight], {
                             opacity: 1,
                             height: "auto",
-                            ...SHOW
+                            ...SHOW,
                         })
                     }
-                }
+                },
             })
         })
 
-        return () => ScrollTrigger.getAll().forEach(t => t.kill())
+        return () => ScrollTrigger.getAll().forEach((t) => t.kill())
     }, [])
 
     return (
@@ -165,29 +186,40 @@ export default function FearlessProgress() {
             {items.map((item, i) => (
                 <div
                     key={i}
-                    ref={(el) => { blocksRef.current[i] = el }}
+                    ref={(el) => {
+                        blocksRef.current[i] = el
+                    }}
                     className="h-[70vh] flex flex-col items-center justify-center relative px-6"
                 >
                     <div
-                        ref={(el) => { leftRefs.current[i] = el }}
+                        ref={(el) => {
+                            leftRefs.current[i] = el
+                        }}
                         className={`absolute bg-[#BBFC00] text-[#031347] px-4 2xl:px-7 2xl:py-2 py-1 font-bold rounded-[10px] opacity-0 text-[18px] md:text-[24px] 2xl:text-[32px] font-fks ${item.leftClass}`}
                     >
                         We are
                     </div>
 
                     <div
-                        ref={(el) => { rightRefs.current[i] = el }}
+                        ref={(el) => {
+                            rightRefs.current[i] = el
+                        }}
                         className={`absolute w-32 h-32 rounded-full flex items-center justify-center text-white font-bold opacity-0 ${item.rightClass}`}
                     >
-                        <Image src="/icons/about-sp.svg" alt="" width={2000} height={2000}
-                            className="2xl:w-full 2xl:h-full md:w-[100px] md:h-[100px] w-[50px] h-[50px]" />
+                        <Image
+                            src="/icons/about-sp.svg"
+                            alt=""
+                            width={2000}
+                            height={2000}
+                            className="2xl:w-full 2xl:h-full md:w-[100px] md:h-[100px] w-[50px] h-[50px]"
+                        />
                     </div>
 
-                    <div className="text-center max-w-3xl flex items-center justify-center flex-col">
+                    <div className="text-center max-w-3xl flex items-center justify-center flex-col pb-16 md:pb-20">
                         <h3 className="title text-[70px] md:text-7xl lg:text-[8vw] 2xl:text-[10vw] font-bold font-fks mb-1 opacity-30 tracking-[0.3px]">
                             {item.title}
                         </h3>
-                        <p className="desc text-[15px] md:text-xl leading-relaxed opacity-0 max-w-[700px] mx-auto mb-1 font-helvetica">
+                        <p className="desc text-[15px] md:text-xl leading-relaxed opacity-0 max-w-[700px] mx-auto mb-8 md:mb-12 font-helvetica">
                             {item.desc}
                         </p>
                     </div>
