@@ -12,9 +12,9 @@ const About = () => {
     return (
         <div>
             <HeroSection  />
-            {/* <GamingHero />
+            <GamingHero />
             <Achievements />
-            <CelebrationSection /> */}
+            <CelebrationSection />
             <Fearless />
             <CaseStudies />
             <MapSection />
