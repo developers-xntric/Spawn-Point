@@ -22,9 +22,9 @@ const BrandExperience = () => {
             </div> */}
             {/* <BrandsPlayableSection /> */}
             {/* <ExpertiseSection /> */}
-            <TechStackSection />
-            {/* 
+            {/* <TechStackSection /> */}
             <NumbersTalkSection />
+            {/* 
             <ContactSection />
             <NewsletterSection /> */}
         </div>
