@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import Link from "next/link"
 export default function HeroSection({ h1, h2, p, img1, img2 }: { h1?: string; h2?: string; p?: string; img1?: string; img2?: string }) {
     return (
         <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative py-16">
@@ -20,9 +20,11 @@ export default function HeroSection({ h1, h2, p, img1, img2 }: { h1?: string; h2
                 <p className="text-white/80 text-md mt-6 max-w-sm mx-auto">
                     {p ? p : "Explore how brands used SpawnPoint to enter the gaming universe"}
                 </p>
+                <Link href="/contact">
                 <button className="mt-6 bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
                     Lets Connect
                 </button>
+                </Link>
             </div>
         </section>
     )

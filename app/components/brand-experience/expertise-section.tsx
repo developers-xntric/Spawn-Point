@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Star from "../icons/star";
 
 export default function ExpertiseSection() {
@@ -140,9 +141,11 @@ export default function ExpertiseSection() {
                                 Let's Build Your Next In <br />
                                 Game Power Move.
                             </p>
+                            <Link href="/contact">
                             <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-lg font-bold text-md lg:text-sm hover:bg-[#a8e600] transition-colors">
                                 Activate Strategy
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
