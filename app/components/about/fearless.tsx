@@ -8,9 +8,9 @@ import Image from "next/image"
 gsap.registerPlugin(ScrollTrigger)
 
 const items = [{ title: "FEARLESS", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[5%] md:left-[23%] lg:left-[20%] top-[0rem] lg:top-[1%] rotate-[-20deg] xl:left-[8rem] xl:top-[1rem] 2xl:left-[-1rem] 2xl:top-[2rem]", rightClass: "right-[-2%] md:right-[17%] top-[5%] md:top-[-4%] xl:right-[6rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-1rem] 2xl:top-[5%]" },
-{ title: "INNOVATIVE", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] rotate-[-20deg] xl:left-[6rem] md:top-[0%] lg:top-[0%] xl:top-[2%] 2xl:left-[-5rem] 2xl:top-[5%]", rightClass: "right-[-6%] md:right-[15%] top-[4%] md:top-[-4%] xl:right-[4rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-4rem] 2xl:top-[5%]" },
-{ title: "RELENTLESS", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[5.5rem] xl:top-[1%] 2xl:left-[-6rem] 2xl:top-[6%]", rightClass: "right-[-6%] md:right-[16%] lg:right-[13%] top-[5%] md:top-[-3%] xl:right-[3.5rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-5rem] 2xl:top-[5%]" },
-{ title: "OPEN", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[14%] md:left-[28%] lg:left-[26%] top-[4%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[12rem] xl:top-[1%] 2xl:left-[5rem] 2xl:top-[6%]", rightClass: "right-[8%] lg:right-[20%] md:right-[25%] top-[4%] md:top-[-4%] lg:top-[0%] lg:right-[11rem] xl:right-[10rem] lg:top-[0%] xl:top-[1%] 2xl:right-[6rem] 2xl:top-[5%]" }]
+{ title: "INNOVATIVE", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] rotate-[-20deg] xl:left-[6rem] md:top-[0%] lg:top-[0%] xl:top-[2%] 2xl:left-[-5rem] 2xl:top-[5%]", rightClass: "right-[-6%] md:right-[15%] top-[4%] md:top-[-4%] xl:right-[4rem] lg:top-[0%] xl:top-[12%] 2xl:right-[-4rem] 2xl:top-[9%]" },
+{ title: "RELENTLESS", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[2%] md:left-[18%] top-[1%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[5.5rem] xl:top-[1%] 2xl:left-[-6rem] 2xl:top-[6%]", rightClass: "right-[-6%] md:right-[16%] lg:right-[13%] top-[5%] md:top-[-3%] xl:right-[3.5rem] lg:top-[0%] xl:top-[3%] 2xl:right-[-5rem] 2xl:top-[8.5%]" },
+{ title: "OPEN", desc: "We dive headfirst into new worlds, unafraid to experiment, break patterns, and push the limits of what in-game marketing can be. Every campaign is a bold move forward.", leftClass: "left-[14%] md:left-[28%] lg:left-[26%] top-[4%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[12rem] xl:top-[1%] 2xl:left-[5rem] 2xl:top-[6%]", rightClass: "right-[8%] lg:right-[20%] md:right-[25%] top-[4%] md:top-[-4%] lg:top-[0%] lg:right-[11rem] xl:right-[10rem] lg:top-[0%] xl:top-[1%] 2xl:right-[6rem] 2xl:top-[7%]" }]
 
 
 export default function FearlessProgress() {
@@ -38,8 +38,8 @@ export default function FearlessProgress() {
             const nextTitle = nextBlock?.querySelector(".title")
             const secondNextBlock = blocksRef.current[i + 2]
             const secondNextTitle = secondNextBlock?.querySelector(".title")
-            const moveY = gsap.utils.mapRange(0, 1, 14, 4, self.progress)
             if (i === 0) {
+                gsap.set([block], { marginTop: "75px" })
                 gsap.set([title, desc, left, right], { opacity: 1, y: 10, height: "auto", scale: 1 })
                 gsap.set([nextTitle], { y: "40px", scale: 1 })
                 gsap.set([secondNextTitle], { y: "20px", scale: 1 })
@@ -73,7 +73,7 @@ export default function FearlessProgress() {
             gsap.set(icon, {
                 rotation: 0,
                 y: 0,
-                transformOrigin: "50% 50%",
+                transformOrigin: "50% 0%",
             })
 
             ScrollTrigger.create({
@@ -81,14 +81,14 @@ export default function FearlessProgress() {
                 start: "top 20%",
                 end: "bottom center",
                 scrub: 20,
-                markers: true,
+                markers: false,
                 onUpdate: (self) => {
                     const direction = self.direction
                     const moveY = gsap.utils.mapRange(0, 1, 30, 8, self.progress)
 
                     gsap.to(icon, {
                         rotation: gsap.utils.interpolate(0, 25, self.progress),
-                          y: 20 + (direction === 1 ? -moveY : moveY),
+                        y: 20 + (direction === 1 ? -moveY : moveY),
                         ease: "none",
                         overwrite: "auto",
                     })
@@ -195,7 +195,7 @@ export default function FearlessProgress() {
                         ref={(el) => {
                             leftRefs.current[i] = el
                         }}
-                        className={`absolute bg-[#BBFC00] text-[#031347] px-4 2xl:px-7 2xl:py-2 py-1 font-bold rounded-[10px] opacity-0 text-[18px] md:text-[24px] 2xl:text-[32px] font-fks ${item.leftClass}`}
+                        className={`absolute bg-[#BBFC00] text-[#031347] px-4 2xl:px-6 2xl:py-2 py-1 font-bold rounded-[10px] opacity-0 text-[18px] md:text-[24px] 2xl:text-[32px] font-fks ${item.leftClass}`}
                     >
                         We are
                     </div>
