@@ -134,7 +134,7 @@ export default function CelebrationSection() {
           alt="Top graphic"
           width={240}
           height={240}
-          className="w-[120px] h-[120px] md:w-[240px] md:h-[240px]"
+          className="w-[120px] h-[120px] md:w-[200px] md:h-[200px] 2xl:w-[240px] 2xl:h-[240px]"
         />
       </div>
 
@@ -145,10 +145,10 @@ export default function CelebrationSection() {
         style={{ transform: "skewY(-6deg)" }}
       >
         <span className="text-[67px] md:text-[120px]  2xl:text-[160px] font-fks uppercase font-bold text-white px-8 leading-none tracking-[1.7px] hidden md:block">
-          Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be Part Of
+          Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be <span className="text-[#BBFC00]">Part </span> Of
         </span>
         <span className="text-[67px] md:text-[120px] font-fks uppercase font-bold text-white px-8 leading-none tracking-[1.7px] md:hidden block">
-          Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be Part Of
+          Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be <span className="text-[#BBFC00]">Part </span> Of
         </span>
       </div>
 
@@ -162,7 +162,7 @@ export default function CelebrationSection() {
           alt="Bottom graphic"
           width={180}
           height={260}
-          className="w-[100px] h-[100px] md:w-[180px] md:h-[260px]"
+          className="w-[100px] h-[100px] md:w-[160px] md:h-[220px] 2xl:w-[180px] 2xl:h-[260px]"
         />
       </div>
     </div>

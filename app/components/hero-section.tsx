@@ -72,7 +72,7 @@ function AnimatedCamera({
       )
 
       targetZ = THREE.MathUtils.lerp(
-        isMobile ? 50 : isTablet ? 70 : 9,
+        isMobile ? 50 : isTablet ? 70 : 60,
         isMobile ? 10 : 20,
         t
       )

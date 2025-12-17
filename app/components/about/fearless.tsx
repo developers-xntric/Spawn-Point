@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useEffect, useRef } from "react"
@@ -23,8 +24,8 @@ export default function FearlessProgress() {
         const container = containerRef.current
         if (!container) return
 
-        const SHOW = { duration: 0.55, ease: "power2.out", overwrite: "auto" }
-        const HIDE = { duration: 0.45, ease: "power2.in", overwrite: "auto" }
+        const SHOW = { duration: 0.55, ease: "power2.out", overwrite: "auto" } as const
+        const HIDE = { duration: 0.45, ease: "power2.in", overwrite: "auto" } as const
 
         // ---------- INITIAL STATE ----------
         blocksRef.current.forEach((block, i) => {
@@ -181,7 +182,7 @@ export default function FearlessProgress() {
     return (
         <div
             ref={containerRef}
-            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-40 -space-y-28 py-16"
+            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-36 -space-y-28 pb-32"
         >
             {items.map((item, i) => (
                 <div
