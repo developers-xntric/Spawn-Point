@@ -48,8 +48,8 @@ function AnimatedCamera({
   const { camera } = useThree()
 
   useFrame(() => {
-    let targetY = isMobile ? 5 : isTablet ? 10 : 10
-    let targetZ = isMobile ? 45 : isTablet ? 55 : 80
+    let targetY = isMobile ? 10 : isTablet ? 10 : 10
+    let targetZ = isMobile ? 35 : isTablet ? 55 : 80
 
     // -----------------------
     // MID SCROLL (0.33 → 0.66)
@@ -58,20 +58,20 @@ function AnimatedCamera({
       const t = (scrollProgress - 0.33) / 0.33
 
       targetY = THREE.MathUtils.lerp(
-        isMobile ? 20 : isTablet ? 20 : 40,
+        isMobile ? 20 : isTablet ? 20 : 10,
         isMobile ? -5 : -4,
         t
       )
 
       targetZ = THREE.MathUtils.lerp(
-        isMobile ? 50 : isTablet ? 70 : 40,
-        isMobile ? 10 : 20,
+        isMobile ? 50 : isTablet ? 70 : 50,
+        isMobile ? 20 : 10,
         t
       )
 
       // Look slightly upward during zoom
       if (!isMobile) {
-        camera.lookAt(0, 12, 0)
+        camera.lookAt(0, 8, 0)
       }
 
     }
@@ -81,8 +81,8 @@ function AnimatedCamera({
     // -----------------------
     else if (scrollProgress >= 0.66) {
       // 🔒 Lock camera — NO MORE Y / Z movement
-      targetY = camera.position.y
-      targetZ = camera.position.z
+      targetY = isMobile ? 10 : isTablet ? 10 : 10
+      targetZ = isMobile ? 45 : isTablet ? 55 : 80
 
       // 🔒 Fix look direction (prevents Y-rotation illusion)
       camera.lookAt(0, 0, 0)
