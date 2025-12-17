@@ -16,7 +16,6 @@ export default function PartnersSection({ isSecond = true }: { isSecond?: boolea
     return (
         <section className="bg-[#031347] py-16 overflow-hidden">
 
-
             {/* Slider Container */}
             <div className="flex flex-col gap-4">
                 {/* Row 1 - Moves Left */}

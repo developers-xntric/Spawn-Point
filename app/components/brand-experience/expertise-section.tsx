@@ -142,7 +142,7 @@ export default function ExpertiseSection() {
                                 Game Power Move.
                             </p>
                             <Link href="/contact">
-                            <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-lg font-bold text-md lg:text-sm hover:bg-[#a8e600] transition-colors">
+                            <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-[5px] font-bold text-md lg:text-sm hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors">
                                 Activate Strategy
                             </button>
                             </Link>

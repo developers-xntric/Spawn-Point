@@ -21,7 +21,7 @@ export default function HeroSection() {
                     See how we’ve helped brands connect with gaming audiences through immersive, measurable activations.
                 </p>
                 <Link href="/contact">
-                    <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors font-bold">
+                    <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">
                         Lets Get Started
                     </button>
                 </Link>

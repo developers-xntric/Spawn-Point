@@ -48,7 +48,7 @@ function AnimatedCamera({
   const { camera } = useThree()
 
   useFrame(() => {
-    let targetY = isMobile ? 10 : isTablet ? 10 : 10
+    let targetY = isMobile ? 10 : isTablet ? 10 : 0
     let targetZ = isMobile ? 35 : isTablet ? 55 : 80
 
     // -----------------------
@@ -58,14 +58,14 @@ function AnimatedCamera({
       const t = (scrollProgress - 0.33) / 0.33
 
       targetY = THREE.MathUtils.lerp(
-        isMobile ? 20 : isTablet ? 20 : 10,
-        isMobile ? -5 : -4,
+        isMobile ? 15 : isTablet ? 20 : 10,
+        isMobile ? 10 : -4,
         t
       )
 
       targetZ = THREE.MathUtils.lerp(
         isMobile ? 50 : isTablet ? 70 : 50,
-        isMobile ? 20 : 10,
+        isMobile ? 8 : 10,
         t
       )
 
@@ -81,7 +81,7 @@ function AnimatedCamera({
     // -----------------------
     else if (scrollProgress >= 0.66) {
       // 🔒 Lock camera — NO MORE Y / Z movement
-      targetY = isMobile ? 10 : isTablet ? 10 : 10
+      targetY = isMobile ? 19 : isTablet ? 10 : 10
       targetZ = isMobile ? 45 : isTablet ? 55 : 80
 
       // 🔒 Fix look direction (prevents Y-rotation illusion)
@@ -158,12 +158,12 @@ function Model({
       object={scene}
       scale={
         isMobile
-          ? [8, 28, 8]
+          ? [10, 12, 12]
           : isTablet
             ? [45, 45, 45]
             : [60, 60, 60]
       }
-      position={[0, isMobile ? -45 : isTablet ? -70 : -100, 0]}
+      position={[0, isMobile ? -19 : isTablet ? -70 : -100, 0]}
     />
   )
 }
