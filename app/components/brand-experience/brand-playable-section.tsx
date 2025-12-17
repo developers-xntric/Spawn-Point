@@ -26,9 +26,9 @@ export default function BrandsPlayableSection() {
                     </div>
 
                     {/* Right - Content */}
-                    <div className="w-[90%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-8">
+                    <div className="w-[90%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-6">
                         {/* Headline */}
-                        <h2 className="font-black font-fks text-[32px] leading-8 lg:text-5xl uppercase tracking-wide mb-4">
+                        <h2 className="font-black font-fks text-[32px] leading-8 xl:leading-12 lg:text-5xl uppercase tracking-wide mb-4">
                             <span className="text-white">Brands </span>
                             <span className="text-[#BBFC00]">Need </span>
                             <span className="text-white">To Be</span>
@@ -44,9 +44,9 @@ export default function BrandsPlayableSection() {
                         </p>
 
                         {/* Stats Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-4">
                             {stats.map((stat, index) => (
-                                <div key={index} className="border-2 bg-white/5 backdrop-blur-2xl border-white/10 rounded-2xl p-6">
+                                <div key={index} className="border-2 bg-white/5 backdrop-blur-2xl border-white/10 rounded-2xl p-6 xl:p-4">
                                     <p className="text-white font-mortend font-black text-3xl md:text-4xl lg:text-[44px]">{stat.value}</p>
                                     <p className="text-white font-hel tracking-wider text-xs md:text-xs -mb-1 relative bottom-1">{stat.label}</p>
                                 </div>
