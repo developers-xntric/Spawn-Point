@@ -23,21 +23,21 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create transporter using your SMTP settings
+    // Create transporter using environment variables
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465,
+      host: process.env.SMTP_HOST,
+      port: parseInt(process.env.SMTP_PORT || '465'),
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'saad@xntric.ca',
-        pass: '@Saad@123',
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     // Prepare email content
     const mailOptions = {
-      from: 'saad@xntric.ca',
-      to: 'COLLAB@SPAWNPOINT.COM',
+      from: process.env.SMTP_USER,
+      to: process.env.COLLAB_EMAIL,
       subject: 'New Collaboration Request from Contact Section',
       html: `
         <h2>New Collaboration Request</h2>
