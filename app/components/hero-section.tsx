@@ -34,7 +34,7 @@ function useBreakpoint() {
 }
 
 // =====================================================
-// CAMERA ANIMATION
+// CAMERA ANIMATION (FIXED)
 // =====================================================
 function AnimatedCamera({
   scrollProgress,
@@ -48,67 +48,62 @@ function AnimatedCamera({
   const { camera } = useThree()
 
   useFrame(() => {
-    let targetY = 10
-    let targetZ = 80
+    let targetY = isMobile ? 10 : isTablet ? 10 : 10
+    let targetZ = isMobile ? 35 : isTablet ? 55 : 80
 
-    if (isMobile) {
-      targetY = 5
-      targetZ = 35
-    } else if (isTablet) {
-      targetY = 10
-      targetZ = 55
-    }
-
-    // MID SCROLL MOVE
+    // -----------------------
+    // MID SCROLL (0.33 → 0.66)
+    // -----------------------
     if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
       const t = (scrollProgress - 0.33) / 0.33
-      console.log(t)
-
 
       targetY = THREE.MathUtils.lerp(
-        isMobile ? 20 : isTablet ? 20 : 60,
+        isMobile ? 20 : isTablet ? 20 : 10,
         isMobile ? -5 : -4,
         t
       )
 
       targetZ = THREE.MathUtils.lerp(
-        isMobile ? 50 : isTablet ? 70 : 60,
-        isMobile ? 10 : 20,
+        isMobile ? 50 : isTablet ? 70 : 50,
+        isMobile ? 20 : 10,
         t
       )
+
+      // Look slightly upward during zoom
+      if (!isMobile) {
+        camera.lookAt(0, 8, 0)
+      }
+
     }
 
-    // FINAL ZOOM (TOP)
-//     if (scrollProgress >= 0.66) {
-//       const t = (scrollProgress - 0.66) / 0.34
+    // -----------------------
+    // AFTER ZOOM (LOCK CAMERA)
+    // -----------------------
+    else if (scrollProgress >= 0.66) {
+      // 🔒 Lock camera — NO MORE Y / Z movement
+      targetY = isMobile ? 10 : isTablet ? 10 : 10
+      targetZ = isMobile ? 45 : isTablet ? 55 : 80
 
-//       // Keep Y same as end of mid-scroll
-// targetY = THREE.MathUtils.lerp(
-//         isMobile ? 20 : isTablet ? 4 : 60,
-//         isMobile ? -5 : -4,
-//         t
-//       )
+      // 🔒 Fix look direction (prevents Y-rotation illusion)
+      camera.lookAt(0, 0, 0)
+    }
 
-//       // Zoom in ONLY on Z
-//       targetZ = THREE.MathUtils.lerp(
-//         isMobile ? 10 : 20,
-//         isMobile ? 3 : 6, // adjust these numbers to increase/decrease zoom
-//         t
-//       )
-//     }
-
+    // -----------------------
+    // INITIAL
+    // -----------------------
+    else {
+      camera.lookAt(0, 0, 0)
+    }
 
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.08)
     camera.position.z = THREE.MathUtils.lerp(camera.position.z, targetZ, 0.08)
-
-    camera.lookAt(0, 0, 0)
   })
 
   return null
 }
 
 // =====================================================
-// MODEL
+// MODEL (UNCHANGED)
 // =====================================================
 function Model({
   isMobile,
@@ -141,16 +136,15 @@ function Model({
   useFrame(() => {
     if (!modelRef.current) return
 
-    // DEFAULT TILTED
     let targetRotX = 0
 
-    // STRAIGHTEN
     if (scrollProgress >= 0.2 && scrollProgress < 0.6) {
       const t = (scrollProgress - 0.2) / 0.4
       targetRotX = THREE.MathUtils.lerp(0.2, 0, t)
     }
 
     if (scrollProgress >= 0.6) targetRotX = -0.1
+
     modelRef.current.rotation.x = THREE.MathUtils.lerp(
       modelRef.current.rotation.x,
       targetRotX,
@@ -199,12 +193,13 @@ export default function HeroSection() {
 
         if (p < 0.2) hasAutoScrolled.current = false
 
-        if (p >= 0.66 && !hasAutoScrolled.current && !isMobile) {
+        // ✅ MOBILE + DESKTOP AUTO SCROLL AFTER ZOOM
+        if (p >= 0.66 && !hasAutoScrolled.current) {
           hasAutoScrolled.current = true
-          const target = document.getElementById("second-section")
+          const target = document.getElementById("services-carousel")
           if (target) {
             window.scrollTo({
-              top: target.getBoundingClientRect().top + window.scrollY,
+              top: target.offsetTop,
               behavior: "smooth",
             })
           }

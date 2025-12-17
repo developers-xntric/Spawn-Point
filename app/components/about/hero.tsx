@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import Link from "next/link"
 export default function HeroSection() {
     const topLineText = "ABOUT US"
     const bottomLineText = "ABOUT US"
@@ -22,9 +22,11 @@ export default function HeroSection() {
                 <p className="text-white text-md mt-2 md:mt-6 max-w-sm mx-auto">
                     We help brands enter the gaming universe through immersive experiences, in-game activations, creators, and virtual worlds
                 </p>
+                <Link href="/contact">
                 <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors font-bold">
                     Lets Connect
                 </button>
+                </Link>
             </div>
             <div
                 className={`absolute top-[90%] left-0 right-0 h-24 flex items-center overflow-hidden z-5 transition-all duration-300`}
