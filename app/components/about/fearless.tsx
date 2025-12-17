@@ -181,7 +181,7 @@ export default function FearlessProgress() {
     return (
         <div
             ref={containerRef}
-            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center -space-y-28 py-16"
+            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-40 -space-y-28 py-16"
         >
             {items.map((item, i) => (
                 <div
