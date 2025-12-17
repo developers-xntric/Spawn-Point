@@ -12,7 +12,7 @@ export default function CaseStudySection() {
                         <p className="text-[#FFF] text-md font-bold uppercase tracking-tighter mt-2">
                             Custom Interactive Experience on <span className="underline text-[#BBFC00]">Roblox</span>
                         </p>
-                        <p className="text-whitefont-hel text-sm mt-6 leading-relaxed max-w-md">
+                        <p className="text-white font-hel text-sm mt-6 leading-relaxed max-w-md">
                             Netflix partnered with SpawnPoint to build Next World, a fully immersive Roblox universe inspired by top
                             Netflix titles. Designed to engage Gen Z and Alpha audiences, the experience delivered cinematic
                             storytelling, interactive missions, and continuous content updates including the massively successful
