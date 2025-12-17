@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HOMEGSP() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -200,10 +201,12 @@ export default function HOMEGSP() {
           <span className="text-[#BBFC00]">MENA</span>{" "}
           <span className="text-white">and Beyond</span>
         </h2>
-
-        <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
-          Book a Strategy Sprint
-        </button>
+        
+        <Link href="/contact">
+          <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
+            Book a Strategy Sprint
+          </button>
+        </Link>
       </div>
     </section>
   );

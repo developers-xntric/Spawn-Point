@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-
+import Link from "next/link"
 export default function GamingHero() {
   return (
     <section className=" text-white overflow-hidden">
@@ -61,9 +61,11 @@ export default function GamingHero() {
             </div>
 
             <div className=" pt-0 md:pt-4">
-              <button className=" bg-[#BBFC00] text-[#031347] font-bold text-ms px-4 md:px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors">
-                Lets Connect
-              </button>
+              <Link href="/contact">
+                <button className=" bg-[#BBFC00] text-[#031347] font-bold text-ms px-4 md:px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors">
+                  Lets Connect
+                </button>
+              </Link>
             </div>
           </div>
 

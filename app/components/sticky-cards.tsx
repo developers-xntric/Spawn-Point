@@ -106,7 +106,7 @@ export default function StickyCards() {
               maximize audience commitment, and deliver measurable Lifetime Lift. We transform
               short-term activations into long-term, compounding value.
             </p>
-            <Link href="/contact">
+            <Link href="/brand-experience">
               <button className="px-5 md:px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border border-transparent transition cursor-pointer mt-5 font-hel md:text-base text-[14px]">
                 Explore Services
               </button>

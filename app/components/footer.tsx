@@ -4,11 +4,10 @@ import Link from "next/link"
 
 export default function Footer() {
     const navLinks = [
-        { label: "Home", href: "#" },
-        { label: "About", href: "#" },
-        { label: "Services", href: "#" },
-        { label: "Branded Experiences", href: "#" },
-        { label: "Case Studies", href: "#" },
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+        { label: "Branded Experiences", href: "/brand-experience" },
+        { label: "Case Studies", href: "/case-studies" },
     ]
 
     const socialLinks = [
@@ -104,7 +103,7 @@ export default function Footer() {
                         </div>
 
                         {/* Social Media Icons */}
-                        <div className="flex flex-wrap md:justify-between lg:w-[100%] gap-2 lg:gap-3  w-full">
+                        {/* <div className="flex flex-wrap md:justify-between lg:w-[100%] gap-2 lg:gap-3  w-full">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.icon}
@@ -115,7 +114,7 @@ export default function Footer() {
                                     {social.icon}
                                 </Link>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 {/* Footer */}

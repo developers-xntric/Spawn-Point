@@ -63,10 +63,11 @@ export default function Navbar() {
         </div>
 
         {/* Connect Button */}
+        <Link href="/contact">
         <button className="hidden md:block bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
           Lets Connect
         </button>
-
+        </Link>
         {/* Mobile Menu Icon */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-white">
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -89,10 +90,11 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-
-            <button className="w-full bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
-              Let’s Connect
-            </button>
+            <Link href="/contact">
+              <button className="w-full bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
+                Let’s Connect
+              </button>
+            </Link>
           </div>
         )}
 
