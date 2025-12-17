@@ -48,13 +48,23 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </div>
         </div>
 
-        {/* -------------------------------------------------- */}
         {/*             SECOND SECTION (CONTENT)               */}
-        {/* -------------------------------------------------- */}
+        
         <div className="mt-6 relative z-20">
           <h3 className="mb-2 text-[20px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-5 md:leading-[42px] tracking-[2px]">
-            {service.title}
+            {service.title.split("&").map((part, index, arr) => (
+              <span key={index}>
+                <span>{part.trim()}</span>
+
+                {index < arr.length - 1 && (
+                  <span className="mx-1 font-hel italic ">
+                    &
+                  </span>
+                )}
+              </span>
+            ))}
           </h3>
+
           <p className="text-white text-[13px] xl:text-[15px] 2xl:text-[18px] font-hel">
             {service.description}
           </p>

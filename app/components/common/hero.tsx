@@ -1,29 +1,34 @@
 import Image from "next/image"
-
-export default function HeroSection({ h1, h2, p, img1, img2 }: { h1?: string; h2?: string; p?: string; img1?: string; img2?: string }) {
+import Link from "next/link"
+export default function HeroSection() {
     return (
-        <section className="bg-[#031347] min-h-[600px] flex items-center justify-center relative py-16">
+        <section className="bg-[#031347] min-h-[500px] lg:min-h-[700px] 2xl:min-h-[800px] flex items-center justify-center relative pt-22 md:pt-16 mb-12">
             {/* Pizza image - left side */}
-            <div className="absolute left-[30%] top-[30%]">
-                <Image src={img1 ? img1 : "/icons/pizza.png"} alt="Pizza decoration" width={50} height={50} className="object-contain" />
+            <div className="absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]">
+                <Image src="/icons/yes.png" alt="Pizza decoration" width={50} height={50} className="object-contain" />
             </div>
 
             {/* Robot image - right side */}
-            <div className="absolute right-[30%] top-[55%]">
-                <Image src={img2 ? img2 : "/icons/robo.png"} alt="Robot decoration" width={50} height={50} className="object-contain" />
+            <div className="absolute right-[4%] md:right-[30%] top-[70%] md:top-[67%]">
+                <Image src="/icons/arrow-top-right.png" alt="Robot decoration" width={50} height={50} className="object-contain" />
             </div>
 
             {/* Center content */}
-            <div className="text-center z-10">
-                <h1 className="text-white text-[80px] font-fks font-bold uppercase tracking-wide">{h1 ? h1 : "Real Projects"}</h1>
-                <h2 className="text-[#BBFC00] text-[120px] font-fks font-bold uppercase tracking-wide leading-20">{h2 ? h2 : "Real Impact"} </h2>
-                <p className="text-white/80 text-md mt-6 max-w-sm mx-auto">
-                    {p ? p : "Explore how brands used SpawnPoint to enter the gaming universe"}
+            <div className="text-center z-10 lg:mb-10">
+                <h1 className="text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">Real Results</h1>
+                <h2 className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative md:bot  bottom-3">Real Engagement</h2>
+                <p className="text-white text-md mt-2 md:mt-6 max-w-sm mx-auto">
+                    See how we’ve helped brands connect with gaming audiences through immersive, measurable activations.
                 </p>
-                <button className="mt-6 bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
-                    Lets Connect
-                </button>
+                <Link href="/contact">
+                    <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:bg-[#a8e600] transition-colors font-bold">
+                        Lets Get Started
+                    </button>
+                </Link>
             </div>
+
+
+
         </section>
     )
 }
