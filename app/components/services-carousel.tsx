@@ -76,7 +76,7 @@ export function ServicesCarousel() {
     const progressPercent = ((current + 1) / count) * 100
 
     return (
-        <section className="pb-6 md:pb-16 pt-6">
+        <section id="services-carousel" className="pb-6 md:pb-16 pt-6">
             <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
 
                 {/* HEADER (UNCHANGED) */}

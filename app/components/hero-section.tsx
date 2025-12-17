@@ -48,61 +48,65 @@ function AnimatedCamera({
   const { camera } = useThree()
 
   useFrame(() => {
-    let targetY = 10
-    let targetZ = 80
+    let targetY = isMobile ? 5 : isTablet ? 10 : 10
+    let targetZ = isMobile ? 35 : isTablet ? 55 : 80
 
-    if (isMobile) {
-      targetY = 5
-      targetZ = 35
-    } else if (isTablet) {
-      targetY = 10
-      targetZ = 55
-    }
-
-    // MID SCROLL MOVE
-    if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
+    // -----------------------
+    // MID SCROLL MOVE (0.33 → 0.66)
+    // -----------------------
+    if (scrollProgress >= 0.33) {
       const t = (scrollProgress - 0.33) / 0.33
-      console.log(t)
-
-
+      //   // Look at center after zoom
       targetY = THREE.MathUtils.lerp(
-        isMobile ? 20 : isTablet ? 20 : 60,
+        isMobile ? 20 : isTablet ? 20 : 40,
         isMobile ? -5 : -4,
         t
       )
+      camera.lookAt(0, 12, 0)
 
       targetZ = THREE.MathUtils.lerp(
-        isMobile ? 50 : isTablet ? 70 : 60,
+        isMobile ? 50 : isTablet ? 70 : 40,
         isMobile ? 10 : 20,
         t
       )
+
+    }
+    // -----------------------
+    // FINAL ZOOM / AFTER MID SCROLL (0.66+)
+    // -----------------------
+    else if (scrollProgress >= 0.66) {
+
+      const t = (scrollProgress - 0.66) / 0.34
+
+      // Zoom in only on Z
+      // targetZ = THREE.MathUtils.lerp(
+      //   isMobile ? 10 : 20,
+      //   isMobile ? 3 : 6,
+      //   t
+      // )
+
+      // Keep Y fixed at end of mid-scroll
+      // targetY = THREE.MathUtils.lerp(
+      //   isMobile ? 20 : isTablet ? 20 : 40,
+      //   isMobile ? -5 : -4,
+      //   t
+      // )
+
+      // Look at center after zoom
+      camera.lookAt(0, 0, 0)
+    }
+    // -----------------------
+    // INITIAL SCROLL (< 0.33)
+    // -----------------------
+    else {
+      camera.lookAt(0, 0, 0)
     }
 
-    // FINAL ZOOM (TOP)
-//     if (scrollProgress >= 0.66) {
-//       const t = (scrollProgress - 0.66) / 0.34
-
-//       // Keep Y same as end of mid-scroll
-// targetY = THREE.MathUtils.lerp(
-//         isMobile ? 20 : isTablet ? 4 : 60,
-//         isMobile ? -5 : -4,
-//         t
-//       )
-
-//       // Zoom in ONLY on Z
-//       targetZ = THREE.MathUtils.lerp(
-//         isMobile ? 10 : 20,
-//         isMobile ? 3 : 6, // adjust these numbers to increase/decrease zoom
-//         t
-//       )
-//     }
-
-
+    // Smoothly move camera
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.08)
     camera.position.z = THREE.MathUtils.lerp(camera.position.z, targetZ, 0.08)
-
-    camera.lookAt(0, 0, 0)
   })
+
 
   return null
 }
@@ -198,17 +202,17 @@ export default function HeroSection() {
         setScrollProgress(p)
 
         if (p < 0.2) hasAutoScrolled.current = false
-
         if (p >= 0.66 && !hasAutoScrolled.current && !isMobile) {
           hasAutoScrolled.current = true
-          const target = document.getElementById("second-section")
+          const target = document.getElementById("services-carousel")
           if (target) {
             window.scrollTo({
-              top: target.getBoundingClientRect().top + window.scrollY,
+              top: target.offsetTop, // <-- use offsetTop
               behavior: "smooth",
             })
           }
         }
+
       },
     })
 
