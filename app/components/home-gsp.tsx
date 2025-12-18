@@ -41,7 +41,7 @@ export default function HOMEGSP() {
 
         if (isMobile) {
           start = "155% 1%";
-          end = "+=70%";
+          end = "+=10%";
         }
 
         if (isTablet) {
@@ -99,7 +99,7 @@ export default function HOMEGSP() {
     <section
       id="home-gsp"
       ref={sectionRef}
-      className="bg-white/5 min-h-screen relative overflow-hidden py-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
+      className="bg-white/5 h-[700px] md:min-h-screen relative overflow-hidden pb-20 md:pt-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
     >
       {/* Floating Images */}
       <div className="absolute -top-10 md:left-10 xl:left-10 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
@@ -189,7 +189,7 @@ export default function HOMEGSP() {
           Spawn Point Studio
         </p>
 
-        <h2 className="text-[37px] lg:text-[60px] font-fks font-black uppercase leading-10 md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
+        <h2 className="text-[40px] lg:text-[60px] font-fks font-black uppercase leading-[40px] md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
           <span className="text-[#BBFC00]">Spawn Point Crafts</span>{" "}
           <span className="text-white">
             Brand Playbooks, Live-Stream Experiences, and

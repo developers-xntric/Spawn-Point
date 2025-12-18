@@ -70,7 +70,7 @@ export default function StickyCards() {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card,
-            start: index === cardEls.length - 1 ? "top 60%" : "top 35%",
+            start: index === cardEls.length - 1 ? "top 60%" : "top 38%",
             end: "top 100%",
             scrub: 1.7,
             markers: false,
