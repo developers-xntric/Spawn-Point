@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function CaseStudySection2() {
     return (
-        <section className="bg-[#031347] pt-0 md:pt-16 pb-16 ">
+        <section className="bg-[#031347] pt-0 md:pt-16 pb-10 md:pb-16 ">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
                 {/* Top content area */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -42,7 +42,7 @@ export default function CaseStudySection2() {
                         </div>
 
                         {/* Stat 3 */}
-                        <div className="bg-white/5 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none md:border-none md:p-0 p-4 md:rounded-none rounded-xl border border-white/10">
+                        <div className="bg-white/5 hidden md:bg-transparent backdrop-blur-sm md:backdrop-blur-none md:border-none md:p-0 p-4 md:rounded-none rounded-xl border border-white/10">
                             {/* <p className="text-white font-bold tracking-wide text-4xl md:text-7xl font-fks">4K</p> */}
                             {/* <p className="text-[#FFF] text-md font-semibold mt-1">Peak CCU</p> */}
                             {/* <p className="text-white font-hel text-sm mt-2 leading-relaxed">
