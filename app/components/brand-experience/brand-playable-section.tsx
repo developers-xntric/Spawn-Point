@@ -10,7 +10,7 @@ export default function BrandsPlayableSection() {
 
     return (
         <section className="bg-[#031347] pt-8 pb-20 ">
-            <div className="2xl:max-w-[1440px] w-[100%] md:w-[85%] mx-auto">
+            <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-stretch gap-5 lg:gap-12">
 
                     {/* Left - Image */}
