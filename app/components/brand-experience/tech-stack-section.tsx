@@ -32,7 +32,7 @@ export default function TechStackSection() {
                     {techItems.map((item, index) => (
                         <div
                             key={index}
-                            className={`relative w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[250px] lg:h-[250px] xl:w-72 xl:h-72 rounded-full border-2 border-[#BBFC00]/40 bg-white/5 backdrop-blur-2xl flex flex-col items-center justify-center text-center py-4 setpos ${index % 2 !== 0 ? "relative right-3 sm:right-3 md:right-0" : "relative sm:left-2 left-7 md:left-0"}`}
+                            className={`relative w-[180px] h-[180px] sm:w-[300px] sm:h-[300px] lg:w-[250px] lg:h-[250px] xl:w-72 xl:h-72 rounded-full border-2 border-[#BBFC00]/40 bg-white/5 backdrop-blur-2xl flex flex-col items-center justify-center text-center py-4 setpos ${index % 2 !== 0 ? "relative right-3 sm:right-3 md:right-0" : "relative sm:left-2 left-4 md:left-0"}`}
                             style={{ zIndex: techItems.length - index }}
                         >
                             {/* Asterisk Icon */}
