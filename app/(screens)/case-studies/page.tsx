@@ -11,8 +11,12 @@ const CaseStudies = () => {
             <HeroSection />
             <CaseStudySection />
             <CaseStudySection2 />
-            <PartnersSection />
-            {/* <CaseStudiesGrid /> */}
+            <div>
+                <h2 className="text-[40px] md:text-[70px] font-fks font-bold text-center text-white uppercase tracking-[1.5px"> <span className="text-[#BBFC00]">Our</span> Partners</h2>
+                <PartnersSection />
+
+            </div>
+            <CaseStudiesGrid />
             <ContactSection />
         </div>
     )

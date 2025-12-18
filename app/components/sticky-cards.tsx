@@ -89,7 +89,7 @@ export default function StickyCards() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#091B56] mt-10 md:mt-1 text-white pb-4 lg:pb-10 xl:pt-1 pt-10 relative min-h-screen"
+      className="bg-[#091B56] mt-10 md:mt-1 text-white md:pb-4 lg:pb-10 xl:pt-1 pt-10 relative min-h-screen"
     >
       <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
         <div className="flex flex-col lg:flex-row gap-10">
@@ -117,7 +117,7 @@ export default function StickyCards() {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-4 pb-20">
+          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-4 md:pb-20 pb-14">
             {cards.map((card, index) => (
               <div
                 key={index}
