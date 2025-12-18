@@ -4,7 +4,7 @@ export default function HeroSection() {
     const topLineText = "ABOUT US"
     const bottomLineText = "ABOUT US"
     return (
-        <section className="bg-[#031347] min-h-[600px] md:min-h-[700px] 2xl:min-h-[800px] flex items-center justify-center relative pt-16 mb-12">
+        <section className="bg-[#031347] min-h-[600px] md:min-h-[600px] 2xl:min-h-[650px] flex items-center justify-center relative pt-16 mb-12">
             {/* Pizza image - left side */}
             <div className="absolute left-[10%]  md:left-[30%] top-[20%] md:top-[30%]">
                 <Image src="/icons/yes.png" alt="Pizza decoration" width={50} height={50} className="object-contain" />
@@ -23,9 +23,9 @@ export default function HeroSection() {
                     We help brands enter the gaming universe through immersive experiences, in-game activations, creators, and virtual worlds
                 </p>
                 <Link href="/contact">
-                <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">
-                    Lets Connect
-                </button>
+                    <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">
+                        Lets Connect
+                    </button>
                 </Link>
             </div>
             <div
