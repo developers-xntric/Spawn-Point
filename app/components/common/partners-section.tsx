@@ -7,6 +7,14 @@ const partners = [
     { name: "WARNER MUSIC GROUP", icon: "/icons/wmg.png" },
     { name: "PARAMOUNT", icon: "/icons/paramount.png" },
     { name: "SKECHER", icon: "/icons/sketcher.png" },
+    { name: null, icon: "/icons/samsung.png" },
+    { name: "XBOX", icon: "/icons/xbox.png" },
+    { name: "DOMINOS PIZZA", icon: "/icons/domino.png" },
+    { name: null, icon: "/icons/cola.png" },
+    { name: "SHELL", icon: "/icons/shell.png" },
+    { name: "MCDONALDS", icon: "/icons/mc.png" },
+    { name: "VODOFONE", icon: "/icons/vodofone.png" },
+    { name: "MERCEDES", icon: "/icons/mercedes.png" },
 ]
 
 export default function PartnersSection({ isSecond = true }: { isSecond?: boolean }) {
@@ -14,7 +22,7 @@ export default function PartnersSection({ isSecond = true }: { isSecond?: boolea
     const duplicatedPartners = [...partners, ...partners, ...partners, ...partners]
 
     return (
-        <section  className="bg-[#031347] md:py-10 py-6 overflow-hidden">
+        <section className="bg-[#031347] md:py-10 py-6 overflow-hidden">
 
             {/* Slider Container */}
             <div className="flex flex-col gap-4">
@@ -26,8 +34,8 @@ export default function PartnersSection({ isSecond = true }: { isSecond?: boolea
                                 key={`row1-${index}`}
                                 className="shrink-0 flex items-center gap-4 bg-[#001763] text-white px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A]"
                             >
-                                <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>
-                                <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
+                                {partner.name && <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>}
+                                <img src={partner.icon || "/placeholder.svg"} alt={partner.name || "Logo"} className={`${!partner.name ? "w-28 h-9" : "w-9 h-9"} object-contain`} />
                             </div>
                         ))}
                     </div>
@@ -44,8 +52,8 @@ export default function PartnersSection({ isSecond = true }: { isSecond?: boolea
                                     className={`shrink-0 flex items-center gap-4 px-5 py-2.5 rounded-[15px] font-bold text-[20px] whitespace-nowrap border-[1.8px] border-[#FFFFFF1A] ${isHighlighted ? "bg-[#BBFC00] text-[#001763] border-2 border-[#BBFC00]" : "bg-[#001763] text-white"
                                         }`}
                                 >
-                                    <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>
-                                    <img src={partner.icon || "/placeholder.svg"} alt={partner.name} className="w-9 h-9 object-contain" />
+                                    {partner.name && <span className="font-fks text-[17px] md:text-3xl tracking-wider">{partner.name}</span>}
+                                    <img src={partner.icon || "/placeholder.svg"} alt={partner.name || "Logo"} className={`${!partner.name ? "w-28 h-9" : "w-9 h-9"} object-contain`} />
                                 </div>
                             )
                         })}
