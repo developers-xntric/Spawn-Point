@@ -8,8 +8,6 @@ const services = [
     "Virtual Worlds",
     "Esports Partnerships",
     "In Stream Adtech",
-    "Hybrid Events",
-    "Creator Economy",
 ]
 
 const budgetOptions = ["$15K—30K", "$30K—70K", "More Than $70K"]
@@ -70,7 +68,7 @@ export default function ContactSection() {
     }
 
     return (
-        <section className="bg-[#031347] pb-16 md:pb-24 px-4 md:px-12 lg:px-20">
+        <section className="bg-[#031347] pb-16 md:pb-24 ">
             <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
                 <div className="bg-[rgba(255,255,255,0.05)] rounded-2xl p-6 md:p-12 lg:p-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -80,9 +78,9 @@ export default function ContactSection() {
                                 <h2 className="text-white text-4xl md:text-7xl font-fks font-bold tracking-wide mb-8">LET'S COLLAB</h2>
 
                                 {/* Video Player */}
-                                <div className="flex items-center border border-[#BBFC00] rounded-md md:w-[330px] ps-3 py-3 gap-2 relative md:mb-8">
-                                    <div className="relative md:w-[50px] md:h-[50px] w-[30px] h-[30px] aspect-square overflow-hidden bg-[#0d2156]">
-                                        <video src="/robo.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                                <div className="flex items-center border border-[#BBFC00] rounded-md md:w-[330px] ps-2 py-2 md:py-2 gap-2 relative md:mb-8">
+                                    <div className="relative md:w-[50px] md:h-[50px] w-[50px] h-[50px] aspect-square overflow-hidden bg-[#0d2156]">
+                                        <video src="/robo.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[5px]" />
                                     </div>
                                     {/* Book a call badge */}
                                     <div className="flex items-center gap-2 text-[#ffffff] px-3 py-2 rounded-lg">
