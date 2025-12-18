@@ -10,7 +10,14 @@ import NewsletterSection from "@/app/components/newsletter";
 const BrandExperience = () => {
     return (
         <div>
-            <HeroSection />
+            <HeroSection
+                h1="Where Brands"
+                h2="Become Experiences"
+                para="We design immersive brand experiences inside the platforms audiences already love. From interactive worlds to live activations, our work moves brands beyond visibility and into participation. Every experience is engineered to engage, retain, and evolve, creating lasting value long after launch."
+                icon1="/icon/pacman.png"
+                icon2="/icon/burger.png"
+                buttonText="Enter the Game"
+            />
             <div className="-mt-24">
                 <PartnersSection isSecond={false} />
             </div>

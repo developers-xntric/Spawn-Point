@@ -15,14 +15,14 @@ export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText }: 
 
             {/* Center content */}
             <div className="text-center z-10 lg:mb-10">
-                <h1 className="text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">Real Results</h1>
-                <h2 className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative md:bot  bottom-3">Real Engagement</h2>
+                <h1 className="text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">{h1 ? h1 : "Real Results"}</h1>
+                <h2 className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative md:bot  bottom-3">{h2 ? h2 : "Real Engagement"}</h2>
                 <p className="text-white text-md mt-2 md:mt-6 max-w-sm mx-auto">
-                    See how we’ve helped brands connect with gaming audiences through immersive, measurable activations.
+                    {para ? para : "See how we’ve helped brands connect with gaming audiences through immersive, measurable activations."}
                 </p>
                 <Link href="/contact">
                     <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">
-                        Lets Get Started
+                        {buttonText ? buttonText : "Lets Get Started"}
                     </button>
                 </Link>
             </div>
