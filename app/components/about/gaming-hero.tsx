@@ -6,15 +6,13 @@ export default function GamingHero() {
   return (
     <section className=" text-white overflow-hidden">
       <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto pt-6 md:pt-20 pb-12">
-<div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center xl:gap-0 gap-5">
-
-
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 items-center xl:gap-0 gap-5">
           {/* Left side - Image + glass background */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-lg 2xl:max-w-[620px]">
 
               {/* Background behind ONLY the girl image */}
-              <div className="absolute top-8 lg:top-12 left-0 w-full xl:h-[540px] rounded-xl overflow-hidden ">
+              <div className="absolute top-8 lg:top-12 left-0 w-full xl:h-[540px] 2xl:h-[670px] rounded-xl overflow-hidden ">
                 <Image
                   alt="gaming-bg"
                   width={1200}
@@ -37,17 +35,17 @@ export default function GamingHero() {
           </div>
 
           {/* Right side content */}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 2xl:gap-12">
             <div>
-              <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
+              <h2 className="text-[40px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
                 WHO <span className="text-[#BBFC00]">WE ARE </span>
               </h2>
-              <p className="text-xl font-bold text-gray-300 uppercase tracking-wider font-fks">
+              <p className="text-xl 2xl:text-2xl font-bold text-gray-300 uppercase tracking-wider font-fks">
                 SpawnPoint started with one belief
               </p>
             </div>
 
-            <div className="space-y-4 text-gray-200 leading-relaxed text-sm xl:text-base">
+            <div className="space-y-4 2xl:space-y-5 text-gray-200 leading-relaxed text-sm xl:text-base 2xl:text-[19px] 2xl:leading-[25px]">
               <p>
                 Brands shouldn’t talk at players they should build with them. We are a collective of creators, designers, strategists, developers, and culture experts who understand the rhythm of gaming communities. Our experience spans across Roblox, Fortnite, esports, streaming, virtual production, and brand experience design.
               </p>
