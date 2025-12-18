@@ -105,7 +105,7 @@ const ContactForm = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   placeholder="John"
-                  className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-4xl border-2 border-white/10 backdrop-blur-xl"
+                  className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-xl border-2 border-white/10 backdrop-blur-xl"
                 />
               </div>
 
@@ -117,7 +117,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="johndoe@mail.com"
-                  className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-4xl border-2 border-white/10 backdrop-blur-xl"
+                  className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-xl border-2 border-white/10 backdrop-blur-xl"
                 />
               </div>
             </div>
@@ -204,7 +204,7 @@ const ContactForm = () => {
           </h2>
           <p className="m-0 text-base  ">
             <span className="font-helvetica font-bold tracking-wide text-xl whitespace-nowrap ">
-              Spawn Point Creative Labs ↗
+              Spawn Point Creative Labs 
             </span>
 
             <br />
