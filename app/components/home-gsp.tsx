@@ -132,7 +132,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-4xl">
         <Image
           width={2000}
           height={2000}
@@ -189,7 +189,7 @@ export default function HOMEGSP() {
           Spawn Point Studio
         </p>
 
-        <h2 className="text-[37px] lg:text-[60px] font-fks font-black uppercase leading-[40px] md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
+        <h2 className="text-[37px] lg:text-[60px] font-fks font-black uppercase leading-10 md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
           <span className="text-[#BBFC00]">Spawn Point Crafts</span>{" "}
           <span className="text-white">
             Brand Playbooks, Live-Stream Experiences, and
