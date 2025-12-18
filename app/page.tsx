@@ -14,9 +14,9 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <HeroSection /> 
       {/* <SecondSection /> */}
+      <HOMEGSP />
       <ServicesCarousel />
       <PartnersSection />
-      <HOMEGSP />
       <GameCardsSection />
       <CaseStudies />
       <StickyCards />

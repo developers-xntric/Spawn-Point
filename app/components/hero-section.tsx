@@ -187,22 +187,22 @@ export default function HeroSection() {
       end: "+=200%",
       pin: true,
       markers: false,
+
       onUpdate: (self) => {
-        const p = self.progress
-        setScrollProgress(p)
+        setScrollProgress(self.progress)
+      },
 
-        if (p < 0.2) hasAutoScrolled.current = false
-
-        // ✅ MOBILE + DESKTOP AUTO SCROLL AFTER ZOOM
-        if (p >= 0.66 && !hasAutoScrolled.current) {
-          hasAutoScrolled.current = true
-          const target = document.getElementById("services-carousel")
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop,
-              behavior: "smooth",
-            })
-          }
+      onLeave: () => {
+        const target = document.getElementById("home-gsp")
+        if (target) {
+          gsap.to(window, {
+            scrollTo: {
+              y: target,
+              autoKill: false,
+            },
+            duration: 1.2,
+            ease: "power2.out",
+          })
         }
       },
     })
