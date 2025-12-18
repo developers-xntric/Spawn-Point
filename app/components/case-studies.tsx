@@ -63,7 +63,7 @@ export function CaseStudies() {
       <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
 
         {/* Hero Header */}
-        <div className="mb-8 md:mb-16 2xl:mb-10">
+        <div className="mb-8 md:mb-8 2xl:mb-10">
           <div className="grid lg:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-full mx-auto">
             <div>
               <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-10 tracking-[1.5px] md:tracking-[2px]">
@@ -72,7 +72,7 @@ export function CaseStudies() {
               </h2>
             </div>
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-5">
               <p className="text-white text-[16px] md:text-[20px] ">
                 We design immersive in-game experiences that drive engagement across every screen, space, and platform.
               </p>
