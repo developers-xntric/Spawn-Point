@@ -66,21 +66,10 @@ export default function CaseStudySection2() {
                 {/* Bottom image area */}
                 <div className="relative mt-8">
                     <div className="md:rounded-xl overflow-hidden">
-                        <Image
-                            src="/icons/cod.png"
-                            alt="Netflix Next World gameplay showcase"
-                            width={1200}
-                            height={1200}
-                            className="w-full h-[200px] md:h-auto object-cover md:rounded-xl"
-                        />
+                       <video src="/Media2.mp4" autoPlay loop muted className="w-full h-[200px] md:h-auto object-cover md:rounded-xl"></video>
                     </div>
 
-                    {/* Partnership badge */}
-                    <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg">
-                        <span className="text-white font-hel text-sm">Partnership</span>
-                        <span className="text-white font-hel">×</span>
-                        <span className="text-white font-bold text-sm tracking-wider">UBISOFT</span>
-                    </div>
+                    
                 </div>
             </div>
         </section>

@@ -48,7 +48,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </div>
         </div>
 
-        {/*             SECOND SECTION (CONTENT)               */}
+        {/*    SECOND SECTION (CONTENT)    */}
         
         <div className="mt-6 relative z-20">
           <h3 className="mb-2 text-[20px] md:text-[34px] 2xl:text-[40px] font-fks font-bold uppercase text-white leading-5 md:leading-[42px] tracking-[2px]">
