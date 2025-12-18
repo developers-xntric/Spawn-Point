@@ -11,49 +11,61 @@ const services = [
         id: 1,
         title: "CAMPAIGNS & ACTIVATIONS",
         description:
-            "Turn stories into playable moments. We craft creator-led campaigns that merge entertainment with engagement every stream becomes a narrative that sells.",
+            "Creator-led storytelling, hybrid events, and in-stream ad campaigns that build awareness ",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
+        image: "/home/service-1.svg",
+        serviceurl: "/campaigns-activations",
     },
     {
         id: 2,
         title: "ESPORTS PARTNERSHIPS",
         description:
-            "Level up your brand through competitive community experiences. From tournament branding to team collaborations we build presence where passion runs.",
+            "High value IP integrations and strategic sponsorships that leverage community  competition ",
         borderColor: "from-[#E81B8E]",
         accentColor: "border-[#E81B8E]",
+        image: "/home/service-2.svg",
+        serviceurl: "/esports-partnerships",
     },
     {
         id: 3,
-        title: "CAMPAIGNS & ACTIVATIONS",
+        title: "Virtual Worlds",
         description:
-            "Turn stories into playable moments. We craft creator-led campaigns that merge entertainment with engagement every stream becomes a narrative that sells.",
+            "Sustained, persistent, and playable branded economies that drive conversion & retention",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
+        image: "/home/service-3.svg",
+        serviceurl: "/campaigns-activations",
     },
     {
         id: 4,
-        title: "CAMPAIGNS & ACTIVATIONS",
+        title: "In-Stream AdTech",
         description:
-            "Turn stories into playable moments. We craft creator-led campaigns that merge entertainment with engagement every stream becomes a narrative that sells.",
+            "Sustained, persistent, and playable branded economies that drive conversion & retention",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
+        image: "/home/service-4.svg",
+        serviceurl: "/campaigns-activations",
     },
     {
         id: 5,
-        title: "ESPORTS PARTNERSHIPS",
+        title: "CAMPAIGNS & ACTIVATIONS",
         description:
-            "Level up your brand through competitive community experiences. From tournament branding to team collaborations we build presence where passion runs.",
-        borderColor: "from-[#E81B8E]",
-        accentColor: "border-[#E81B8E]",
+            "Creator-led storytelling, hybrid events, and in-stream ad campaigns that build awareness ",
+        borderColor: "from-[#CCFF00]",
+        accentColor: "border-[#CCFF00]",
+        image: "/home/service-1.svg",
+        serviceurl: "/esports-partnerships",
     },
     {
         id: 6,
-        title: "CAMPAIGNS & ACTIVATIONS",
+        title: "ESPORTS PARTNERSHIPS",
         description:
-            "Turn stories into playable moments. We craft creator-led campaigns that merge entertainment with engagement every stream becomes a narrative that sells.",
-        borderColor: "from-[#CCFF00]",
-        accentColor: "border-[#CCFF00]",
+            "High value IP integrations and strategic sponsorships that leverage community  competition ",
+        borderColor: "from-[#E81B8E]",
+        accentColor: "border-[#E81B8E]",
+        image: "/home/service-2.svg",
+        serviceurl: "/campaigns-activations",
     },
 ]
 
@@ -95,9 +107,9 @@ export function ServicesCarousel() {
                         {services.map((service) => (
                             <CarouselItem
                                 key={service.id}
-                                className="basis-[90%] md:basis-[70%] lg:basis-[33%]"
+                                className="basis-[90%] md:basis-[50%] lg:basis-[33%]"
                             >
-                                <div className=" md:h-[520px] 2xl:h-[545px]">
+                                <div className=" md:h-[500px] 2xl:h-[560px]">
                                     <ServiceCard service={service} />
                                 </div>
                             </CarouselItem>
@@ -106,7 +118,7 @@ export function ServicesCarousel() {
                 </Carousel>
 
                 {/* CONTROLS ROW (YOUR UI PRESERVED) */}
-                <div className="flex items-center md:justify-center md:gap-6 gap-4 relative ml-6  md:ml-0  mt-10 md:mt-1">
+                <div className="flex items-center md:justify-center md:gap-6 gap-4 relative ml-6  md:ml-0  mt-10 md:mt-10">
 
                     {/* LEFT */}
                     <button

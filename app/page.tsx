@@ -12,7 +12,7 @@ import NewsletterSection from "./components/newsletter";
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      <HeroSection />
+      <HeroSection /> 
       {/* <SecondSection /> */}
       <ServicesCarousel />
       <PartnersSection />
