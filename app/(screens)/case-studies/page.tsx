@@ -15,10 +15,11 @@ const CaseStudies = () => {
                 icon1="/icons/pizza.png"
                 icon2="/icons/robo.png"
                 buttonText="Let’s Get Started"
+                hWidth='max-w-md'
                 icon1Style="absolute left-[10%] md:left-[15%] xl:left-[27%] top-[20%] md:top-[27%]"
                 icon2Style="absolute right-[4%] md:right-[20%] top-[70%] md:top-[58%]"
                 icon1Width={50}
-                icon2Width={60}
+                icon2Width={70}
             />
             <CaseStudySection />
             <CaseStudySection2 />
