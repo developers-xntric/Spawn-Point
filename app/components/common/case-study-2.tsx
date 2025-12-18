@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function CaseStudySection() {
     return (
-        <section className="bg-[#031347] py-16 md:pt-0 ">
+        <section className="bg-[#031347] py-8 md:pt-0 ">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
                 {/* Top content area */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
