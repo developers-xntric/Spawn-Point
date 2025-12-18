@@ -81,6 +81,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => setOpen(false)}
                 className={
                   pathname === link.href
                     ? "block text-[#BBFC00] font-normal transition"
@@ -90,7 +91,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/contact">
+            <Link href="/contact" onClick={() => setOpen(false)}>
               <button className="w-full bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
                 Let’s Connect
               </button>
