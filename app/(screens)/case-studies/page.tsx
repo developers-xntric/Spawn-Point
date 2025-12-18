@@ -8,7 +8,18 @@ import ContactSection from '@/app/components/contact-section';
 const CaseStudies = () => {
     return (
         <div>
-            <HeroSection />
+            <HeroSection
+                h1="Real Results"
+                h2="Real Engagement"
+                para="See how we’ve helped brands connect with gaming audiences through immersive, measurable activations."
+                icon1="/icons/pizza.png"
+                icon2="/icons/robo.png"
+                buttonText="Let’s Get Started"
+                icon1Style="absolute left-[10%] md:left-[15%] xl:left-[27%] top-[20%] md:top-[27%]"
+                icon2Style="absolute right-[4%] md:right-[20%] top-[70%] md:top-[58%]"
+                icon1Width={50}
+                icon2Width={60}
+            />
             <CaseStudySection />
             <CaseStudySection2 />
             <PartnersSection />
