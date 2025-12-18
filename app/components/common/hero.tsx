@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 export default function HeroSection() {
     return (
-        <section className="bg-[#031347] min-h-[500px] lg:min-h-[700px] 2xl:min-h-[800px] flex items-center justify-center relative pt-22 md:pt-16 mb-12">
+        <section className="bg-[#031347] min-h-[500px] lg:min-h-[650px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-16 mb-12">
             {/* Pizza image - left side */}
             <div className="absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]">
                 <Image src="/icons/yes.png" alt="Pizza decoration" width={50} height={50} className="object-contain" />
