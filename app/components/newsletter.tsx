@@ -83,14 +83,14 @@ export default function NewsletterSection() {
             </div>
 
             {/* Main Content */}
-            <div className="relative max-w-5xl mx-auto mt-20  text-center">
+            <div className="relative max-w-5xl mx-auto mt-10 text-center">
                 {/* Character Image */}
                 <div className="relative w-full max-w-5xl mx-auto -mt-4 mb-0">
                     <Image src="/nl.png" alt="Game Characters" width={1000} height={1000} className="w-full h-auto object-cover relative z-0 mr-20 mx-auto right-2 md:right-4 lg:right-8" />
                 </div>
 
                 {/* Email Form - Overlapping the image */}
-                <div className="relative z-20 -mt-1 md:-mt-32 mb-12">
+                <div className="relative z-20 -mt-1 md:-mt-36 mb-12">
                     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-0 max-w-[85%] md:max-w-lg mx-auto relative">
                         <input
                             type="email"

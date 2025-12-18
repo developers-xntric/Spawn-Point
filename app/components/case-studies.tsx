@@ -60,19 +60,19 @@ export function CaseStudies() {
 
   return (
     <section className="pt-14 md:pt-16 pb-1 md:pb-16">
-      <div className="2xl:max-w-[1440px] w-[100%] md:w-[85%] mx-auto">
+      <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
 
         {/* Hero Header */}
-        <div className=" mb-8 md:mb-16">
-          <div className="grid lg:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-[100%] mx-auto">
+        <div className="mb-8 md:mb-8 2xl:mb-10">
+          <div className="grid lg:grid-cols-2 md:gap-12 gap-4 items-start w-[90%] md:w-full mx-auto">
             <div>
-              <h2 className=" text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-[40px] tracking-[1.5px] md:tracking-[2px]">
+              <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-10 tracking-[1.5px] md:tracking-[2px]">
                 Where <span className="text-[#BBFC00]">Brands </span> Become <br />
                 playable<span className="text-[#BBFC00]"> Stories</span>
               </h2>
             </div>
 
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-5">
               <p className="text-white text-[16px] md:text-[20px] ">
                 We design immersive in-game experiences that drive engagement across every screen, space, and platform.
               </p>
@@ -95,7 +95,7 @@ export function CaseStudies() {
 
         {/* Carousel Section */}
         <div>
-          <div className="relative w-full h-[470px] md:h-[600px] 2xl:h-[650px] md:rounded-2xl overflow-hidden mb-8 group">
+          <div className="relative w-full h-[470px] md:h-[600px] 2xl:h-[600px] md:rounded-2xl overflow-hidden mb-8 2xl:mb-4 group">
 
             {/* VIDEO BACKGROUND (same wrapper, same size) */}
             <div className="relative w-full h-full">
