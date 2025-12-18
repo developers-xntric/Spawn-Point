@@ -19,7 +19,7 @@ const partners = [
 
 export default function PartnersSection({ isSecond = true }: { isSecond?: boolean }) {
     // Duplicate partners for seamless infinite scroll
-    const duplicatedPartners = [...partners, ...partners, ...partners, ...partners]
+    const duplicatedPartners = [...partners, ...partners, ...partners, ...partners, ...partners, ...partners]
 
     return (
         <section className="bg-[#031347] md:py-10 py-6 overflow-hidden">
