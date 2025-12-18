@@ -189,7 +189,7 @@ export default function HOMEGSP() {
           Spawn Point Studio
         </p>
 
-        <h2 className="text-[40px] lg:text-[60px] font-fks font-black uppercase leading-[40px] md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
+        <h2 className="text-[40px] lg:text-[60px] font-fks font-black uppercase leading-10 md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
           <span className="text-[#BBFC00]">Spawn Point Crafts</span>{" "}
           <span className="text-white">
             Brand Playbooks, Live-Stream Experiences, and
