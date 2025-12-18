@@ -52,7 +52,7 @@ export default function ExpertiseSection() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + Audience Reinforcement Engine + DataForge Dashboard
+                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + Audience Reinforcement Engine
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -88,7 +88,7 @@ export default function ExpertiseSection() {
 
                     {/* Right Column */}
                     <div className="flex flex-col gap-6">
-                        {/* Esports Partnerships Card */}
+                        {/* CREATOR STREAM AWARENESS */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 CREATOR STREAM AWARENESS
@@ -99,76 +99,63 @@ export default function ExpertiseSection() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + CreatorNet Portal + DataForge Dashboard
+                                    <span className="text-white text-md lg:text-sm">Brands struggle to authentically reach gamers.
                                     </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + CreatorNet Portal + DataForge Dashboard</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
                                     <span className="text-white text-md lg:text-sm">4x recall vs pre-roll ads; scalable awareness solution.</span>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Team-branded partnerships</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">PR + social amplification</span>
-                                </div>
                             </div>
                         </div>
 
-                        {/* Virtual Worlds Card */}
+                        {/* BRAND ARENA IP BUILD */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">BRAND ARENA IP BUILD</h3>
                             <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
-                                Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
+                                End-to-end esports IP development-concept, production, and live activation.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Branded maps</span>
+                                    <span className="text-white text-md lg:text-sm">Sponsorships lack longevity; brands need cultural equity.
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Gameplay loops</span>
+                                    <span className="text-white text-md lg:text-sm">CreatorNet Portal + Al Ad Engine + DataForge Dashboard
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Virtual stores (Shopify integrated)</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Seasonal updates</span>
+                                    <span className="text-white text-md lg:text-sm">Own the arena, not just the logo.</span>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Virtual Worlds Card */}
+                        {/* WORLD FORGE BUILDS */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
-                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">WORLD FORGE BUILDS</h3>
                             <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
-                                Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
+                                Custom branded worlds in Roblox, Fortnite, Minecraft, or CS2 with playable loops and commerce.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Branded maps</span>
+                                    <span className="text-white text-md lg:text-sm">Lack of persistent brand-owned spaces.</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Gameplay loops</span>
+                                    <span className="text-white text-md lg:text-sm">DataForge Dashboard + CreatorNet Portal
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Virtual stores (Shopify integrated)</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Seasonal updates</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Streamer-driven traffic</span>
+                                    <span className="text-white text-md lg:text-sm">MENA gamers spend 6-10 hrs/week in-game-create your owned ecosystem.</span>
                                 </div>
                             </div>
                         </div>
