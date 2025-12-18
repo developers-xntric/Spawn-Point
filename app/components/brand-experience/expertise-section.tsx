@@ -15,7 +15,7 @@ export default function ExpertiseSection() {
                             <span className="text-[#BBFC00]">Interaction</span>
                         </h2>
 
-                        {/* Campaigns & Activations Card */}
+                        {/* PLAYTEST ACTIVATION */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 PLAYTEST ACTIVATION
@@ -39,54 +39,48 @@ export default function ExpertiseSection() {
                             </div>
                         </div>
 
-                        {/* In-Stream Adtech Card */}
+                        {/* CREATOR STREAM PLUS */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
-                                In-Stream Adtech
+                                CREATOR STREAM PLUS
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">Extended in-stream activations using UTM, offer codes, and retargeting for performance.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Dynamic live ads</span>
+                                    <span className="text-white text-md lg:text-sm">Need to connect awareness with measurable conversions.</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Rich-media panels</span>
+                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + Audience Reinforcement Engine + DataForge Dashboard
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">QR-triggered CTAs</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Full-funnel analytics via DataForge</span>
+                                    <span className="text-white text-md lg:text-sm">Transforms creator reach into performance ROI.</span>
                                 </div>
                             </div>
                         </div>
 
-                        {/* In-Stream Adtech Card */}
+                        {/* ARENA ACCESS PARTNERSHIPS */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
-                                In-Stream Adtech
+                                ARENA ACCESS PARTNERSHIPS
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">Brand integration into global esports platforms like Esports World Cup with managed activations.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Dynamic live ads</span>
+                                    <span className="text-white text-md lg:text-sm">Fragmented sponsorship ROI.</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Rich-media panels</span>
+                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + CreatorNet Portal + DataForge Dashboard
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">QR-triggered CTAs</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">Full-funnel analytics via DataForge</span>
+                                    <span className="text-white text-md lg:text-sm">Turn sponsorships into measurable performance assets.</span>
                                 </div>
                             </div>
                         </div>
