@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-export default function HeroSection() {
+export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText }: { h1?: string; h2?: string; icon1?: string; icon2?: string; para?: string; buttonText?: string; }) {
     return (
         <section className="bg-[#031347] min-h-[500px] lg:min-h-[650px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-16 mb-12">
             {/* Pizza image - left side */}
