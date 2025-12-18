@@ -122,6 +122,54 @@ const ContactForm = () => {
               </div>
             </div>
 
+            {/* Services */}
+            <div className="my-8 relative left-1">
+              <label className="block mb-3 text-[16px] tracking-wide font-bold">
+                Services
+              </label>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-[18px]">
+                {[
+                  "Campaigns & Activations",
+                  "Virtual Worlds",
+                  "Esports partnerships",
+                  "In Stream Adtech",
+                ].map((service) => (
+                  <label
+                    key={service}
+                    className="flex items-center gap-3 cursor-pointer group"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={formData.services.includes(service)}
+                      onChange={() => handleServiceChange(service)}
+                      className="peer hidden"
+                    />
+
+                    {/* Custom box */}
+                    <div className="w-4 h-4 rounded-xs border border-white 
+                  bg-transparent flex items-center justify-center
+                  peer-checked:bg-[#BBFC00] peer-checked:border-[#BBFC00]
+                  transition">
+                      <svg
+                        className="w-3 h-3 text-[#031347] opacity-0 peer-checked:opacity-100"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+
+                    <span className="opacity-80 group-hover:opacity-100">
+                      {service}
+                    </span>
+                  </label>
+
+                ))}
+              </div>
+            </div>
 
             {/* Message */}
             <div>
