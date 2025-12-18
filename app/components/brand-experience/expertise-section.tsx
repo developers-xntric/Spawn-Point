@@ -155,6 +155,33 @@ export default function ExpertiseSection() {
                                     <Star />
                                     <span className="text-white text-md lg:text-sm">Seasonal updates</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* Virtual Worlds Card */}
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
+                                Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
+                            </p>
+                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Branded maps</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Gameplay loops</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Virtual stores (Shopify integrated)</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Seasonal updates</span>
+                                </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
                                     <span className="text-white text-md lg:text-sm">Streamer-driven traffic</span>
