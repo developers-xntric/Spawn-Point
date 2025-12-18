@@ -19,7 +19,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, icon1Style, icon2Style, icon1Width, icon1Height, icon2Width, icon2Height, hWidth }: HeroSectionProps) {
     return (
-        <section className="bg-[#031347] min-h-[500px] lg:min-h-[650px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-16 mb-12">
+        <section className="bg-[#031347] min-h-[500px] lg:min-h-[600px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-28 mb-12">
             {/* Pizza image - left side */}
             <div className={`${icon1Style ? icon1Style : "absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]"}`}>
                 <Image src={icon1 ? icon1 : "/icons/yes.png"} alt="Pizza decoration" width={icon1Width ? icon1Width : 55} height={icon1Height ? icon1Height : 50} className="object-contain" />

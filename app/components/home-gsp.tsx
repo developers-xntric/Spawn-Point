@@ -51,7 +51,7 @@ export default function HOMEGSP() {
 
         if (isDesktop) {
           start = "top top";
-          end = "+=100%";
+          end = "+=50%";
           pinSection = true; // Pin desktop
         }
 
@@ -67,7 +67,7 @@ export default function HOMEGSP() {
             scrub: 2.7,
             pin: pinSection,
             pinSpacing: pinSection,
-            markers: false,
+            markers: true,
           },
         });
 
@@ -110,7 +110,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute -top-4 2xl:-top-3 -right-2 2xl:right-10 w-30 md:w-60 2xl:w-80 z-10 floating-img">
+      <div className="absolute -top-4 2xl:-top-6 -right-2 2xl:right-10 w-30 md:w-60 2xl:w-80 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -130,7 +130,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-38 -right-10 xl:right-16 w-40 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img rounded-4xl">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-32 -right-10 xl:right-16 w-40 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img rounded-[20px]">
         <Image
           width={2000}
           height={2000}
