@@ -14,9 +14,11 @@ const BrandExperience = () => {
                 h1="Where Brands"
                 h2="Become Experiences"
                 para="We design immersive brand experiences inside the platforms audiences already love. From interactive worlds to live activations, our work moves brands beyond visibility and into participation. Every experience is engineered to engage, retain, and evolve, creating lasting value long after launch."
-                icon1="/icon/pacman.png"
-                icon2="/icon/burger.png"
+                icon1="/icons/pacman.png"
+                icon2="/icons/burger.png"
                 buttonText="Enter the Game"
+                icon1Style="absolute left-[10%] md:left-[15%] xl:left-[27%] top-[20%] md:top-[27%]"
+                icon2Style="absolute right-[4%] md:right-[22.5%] top-[70%] md:top-[58%]"
             />
             <div className="-mt-24">
                 <PartnersSection isSecond={false} />
