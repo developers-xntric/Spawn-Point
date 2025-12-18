@@ -1,6 +1,6 @@
 export default function NumbersTalkSection() {
     return (
-        <section className="bg-[#031347] pb-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <section className="bg-[#031347] pb-16 md:py-10 md:pb-24 px-4 md:px-8 lg:px-16">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <h2 className="text-center font-fks font-black text-2xl md:text-3xl lg:text-7xl uppercase tracking-wide mb-12 md:mb-16">

@@ -134,7 +134,7 @@ export default function CelebrationSection() {
           alt="Top graphic"
           width={240}
           height={240}
-          className="w-[120px] h-[120px] md:w-[200px] md:h-[200px] 2xl:w-[240px] 2xl:h-[240px]"
+          className="w-[120px] h-[120px] md:w-[200px] md:h-[200px] 2xl:w-60 2xl:h-60"
         />
       </div>
 
@@ -162,7 +162,7 @@ export default function CelebrationSection() {
           alt="Bottom graphic"
           width={180}
           height={260}
-          className="w-[100px] h-[100px] md:w-[160px] md:h-[220px] 2xl:w-[180px] 2xl:h-[260px]"
+          className="w-[100px] h-[100px] md:w-40 md:h-[220px] 2xl:w-[180px] 2xl:h-[260px]"
         />
       </div>
     </div>
