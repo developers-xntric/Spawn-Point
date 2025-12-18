@@ -42,8 +42,11 @@ export function CaseStudies() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    setProgress((currentSlide / (caseStudies.length - 1)) * 100)
+    const rawProgress = (currentSlide / (caseStudies.length - 1)) * 100
+    const minProgress = 6 
+    setProgress(Math.max(minProgress, rawProgress))
   }, [currentSlide])
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % caseStudies.length)

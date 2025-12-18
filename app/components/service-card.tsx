@@ -20,10 +20,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
     <div className="group h-full">
       <div className="relative flex h-[369px] md:h-[420px] lg:h-[490px] xl:h-[425px] 2xl:h-full flex-col rounded-[10px] md:rounded-[16px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] p-3 2xl:p-5 transition-all duration-300 hover:shadow-2xl overflow-hidden">
 
-        {/* -------------------------------------------------- */}
         {/*                 FIRST SECTION (HEADER)             */}
         {/* -------------------------------------------------- */}
-        <div className="relative w-full md:w-full h-[300px] md:h-full lg:h-[300px] 2xl:h-[225px] flex flex-col items-center rounded-[20px] overflow-hidden">
+        <div id="service-card" className="relative w-full md:w-full h-[300px] md:h-full lg:h-[300px] 2xl:h-[225px] flex flex-col items-center rounded-[20px] overflow-hidden mb-0 2xl:mb-6">
 
           {/* Background curve */}
           <Image
@@ -74,8 +73,8 @@ export function ServiceCard({ service }: ServiceCardProps) {
           <p className="text-white text-[13px] xl:text-[15px] 2xl:text-[18px] font-hel mb-4 md:line-clamp-none">
             {service.description}
           </p>
-          <div className="md:mb-2 w-full">
-            <Link href={service.serviceurl} className="block hover:bg-[#BBFC00] hover:border-[#BBFC00] hover:text-[#031347] text-white text-[13px]  w-full font-hel font-bold  mt-4 bg-transparent border border-white px-4 py-2 lg:py-3 rounded-[5px] text-center">Let's Connect</Link>
+          <div className=" w-full">
+            <Link href={service.serviceurl} className="block hover:bg-[#BBFC00] hover:border-[#BBFC00] hover:text-[#031347] text-white text-[13px] 2xl:text-[17px]  w-full font-hel font-bold  mt-4 bg-transparent border border-white px-4 py-2 lg:py-3 rounded-[5px] text-center">Let's Connect</Link>
           </div>
         </div>
       </div>
