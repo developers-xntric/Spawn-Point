@@ -41,7 +41,7 @@ export default function HOMEGSP() {
 
         if (isMobile) {
           start = "155% 1%";
-          end = "+=10%";
+          end = "+=0%";
         }
 
         if (isTablet) {
@@ -50,10 +50,9 @@ export default function HOMEGSP() {
         }
 
         if (isDesktop) {
-          start = "top+=1 top";
-          pinSection = true;
-
+          start = "top top";
           end = "+=100%";
+          pinSection = true; // Pin desktop
         }
 
         // MAIN FLOATING IMAGES
@@ -97,12 +96,11 @@ export default function HOMEGSP() {
 
   return (
     <section
-      id="home-gsp"
       ref={sectionRef}
-      className="bg-white/5 h-[700px] md:min-h-screen relative overflow-hidden pb-20 md:pt-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
+      className="bg-white/5 h-[700px] md:h-full md:min-h-screen relative overflow-hidden pb-20 md:pt-20 pt-0 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
     >
       {/* Floating Images */}
-      <div className="absolute -top-10 md:left-10 xl:left-10 -left-4 w-30 md:w-60 lg:w-64 z-10 floating-img">
+      <div className="absolute -top-10 md:left-10 xl:left-10 -left-4 w-30 md:w-60 2xl:w-64 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -112,7 +110,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute -top-4 2xl:top-5 -right-2 2xl:right-10 w-30 md:w-60 xl:w-80 z-10 floating-img">
+      <div className="absolute -top-4 2xl:-top-3 -right-2 2xl:right-10 w-30 md:w-60 2xl:w-80 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -122,7 +120,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-44 md:bottom-20 xl:bottom-44 2xl:bottom-52 -left-6 md:left-2 xl:left-10 w-36 md:w-64 lg:w-90 z-10 floating-img">
+      <div className="absolute bottom-44 md:bottom-20 xl:bottom-44 2xl:bottom-52 -left-6 md:left-2 xl:left-10 w-36 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img">
         <Image
           width={2000}
           height={2000}
@@ -132,7 +130,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-4xl">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-38 -right-10 xl:right-16 w-40 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img rounded-[20px]">
         <Image
           width={2000}
           height={2000}
@@ -153,7 +151,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute -top-4 xl:top-10 2xl:top-20 right-2 md:right-10 xl:right-20 w-20 md:w-44 xl:w-48 z-20 floating-img-overlay">
+      <div className="absolute -top-4 xl:top-10 2xl:top-10 right-2 md:right-10 2xl:right-20 w-20 md:w-44 2xl:w-48 z-20 floating-img-overlay">
         <Image
           width={2000}
           height={2000}
@@ -189,7 +187,7 @@ export default function HOMEGSP() {
           Spawn Point Studio
         </p>
 
-        <h2 className="text-[40px] lg:text-[60px] font-fks font-black uppercase leading-[40px] md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
+        <h2 className="text-[37px] lg:text-[60px] font-fks font-black uppercase leading-[40px] md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
           <span className="text-[#BBFC00]">Spawn Point Crafts</span>{" "}
           <span className="text-white">
             Brand Playbooks, Live-Stream Experiences, and
@@ -203,7 +201,7 @@ export default function HOMEGSP() {
           <span className="text-[#BBFC00]">MENA</span>{" "}
           <span className="text-white">and Beyond</span>
         </h2>
-
+        
         <Link href="/contact">
           <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
             Book a Strategy Sprint

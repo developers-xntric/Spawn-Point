@@ -261,3 +261,29 @@ button {
     height: 215px !important;
   }
 }
+
+
+
+#videoPlayer {
+  position: relative;
+  background: #031347;
+  /* inner background */
+  border-radius: 8px;
+}
+
+#videoPlayer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.7px;
+  /* border thickness */
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #456526, #BBFC00);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}

@@ -49,7 +49,7 @@ export default function StickyCards() {
 
 
       gsap.set(cardEls, {
-        opacity: 1,
+        opacity: 0,
         y: (i) => i === 0 ? 180 : 150,
       })
 
@@ -58,7 +58,9 @@ export default function StickyCards() {
         start: "top top",
         end: "bottom bottom",
         pin: left,
-        pinSpacing: false,
+        pinSpacing: true,
+        anticipatePin: 1,
+        scrub: 2.5,
         markers: false,
       })
 

@@ -78,15 +78,28 @@ export default function ContactSection() {
                                 <h2 className="text-white text-4xl md:text-7xl font-fks font-bold tracking-wide mb-8">LET'S COLLAB</h2>
 
                                 {/* Video Player */}
-                                <div className="flex items-center border border-[#BBFC00] rounded-md md:w-[330px] ps-2 py-2 md:py-2 gap-2 relative md:mb-8">
-                                    <div className="relative md:w-[50px] md:h-[50px] w-[50px] h-[50px] aspect-square overflow-hidden bg-[#0d2156]">
-                                        <video src="/robo.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[5px]" />
+                                <div
+                                    id="videoPlayer"
+                                    className="gradient-border flex items-center rounded-md md:w-[330px] ps-2 py-2 md:py-2 gap-2 relative md:mb-8 bg-[#031347]"
+                                >
+                                    <div className="relative md:w-[50px] md:h-[50px] w-[50px] h-[50px] aspect-square overflow-hidden bg-[#031347]">
+                                        <video
+                                            src="/robo.mp4"
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            className="w-full h-full object-cover rounded-[5px]"
+                                        />
                                     </div>
-                                    {/* Book a call badge */}
+
                                     <div className="flex items-center gap-2 text-[#ffffff] px-3 py-2 rounded-lg">
-                                        <span className="md:text-[14px] text-[4vw] font-medium tracking-wide font-hel">Book a call with spawnpoint</span>
+                                        <span className="md:text-[14px] text-[4vw] font-medium tracking-wide font-hel">
+                                            Book a call with spawnpoint
+                                        </span>
                                     </div>
                                 </div>
+
                             </div>
 
                             {/* Email */}

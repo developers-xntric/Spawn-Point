@@ -150,14 +150,14 @@ export function CaseStudies() {
                 onClick={prevSlide}
                 className=" rounded-full border-2 border-[#273561] p-2 text-[#CCFF00] md:w-14 md:h-14 w-10 h-10 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
               >
-                <Image src="/home/left-arrow.svg" alt="Left Arrow" width={20} height={20}  className="md:w-20 md:h-20 w-5 h-5" />
+                <Image src="/home/left-arrow.svg" alt="Left Arrow" width={20} height={20}  className="md:w-[25px] md:h-[25px] w-5 h-5" />
               </button>
 
               <button
                 onClick={nextSlide}
                 className="rounded-full border-2 border-[#273561] p-2 md:w-14 md:h-14 w-10 h-10 flex items-center justify-center cursor-pointer backdrop-blur-[10px] bg-white/10"
               >
-                <Image src="/home/right-arrow.svg" alt="Right Arrow" width={20} height={20} className="md:w-20 md:h-20 w-5 h-5" />
+                <Image src="/home/right-arrow.svg" alt="Right Arrow" width={20} height={20} className="md:w-[25px] md:h-[25px] w-5 h-5" />
               </button>
             </div>
           </div>
