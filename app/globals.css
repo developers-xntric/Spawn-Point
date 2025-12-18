@@ -255,3 +255,9 @@ button {
     font-size: 13px !important;
   }
 }
+
+@media (min-width: 1400px) and (max-width: 1720px) {
+  #service-card {
+    height: 215px !important;
+  }
+}

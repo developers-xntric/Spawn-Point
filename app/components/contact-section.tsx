@@ -71,7 +71,7 @@ export default function ContactSection() {
 
     return (
         <section className="bg-[#031347] pb-16 md:pb-24 px-4 md:px-12 lg:px-20">
-            <div className="max-w-7xl mx-auto">
+            <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
                 <div className="bg-[rgba(255,255,255,0.05)] rounded-2xl p-6 md:p-12 lg:p-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         {/* Left Side */}
