@@ -34,29 +34,29 @@ export default function CelebrationSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
+          start: "top center",
+          end: "bottom center",
           scrub: 3.7,
         },
       });
 
       tl.fromTo(
         lineRef.current,
-        { x: "70%" },
-        { x: "-60%", y: "10%", ease: "none" },
+        { x: "50%" },
+        { x: "-40%", y: "10%", ease: "none" },
         0
       );
 
       tl.fromTo(
         topImgRef.current,
-        { x: "140%", rotation: 0 },
+        { x: "120%", rotation: 0 },
         { x: "-540%", rotation: 360, ease: "none" },
         0
       );
 
       tl.fromTo(
         bottomImgRef.current,
-        { x: "140%", rotation: 0 },
+        { x: "120%", rotation: 0 },
         { x: "-600%", rotation: -360, ease: "none" },
         0
       );
