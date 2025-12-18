@@ -46,7 +46,7 @@ export default function FearlessProgress() {
                 gsap.set([secondNextTitle], { y: "20px", scale: 1 })
             } else {
                 gsap.set(title, { opacity: 0.1, y: 10, scale: 1, height: "auto" })
-                gsap.set(nextTitle, { y: "40px", scale: 1 })
+                gsap.set(nextTitle!, { y: "40px", scale: 1 })
                 gsap.set([desc, left, right], {
                     opacity: 0,
                     y: "-200px",
