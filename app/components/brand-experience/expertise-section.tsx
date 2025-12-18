@@ -91,19 +91,20 @@ export default function ExpertiseSection() {
                         {/* Esports Partnerships Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
-                                Esports Partnerships
+                                CREATOR STREAM AWARENESS
                             </h3>
                             <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
-                                Your brand inside the biggest cultural moments across UAE, KSA, Egypt.
+                                In-stream brand integrations for awareness across Twitch, YouTube, Kick, and TikTok.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Tournament IPs</span>
+                                    <span className="text-white text-md lg:text-sm">Al Ad Engine + CreatorNet Portal + DataForge Dashboard
+                                    </span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Finals events</span>
+                                    <span className="text-white text-md lg:text-sm">4x recall vs pre-roll ads; scalable awareness solution.</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
