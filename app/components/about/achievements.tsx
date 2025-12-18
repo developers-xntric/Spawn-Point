@@ -9,7 +9,7 @@ export function Achievements() {
           <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] font-hel">
             ACHEIVEMENTS
           </p>
-          <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto text-center leading-[40px] md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
+          <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto text-center leading-10 md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
             WE DON'T <span className="text-[#BBFC00]">CREATE ADS </span> WE BUILD WORLDS THAT WIN{" "}
             <span className="text-[#BBFC00]">ATTENTION</span>
           </h2>
@@ -20,13 +20,13 @@ export function Achievements() {
           {/* Left Stats Cards */}
           <div className="space-y-6 flex flex-col w-full h-full justify-between">
             {/* Card 1 */}
-            <div className="rounded-[12px] md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-4 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
+            <div className="rounded-2xl md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-4 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
               <div className="text-[40px] md:text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance">#1</div>
               <p className="text-white text-[16px] md:text-[16px]  max-w-sm ">in branded activations on Roblox</p>
             </div>
 
             {/* Card 2 */}
-            <div className="rounded-[12px] md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-5 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
+            <div className="rounded-2xl md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-5 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
               <div className="text-[40px] md:text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance tracking-[1.5px]">
                 2.5 BILLION<span className="text-[45px]">+</span>
               </div>
@@ -34,7 +34,7 @@ export function Achievements() {
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-[12px] md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-5 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
+            <div className="rounded-2xl md:rounded-lg border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 pt-5 md:pt-10 xl:pt-10 2xl:pt-20 pb-4 pl-4 ">
               <div className="text-[40px] md:text-[55px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto  leading-[55px] text-balance tracking-[1.5px]">Award Winning</div>
               <p className="text-white text-[16px] md:text-[16px]  max-w-sm">Recognized globally for excellence in brand activations</p>
             </div>
@@ -47,14 +47,14 @@ export function Achievements() {
               alt="Roblox 3D Icon"
               width={2000}
               height={2000}
-              className="object-contain w-[100%] h-full mx-auto"
+              className="object-contain w-full h-full mx-auto"
               priority
             />
           </div>
 
           {/* Right Info Card */}
           <div className="w-full rounded-lg h-full border border-[#FFFFFF1A] backdrop-blur-[30px] bg-white/5 p-4 md:p-8 flex flex-col justify-end space-y-6 md:pt-8 pt-6">
-            <h3 className="text-[40px] md:text-[55px] font-fks font-bold uppercase text-white max-w-[570px]  leading-[40px] md:leading-[55px] text-balance tracking-[1.5px]">
+            <h3 className="text-[40px] md:text-[55px] font-fks font-bold uppercase text-white max-w-[570px]  leading-10 md:leading-[55px] text-balance tracking-[1.5px]">
               Roblox Partner
               <br />
               Program:
@@ -66,7 +66,7 @@ export function Achievements() {
           </div>
 
            {/* Center Image */}
-          <div className="relative md:hidden w-full h-[260px] sm:h-[320px] md:h-[420px] lg:h-full ">
+          <div className="relative md:hidden w-full h-[260px] sm:h-80 md:h-[420px] lg:h-full ">
             <Image
               src="/about/achivement-mob.png"
               alt="Roblox 3D Icon"
