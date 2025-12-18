@@ -9,10 +9,9 @@ export default function BrandsPlayableSection() {
     ]
 
     return (
-        <section className="bg-[#031347] pt-8 pb-20 ">
-            <div className="2xl:max-w-[1440px] w-[100%] md:w-[85%] mx-auto">
+        <section className="bg-[#031347] pt-8 pb-20">
+            <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
                 <div className="flex flex-col-reverse lg:flex-row items-stretch gap-5 lg:gap-12">
-
                     {/* Left - Image */}
                     <div className="w-full lg:w-1/2">
                         <div className="relative rounded-2xl overflow-hidden">
@@ -27,7 +26,7 @@ export default function BrandsPlayableSection() {
                     </div>
 
                     {/* Right - Content */}
-                    <div className="w-[90%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-6 flex flex-col justify-between">
+                    <div className="w-[90%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-6 flex flex-col justify-between mx-auto">
                         {/* Headline */}
 
 
