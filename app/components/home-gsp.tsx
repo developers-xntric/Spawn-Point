@@ -50,9 +50,10 @@ export default function HOMEGSP() {
         }
 
         if (isDesktop) {
-          start = "top top";
+          start = "top+=1 top";
+          pinSection = true;
+
           end = "+=100%";
-          pinSection = true; // Pin desktop
         }
 
         // MAIN FLOATING IMAGES
@@ -96,6 +97,7 @@ export default function HOMEGSP() {
 
   return (
     <section
+      id="home-gsp"
       ref={sectionRef}
       className="bg-white/5 min-h-screen relative overflow-hidden py-20 px-4 rounded-[38px_0_0_0] md:rounded-[162px_0_0_0]"
     >
@@ -201,7 +203,7 @@ export default function HOMEGSP() {
           <span className="text-[#BBFC00]">MENA</span>{" "}
           <span className="text-white">and Beyond</span>
         </h2>
-        
+
         <Link href="/contact">
           <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
             Book a Strategy Sprint

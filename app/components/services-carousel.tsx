@@ -11,7 +11,7 @@ const services = [
         id: 1,
         title: "CAMPAIGNS & ACTIVATIONS",
         description:
-            "Creator-led storytelling, hybrid events, and in-stream ad campaigns that build awareness ",
+            "Creator-led storytelling, hybrid events, and in-stream ad campaigns build awareness ",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-1.svg",
@@ -47,26 +47,7 @@ const services = [
         image: "/home/service-4.svg",
         serviceurl: "/campaigns-activations",
     },
-    {
-        id: 5,
-        title: "CAMPAIGNS & ACTIVATIONS",
-        description:
-            "Creator-led storytelling, hybrid events, and in-stream ad campaigns that build awareness ",
-        borderColor: "from-[#CCFF00]",
-        accentColor: "border-[#CCFF00]",
-        image: "/home/service-1.svg",
-        serviceurl: "/esports-partnerships",
-    },
-    {
-        id: 6,
-        title: "ESPORTS PARTNERSHIPS",
-        description:
-            "High value IP integrations and strategic sponsorships that leverage community  competition ",
-        borderColor: "from-[#E81B8E]",
-        accentColor: "border-[#E81B8E]",
-        image: "/home/service-2.svg",
-        serviceurl: "/campaigns-activations",
-    },
+   
 ]
 
 export function ServicesCarousel() {
@@ -88,14 +69,14 @@ export function ServicesCarousel() {
     const progressPercent = ((current + 1) / count) * 100
 
     return (
-        <section id="services-carousel" className="pb-6 md:pb-16 pt-6">
+        <section  className="pb-0 md:pb-1 pt-16 md:pt-20">
             <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
 
                 {/* HEADER (UNCHANGED) */}
                 <div className="mb-16 md:text-center 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto"> <p className="mb-4 md:text-[20px] text-[16px] tracking-[12px] text-[#FF1586] font-hel"> SERVICES </p> <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] md:leading-[45px] leading-[40px] md:tracking-[2px] tracking-[1.5px]"> <span className="text-[#BBFC00]">Gaming + AI </span> first campaigns that move audiences, not{" "} <span className="text-[#BBFC00]">just eyeballs</span> </h2> </div>
 
                 {/* SHADCN CAROUSEL */}
-                <Carousel
+                {/* <Carousel
                     setApi={setApi}
                     opts={{
                         align: "start",
@@ -107,7 +88,7 @@ export function ServicesCarousel() {
                         {services.map((service) => (
                             <CarouselItem
                                 key={service.id}
-                                className="basis-[90%] md:basis-[50%] lg:basis-[33%]"
+                                className="grid grid-cols-4"
                             >
                                 <div className=" md:h-[500px] 2xl:h-[560px]">
                                     <ServiceCard service={service} />
@@ -115,13 +96,23 @@ export function ServicesCarousel() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                </Carousel>
+                </Carousel> */}
+
+                <div className="">
+                    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 w-[90%] md:w-full mx-auto">
+                        {services.map((service) => (
+                            <div className="">
+                                <ServiceCard service={service} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
                 {/* CONTROLS ROW (YOUR UI PRESERVED) */}
                 <div className="flex items-center md:justify-center md:gap-6 gap-4 relative ml-6  md:ml-0  mt-10 md:mt-10">
 
                     {/* LEFT */}
-                    <button
+                    {/* <button
                         onClick={() => api?.scrollPrev()}
                         className="rounded-full border-2 border-[#273561] p-2 w-10 md:w-14 h-10 md:h-14 backdrop-blur bg-white/10 flex items-center justify-center"
                     >
@@ -131,18 +122,18 @@ export function ServicesCarousel() {
                             width={27}
                             height={27}
                         />
-                    </button>
+                    </button> */}
 
                     {/* PROGRESS */}
-                    <div className="w-[100px] md:w-[170px] h-2 bg-white/10 rounded-full overflow-hidden">
+                    {/* <div className="w-[100px] md:w-[170px] h-2 bg-white/10 rounded-full overflow-hidden">
                         <div
                             className="h-full bg-[#BBFC00] transition-all duration-500"
                             style={{ width: `${progressPercent}%` }}
                         />
-                    </div>
+                    </div> */}
 
                     {/* RIGHT */}
-                    <button
+                    {/* <button
                         onClick={() => api?.scrollNext()}
                         className="rounded-full border-2 border-[#273561] p-2 w-10 md:w-14 h-10 md:h-14 backdrop-blur bg-white/10 flex items-center justify-center"
                     >
@@ -153,7 +144,7 @@ export function ServicesCarousel() {
                             height={27}
                             className="md:ml-2"
                         />
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </section>
