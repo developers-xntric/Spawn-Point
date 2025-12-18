@@ -10,37 +10,31 @@ export default function ExpertiseSection() {
                     <div className="flex flex-col gap-6">
                         {/* Header */}
                         <h2 className="font-black font-fks text-5xl md:text-4xl lg:text-6xl uppercase tracking-wider mb-4">
-                            <span className="text-white">Expertise That Drives</span>
+                            <span className="text-white">Expertise Built For</span>
                             <br />
-                            <span className="text-[#BBFC00]">Engagement</span>
+                            <span className="text-[#BBFC00]">Interaction</span>
                         </h2>
 
                         {/* Campaigns & Activations Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
-                                Campaigns & Activations
+                                PLAYTEST ACTIVATION
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
-                                Turn brand stories into playable creator moments. Creators lead the narrative. Audiences shape the
-                                outcome.
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
+                                Low-cost test entry via branded Roblox avatar interactions and short-form content.
                             </p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Creator campaigns</span>
+                                    <span className="text-white text-md lg:text-sm leading-4">Need low-risk access to gaming audiences.</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Reaction-based brand moments</span>
+                                    <span className="text-white text-md lg:text-sm leading-4">CreatorNet Portal + DataForge Dashboard</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Star />
-                                    <span className="text-white text-md lg:text-sm">Play-test activations</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Star />
-                                    <span className="text-white text-md lg:text-sm">TikTok + IG Reels gaming formats</span>
+                                    <span className="text-white text-md lg:text-sm leading-4">Fastest way to test gaming ROI under AED 15K.</span>
                                 </div>
                             </div>
                         </div>
@@ -50,8 +44,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 In-Stream Adtech
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -77,8 +70,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 In-Stream Adtech
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -107,10 +99,9 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 Esports Partnerships
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
                                 Your brand inside the biggest cultural moments across UAE, KSA, Egypt.
                             </p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -134,10 +125,9 @@ export default function ExpertiseSection() {
                         {/* Virtual Worlds Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
                                 Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
                             </p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -161,10 +151,9 @@ export default function ExpertiseSection() {
                         {/* Virtual Worlds Card */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">Virtual Worlds</h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
                                 Persistent branded experiences inside Roblox, Fortnite, Minecraft, CS2.
                             </p>
-                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
