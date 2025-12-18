@@ -6,9 +6,46 @@ import { useState } from "react"
 export default function NewsletterSection() {
     const [email, setEmail] = useState("")
     const [agreed, setAgreed] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitMessage, setSubmitMessage] = useState("")
 
     // Create array for marquee items
     const marqueeItems = Array(8).fill(null)
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (!email || !agreed) {
+            setSubmitMessage("Please enter your email and agree to the privacy policy.");
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitMessage("");
+
+        try {
+            const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitMessage("Thank you for subscribing! We've sent a confirmation to your email.");
+                setEmail("");
+            } else {
+                setSubmitMessage(data.error || "Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            setSubmitMessage("Network error. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <section className="bg-[#031347] md:pt-8 md:pb-20 overflow-hidden">
@@ -54,7 +91,7 @@ export default function NewsletterSection() {
 
                 {/* Email Form - Overlapping the image */}
                 <div className="relative z-20 -mt-1 md:-mt-32 mb-12">
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-0 max-w-[85%] md:max-w-lg mx-auto relative">
+                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-0 max-w-[85%] md:max-w-lg mx-auto relative">
                         <input
                             type="email"
                             value={email}
@@ -65,10 +102,21 @@ export default function NewsletterSection() {
                                 backdropFilter: "blur(17px)"
                             }}
                         />
-                        <button className="absolute md:right-2 right-2 lg:bottom-2 w-auto sm:w-auto bg-white text-[#031347] font-hel text-[11px] md:text-sm font-semibold px-4 md:px-8 py-3 rounded-[10px] md:mt-2 sm:mt-0 transition-colors">
-                            Subscribe
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="absolute md:right-2 right-2 lg:bottom-2 w-auto sm:w-auto bg-white text-[#031347] font-hel text-[11px] md:text-sm font-semibold px-4 md:px-8 py-3 rounded-[10px] md:mt-2 sm:mt-0 transition-colors hover:bg-opacity-90 disabled:opacity-70"
+                        >
+                            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
                         </button>
-                    </div>
+                    </form>
+
+                    {/* Display submission message */}
+                    {submitMessage && (
+                        <div className={`mt-4 text-center ${submitMessage.includes('Thank you') ? 'text-green-400' : 'text-red-400'}`}>
+                            {submitMessage}
+                        </div>
+                    )}
 
                     {/* Privacy Checkbox */}
                     <div className="flex items-center justify-center gap-2 mt-4">
