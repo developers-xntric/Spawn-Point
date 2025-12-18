@@ -71,6 +71,33 @@ export default function ExpertiseSection() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* In-Stream Adtech Card */}
+                        <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
+                            <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
+                                In-Stream Adtech
+                            </h3>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-2 lg:max-w-[70%]">AI-powered ad overlays that adapt in real-time.</p>
+                            <p className="text-white text-lg tracking-wide mb-2">We build:</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Dynamic live ads</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Rich-media panels</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">QR-triggered CTAs</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Star />
+                                    <span className="text-white text-md lg:text-sm">Full-funnel analytics via DataForge</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right Column */}
@@ -142,9 +169,9 @@ export default function ExpertiseSection() {
                                 Game Power Move.
                             </p>
                             <Link href="/contact">
-                            <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-[5px] font-bold text-md lg:text-sm hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors">
-                                Activate Strategy
-                            </button>
+                                <button className="bg-[#BBFC00] text-[#031347] px-12 lg:px-7 py-3 rounded-[5px] font-bold text-md lg:text-sm hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors">
+                                    Activate Strategy
+                                </button>
                             </Link>
                         </div>
                     </div>
