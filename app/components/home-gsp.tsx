@@ -132,7 +132,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-[20px]">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-56 -right-10 xl:right-16 w-40 md:w-64 lg:w-90 z-10 floating-img rounded-4xl">
         <Image
           width={2000}
           height={2000}
