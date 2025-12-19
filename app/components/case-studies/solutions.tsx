@@ -41,7 +41,7 @@ export default function Solutions({
                         </div>
 
 
-                        <div className="flex items-stretch justify-center gap-5 h-full">
+                        <div className="flex flex-col-reverse lg:flex-row flex-col items-stretch justify-center gap-5 h-full">
 
 
                             <div className={leftCardClass}>

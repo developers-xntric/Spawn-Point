@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
             <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-10 md:pt-20">
-                <div className="flex md:flex-row flex-col justify-between md:items-center gap-8 mb-10">
+                <div className="flex md:flex-row flex-col justify-between md:items-center gap-8 mb-6 md:mb-10">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
                         <h2 className="font-fks font-bold text-white text-[40px] md:text-[60px] xl:text-[95px] leading-[50px] md:leading-[60px] xl:leading-[95px] uppercase max-w-[400px]">
@@ -63,7 +63,7 @@ export default function Footer() {
                     <Image src="/Spawnpoint_name.svg" alt="Spawnpoint" width={120} height={80} className="w-[620px] h-5 md:w-auto md:h-auto" />
                 </div>
                 <div className="flex justify-center items-center md:hidden">
-                    <Image src="/spawnpoint-mob.svg" alt="Spawnpoint" width={120} height={80} className="w-[620px] h-auto md:w-auto md:h-auto" />
+                    <Image src="/spawnpoint-mob.svg" alt="Spawnpoint" width={120} height={80} className="w-[520px] h-auto md:w-auto md:h-auto" />
                 </div>
 
                 <p className="text-white text-[12px] md:text-[13px] text-center mt-5 md:mt-10 uppercase">©  ALL RIGHTS RESERVED, spawnpointstudiO {new Date().getFullYear()}.</p>

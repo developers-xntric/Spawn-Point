@@ -23,14 +23,14 @@ export default function CaseHero({
   rightImageAlt = "Right image",
 }: CaseHeroProps) {
   return (
-    <section className="bg-[#031347] min-h-[500px] lg:min-h-[550px] 2xl:min-h-[650px] flex items-center justify-center relative pt-22 md:pt-20 mb-12">
+    <section className="bg-[#031347] min-h-[380px] lg:min-h-[550px] 2xl:min-h-[500px] flex items-center justify-center relative pt-22 md:pt-20 2xl:pt-52 mb-12">
       {/* Left image */}
-      <div className="absolute left-[10%] md:left-[15%] xl:left-[30%] 2xl:left-[35%] top-[20%] md:top-[30%]">
+      <div className="absolute left-[10%] md:left-[15%] xl:left-[30%] 2xl:left-[35%] top-[27%] md:top-[30%]">
         <Image src={leftImage} alt={leftImageAlt} width={50} height={50} className="object-contain" />
       </div>
 
       {/* Right image */}
-      <div className="absolute right-[4%] md:right-[30%] top-[70%] md:top-[70%] 2xl:top-[67%] 2xl:right-[30%]">
+      <div className="absolute right-[1%] md:right-[30%] top-[62%] md:top-[70%] 2xl:top-[67%] 2xl:right-[30%]">
         <Image src={rightImage} alt={rightImageAlt} width={70} height={70} className="object-contain" />
       </div>
 

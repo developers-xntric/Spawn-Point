@@ -12,9 +12,8 @@ export default function CaseStudiesSection() {
                     <div className="md:col-span-7 bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
                         <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[400px]">
 
-
                             <Image
-                                src="/left-card-1.svg" // replace with your image path
+                                src="/left-card-1.svg"
                                 alt="Doritos"
                                 fill
                                 className="object-cover"
@@ -62,7 +61,6 @@ export default function CaseStudiesSection() {
                 {/* Row 2: Full width card */}
 
                 <div className="bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
-
 
                     <div className="relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[550px]">
                         <Image
