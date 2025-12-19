@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CaseStudiesSection() {
     return (
-        <section className="bg-[#031347] py-10 md:py-16 ">
+        <section className="bg-[#031347] pt-10 pb-10 md:pt-10 md:pb-16 ">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto space-y-6">
                 {/* Row 1: Left 70%, Right 30% */}
                 <div className="grid grid-cols-1 lg:grid-cols-10 gap-6">
