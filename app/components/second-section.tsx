@@ -1,6 +1,6 @@
 import MoveableBalls from "./moveable-balls"
 
-export default function ContentSection() {
+export default function SecondSection() {
     return (
         <section id="second-section" className="w-full py-16 text-black">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto flex flex-col items-center justify-center space-y-10">

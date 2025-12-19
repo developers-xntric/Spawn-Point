@@ -9,7 +9,8 @@ import * as THREE from "three"
 // ==================== GSAP SCROLL ====================
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-gsap.registerPlugin(ScrollTrigger)
+import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
 // =====================================================
 // BREAKPOINT HOOK
@@ -34,65 +35,49 @@ function useBreakpoint() {
 }
 
 // =====================================================
-// CAMERA ANIMATION (FIXED)
+// CAMERA ANIMATION
 // =====================================================
-function AnimatedCamera({
-  scrollProgress,
-  isMobile,
-  isTablet,
-}: {
-  scrollProgress: number
-  isMobile: boolean
-  isTablet: boolean
-}) {
+function AnimatedCamera({ scrollProgress, isMobile, isTablet }: { scrollProgress: number, isMobile: boolean, isTablet: boolean }) {
   const { camera } = useThree()
 
   useFrame(() => {
-    let targetY = isMobile ? 10 : isTablet ? 10 : 0
-    let targetZ = isMobile ? 35 : isTablet ? 55 : 80
+    let targetY = isMobile ? 16 : isTablet ? -20 : 20
+    let targetZ = isMobile ? 22 : isTablet ? 8 : 70
 
     // -----------------------
-    // MID SCROLL (0.33 → 0.66)
+    // ZOOM + MOVE UP (FIRST SCROLL)
     // -----------------------
-    if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
-      const t = (scrollProgress - 0.33) / 0.33
+    if (scrollProgress >= 0.1 && scrollProgress < 0.4) {
+      const t = (scrollProgress - 0.1) / 0.56 // smooth progression
 
       targetY = THREE.MathUtils.lerp(
-        isMobile ? 15 : isTablet ? 20 : 10,
-        isMobile ? 10 : -4,
+        isMobile ? 20 : isTablet ? 10 : 18,
+        isMobile ? 1 : isTablet ? 8 : 45,
         t
       )
 
       targetZ = THREE.MathUtils.lerp(
-        isMobile ? 50 : isTablet ? 70 : 50,
-        isMobile ? 8 : 10,
+        isMobile ? 1 : isTablet ? 8 : 1,
+        isMobile ? 20 : isTablet ? 55 : 50,
         t
       )
 
-      // Look slightly upward during zoom
-      if (!isMobile) {
-        camera.lookAt(0, 8, 0)
-      }
-
+      // Look slightly upward
+      if (!isMobile) camera.lookAt(0, 20, 0)
+      if (isMobile) camera.lookAt(0, 10, 0)
     }
 
     // -----------------------
     // AFTER ZOOM (LOCK CAMERA)
     // -----------------------
-    else if (scrollProgress >= 0.66) {
-      // 🔒 Lock camera — NO MORE Y / Z movement
-      targetY = isMobile ? 19 : isTablet ? 10 : 10
-      targetZ = isMobile ? 45 : isTablet ? 55 : 80
-
-      // 🔒 Fix look direction (prevents Y-rotation illusion)
-      camera.lookAt(0, 0, 0)
+    else if (scrollProgress >= 0.1) {
+      targetY = isMobile ? 10 : isTablet ? 15 : 20.2
+      targetZ = isMobile ? 2 : isTablet ? 55 : 20
+      if (!isMobile) camera.lookAt(0, 20, 0)
+      if (isMobile) camera.lookAt(0, 10, 0)
     }
-
-    // -----------------------
-    // INITIAL
-    // -----------------------
     else {
-      camera.lookAt(0, 0, 0)
+      camera.lookAt(0, 8, 0)
     }
 
     camera.position.y = THREE.MathUtils.lerp(camera.position.y, targetY, 0.08)
@@ -103,17 +88,9 @@ function AnimatedCamera({
 }
 
 // =====================================================
-// MODEL (UNCHANGED)
+// MODEL
 // =====================================================
-function Model({
-  isMobile,
-  isTablet,
-  scrollProgress,
-}: {
-  isMobile: boolean
-  isTablet: boolean
-  scrollProgress: number
-}) {
+function Model({ isMobile, isTablet, scrollProgress }: { isMobile: boolean, isTablet: boolean, scrollProgress: number }) {
   const modelRef = useRef<THREE.Group>(null)
   const { scene } = useGLTF("/home/hero.glb")
 
@@ -137,33 +114,22 @@ function Model({
     if (!modelRef.current) return
 
     let targetRotX = 0
-
-    if (scrollProgress >= 0.2 && scrollProgress < 0.6) {
+    if (scrollProgress >= 0.2 && scrollProgress < 0.4) {
       const t = (scrollProgress - 0.2) / 0.4
       targetRotX = THREE.MathUtils.lerp(0.2, 0, t)
     }
 
     if (scrollProgress >= 0.6) targetRotX = -0.1
 
-    modelRef.current.rotation.x = THREE.MathUtils.lerp(
-      modelRef.current.rotation.x,
-      targetRotX,
-      0.04
-    )
+    modelRef.current.rotation.x = THREE.MathUtils.lerp(modelRef.current.rotation.x, targetRotX, 0.04)
   })
 
   return (
     <primitive
       ref={modelRef}
       object={scene}
-      scale={
-        isMobile
-          ? [10, 12, 12]
-          : isTablet
-            ? [45, 45, 45]
-            : [60, 60, 60]
-      }
-      position={[0, isMobile ? -19 : isTablet ? -70 : -100, 0]}
+      scale={isMobile ? [6, 14.5, 12] : isTablet ? [45, 45, 45] : [60, 60, 60]}
+      position={[0, isMobile ? -17 : isTablet ? -70 : -90, 0]}
     />
   )
 }
@@ -190,19 +156,20 @@ export default function HeroSection() {
 
       onUpdate: (self) => {
         setScrollProgress(self.progress)
-      },
 
-      onLeave: () => {
-        const target = document.getElementById("home-gsp")
-        if (target) {
+        // Trigger scroll only if progress > 0.6 and user is scrolling down
+        if (self.progress > 0.4 && !hasAutoScrolled.current && self.direction > 0) {
+          hasAutoScrolled.current = true
           gsap.to(window, {
-            scrollTo: {
-              y: target,
-              autoKill: false,
-            },
-            duration: 1.2,
-            ease: "power2.out",
+            scrollTo: "#home-gsp",
+            duration: 1,
+            ease: "power2.inOut",
           })
+        }
+
+        // Reset if user scrolls back above hero
+        if (self.progress < 0.05 && hasAutoScrolled.current) {
+          hasAutoScrolled.current = false
         }
       },
     })
@@ -210,39 +177,23 @@ export default function HeroSection() {
     return () => st.kill()
   }, [isMobile])
 
+
+
   return (
     <div ref={containerRef} className="relative w-full h-screen overflow-hidden">
       <Canvas
-        camera={{
-          position: isMobile ? [0, -5, 25] : [0, -20, 8],
-          fov: isMobile ? 55 : 45,
-        }}
-        gl={{
-          antialias: true,
-          alpha: true,
-          outputColorSpace: THREE.SRGBColorSpace,
-          toneMapping: THREE.NoToneMapping,
-        }}
+        camera={{ position: isMobile ? [0, -5, 25] : [0, -20, 8], fov: isMobile ? 50 : 45 }}
+        gl={{ antialias: true, alpha: true, outputColorSpace: THREE.SRGBColorSpace, toneMapping: THREE.NoToneMapping }}
         dpr={[1, 2]}
       >
-        <AnimatedCamera
-          scrollProgress={scrollProgress}
-          isMobile={isMobile}
-          isTablet={isTablet}
-        />
-
+        <AnimatedCamera scrollProgress={scrollProgress} isMobile={isMobile} isTablet={isTablet} />
         <directionalLight position={[0, 5, 10]} intensity={0.2} />
         <directionalLight position={[10, 0, -5]} intensity={0.2} />
         <directionalLight position={[-10, 10, 10]} intensity={0.2} />
-
         <Environment files="/my.hdr" preset="studio" environmentIntensity={0.9} />
-
-        <Model
-          isMobile={isMobile}
-          isTablet={isTablet}
-          scrollProgress={scrollProgress}
-        />
+        <Model isMobile={isMobile} isTablet={isTablet} scrollProgress={scrollProgress} />
       </Canvas>
+
     </div>
   )
 }
