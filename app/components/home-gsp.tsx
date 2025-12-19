@@ -67,7 +67,7 @@ export default function HOMEGSP() {
             scrub: 2.7,
             pin: pinSection,
             pinSpacing: pinSection,
-            markers: true,
+            markers: false,
           },
         });
 
