@@ -19,7 +19,7 @@ export default function TechStackSection() {
     ]
 
     return (
-        <section className="bg-[#031347] py-16 md:py-24 px-4 md:px-8 lg:px-16">
+        <section className="bg-[#031347] py-16 md:py-4 px-4 md:px-8 lg:px-16">
             <div className="max-w-xl lg:max-w-6xl mx-auto">
                 {/* Header */}
                 <h2 className="text-center font-fks font-black text-4xl sm:text-3xl md:text-5xl lg:text-6xl uppercase tracking-wide my-12 md:mb-16">
@@ -44,7 +44,7 @@ export default function TechStackSection() {
                             </h3>
 
                             {/* Description */}
-                            <p className="text-white tracking-wider px-8 text-[10px] sm:text-sm lg:text-xs lg:mt-2 xl:text-sm leading-tight">{item.description}</p>
+                            <p className="text-white tracking-wider px-8 text-[10px] sm:text-sm lg:text-xs xl:text-sm leading-tight">{item.description}</p>
                         </div>
                     ))}
                 </div>

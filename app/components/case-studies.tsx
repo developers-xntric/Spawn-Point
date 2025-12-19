@@ -127,11 +127,11 @@ export function CaseStudies() {
                   </p>
                 </div>
 
-                <Link href="/case-studies">
+                {/* <Link href="/case-studies">
                   <button className="px-4 md:px-8 py-2 md:py-3 text-[15px] md:text-base rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition cursor-pointer">
                     View Case Study
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
