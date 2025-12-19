@@ -22,7 +22,7 @@ export default function PartnersSection({ isSecond = true }: { isSecond?: boolea
     const duplicatedPartners = [...partners, ...partners, ...partners, ...partners, ...partners, ...partners]
 
     return (
-        <section className="bg-[#031347] md:py-10 py-6 overflow-hidden">
+        <section className="bg-[#031347] md:pt-0 md:pb-16 pt-0 pb-10 overflow-hidden">
 
             {/* Slider Container */}
             <div className="flex flex-col gap-4">

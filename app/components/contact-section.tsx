@@ -208,7 +208,7 @@ export default function ContactSection() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className={`${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''} text-white font-fks font-bold tracking-wide text-4xl hover:text-[#BBFC00] transition-colors`}
+                                        className={`${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''} text-left md:text-center text-white font-fks font-bold tracking-wide text-4xl hover:text-[#BBFC00] transition-colors`}
                                     >
                                         {isSubmitting ? 'SENDING...' : 'SUBMIT'}
                                     </button>

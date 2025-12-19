@@ -89,10 +89,10 @@ export default function StickyCards() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#091B56] mt-10 md:mt-1 text-white md:pb-4 lg:pb-10 xl:pt-1 pt-10 relative min-h-screen"
+      className="bg-[#091B56] mt-10 md:mt-1 text-white pb-0 lg:pb-10 xl:pt-1 pt-10 relative min-h-screen"
     >
       <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row gap-7 md:gap-10  ">
           {/* LEFT SECTION */}
           <div className="left relative top-0 w-full lg:w-[40%] xl:w-[55%] lg:h-screen lg:flex lg:flex-col lg:justify-center ">
             <div>
@@ -117,11 +117,11 @@ export default function StickyCards() {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-4 md:pb-20 pb-14">
+          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-6 pb-20">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="card-item relative md:rounded-[20px] rounded-[10px] bg-white/5 backdrop-blur-[30px] p-3 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
+                className="card-item relative md:rounded-[20px] rounded-[15px] bg-white/5 backdrop-blur-[30px] p-4 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
