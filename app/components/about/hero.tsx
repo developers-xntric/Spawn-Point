@@ -4,23 +4,23 @@ export default function HeroSection() {
     const topLineText = "SPAWN POINT"
     const bottomLineText = "ABOUT US"
     return (
-        <section className="bg-[#031347] min-h-[600px] md:min-h-[600px] 2xl:min-h-[650px] flex items-center justify-center relative pt-16 mb-12">
+        <section className="bg-[#031347] min-h-[600px] md:min-h-[600px] 2xl:min-h-[650px] flex items-center justify-center relative pt-20 md:pt-16 mb-12">
             {/* Pizza image - left side */}
-            <div className="absolute left-[10%] md:left-[35%] top-[20%] md:top-[26%] 2xl:top-[27%] 2xl:left-[39%]">
+            <div className="absolute left-[8%] xl:left-[25%] top-[16%] md:top-[26%] 2xl:top-[27%] 2xl:left-[29%]">
                 <Image src="/icons/yes.png" alt="Pizza decoration" width={60} height={50} className="object-contain" />
             </div>
 
             {/* Robot image - right side */}
-            <div className="absolute right-[4%] md:right-[32%] top-[70%] md:top-[67%] 2xl:right-[36.5%]">
+            <div className="absolute right-[4%] md:right-[20%] xl:right-[32%] top-[70%] xl:top-[67%] 2xl:right-[36.5%]">
                 <Image src="/icons/arrow-top-right.png" alt="Robot decoration" width={55} height={50} className="object-contain" />
             </div>
 
             {/* Center content */}
             <div className="text-center z-10 mb-10">
-                <h1 className="text-white text-[50px] md:text-[100px] font-fks font-bold uppercase tracking-wide">WE ARE</h1>
-                <h2 className="text-[#BBFC00] text-[70px] md:text-[130px] font-fks font-bold uppercase tracking-wide leading-20 relative md:bot  bottom-3">SPAWN POINT</h2>
-                <p className="text-white text-md mt-2 md:mt-6 max-w-sm mx-auto">
-                    We help brands enter the gaming universe through immersive experiences, in-game activations, creators, and virtual worlds
+                <h1 className="text-white text-[50px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">Where Brands</h1>
+                <h2 className="text-[#BBFC00] text-[70px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-20 relative md:bot  bottom-3">Become Playable</h2>
+                <p className="text-white text-md mt-2 lg:mt-6 max-w-[90%] md:max-w-[55%] mx-auto">
+                  SpawnPoint is a gaming-first brand experience studio built at the intersection of creativity, code, and culture. We help brands move beyond interruption and into participation by embedding them directly into gaming, esports, and virtual ecosystems.
                 </p>
                 <Link href="/contact">
                     <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">

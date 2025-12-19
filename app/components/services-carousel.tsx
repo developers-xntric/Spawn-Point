@@ -15,7 +15,7 @@ const services = [
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-1.svg",
-        serviceurl: "/campaigns-activations",
+        serviceurl: "/contact",
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ const services = [
         borderColor: "from-[#E81B8E]",
         accentColor: "border-[#E81B8E]",
         image: "/home/service-2.svg",
-        serviceurl: "/esports-partnerships",
+        serviceurl: "/contact",
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const services = [
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-3.svg",
-        serviceurl: "/campaigns-activations",
+        serviceurl: "/contact",
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const services = [
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-4.svg",
-        serviceurl: "/campaigns-activations",
+        serviceurl: "/contact",
     },
 
 ]
@@ -75,7 +75,7 @@ export function ServicesCarousel() {
                 {/* HEADER (UNCHANGED) */}
                 <div className="mb-10 md:text-center 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto"> 
                     <p className="mb-4 md:text-[20px] text-[16px] tracking-[12px] text-[#FF1586] font-hel"> SERVICES </p>
-                 <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] md:leading-[45px] leading-10 md:tracking-[2px] tracking-[1.5px]"> <span className="text-[#BBFC00]">Gaming + AI </span> first campaigns that move audiences, not{" "} <span className="text-[#BBFC00]">just eyeballs</span> 
+                 <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] md:leading-[45px] leading-10 md:tracking-[2px] tracking-[1.5px]"> Your <span className="text-[#BBFC00]">Brand, Inside </span>  the World of Play. Where Culture Meets{" "} <span className="text-[#BBFC00]">Conversion</span> 
                  </h2> 
                  </div>
 

@@ -47,7 +47,7 @@ export default function GameBrands() {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden pt-16 pb-1 md:pb-16">
+    <div className="relative w-full overflow-hidden pt-6 md:pt-3 pb-1 md:pb-16">
       {/* Header */}
       <div className="relative z-10 text-center mb-10 md:mb-8">
         <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[90%] md:max-w-[700px] mx-auto text-center leading-10 md:leading-[45px] lg:leading-[65px] tracking-[1.5px]">

@@ -11,12 +11,12 @@ import NewsletterSection from '@/app/components/newsletter';
 const About = () => {
     return (
         <div>
-            <HeroSection  />
+            <HeroSection   />
             <GamingHero />
             <Achievements />
             <CelebrationSection />
             <Fearless />
-            <CaseStudies />
+            <CaseStudies isabout={true} />
             <MapSection />
             <ContactSection />
             <NewsletterSection />

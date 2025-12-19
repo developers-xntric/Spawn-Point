@@ -204,7 +204,7 @@ export default function HOMEGSP() {
         
         <Link href="/contact">
           <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
-            Book a Strategy Sprint
+            Build My Campaign
           </button>
         </Link>
       </div>

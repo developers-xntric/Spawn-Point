@@ -17,7 +17,7 @@ export default function Footer() {
     return (
         <footer className="relative w-full bg-[url('/Footer-bg.svg')] bg-cover bg-center overflow-hidden">
             <div className="relative  2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto py-10 md:pt-20">
-                <div className="flex md:flex-row flex-col justify-between md:items-center gap-8 mb-6 md:mb-10">
+                <div className="flex md:flex-row flex-col justify-between md:items-start gap-8 mb-6 md:mb-10">
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
                         <h2 className="font-fks font-bold text-white text-[40px] md:text-[60px] xl:text-[95px] leading-[50px] md:leading-[60px] xl:leading-[95px] uppercase max-w-[400px]">
@@ -28,7 +28,7 @@ export default function Footer() {
                     {/* Right Side - Column with BUILD WITH US, Logos, Nav, Social */}
                     <div className="flex flex-col items-start gap-10  ">
                         {/* BUILD WITH US */}
-                        <h2 className="text-lime-400 text-xl font-bold font-fks tracking-wider md:block hidden">BUILD WITH US</h2>
+                        {/* <h2 className="text-lime-400 text-xl font-bold font-fks tracking-wider md:block hidden">BUILD WITH US</h2> */}
 
                         {/* Game Logos */}
                         <div className="flex items-center gap-4 lg:gap-12">

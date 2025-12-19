@@ -1,5 +1,6 @@
+"use client"
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function MapSection() {
     const crewMembers = [
@@ -32,6 +33,48 @@ export default function MapSection() {
             pinPosition: 'top-[-20px] right-[100%] -translate-x-1/2'
         }
     ];
+    const startTime = "0:01:12"
+
+    const parseTime = (time: string) => {
+        const parts = time.split(":").map(Number)
+
+        if (parts.length === 3) {
+            const [h, m, s] = parts
+            return h * 3600 + m * 60 + s
+        }
+
+        if (parts.length === 2) {
+            const [m, s] = parts
+            return m * 60 + s
+        }
+
+        return 0
+    }
+
+    const [time, setTime] = useState(() => parseTime(startTime))
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime((prev) => prev + 1)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [])
+
+
+
+    const formatTime = (seconds: number) => {
+        const hrs = Math.floor(seconds / 3600)
+        const mins = Math.floor((seconds % 3600) / 60)
+        const secs = seconds % 60
+
+        const pad = (n: number) => n.toString().padStart(2, "0")
+
+        return `${hrs}:${pad(mins)}:${pad(secs)}`
+    }
+
+
+
 
     return (
         <div className="relative w-full  bg-[#031347] overflow-hidden pt-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
@@ -81,7 +124,7 @@ export default function MapSection() {
 
                             {/* Time */}
                             <div className="absolute top-3 right-3 z-30 md:mt-4 mt-1">
-                                <span className="text-[#BFFF00] text-[10px] md:text-[14px] ">0:01:12</span>
+                                <span className="text-[#BFFF00] text-[10px] md:text-[14px] ">    {formatTime(time)}</span>
                             </div>
 
                             {/* Character Image */}
@@ -98,7 +141,7 @@ export default function MapSection() {
 
                             {/* Name */}
                             <div className="relative flex  py-3 ">
-                                <h3 className="text-white font-bold text-[12px] md:text-[18px] tracking-wide uppercase">
+                                <h3 className="text-white font-fks font-bold text-[12px] md:text-[20px] tracking-[2px] uppercase">
                                     {member.name}
                                 </h3>
                             </div>

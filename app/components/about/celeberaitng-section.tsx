@@ -43,7 +43,7 @@ export default function CelebrationSection() {
       tl.fromTo(
         lineRef.current,
         { x: "50%" },
-        { x: "-40%", y: "10%", ease: "none" },
+        { x: "-50%", y: "10%", ease: "none" },
         0
       );
 
@@ -91,7 +91,7 @@ export default function CelebrationSection() {
         lineRef.current,
         { x: "40%" },
         {
-          x: "-230%",
+          x: "-220%",
           y: "10%",
           ease: "none",
         },

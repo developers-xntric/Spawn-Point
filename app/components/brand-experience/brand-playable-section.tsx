@@ -41,7 +41,7 @@ export default function BrandsPlayableSection() {
                             </h2>
 
                             {/* Description */}
-                            <p className="text-white tracking-wide text-sm md:text-[16px] mb-6 lg:mb-8 leading-tight">
+                            <p className="text-white tracking-wide text-sm md:text-[16px] 2xl:text-[18px] mb-6 lg:mb-8 leading-tight font-hel">
                                 Gaming has become the most immersive attention environment in the region. It’s where audiences choose to spend time, not just consume content. We help brands show up with purpose, designed to be interacted with, remembered, and returned to. Every experience is built to feel native, credible, and measurable from day one.
                             </p>
                         </div>
@@ -52,7 +52,7 @@ export default function BrandsPlayableSection() {
                             {stats.map((stat, index) => (
                                 <div key={index} className="border-2 bg-white/5 md:bg-transparent backdrop-blur-2xl border-white/10 md:border-none rounded-2xl p-6 xl:p-0">
                                     <p className="text-white font-mortend font-black text-3xl md:text-4xl 2xl:text-[44px]">{stat.value}</p>
-                                    <p className="text-white font-hel tracking-wider text-xs md:text-xs -mb-1 relative bottom-1">{stat.label}</p>
+                                    <p className="text-white font-hel tracking-wider text-xs md:text-xs 2xl:text-[15px] -mb-1 relative bottom-1">{stat.label}</p>
                                 </div>
                             ))}
                         </div>

@@ -18,9 +18,10 @@ const BrandExperience = () => {
                 icon2="/icons/burger.png"
                 buttonText="Enter the Game"
                 icon1Style="absolute left-[10%] md:left-[15%] xl:left-[27%] top-[20%] md:top-[27%]"
-                icon2Style="absolute right-[4%] md:right-[22.5%] top-[70%] md:top-[58%]"
+                icon2Style="absolute right-[4%] md:right-[22.5%] top-[70%] md:top-[62%]"
+                paraclass="max-w-[90%] md:max-w-2xl"
             />
-            <div className="-mt-24">
+            <div className="-mt-6">
                 <PartnersSection isSecond={false} />
             </div>
             <BrandsPlayableSection />

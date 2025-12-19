@@ -18,7 +18,7 @@ export default function Home() {
       <ServicesCarousel />
       <PartnersSection />
       <GameCardsSection />
-      <CaseStudies />
+      <CaseStudies isabout={false} />
       <StickyCards />
       <MapSection />
       <ContactSection />

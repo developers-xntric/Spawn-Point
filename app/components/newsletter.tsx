@@ -127,12 +127,12 @@ export default function NewsletterSection() {
                             onChange={(e) => setAgreed(e.target.checked)}
                             className="w-4 h-4 rounded border-gray-500 bg-transparent accent-[#BBFC00]"
                         />
-                        <label htmlFor="privacy" className="text-white md:text-gray-400 text-xs">
-                            I trust you with my data! Details in the{" "}
-                            <a href="#" className="underline hover:text-white">
+                        <label htmlFor="privacy" className="text-white  text-xs">
+                            I trust you with my data! Details in the Privacy Policy.{" "}
+                            {/* <a href="#" className="underline hover:text-white">
                                 Privacy Policy
-                            </a>
-                            .
+                            </a> */}
+                            
                         </label>
                     </div>
                 </div>

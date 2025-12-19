@@ -10,22 +10,22 @@ gsap.registerPlugin(ScrollTrigger)
 // Card data
 const cards = [
   {
-    heading: "Set goals",
+    heading: "Audience Capture & Optimization.",
     para: "Creator-led storytelling and immediate audience acquisition, fueled by our AI Ad Engine and in-stream AdTech implementation.",
     title: "Ignition",
   },
   {
-    heading: "Build the strategy",
+    heading: "Asset Development & IP Ownership.",
     title: "Scaling",
     para: "Conceptualization and development of major Esports IP partnerships alongside the build-out of persistent, branded Virtual Worlds.",
   },
   {
-    heading: "Activate the campaign",
+    heading: "High-Impact Visibility & Growth.",
     title: "Momentum",
-    para: "Strategic Seasonal Gaming Events and hybrid activations, focusing on high-dwell time engagement and expansive partnerships.",
+    para: "Strategic Seasonal Gaming Events 7and hybrid activations, focusing on high-dwell time engagement and expansive partnerships.",
   },
   {
-    heading: "Amplify what works",
+    heading: "Retention & Value Maximization.",
     title: "Sustained Growth",
     para: "Implementation of the Audience Reinforcement Engine and operationalizing commerce/loyalty missions within persistent Virtual Worlds.",
   },
@@ -33,6 +33,15 @@ const cards = [
 
 export default function StickyCards() {
   const sectionRef = useRef<HTMLDivElement>(null)
+
+  const styleAmpersand = (text: string) => {
+    return text.replace(
+      /&/g,
+      `<span class="font-hel">&</span>`
+    )
+  }
+
+
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -117,7 +126,7 @@ export default function StickyCards() {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-6 pb-20">
+          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-6 md:pb-20 pb-16">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -158,10 +167,21 @@ export default function StickyCards() {
                         Q{index + 1} {card.title}
                       </p>
                       <h2
-                        dangerouslySetInnerHTML={{ __html: card.heading }}
-                        className="font-fks text-white text-[50px] md:text-[32px] lg:text-[40px] xl:text-[44px] font-bold uppercase tracking-[2px] md:tracking-[1.5px]"
+                        dangerouslySetInnerHTML={{
+                          __html: styleAmpersand(card.heading),
+                        }}
+                        className="
+    font-fks
+    text-white
+    text-[45px] md:text-[32px] lg:text-[40px] xl:text-[44px]
+    font-bold uppercase
+    lg:leading-[45px]
+    tracking-[2px] md:tracking-[1.5px]
+    lg:w-[70%]
+  "
                       />
-                      <p className="text-white text-[25px] md:text-[18px] lg:text-[20px] xl:text-[24px] tracking-[1px] md:tracking-[0.5px] font-hel">
+
+                      <p className="text-white text-[25px] md:text-[18px] lg:text-[20px] xl:text-[20px] tracking-[1px] md:tracking-[0.5px] font-hel">
                         {card.para}
                       </p>
                     </div>

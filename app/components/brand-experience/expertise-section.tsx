@@ -3,8 +3,8 @@ import Star from "../icons/star";
 
 export default function ExpertiseSection() {
     return (
-        <section className="bg-[#091B56] py-16 md:py-24 px-4 md:px-8 lg:px-28 rounded-tl-[50px] md:rounded-tl-[140px]">
-            <div className="max-w-7xl mx-auto">
+        <section className="bg-[#091B56] py-16 md:py-24 p rounded-tl-[50px] md:rounded-tl-[140px]">
+            <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Left Column */}
                     <div className="flex flex-col gap-6">
@@ -20,7 +20,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 PLAYTEST ACTIVATION
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">
                                 Low-cost test entry via branded Roblox avatar interactions and short-form content.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
@@ -44,7 +44,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 CREATOR STREAM PLUS
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">Extended in-stream activations using UTM, offer codes, and retargeting for performance.</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">Extended in-stream activations using UTM, offer codes, and retargeting for performance.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -67,7 +67,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 ARENA ACCESS PARTNERSHIPS
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">Brand integration into global esports platforms like Esports World Cup with managed activations.</p>
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">Brand integration into global esports platforms like Esports World Cup with managed activations.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
                                 <div className="flex items-center gap-2">
                                     <Star />
@@ -93,7 +93,7 @@ export default function ExpertiseSection() {
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">
                                 CREATOR STREAM AWARENESS
                             </h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">
                                 In-stream brand integrations for awareness across Twitch, YouTube, Kick, and TikTok.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
@@ -116,7 +116,7 @@ export default function ExpertiseSection() {
                         {/* BRAND ARENA IP BUILD */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">BRAND ARENA IP BUILD</h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">
                                 End-to-end esports IP development-concept, production, and live activation.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">
@@ -140,7 +140,7 @@ export default function ExpertiseSection() {
                         {/* WORLD FORGE BUILDS */}
                         <div className="bg-white/5 border-2 border-white/10 rounded-2xl p-6 md:p-6">
                             <h3 className="text-white font-fks font-black text-4xl md:text-5xl uppercase tracking-wide mb-3">WORLD FORGE BUILDS</h3>
-                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[70%]">
+                            <p className="text-white text-sm leading-tight lg:text-md tracking-wide mb-5 lg:max-w-[90%]">
                                 Custom branded worlds in Roblox, Fortnite, Minecraft, or CS2 with playable loops and commerce.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-2">

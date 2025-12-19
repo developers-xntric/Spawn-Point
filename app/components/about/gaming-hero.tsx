@@ -40,28 +40,27 @@ export default function GamingHero() {
               <h2 className="text-[40px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase text-white leading-[65px] text-balance text-left">
                 WHO <span className="text-[#BBFC00]">WE ARE </span>
               </h2>
-              <p className="text-xl 2xl:text-2xl font-bold text-gray-300 uppercase tracking-wider font-fks">
-                SpawnPoint started with one belief
+              <p className="text-xl 2xl:text-2xl font-bold text-gray-300 uppercase tracking-wider font-fks 2xl:mt-4">
+                Creators, Technologists, and Cultural Strategists
               </p>
             </div>
 
             <div className="space-y-4 2xl:space-y-5 text-gray-200 leading-relaxed text-sm xl:text-base 2xl:text-[19px] 2xl:leading-[25px]">
               <p>
-                Brands shouldn’t talk at players they should build with them. We are a collective of creators, designers, strategists, developers, and culture experts who understand the rhythm of gaming communities. Our experience spans across Roblox, Fortnite, esports, streaming, virtual production, and brand experience design.
+                SpawnPoint is a collective of strategists, technologists, creators, and gaming natives who understand how digital culture actually moves. We don’t treat gaming as a channel; it’s our operating system.
               </p>
               <p>
-
-                We help brands enter gaming worlds with respect, creativity, and innovation creating experiences that feel native rather than intrusive
+                Our teams work across AI, data, creator ecosystems, esports, and virtual production to build experiences that feel native to players and measurable for brands. Rooted in MENA and connected globally, we bring cultural fluency, platform intelligence, and executional depth to every activation.
               </p>
               <p>
-                Whether it’s a custom Roblox world, a creator-led storytelling campaign, or dynamic in-stream ad placements, we craft experiences that players actually want to engage with. For us, gaming isn’t a channel it’s a culture.
+                Simply put, we speak gamer, and we translate it into business results.
               </p>
             </div>
 
             <div className=" pt-0 md:pt-4">
               <Link href="/contact">
                 <button className=" bg-[#BBFC00] text-[#031347] font-bold text-ms px-4 md:px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white  transition-colors">
-                  Lets Connect
+                 Get in Touch
                 </button>
               </Link>
             </div>

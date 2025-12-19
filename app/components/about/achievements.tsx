@@ -6,12 +6,12 @@ export function Achievements() {
       <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
         {/* Header */}
         <div className="mb-12 text-center md:mb-16">
-          <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] font-hel">
-            ACHEIVEMENTS
+          <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] font-hel uppercase">
+            Our Achievements
           </p>
-          <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[570px] mx-auto text-center leading-10 md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
-            WE DON'T <span className="text-[#BBFC00]">CREATE ADS </span> WE BUILD WORLDS THAT WIN{" "}
-            <span className="text-[#BBFC00]">ATTENTION</span>
+          <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white  mx-auto text-center leading-10 md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
+            Built on <span className="text-[#BBFC00]">Performance </span> Not {""}
+            <span className="text-[#BBFC00]">Promises</span>
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export function Achievements() {
               <br />
               Program:
             </h3>
-            <p className="text-white/80 text-[16px] md:text-[16px]  max-w-sm">
+            <p className="text-white text-[16px] md:text-[16px]  max-w-sm">
               As an exclusive member, we hold built the leading experiences within Roblox Advertising Solutions, giving
               us access to in-platform ads and the latest innovations for creating winning experiences.
             </p>

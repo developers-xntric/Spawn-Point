@@ -199,11 +199,11 @@ export default function ContactSection() {
                             <form onSubmit={handleSubmit}>
                                 <div className="flex  flex-col-reverse md:flex-row md:items-center md:justify-between gap-4 mt-4">
                                     <p className="text-white text-xs">
-                                        Curious how we handle your data with care? Scoop into our{" "}
-                                        <a href="#" className="underline hover:text-white">
+                                        Curious how we handle your data with care? Scoop into our Privacy Policy.{" "}
+                                        {/* <a href="#" className="underline hover:text-white">
                                             Privacy Policy
-                                        </a>
-                                        .
+                                        </a> */}
+                                        
                                     </p>
                                     <button
                                         type="submit"
