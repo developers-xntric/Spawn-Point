@@ -75,27 +75,27 @@ export default function ReviewsCarousel() {
                     <CarouselContent>
                         {reviews.map((review, index) => (
                             <CarouselItem key={index}>
-                                <div className="max-w-[900px] mx-auto text-center flex flex-col items-center space-y-10">
+                                <div className="max-w-[900px] 2xl:max-w-[1200px] mx-auto text-center flex flex-col items-center space-y-10">
 
                                     {/* STARS */}
                                     <Image
-                                        src="/icons/reviews-stars.svg" // ⭐ your star image
+                                        src="/icons/reviews-stars.svg" 
                                         alt="Rating"
                                         width={140}
                                         height={28}
                                         className="w-[90%] md:w-[50%]"
                                     />
 
-                                    <div className="flex flex-col items-center bg-white/5 backdrop-blur p-5 rounded-[10px] border border-white/20">
+                                    <div className="flex flex-col items-center bg-white/5 md:bg-transparent backdrop-blur p-5 rounded-[10px] md:border-none border border-white/20">
                                         {/* REVIEW TEXT */}
-                                        <p className="text-white text-[16px] md:text-[26px] leading-[22px] md:leading-[38px] mb-8">
+                                        <p className="text-white text-[16px] md:text-[26px] 2xl:text-[30px] leading-[22px] md:leading-[38px] mb-8">
                                             “{review.description}”
                                         </p>
 
                                         <div>
 
                                             {/* CLIENT INFO */}
-                                            <p className="text-white font-semibold text-2xl font-fks uppercase tracking-[1.5px]">
+                                            <p className="text-white font-semibold text-2xl 2xl:text-[30px] font-fks uppercase tracking-[1.5px]">
                                                 {review.name}
                                             </p>
                                             <p className="text-white text-sm md:text-lg">
@@ -118,7 +118,7 @@ export default function ReviewsCarousel() {
                     {/* LEFT BUTTON */}
                     <button
                         onClick={() => api?.scrollPrev()}
-                        className="rounded-full border-2 border-[#273561] w-12 h-12 flex items-center justify-center backdrop-blur bg-white/10"
+                        className="rounded-full  border-2 border-[#273561] w-12 h-12 flex items-center justify-center backdrop-blur bg-white/10"
                     >
                         <Image src="/home/left-arrow.svg" alt="Prev" width={20} height={20} className="md:w-[23px] md:h-[23px] w-[20px] h-[20px]" />
                     </button>

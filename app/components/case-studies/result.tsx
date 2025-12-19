@@ -6,7 +6,6 @@ interface ResultsSectionProps {
   results: ResultsCard[];
   description?: string;
 
-  /* 🔹 Dynamic class props */
   sectionClass?: string;
   containerClass?: string;
   titleClass?: string;

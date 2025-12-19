@@ -28,7 +28,8 @@ const ChupaChups = () => {
             />
             <CaseSecond
                 title="Integrated contextual in-game stream triggers to engage gamers at key gameplay moments without disrupting the viewing experience."
-                videoSrc="/videos/demo-video.mp4"
+                videoSrc="/chupa-chups/feature.png"
+
                 titleClass="text-white text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  md:text-center mb-10 tracking-[1.5px] leading-[40px] md:leading-[65px] 2xl:leading-[80px]"
                 sectionClass="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto bg-[#031347] flex flex-col items-center justify-center"
                 videoClass="w-full  rounded-xl shadow-xl h-[250px] md:h-[400px] lg:h-[600px]"
@@ -58,7 +59,7 @@ const ChupaChups = () => {
                 />
             </div>
 
-            <Solutions  titleClass="text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  text-white  tracking-[1.5px] leading-[65px] 2xl:leading-[80px]" rightCardClass=" md:rounded-[20px] rounded-[10px] bg-white/5 backdrop-blur-[30px] overflow-hidden border border-[#FFFFFF1A] flex-1 flex flex-col md:py-10 py-6 md:px-6 px-4"
+            <Solutions titleClass="text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  text-white  tracking-[1.5px] leading-[65px] 2xl:leading-[80px]" rightCardClass=" md:rounded-[20px] rounded-[10px] bg-white/5 backdrop-blur-[30px] overflow-hidden border border-[#FFFFFF1A] flex-1 flex flex-col md:py-10 py-6 md:px-6 px-4"
                 pointsClass="flex flex-col justify-between flex-1 list-decimal list-inside text-[14px] md:text-[17px] 2xl:text-[20px] font-hel text-white gap-6"
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
@@ -78,7 +79,7 @@ const ChupaChups = () => {
             <ResultsSection
                 titleClass="mb-6 text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase text-left md:text-center text-white  tracking-[1.5px] leading-[65px] 2xl:leading-[80px]"
                 results={resultsData}
-                
+
                 description="In doing so, Chupa Chups became a native part of the gaming moment, not just a break in the action, targeting gaming audiences and in-game branding."
                 gridClass="grid lg:grid-cols-3 gap-6 mb-6"
                 sectionClass=""

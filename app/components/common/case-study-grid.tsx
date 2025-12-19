@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function CaseStudiesSection() {
     return (
-        <section className="bg-[#031347] py-10 md:py-16 px-4 md:px-8">
+        <section className="bg-[#031347] py-10 md:py-16 ">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto space-y-6">
                 {/* Row 1: Left 70%, Right 30% */}
                 <div className="grid grid-cols-1 md:grid-cols-10 gap-6">
                     {/* Left card - 70% */}
                     <div className="md:col-span-7 bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
-                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[400px]">
+                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[350px] 2xl:h-[400px]">
 
                             <Image
                                 src="/left-card-1.svg"
@@ -36,7 +36,7 @@ export default function CaseStudiesSection() {
                     {/* Right card - 30% */}
                     <div className="md:col-span-3 bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
 
-                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[400px]">
+                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[350px] 2xl:h-[400px]">
                             <Image
                                 src="right-1.svg" // replace with your image path
                                 alt="Spotify Island"
@@ -62,7 +62,7 @@ export default function CaseStudiesSection() {
 
                 <div className="bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
 
-                    <div className="relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[550px]">
+                    <div className="relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[500px] 2xl:h-[550px]">
                         <Image
                             src="/center-card.svg"
                             alt="Spotify Island"
@@ -88,7 +88,7 @@ export default function CaseStudiesSection() {
                     <div className="md:col-span-3 bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
 
 
-                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[400px]">
+                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[350px] 2xl:h-[400px]">
                             <Image
                                 src="/left-card-2.svg"
                                 alt="Spotify Island"
@@ -108,7 +108,7 @@ export default function CaseStudiesSection() {
                     {/* Right card - 70% */}
                     <div className="md:col-span-7 bg-white/5 p-5 rounded-lg md:rounded-2xl border-[1px] border-white/20 h-full w-full">
 
-                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[400px]">
+                        <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[350px]  2xl:h-[400px]">
                             <Image
                                 src="/right-2.svg"
                                 alt="Spotify Island"
