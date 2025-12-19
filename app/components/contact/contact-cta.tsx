@@ -14,6 +14,7 @@ export default function ContactCTA() {
                 icon2Style="absolute right-[4%] md:right-[21.5%] top-[70%] md:top-[58%]"
                 icon1Width={100}
                 icon2Width={80}
+                paraclass="w-[90%] md:max-w-2xl"
             />
 
         // <section className="bg-[#031347] min-h-[300px] md:min-h-[300px] 2xl:min-h-[500px] flex items-center justify-center relative pt-16 mt-20 md:mt-20 2xl:mt-20 mb-12">

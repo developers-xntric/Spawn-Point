@@ -78,7 +78,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-[#031347] text-white pb-16 pt-0 px-5 md:px-10 font-sans flex justify-center items-start min-h-screen relative">
+    <div className="bg-[#031347] text-white pb-16 pt-0 px-5 md:px-0font-sans flex justify-center items-start  relative">
       <div className="2xl:max-w-[1440px] w-full lg:w-[85%] mx-auto flex flex-col lg:flex-row gap-14">
         {/* Left Column: Form */}
         <div className="flex-3 flex flex-col gap-5">
