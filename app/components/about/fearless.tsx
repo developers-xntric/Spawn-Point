@@ -182,7 +182,7 @@ export default function FearlessProgress() {
     return (
         <div
             ref={containerRef}
-            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-1 md:pt-36 -space-y-28 pb-4 md:pb-32"
+            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-1 md:pt-32 2xl:pt-52 -space-y-28 pb-4 md:pb-32"
         >
             {/* Mobile-only fixed "We are" */}
             <div className="md:hidden absolute top-16 left-[20%] -translate-x-1/2 z-50 rotate-[-20deg]">
