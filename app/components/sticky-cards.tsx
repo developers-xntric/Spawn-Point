@@ -1,13 +1,13 @@
-"use client"
-import { useEffect, useRef } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+"use client";
 
-gsap.registerPlugin(ScrollTrigger)
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Card data
+gsap.registerPlugin(ScrollTrigger);
+
 const cards = [
   {
     heading: "Audience Capture & Optimization.",
@@ -22,100 +22,105 @@ const cards = [
   {
     heading: "High-Impact Visibility & Growth.",
     title: "Momentum",
-    para: "Strategic Seasonal Gaming Events 7and hybrid activations, focusing on high-dwell time engagement and expansive partnerships.",
+    para: "Strategic Seasonal Gaming Events and hybrid activations, focusing on high-dwell time engagement and expansive partnerships.",
   },
   {
     heading: "Retention & Value Maximization.",
     title: "Sustained Growth",
     para: "Implementation of the Audience Reinforcement Engine and operationalizing commerce/loyalty missions within persistent Virtual Worlds.",
   },
-]
+];
 
-export default function StickyCards() {
-  const sectionRef = useRef<HTMLDivElement>(null)
+export default function AboutSection3() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const leftRef = useRef<HTMLDivElement>(null);
 
   const styleAmpersand = (text: string) => {
-    return text.replace(
-      /&/g,
-      `<span class="font-hel">&</span>`
-    )
-  }
-
-
+    // Replace & with a styled span
+    const parts = text.split("&");
+    return parts.map((part, i) =>
+      i === 0 ? (
+        <span key={i}>{part}</span>
+      ) : (
+        <span key={i}>
+          <span className="font-hel">&</span>
+          {part}
+        </span>
+      )
+    );
+  };
 
   useEffect(() => {
-    if (!sectionRef.current) return
+    if (!sectionRef.current || !leftRef.current) return;
 
-    // Check if desktop
-    const isDesktop = window.innerWidth > 1024
+    const isMobile = window.innerWidth < 1024;
+    const cardsEls = sectionRef.current.querySelectorAll(".card-item");
 
-    if (!isDesktop) return
+    // ✅ MOBILE: NO animation, NO pin
+    if (isMobile) {
+      cardsEls.forEach((card) => {
+        card.classList.add("fade-in"); // make visible immediately
+      });
+      return;
+    }
 
-    const ctx = gsap.context(() => {
-      const left = sectionRef.current!.querySelector(".left") as HTMLElement
-      const right = sectionRef.current!.querySelector(".right") as HTMLElement
-      const cardEls = Array.from(right.children) as HTMLElement[]
+    // ---------------- DESKTOP ONLY ----------------
 
+    // Fade-in observer
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-      gsap.set(cardEls, {
-        opacity: 0,
-        y: (i) => i === 0 ? 180 : 150,
-      })
+    cardsEls.forEach((card) => observer.observe(card));
 
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        pin: left,
-        pinSpacing: true,
-        anticipatePin: 1,
-        scrub: 2.5,
-        markers: false,
-      })
-
-      cardEls.forEach((card, index) => {
-        gsap.to(card, {
-          opacity: 1,
-          y: 40,
-          duration: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: index === cardEls.length - 1 ? "top 60%" : "top 38%",
-            end: "top 100%",
-            scrub: 1.7,
-            markers: false,
-          },
-        })
-      })
-    }, sectionRef)
+    // Pin left section (DESKTOP ONLY)
+    ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      pin: leftRef.current,
+      pinSpacing: true,
+    });
 
     return () => {
-      ctx.revert()
-    }
-  }, [])
+      observer.disconnect();
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="bg-[#091B56] mt-10 md:mt-1 text-white pb-0 lg:pb-10 xl:pt-1 pt-10 relative min-h-screen"
+      className="bg-[#091B56]  mt-20  text-white pb-10 lg:pb-40 xl:pt-40 pt-20 relative"
     >
       <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-7 md:gap-10  ">
-          {/* LEFT SECTION */}
-          <div className="left relative top-0 w-full lg:w-[40%] xl:w-[55%] lg:h-screen lg:flex lg:flex-col lg:justify-center ">
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Left Column */}
+          <div
+            ref={leftRef}
+            className="w-[96vw] lg:w-[40%] xl:w-[50%] md:sticky top-0 lg:top-20 z-[20] lg:bg-transparent h-fit"
+          >
             <div>
               <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                 How We Work
               </p>
               <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-[40px] md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] max-w-[650px] font-fks">
-                From <span className="text-[#BBFC00]">Insight </span> to Immortality: Our 4-Quarter
+                From <span className="text-[#BBFC00]">Insight </span> to
+                Immortality: Our 4-Quarter
                 <span className="text-[#BBFC00]"> System</span>
               </h2>
-              <p className="text-white text-sm md:text-[16px] xl:text-[20px] font-hel mt-5">
-                We implement a proprietary 4-Phase annual framework to ensure continuous relevance,
-                maximize audience commitment, and deliver measurable Lifetime Lift. We transform
-                short-term activations into long-term, compounding value.
+              <p className="text-white text-sm md:text-[16px] xl:text-[20px] font-hel mt-5 w-[95%] md:w-full">
+                We implement a proprietary 4-Phase annual framework to ensure
+                continuous relevance, maximize audience commitment, and deliver
+                measurable Lifetime Lift. We transform short-term activations
+                into long-term, compounding value.
               </p>
               <Link href="/brand-experience">
                 <button className="px-5 md:px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border border-transparent transition cursor-pointer mt-5 font-hel md:text-base text-[14px]">
@@ -125,29 +130,37 @@ export default function StickyCards() {
             </div>
           </div>
 
-          {/* RIGHT SECTION */}
-          <div className="right w-full lg:w-[60%] xl:w-[50%] md:space-y-8 space-y-6 md:pb-20 pb-16">
+          {/* Right Column */}
+          <div className="w-full lg:w-[60%] xl:w-[50%] space-y-6 md:space-y-20">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="card-item relative md:rounded-[20px] rounded-[15px] bg-white/5 backdrop-blur-[30px] p-4 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
+                className="card-item relative md:rounded-[20px] rounded-[15px] bg-white/5 backdrop-blur-[30px] p-3 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
               >
+                {/* SVG Background */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-32 md:h-full"
+                  className="w-full h-[210px] md:h-full lg:h-68 xl:h-70"
                   viewBox="0 0 713 302"
                   preserveAspectRatio="none"
                 >
                   <defs>
-                    <filter id={`drop-${index}`} x="0" y="0" width="713" height="302" filterUnits="userSpaceOnUse">
+                    <filter
+                      id={`drop-${index}`}
+                      x="0"
+                      y="0"
+                      width="713"
+                      height="302"
+                      filterUnits="userSpaceOnUse"
+                    >
                       <feOffset dy="4" />
                       <feGaussianBlur stdDeviation="2" />
                       <feColorMatrix
                         type="matrix"
                         values="0 0 0 0 0  
-                  0 0 0 0 0 
-                  0 0 0 0 0 
-                  0 0 0 0.25 0"
+                                0 0 0 0 0 
+                                0 0 0 0 0 
+                                0 0 0 0.25 0"
                       />
                       <feBlend in="SourceGraphic" result="shape" />
                     </filter>
@@ -160,47 +173,55 @@ export default function StickyCards() {
                     fill="transparent"
                     filter={`url(#drop-${index})`}
                   />
-
-                  <foreignObject x="30" y="30" width="640" height="230">
-                    <div className="flex flex-col space-y-3 text-white leading-tight">
-                      <p className="text-[#BBFC00] text-[32px] md:text-[20px] lg:text-[22px] tracking-[1px]">
-                        Q{index + 1} {card.title}
-                      </p>
-                      <h2
-                        dangerouslySetInnerHTML={{
-                          __html: styleAmpersand(card.heading),
-                        }}
-                        className="
-    font-fks
-    text-white
-    text-[45px] md:text-[32px] lg:text-[40px] xl:text-[44px]
-    font-bold uppercase
-    lg:leading-[45px]
-    tracking-[2px] md:tracking-[1.5px]
-    lg:w-[70%]
-  "
-                      />
-
-                      <p className="text-white text-[25px] md:text-[18px] lg:text-[20px] xl:text-[20px] tracking-[1px] md:tracking-[0.5px] font-hel">
-                        {card.para}
-                      </p>
-                    </div>
-                  </foreignObject>
                 </svg>
 
+                <div className="flex flex-col space-y-2 md:space-y-3 text-white leading-tight absolute md:top-10 top-8 left-8 md:left-10 2xl:top-12 2xl:left-12">
+                  <p className="text-[#BBFC00] text-[15px] md:text-[20px] lg:text-[22px] tracking-[1px]">
+                    Q{index + 1} {card.title}
+                  </p>
+                  <h2 className="font-fks text-white text-[25px] md:text-[32px] lg:text-[40px] 2xl:text-[44px] font-bold uppercase leading-[30px] md:leading-[45px] tracking-[2px] md:tracking-[1.5px] lg:w-[70%]">
+                    {styleAmpersand(card.heading)}
+                  </h2>
+
+                  <p className="text-white text-[13px] md:text-[18px] lg:text-[18px] 2xl:text-[20px] md:tracking-[1px] md:tracking-[0.5px] font-hel w-[90%] xl:w-[90%] 2xl:w-[87%]">
+                    {card.para}
+                  </p>
+                </div>
+
                 <Image
-                  src="/home/gif-icons-sticky.svg"
+                  src="/home/sticky-card-icon.svg"
                   alt="icons"
                   width={140}
                   height={50}
-
-                  className="mix- red-400 absolute xl:top-3 md:top-2 2xl:top-5 -top-1 right-4 md:right-12 xl:right-10 2xl:right-12 z-30 w-[70px] md:w-[100px] xl:w-[140px] h-[50px]"
+                  className="absolute xl:top-3 md:top-2 2xl:top-5 top-1 right-4 md:right-12 xl:right-10 2xl:right-12 z-30 w-[70px] md:w-[100px] xl:w-[140px] h-[50px] "
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .card-item {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 0.7s ease-out;
+        }
+
+        .card-item.fade-in {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        /* ✅ MOBILE OVERRIDE */
+        @media (max-width: 1023px) {
+          .card-item {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+          }
+        }
+      `}</style>
     </section>
-  )
+  );
 }
