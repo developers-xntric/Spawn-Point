@@ -28,7 +28,7 @@ const ChupaChups = () => {
             />
             <CaseSecond
                 title="Integrated contextual in-game stream triggers to engage gamers at key gameplay moments without disrupting the viewing experience."
-                videoSrc="/chupa-chups/feature.png"
+                videoSrc="/chupa-chups/feature.webm"
 
                 titleClass="text-white text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  md:text-center mb-10 tracking-[1.5px] leading-[40px] md:leading-[65px] 2xl:leading-[80px]"
                 sectionClass="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto bg-[#031347] flex flex-col items-center justify-center"

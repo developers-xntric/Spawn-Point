@@ -11,7 +11,7 @@ const caseStudies = [
     description:
       "Integrated contextual in-game stream triggers to engage gamers at key gameplay moments without disrupting the viewing experience.",
     // stat: "+114% in-store traffic, proving virtual fandom can drive real-world flavor.",
-    video: "/chupa-chups/feature.png",
+    video: "/chupa-chups/feature.webm",
     brandName: "Chupa Chups",
     url: "/case-studies/chupa-chups",
   },
@@ -21,7 +21,7 @@ const caseStudies = [
     description:
       "Positioned pizza as the ultimate gaming companion by embedding high-impact, non-intrusive overlays across popular game streams.",
     // stat: "+89% engagement across digital touchpoints.",
-    video: "/dominos/feature.png",
+    video: "/dominos/feature.gif",
     brandName: "Domino’s",
     url: "/case-studies/dominos",
   },
@@ -30,7 +30,7 @@ const caseStudies = [
     title: "Doritos",
     description:
       "Drove higher engagement by tailoring live stream branding to specific game genres and gamer personas at scale.",
-    video: "/doritos/feature.svg",
+    video: "/doritos/feature.gif",
     brandName: "Doritos ",
     url: "/case-studies/doritos",
   },
@@ -39,7 +39,7 @@ const caseStudies = [
     title: "Karaca",
     description:
       "Introduced a tech-enabled lifestyle product to gamers by interactive overlays with tech-savvy gaming audiences.",
-    video: "/karaca/feature.svg",
+    video: "/karaca/feature.webm",
     brandName: "Karaca",
     url: "/case-studies/karaca",
   },
@@ -48,7 +48,7 @@ const caseStudies = [
     title: "Mentos ",
     description:
       "Captured gamer attention using playful, custom-designed overlays that blended seamlessly with live gaming content.",
-    video: "/mentos/feature.svg",
+    video: "/mentos/feature.webm",
     brandName: "Mentos ",
     url: "/case-studies/mentos",
   },
@@ -57,7 +57,7 @@ const caseStudies = [
     title: "Vodafone",
     description:
       "Promoted an official esports tournament through native livestream integrations, linking 5G performance with competitive gaming.",
-    video: "/vodafone/feature.svg",
+    video: "/vodafone/feature.gif",
     brandName: "Vodafone",
     url: "/case-studies/vodafone",
   },
@@ -66,7 +66,7 @@ const caseStudies = [
     title: "Shell ",
     description:
       "Integrated contextual in-game stream triggers to engage gamers at key gameplay moments without disruptExtended real-world motorsport credibility into racing and simulation games through performance-aligned live stream branding.ing the viewing experience.",
-    video: "/shell/feature.svg",
+    video: "/shell/feature.gif",
     brandName: "Shell ",
     url: "/case-studies/shell",
   },
@@ -106,8 +106,6 @@ export function CaseStudies({ isabout }: { isabout: boolean }) {
                   End-to-End <span className="text-[#BBFC00]"> Gaming,</span> Esports <span className="font-hel">&</span> Virtual
                   <span className="text-[#BBFC00]"> Experiences</span>
                 </h2>
-
-
 
                 :
 
@@ -156,7 +154,19 @@ export function CaseStudies({ isabout }: { isabout: boolean }) {
             {/* VIDEO BACKGROUND (same wrapper, same size) */}
             <div className="relative w-full h-full">
 
-              <Image width={2000} height={2000} src={study.video} alt={study.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-500" />
+              {/* Background */}
+              {study.video.match(/\.(mp4|webm|mov)$/i) ? (
+                <video
+                  src={study.video}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <Image width={2000} height={2000} src={study.video} alt={study.title} className="absolute inset-0 w-full h-full object-cover transition-all duration-500" />
+              )}
 
 
               {/* Dark overlay */}

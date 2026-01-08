@@ -28,7 +28,7 @@ const Doritos = () => {
             />
             <CaseSecond
                 title="Drove higher engagement by tailoring live stream branding to specific game genres and gamer personas at scale."
-                videoSrc="/doritos/feature.svg"
+                videoSrc="/doritos/feature.gif"
                 titleClass="text-white text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  md:text-center mb-10 tracking-[1.5px] leading-[40px] md:leading-[65px] 2xl:leading-[80px]"
                 sectionClass="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto bg-[#031347] flex flex-col items-center justify-center"
                 videoClass="w-full  rounded-xl shadow-xl h-[250px] md:h-[400px] lg:h-[600px]"
