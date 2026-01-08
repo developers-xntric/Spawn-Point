@@ -13,7 +13,7 @@ export default function SecondSection() {
                        Gaming + AI campaigns that move audiences, not just eyeballs. SpawnPoint builds proprietary systems that turn participation into measurable growth.
                     </p>
                 </div>
-                <div className="relative w-full h-[500px] rounded-[15px] border-[0.5px] border-[#BBFC00]">
+                <div className="relative w-full  h-[400px]  md:h-[500px] rounded-[15px] border-[0.5px] border-[#BBFC00]">
                     <div className="w-full h-full rounded-[15px] overflow-hidden relative">
                         <div className="absolute inset-0 bg-white/5 backdrop-blur-lg pointer-events-none"></div>
 

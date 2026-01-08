@@ -40,7 +40,7 @@ export default function HOMEGSP() {
         let pinSection = false; // Only pin on desktop
 
         if (isMobile) {
-          start = "155% 1%";
+          start = "-12% 1%";
           end = "+=0%";
         }
 
