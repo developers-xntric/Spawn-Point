@@ -85,7 +85,6 @@ export default function MoveableBalls() {
       // Image URLs array - replace with your own images
       const imageUrls = [
         "/moving-icons/1.png",
-        "/moving-icons/2.png",
         "/moving-icons/3.png",
         "/moving-icons/4.png",
         "/moving-icons/5.png",
@@ -98,20 +97,15 @@ export default function MoveableBalls() {
         "/moving-icons/13.png",
         "/moving-icons/14.png",
         "/moving-icons/15.png",
-
-        //  DUplicate 
-        "/moving-icons/8.png",
-        "/moving-icons/9.png",
-        "/moving-icons/10.png",
-        "/moving-icons/11.png",
-        "/moving-icons/12.png",
-        "/moving-icons/13.png",
-        "/moving-icons/2.png",
-        "/moving-icons/3.png",
+        "/moving-icons/16.png",
+        "/moving-icons/17.png",
+        "/moving-icons/18.png",
+        "/moving-icons/19.png",
+        "/moving-icons/20.png",
+        "/moving-icons/21.png",
+        "/moving-icons/1.png",
         "/moving-icons/4.png",
-        "/moving-icons/5.png",
-
-
+        "/moving-icons/22.png",
 
       ]
 
