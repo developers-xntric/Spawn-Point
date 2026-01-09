@@ -25,6 +25,7 @@ const Shell = () => {
                 buttonLink="/contact"
                 leftImage="/icons/pizza.png"
                 rightImage="/icons/man.png"
+                
             />
             <CaseSecond
                 title="Extended real-world motorsport credibility into racing and simulation games through performance-aligned live stream branding."

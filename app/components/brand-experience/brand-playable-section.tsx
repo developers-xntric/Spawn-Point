@@ -26,7 +26,7 @@ export default function BrandsPlayableSection() {
                     </div>
 
                     {/* Right - Content */}
-                    <div className="w-[90%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-6 flex flex-col justify-between mx-auto">
+                    <div className="w-[100%] lg:w-1/2 bg-white/5 border-2 border-white/10 rounded-2xl py-8 p-5 md:p-6 flex flex-col justify-between mx-auto">
                         {/* Headline */}
 
 

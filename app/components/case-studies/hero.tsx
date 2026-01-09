@@ -1,5 +1,9 @@
+"use client"
+
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import gsap from "gsap"
 
 interface CaseHeroProps {
   title: string
@@ -10,6 +14,8 @@ interface CaseHeroProps {
   leftImageAlt?: string
   rightImage: string
   rightImageAlt?: string
+  vodafoneClass?: string
+  isVodafone?: boolean
 }
 
 export default function CaseHero({
@@ -18,19 +24,45 @@ export default function CaseHero({
   buttonText,
   buttonLink,
   leftImage,
+  vodafoneClass,
+  isVodafone,
   leftImageAlt = "Left image",
   rightImage,
   rightImageAlt = "Right image",
 }: CaseHeroProps) {
+  const leftImgRef = useRef(null)
+  const rightImgRef = useRef(null)
+
+  useEffect(() => {
+    // Left Image Animation
+    gsap.to(leftImgRef.current, {
+      y: -10,
+      duration: 2.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1,
+    })
+
+    // Right Image Animation
+    gsap.to(rightImgRef.current, {
+      y: -10,
+      duration: 3,
+      delay: 0.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1,
+    })
+  }, [])
+
   return (
     <section className="bg-[#031347] min-h-[380px] lg:min-h-[550px] 2xl:min-h-[500px] flex items-center justify-center relative pt-22 md:pt-20 2xl:pt-52 mb-12">
       {/* Left image */}
-      <div className="absolute left-[10%] md:left-[15%] xl:left-[30%] 2xl:left-[35%] top-[27%] md:top-[30%]">
+      <div ref={leftImgRef} className="absolute left-[10%] md:left-[15%] xl:left-[32%] 2xl:left-[36%] top-[27%] md:top-[30%] 2xl:top-[40%] ">
         <Image src={leftImage} alt={leftImageAlt} width={50} height={50} className="object-contain" />
       </div>
 
       {/* Right image */}
-      <div className="absolute right-[1%] md:right-[30%] top-[62%] md:top-[70%] 2xl:top-[67%] 2xl:right-[30%]">
+      <div ref={rightImgRef} className={`${isVodafone ? vodafoneClass : "absolute right-[1%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[36.5%]"}`}>
         <Image src={rightImage} alt={rightImageAlt} width={70} height={70} className="object-contain" />
       </div>
 

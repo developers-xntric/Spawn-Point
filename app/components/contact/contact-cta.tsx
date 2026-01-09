@@ -10,8 +10,8 @@ export default function ContactCTA() {
                 para=" Your audience is already inside gaming, esports, and virtual worlds. Let’s meet them with experiences that earn time, trust, and loyalty. Start the conversation, and everything else follows."
                 icon1="/icons/OMG.svg"
                 icon2="/icons/Dollar.svg"
-                icon1Style="absolute left-[10%] md:left-[15%] xl:left-[32%] top-[25%] md:top-[32%]"
-                icon2Style="absolute right-[4%] md:right-[21.5%] top-[70%] md:top-[58%]"
+                icon1Style="absolute left-[10%] md:left-[15%] xl:left-[32%] top-[25%] md:top-[32%] 2xl:left-[35%]"
+                icon2Style="absolute right-[4%] md:right-[21.5%] top-[70%] md:top-[58%] 2xl:right-[28%]"
                 icon1Width={100}
                 icon2Width={80}
                 paraclass="w-[90%] md:max-w-2xl"
