@@ -10,6 +10,7 @@ export default function CelebrationSection() {
   const lineRef = useRef(null);
   const topImgRef = useRef(null);
   const bottomImgRef = useRef(null);
+  const mobileImgRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -58,6 +59,13 @@ export default function CelebrationSection() {
         bottomImgRef.current,
         { x: "120%", rotation: 0 },
         { x: "-600%", rotation: -360, ease: "none" },
+        0
+      );
+
+      tl.fromTo(
+        mobileImgRef.current,
+        { rotation: 0 },
+        { rotation: 360, ease: "none" },
         0
       );
 
@@ -112,6 +120,13 @@ export default function CelebrationSection() {
         0
       );
 
+      tl.fromTo(
+        mobileImgRef.current,
+        { rotation: 0 },
+        { rotation: 360, ease: "none" },
+        0
+      );
+
 
     });
 
@@ -127,8 +142,8 @@ export default function CelebrationSection() {
       {/* TOP IMAGE — NOW INSIDE THE TEXT */}
       <div
         ref={topImgRef}
-        className="absolute md:top-[20%] top-[25%] z-30 pointer-events-none select-none"
-      >
+        className="absolute md:top-[33%] 2xl:top-[38%] top-[25%] left-[30%] -z-30 pointer-events-none select-none"
+      >``
         <Image
           src="/icons/movingline-icon2.svg"
           alt="Top graphic"
@@ -150,19 +165,28 @@ export default function CelebrationSection() {
         <span className="text-[67px] md:text-[120px] font-fks uppercase font-bold text-white px-8 leading-none tracking-[1.7px] md:hidden block">
           Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be <span className="text-[#BBFC00]">Part </span> Of
         </span>
+        <div ref={mobileImgRef} className="relative shrink-0 mb-24">
+          <Image
+            src="/icons/mobile.png"
+            alt="Review Stars"
+            width={2000}
+            height={2000}
+            className="w-52 h-52 2xl:w-64 2xl:h-64"
+          />
+        </div>
       </div>
 
       {/* BOTTOM IMAGE — NOW INSIDE THE TEXT */}
       <div
         ref={bottomImgRef}
-        className="absolute md:bottom-[1%] bottom-[20%] z-30 pointer-events-none select-none"
+        className="absolute md:bottom-[18%] 2xl:bottom-[20%] bottom-[20%] right-[20%] -z-30 pointer-events-none select-none"
       >
         <Image
           src="/icons/movingline-icon.svg"
           alt="Bottom graphic"
           width={180}
           height={260}
-          className="w-[100px] h-[100px] md:w-40 md:h-[220px] 2xl:w-[180px] 2xl:h-[260px]"
+          className="w-[100px] h-[100px] md:w-36 md:h-[200px] 2xl:w-[180px] 2xl:h-[260px]"
         />
       </div>
     </div>

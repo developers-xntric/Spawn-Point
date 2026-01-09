@@ -3,7 +3,7 @@ export default function NumbersTalkSection() {
         <section className="bg-[#031347] pb-16 md:py-10 md:pb-24 px-4 md:px-8 lg:px-16">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
-                <h2 className="text-center font-fks font-black text-2xl md:text-3xl lg:text-7xl uppercase tracking-wide mb-12 md:mb-16">
+                <h2 className="text-center font-fks font-black text-2xl md:text-3xl lg:text-7xl uppercase tracking-wide mb-8 md:mb-8">
                     <span className="text-white">Let The </span>
                     <span className="text-[#BBFC00]">Numbers </span>
                     <span className="text-white">Talk</span>
@@ -25,14 +25,14 @@ export default function NumbersTalkSection() {
 
                         {/* Center Video */}
                         <div className="relative hidden md:block">
-                            <div className="rounded-full px-4 py-2 md:px-6 md:py-3 overflow-hidden">
+                            <div className="rounded-full px-4 py-2 md:px-6 md:py-3 ">
                                 <video
                                     src="/game/fool.mp4"
                                     autoPlay
                                     loop
                                     muted
                                     playsInline
-                                    className="w-32 h-20 md:w-40 md:h-24 lg:w-80 lg:h-28 object-cover rounded-full"
+                                    className="w-32 h-20 md:w-40 md:h-24 lg:w-80 lg:h-48 object-cover"
                                 />
                             </div>
                         </div>

@@ -6,12 +6,12 @@ export default function HeroSection() {
     return (
         <section className="bg-[#031347] min-h-[600px] md:min-h-[600px] 2xl:min-h-[650px] flex items-center justify-center relative pt-20 md:pt-16 mb-12">
             {/* Pizza image - left side */}
-            <div className="absolute left-[8%] xl:left-[25%] top-[16%] md:top-[26%] 2xl:top-[27%] 2xl:left-[29%]">
+            <div className="absolute left-[8%] xl:left-[27%] top-[16%] md:top-[26%] 2xl:top-[27%] 2xl:left-[31%]">
                 <Image src="/icons/yes.png" alt="Pizza decoration" width={60} height={50} className="object-contain" />
             </div>
 
             {/* Robot image - right side */}
-            <div className="absolute right-[4%] md:right-[20%] xl:right-[32%] top-[70%] xl:top-[67%] 2xl:right-[36.5%]">
+            <div className="absolute right-[4%] md:right-[20%] xl:right-[32%] top-[70%] xl:top-[73%] 2xl:top-[72%] 2xl:right-[30.5%]">
                 <Image src="/icons/arrow-top-right.png" alt="Robot decoration" width={55} height={50} className="object-contain" />
             </div>
 

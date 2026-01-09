@@ -4,7 +4,7 @@ import Star from "../icons/star";
 export default function ExpertiseSection() {
     return (
         <section className="bg-[#091B56] py-16 md:py-24 p rounded-tl-[50px] md:rounded-tl-[140px]">
-            <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
+            <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Left Column */}
                     <div className="flex flex-col gap-6">
