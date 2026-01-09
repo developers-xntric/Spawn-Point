@@ -1,5 +1,9 @@
+"use client"
+
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import gsap from "gsap"
 
 interface HeroSectionProps {
     h1?: string;
@@ -19,15 +23,39 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, icon1Style, icon2Style, icon1Width, icon1Height, icon2Width, icon2Height, hWidth, paraclass }: HeroSectionProps) {
+    const icon1Ref = useRef(null)
+    const icon2Ref = useRef(null)
+
+    useEffect(() => {
+        // Left Image Animation
+        gsap.to(icon1Ref.current, {
+            y: -10,
+            duration: 2.5,
+            ease: "power1.inOut",
+            yoyo: true,
+            repeat: -1,
+        })
+
+        // Right Image Animation
+        gsap.to(icon2Ref.current, {
+            y: -10,
+            duration: 3,
+            delay: 0.5,
+            ease: "power1.inOut",
+            yoyo: true,
+            repeat: -1,
+        })
+    }, [])
+
     return (
         <section className="bg-[#031347] min-h-[500px] lg:min-h-[600px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-28 mb-12">
             {/* Pizza image - left side */}
-            <div className={`${icon1Style ? icon1Style : "absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]"}`}>
+            <div ref={icon1Ref} className={`${icon1Style ? icon1Style : "absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]"}`}>
                 <Image src={icon1 ? icon1 : "/icons/yes.png"} alt="Pizza decoration" width={icon1Width ? icon1Width : 55} height={icon1Height ? icon1Height : 50} className="object-contain" />
             </div>
 
             {/* Robot image - right side */}
-            <div className={`${icon2Style ? icon2Style : "absolute right-[4%] md:right-[30%] top-[70%] md:top-[67%]"}`}>
+            <div ref={icon2Ref} className={`${icon2Style ? icon2Style : "absolute right-[4%] md:right-[30%] top-[70%] md:top-[67%]"}`}>
                 <Image src={icon2 ? icon2 : "/icons/arrow-top-right.png"} alt="Robot decoration" width={icon2Width ? icon2Width : 50} height={icon2Height ? icon2Height : 50} className="object-contain" />
             </div>
 

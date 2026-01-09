@@ -57,12 +57,12 @@ export default function CaseHero({
   return (
     <section className="bg-[#031347] min-h-[380px] lg:min-h-[550px] 2xl:min-h-[500px] flex items-center justify-center relative pt-22 md:pt-20 2xl:pt-52 mb-12">
       {/* Left image */}
-      <div ref={leftImgRef} className="absolute left-[10%] md:left-[15%] xl:left-[32%] 2xl:left-[36%] top-[27%] md:top-[30%] 2xl:top-[40%] ">
+      <div ref={leftImgRef} className="absolute left-[15%] md:left-[15%] xl:left-[32%] 2xl:left-[36%] top-[34%] md:top-[30%] 2xl:top-[40%] ">
         <Image src={leftImage} alt={leftImageAlt} width={50} height={50} className="object-contain" />
       </div>
 
       {/* Right image */}
-      <div ref={rightImgRef} className={`${isVodafone ? vodafoneClass : "absolute right-[1%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[36.5%]"}`}>
+      <div ref={rightImgRef} className={`${isVodafone ? vodafoneClass : "absolute right-[7%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[36.5%]"}`}>
         <Image src={rightImage} alt={rightImageAlt} width={70} height={70} className="object-contain" />
       </div>
 

@@ -142,7 +142,7 @@ export default function CelebrationSection() {
       {/* TOP IMAGE — NOW INSIDE THE TEXT */}
       <div
         ref={topImgRef}
-        className="absolute md:top-[33%] 2xl:top-[38%] top-[25%] left-[30%] -z-30 pointer-events-none select-none"
+        className="absolute md:top-[33%] 2xl:top-[38%] top-[33vh] left-[30%] -z-30 pointer-events-none select-none"
       >``
         <Image
           src="/icons/movingline-icon2.svg"
@@ -165,13 +165,13 @@ export default function CelebrationSection() {
         <span className="text-[67px] md:text-[120px] font-fks uppercase font-bold text-white px-8 leading-none tracking-[1.7px] md:hidden block">
           Let’s <span className="text-[#BBFC00]">Build</span> What Players Want to Be <span className="text-[#BBFC00]">Part </span> Of
         </span>
-        <div ref={mobileImgRef} className="relative shrink-0 mb-24">
+        <div ref={mobileImgRef} className="relative right-10 md:right-0 shrink-0 mb-24">
           <Image
             src="/icons/mobile.png"
             alt="Review Stars"
             width={2000}
             height={2000}
-            className="w-52 h-52 2xl:w-64 2xl:h-64"
+            className=" md:w-52 md:h-52 w-36 h-36 2xl:w-64 2xl:h-64"
           />
         </div>
       </div>
@@ -179,7 +179,7 @@ export default function CelebrationSection() {
       {/* BOTTOM IMAGE — NOW INSIDE THE TEXT */}
       <div
         ref={bottomImgRef}
-        className="absolute md:bottom-[18%] 2xl:bottom-[20%] bottom-[20%] right-[20%] -z-30 pointer-events-none select-none"
+        className="absolute md:bottom-[18%] 2xl:bottom-[20%] bottom-[33vh] right-[20%] -z-30 pointer-events-none select-none"
       >
         <Image
           src="/icons/movingline-icon.svg"

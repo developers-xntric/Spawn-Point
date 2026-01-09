@@ -26,7 +26,7 @@ const Dominos = () => {
                 leftImage="/icons/pizza.png"
                 rightImage="/icons/man.png"
                  isVodafone
-                vodafoneClass=" absolute right-[1%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[34.5%]"
+                vodafoneClass=" absolute right-[8%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[34.5%]"
             />
             <CaseSecond
                 title="Positioned pizza as the ultimate gaming companion by embedding high-impact, non-intrusive overlays across popular game streams."

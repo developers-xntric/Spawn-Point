@@ -16,7 +16,7 @@ const CaseStudies = () => {
                 icon2="/icons/robo.png"
                 buttonText="Let’s Get Started"
                 hWidth='max-w-md'
-                icon1Style="absolute left-[10%] md:left-[15%] xl:left-[29%] top-[20%] md:top-[29%] 2xl:top-[28%] 2xl:left-[33.5%]"
+                icon1Style="absolute left-[13%] md:left-[15%] xl:left-[29%] top-[24%] md:top-[29%] 2xl:top-[28%] 2xl:left-[33.5%]"
                 icon2Style="absolute right-[4%] md:right-[20%] top-[70%] md:top-[63%] 2xl:right-[30%] 2xl:top-[65%]"
                 icon1Width={50}
                 icon2Width={70}
