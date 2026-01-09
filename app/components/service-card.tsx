@@ -18,7 +18,7 @@ interface ServiceCardProps {
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div className="group h-full">
-      <div className="relative flex h-[99vw]  md:h-[420px] lg:h-[490px] xl:h-[425px] 2xl:h-full flex-col rounded-[10px] md:rounded-[16px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] p-4 md:p-3 2xl:p-5 transition-all duration-300 hover:shadow-2xl overflow-hidden">
+      <div className="relative flex h-[99.5vw]  md:h-[420px] lg:h-[490px] xl:h-[425px] 2xl:h-full flex-col rounded-[10px] md:rounded-[16px] border-2 border-[#273561] bg-white/5 backdrop-blur-[30px] p-4 md:p-3 2xl:p-5 transition-all duration-300 hover:shadow-2xl overflow-hidden">
 
         {/*                 FIRST SECTION (HEADER)             */}
         <div id="service-card" className="relative w-full md:w-full h-[300px] md:h-full lg:h-[300px] 2xl:h-[225px] flex flex-col items-center rounded-[20px] overflow-hidden mb-0 2xl:mb-6">

@@ -81,7 +81,7 @@ export function ServicesCarousel() {
 
 
                 <div className="">
-                    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 w-[82%] md:w-full mx-auto">
+                    <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 w-[84.5vw] md:w-full mx-auto">
                         {services.map((service) => (
                             <div key={service.id} className="">
                                 <ServiceCard service={service} />

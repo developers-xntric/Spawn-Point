@@ -8,31 +8,31 @@ export default function MapSection() {
             id: 1,
             name: 'PINKY "THE CREATOR"',
             image: '/home/map-man-1.svg',
-            position: 'top-[-200px] md:top-[-210px] 2xl:top-[-140px] xl:left-[150px] 2xl:left-[170px]',
+            position: 'top-[-200px] md:top-[-210px] 2xl:top-[-140px] left-[6vw] md:left-0 xl:left-[150px] 2xl:left-[170px]',
             pinPosition: 'bottom-[-30px] left-[100%] -translate-x-1/2'
         },
         {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
             image: '/home/map-man-2.svg',
-            position: 'top-[-250px] 2xl:top-[-140px] lg:right-[12%] right-[0%]',
+            position: 'top-[-250px] 2xl:top-[-140px] lg:right-[12%] right-[6vw] md:right-[0%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
         {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[50px] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[150px] lg:left-[1%] xl:left-[15%]',
+            position: 'bottom-[37%] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[150px] left-[6vw] md:left-0 lg:left-[1%] xl:left-[15%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {
             id: 4,
             name: 'C-SLACK "THE CULTURE"',
             image: '/home/map-man-4.svg',
-            position: 'md:bottom-[45%] lg:bottom-[27%] 2xl:bottom-[150px] right-[1%] lg:right-[12%]',
+            position: 'bottom-[55%] md:bottom-[45%] lg:bottom-[27%] 2xl:bottom-[150px] right-[6vw] md:right-[1%] lg:right-[12%]',
             pinPosition: 'top-[-20px] right-[100%] -translate-x-1/2'
         }
-    ];
+    ]; 
     const startTime = "0:01:12"
 
     const parseTime = (time: string) => {
@@ -114,7 +114,7 @@ export default function MapSection() {
                         </div>
 
                         {/* Card */}
-                        <div className="group relative z-30 w-[150px] md:w-72 h-[185px] md:h-[295px] 2xl:w-[350px] 2xl:h-[350px] rounded-[10px] overflow-hidden border border-[#FFFFFF1A] shadow-2xl transition-all duration-300 hover:scale-150 hover:shadow-[0_0_30px_rgba(191,255,0,0.3)] cursor-pointer bg-white/5 backdrop-blur-[30px] p-2 ">
+                        <div className="group relative z-30 w-[150px] md:w-72 h-[170px] md:h-[295px] 2xl:w-[350px] 2xl:h-[350px] rounded-[10px] overflow-hidden border border-[#FFFFFF1A] shadow-2xl transition-all duration-300 hover:scale-150 hover:shadow-[0_0_30px_rgba(191,255,0,0.3)] cursor-pointer bg-white/5 backdrop-blur-[30px] p-2 ">
 
                             {/* REC ICON */}
                             <div className="absolute top-2 right-3 z-30 flex items-center gap-2">

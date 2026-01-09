@@ -111,7 +111,7 @@ export default function AboutSection3() {
               <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                 How We Work
               </p>
-              <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-[40px] md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] max-w-[650px] font-fks">
+              <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-[40px] md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] md:max-w-[650px] max-w-[90%] font-fks">
                 From <span className="text-[#BBFC00]">Insight </span> to
                 Immortality: Our 4-Quarter
                 <span className="text-[#BBFC00]"> System</span>
@@ -175,11 +175,11 @@ export default function AboutSection3() {
                   />
                 </svg>
 
-                <div className="flex flex-col space-y-2 md:space-y-3 text-white leading-tight absolute md:top-10 top-8 left-8 md:left-10 2xl:top-12 2xl:left-12">
-                  <p className="text-[#BBFC00] text-[15px] md:text-[20px] lg:text-[22px] tracking-[1px]">
+                <div className="flex flex-col space-y-2 md:space-y-3 text-white leading-tight absolute md:top-10 top-9 left-8 md:left-10 2xl:top-12 2xl:left-12">
+                  <p className="text-[#BBFC00] text-[15px] md:text-[20px] lg:text-[22px] tracking-[1px] uppercase">
                     Q{index + 1} {card.title}
                   </p>
-                  <h2 className="font-fks text-white text-[25px] md:text-[32px] lg:text-[40px] 2xl:text-[44px] font-bold uppercase leading-[30px] md:leading-[45px] tracking-[2px] md:tracking-[1.5px] lg:w-[70%]">
+                  <h2 className="font-fks text-white text-[25px] md:text-[32px] lg:text-[40px] 2xl:text-[44px] font-bold uppercase leading-[30px] md:leading-[45px] tracking-[2px] md:tracking-[1.5px] w-[80%] md:w-full lg:w-[70%]">
                     {styleAmpersand(card.heading)}
                   </h2>
 

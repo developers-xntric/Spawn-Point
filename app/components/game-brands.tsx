@@ -56,7 +56,7 @@ export default function GameBrands() {
       </div>
       {/* GREENISH LINE */}
       <div
-        className={`absolute top-[29%] lg:top-[50%] left-0 right-0 h-24 flex items-center overflow-hidden z-12 transition-all duration-300`}
+        className={`absolute top-[27%] md:top-[29%] lg:top-[50%] left-0 right-0 h-24 flex items-center overflow-hidden z-12 transition-all duration-300`}
         style={{
           transform: "skewY(-6deg)",
         }}
