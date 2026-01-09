@@ -131,7 +131,7 @@ export default function AboutSection3() {
           </div>
 
           {/* Right Column */}
-          <div className="w-full lg:w-[60%] xl:w-[50%] space-y-6 md:space-y-20">
+          <div className="w-full lg:w-[60%] xl:w-[50%] space-y-6 md:space-y-20 xl:mt-[68px]">
             {cards.map((card, index) => (
               <div
                 key={index}
