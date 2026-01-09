@@ -183,7 +183,7 @@ export default function HOMEGSP() {
       </div>
 
       {/* Center Content */}
-      <div className="relative z-30 max-w-[1100px] mx-auto text-center flex flex-col items-center justify-center h-screen">
+      <div className="relative z-30 max-w-[1100px] mx-auto text-center flex flex-col items-center justify-center h-[700px] md:h-screen">
         <p className="text-[#FF1586] text-[16px] md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase mb-8 font-medium">
           Spawn Point Studio
         </p>

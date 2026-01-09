@@ -84,85 +84,171 @@ export default function MoveableBalls() {
 
       // Image URLs array - replace with your own images
       const imageUrls = [
-        "/moving-icons/1.png",
         "/moving-icons/3.png",
+        "/moving-icons/1.png",
+        "/moving-icons/new-text-4.png",
         "/moving-icons/4.png",
+        "/moving-icons/new-text-3.png",
         "/moving-icons/5.png",
         "/moving-icons/6.png",
+        "/moving-icons/new-text-8.png",
+        "/moving-icons/12.png",
+        "/moving-icons/new-text-6.png",
+        "/moving-icons/new-text-9.png",
+        "/moving-icons/new-text-2.png",
         "/moving-icons/8.png",
         "/moving-icons/9.png",
+        "/moving-icons/new-text-10.png",
+        "/moving-icons/new-text-7.png",
+        "/moving-icons/8.png",
         "/moving-icons/10.png",
+        "/moving-icons/new-text.png",
         "/moving-icons/11.png",
         "/moving-icons/12.png",
+        "/moving-icons/3.png",
         "/moving-icons/13.png",
-        "/moving-icons/14.png",
-        "/moving-icons/15.png",
-        "/moving-icons/16.png",
-        "/moving-icons/17.png",
-        "/moving-icons/18.png",
-        "/moving-icons/19.png",
-        "/moving-icons/20.png",
-        "/moving-icons/21.png",
-        "/moving-icons/1.png",
-        "/moving-icons/4.png",
-        "/moving-icons/22.png",
+        // "/moving-icons/new-text-scale.png",
+
 
       ]
+
+      let imageIndex = 0;
+
+
+      // Helper to dynamically scale sprite to fit body preserving aspect ratio
+      const setSpriteScale = (body: any, targetSize: number) => {
+        const img = new Image()
+        img.src = body.render.sprite.texture
+        img.onload = () => {
+          const maxDimension = Math.max(img.width, img.height)
+          const scale = targetSize / maxDimension
+          body.render.sprite.xScale = scale
+          body.render.sprite.yScale = scale
+        }
+      }
 
       // Add initial stack with images
       const stack = Matter.Composites.stack(80, 40, 8, 4, 20, 20, (x: number, y: number) => {
         const r = Math.random()
-        const imgUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)]
+        const imgUrl = imageUrls[imageIndex % imageUrls.length]
+        imageIndex++;
+        const isText = imgUrl.includes("text");
+        let body;
 
-        if (r < 0.5) {
-          return Matter.Bodies.rectangle(x, y, 60, 60, {
+        if (isText) {
+          // CHANGE SIZE HERE (TEXT): Width (180), Height (70)
+          // Tighter rectangle for text to reduce gaps
+          const isMobile = window.innerWidth < 768;
+          const mobileScale = isMobile ? 0.5 : 1;
+
+          const width = 180 * mobileScale;
+          const height = 70 * mobileScale;
+
+          body = Matter.Bodies.rectangle(x, y, width, height, {
             chamfer: { radius: 8 },
             render: {
               sprite: {
                 texture: imgUrl,
-                xScale: 0.6,
-                yScale: 0.6
+                xScale: 1,
+                yScale: 1
               }
             }
           })
+          setSpriteScale(body, width) // Scale to match width
+        } else if (r < 0.5) {
+          // CHANGE SIZE HERE (SQUARE): width (80), height (80)
+          const isMobile = window.innerWidth < 768;
+          const mobileScale = isMobile ? 0.5 : 1;
+
+          const size = 80 * mobileScale;
+          body = Matter.Bodies.rectangle(x, y, size, size, {
+            chamfer: { radius: 8 },
+            render: {
+              sprite: {
+                texture: imgUrl,
+                xScale: 1, // Init with 1, will be auto-scaled
+                yScale: 1
+              }
+            }
+          })
+          setSpriteScale(body, size)
         } else {
           const sides = Math.round(Matter.Common.random(3, 8))
-          return Matter.Bodies.polygon(x, y, sides, 30, {
+          // CHANGE SIZE HERE (POLYGON): radius (40)
+          const isMobile = window.innerWidth < 768;
+          const mobileScale = isMobile ? 0.5 : 1;
+          const radius = 40 * mobileScale;
+          body = Matter.Bodies.polygon(x, y, sides, radius, {
             chamfer: { radius: 6 },
             render: {
               sprite: {
                 texture: imgUrl,
-                xScale: 0.6,
-                yScale: 0.6
+                xScale: 1, // Init with 1
+                yScale: 1
               }
             }
           })
+          setSpriteScale(body, radius * 2)
         }
+        return body
       })
       Matter.World.add(world, stack)
 
       // Drop balls with images
       function dropBall() {
         const x = Math.random() * containerWidth
-        const radius = 30 + Math.random() * 20
-        const imgUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)]
+        const imgUrl = imageUrls[imageIndex % imageUrls.length]
+        imageIndex++;
 
-        const ball = Matter.Bodies.circle(x, -50, radius, {
-          restitution: 0.7,
-          render: {
-            sprite: {
-              texture: imgUrl,
-              xScale: (radius * 2) / 100,
-              yScale: (radius * 2) / 100
+        const isText = imgUrl.includes("text");
+
+        // CHANGE SIZE HERE: size calculation
+        const isMobile = window.innerWidth < 768;
+        const mobileScale = isMobile ? 0.5 : 1;
+
+        let ball;
+
+        if (isText) {
+          // TEXT: Rectangular body
+          const width = 180 * mobileScale;
+          const height = 70 * mobileScale;
+
+          ball = Matter.Bodies.rectangle(x, -50, width, height, {
+            restitution: 0.7,
+            render: {
+              sprite: {
+                texture: imgUrl,
+                xScale: 1,
+                yScale: 1
+              }
             }
-          }
-        })
+          })
+          setSpriteScale(ball, width)
+        } else {
+          // Icon: Circular body
+          // radius 20-50
+          let radius = (20 + Math.random() * 30) * mobileScale;
+
+          ball = Matter.Bodies.circle(x, -50, radius, {
+            restitution: 0.7,
+            render: {
+              sprite: {
+                texture: imgUrl,
+                xScale: 1,
+                yScale: 1
+              }
+            }
+          })
+          setSpriteScale(ball, radius * 2)
+        }
+
         Matter.World.add(world, ball)
       }
 
-      const interval = window.setInterval(dropBall, 800)
 
-      // Mouse control (drag)
+      const interval = window.setInterval(dropBall, 200)
+
+      // Mouse control (hover repulsion)
       const mouse = Matter.Mouse.create(render.canvas)
 
       // Allow scrolling
@@ -170,12 +256,36 @@ export default function MoveableBalls() {
       mouse.element.removeEventListener("mousewheel", mouseAny.mousewheel)
       mouse.element.removeEventListener("DOMMouseScroll", mouseAny.mousewheel)
 
-      const mouseConstraint = Matter.MouseConstraint.create(engine, {
-        mouse,
-        constraint: { stiffness: 0.2, render: { visible: false } }
-      })
-      Matter.World.add(world, mouseConstraint)
+      // Removed MouseConstraint to disable dragging
       render.mouse = mouse
+
+      // Add Repulsion effect on mouse move
+      Matter.Events.on(engine, "beforeUpdate", () => {
+        const mousePosition = mouse.position
+        Matter.Composite.allBodies(world).forEach((body: any) => {
+          if (body.isStatic) return // Don't repel walls
+
+          // Check if body is roughly on screen (optimization)
+          if (body.position.y > containerHeight + 100 || body.position.y < -100) return
+
+          // Fix TS error: calculate distance manually if dist is missing
+          const diff = Matter.Vector.sub(body.position, mousePosition)
+          const d = Matter.Vector.magnitude(diff)
+          const repulsionRange = 175 // Increased range slightly
+
+          if (d < repulsionRange) {
+            // Calculate vector away from mouse
+            const normal = Matter.Vector.normalise(diff)
+
+            // Force depending on distance (closer = stronger)
+            // Scale by body.mass so large items move just as easily as small ones
+            const forceMagnitude = (repulsionRange - d) * 0.0003 * body.mass
+            const force = Matter.Vector.mult(normal, forceMagnitude)
+
+            Matter.Body.applyForce(body, body.position, force)
+          }
+        })
+      })
 
       // Resize handler
       const onResize = () => {
