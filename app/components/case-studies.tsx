@@ -175,7 +175,7 @@ export function CaseStudies({ isabout }: { isabout: boolean }) {
               {/* Content Overlay */}
               <div className="absolute inset-0 p-5 md:p-10 flex flex-col justify-end space-y-4 md:space-y-6">
                 <div className="flex flex-col gap-4">
-                  <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-fks tracking-[1.5px]">
+                  <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-fks tracking-[1.5px] uppercase">
                     {study.title}
                   </h2>
                   <p className="text-white text-sm md:text-[20px] md:max-w-[80%] font-hel">

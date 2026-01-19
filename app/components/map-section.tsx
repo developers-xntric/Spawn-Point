@@ -15,21 +15,21 @@ export default function MapSection() {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
             image: '/home/map-man-2.svg',
-            position: 'top-[-250px] 2xl:top-[-140px] lg:right-[12%] right-[6vw] md:right-[0%]',
+            position: 'top-[-250px] 2xl:top-[-140px] lg:right-[12%] xl:right-[20%] right-[6vw] md:right-[0%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
         {
             id: 3,
             name: 'FRAMEZ "THE LENSE"',
             image: '/home/map-man-3.svg',
-            position: 'bottom-[37%] md:bottom-[200px] xl:bottom-[200px] 2xl:bottom-[150px] left-[6vw] md:left-0 lg:left-[1%] xl:left-[15%]',
+            position: 'bottom-[37%] md:bottom-[200px] xl:bottom-[240px] 2xl:bottom-[150px] left-[6vw] md:left-0 lg:left-[1%] xl:left-[20%]',
             pinPosition: 'top-[-20px] left-[105%] -translate-x-1/2'
         },
         {
             id: 4,
             name: 'C-SLACK "THE CULTURE"',
             image: '/home/map-man-4.svg',
-            position: 'bottom-[55%] md:bottom-[45%] lg:bottom-[27%] 2xl:bottom-[150px] right-[6vw] md:right-[1%] lg:right-[12%]',
+            position: 'bottom-[55%] md:bottom-[45%] lg:bottom-[27%] xl:bottom-[36%] 2xl:bottom-[150px] right-[6vw] md:right-[1%] lg:right-[12%]',
             pinPosition: 'top-[-20px] right-[100%] -translate-x-1/2'
         }
     ]; 
@@ -141,7 +141,7 @@ export default function MapSection() {
 
                             {/* Name */}
                             <div className="relative flex  py-3 ">
-                                <h3 className="text-white font-fks font-bold text-[12px] md:text-[20px] tracking-[2px] uppercase">
+                                <h3 className="text-white font-fks font-bold text-[12px] md:text-[20px] 2xl:text-[24px] tracking-[2px] uppercase">
                                     {member.name}
                                 </h3>
                             </div>

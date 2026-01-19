@@ -8,9 +8,9 @@ import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const items = [{ title: "FEARLESS", desc: "We enter new platforms before they’re proven and build where others hesitate. Risk is not avoided; it’s calculated, designed, and optimized. That’s how culture is created, not followed.", leftClass: "left-[5%] md:left-[23%] lg:left-[20%] top-[0rem] lg:top-[1%] rotate-[-20deg] xl:left-[8rem] xl:top-[1rem] 2xl:left-[-1rem] 2xl:top-[2rem]", rightClass: "right-[-2%] md:right-[17%] top-[5%] md:top-[-4%] xl:right-[6rem] lg:top-[0%] xl:top-[1%] 2xl:right-[-1rem] 2xl:top-[5%]" },
-{ title: "INNOVATIVE", desc: "We fuse creativity, data, and technology to invent new ways for brands to play. From AI-driven systems to interactive storytelling, innovation is our baseline. If it’s been done before, we push it further.", leftClass: "left-[2%] md:left-[18%] top-[1%] rotate-[-20deg] xl:left-[6rem] md:top-[0%] lg:top-[0%] xl:top-[2%] 2xl:left-[-5rem] 2xl:top-[5%]", rightClass: "right-[-6%] md:right-[15%] top-[4%] md:top-[-4%] xl:right-[4rem] lg:top-[0%] xl:top-[12%] 2xl:right-[-4rem] 2xl:top-[9%]" },
-{ title: "RELENTLESS", desc: "We don’t stop at launch, we optimize, iterate, and evolve. Every activation is measured, refined, and strengthened in real time. Because impact isn’t accidental, it’s engineered.", leftClass: "left-[2%] md:left-[18%] top-[1%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[5.5rem] xl:top-[1%] 2xl:left-[-6rem] 2xl:top-[6%]", rightClass: "right-[-6%] md:right-[16%] lg:right-[13%] top-[5%] md:top-[-3%] xl:right-[3.5rem] lg:top-[0%] xl:top-[3%] 2xl:right-[-5rem] 2xl:top-[8.5%]" },
+const items = [{ title: "FEARLESS", desc: "We enter new platforms before they’re proven and build where others hesitate. Risk is not avoided; it’s calculated, designed, and optimized. That’s how culture is created, not followed.", leftClass: "left-[5%] md:left-[23%] lg:left-[20%] top-[0rem] lg:top-[1%] rotate-[-20deg] xl:left-[8rem] xl:top-[1rem] 2xl:left-[-1rem] 2xl:top-[2rem]", rightClass: "right-[-2%] md:right-[17%] top-[5%] md:top-[-4%] xl:right-[6rem] lg:top-[0%] xl:top-[1%] 2xl:right-[1rem] 2xl:top-[5%]" },
+{ title: "INNOVATIVE", desc: "We fuse creativity, data, and technology to invent new ways for brands to play. From AI-driven systems to interactive storytelling, innovation is our baseline. If it’s been done before, we push it further.", leftClass: "left-[2%] md:left-[18%] top-[1%] rotate-[-20deg] xl:left-[6rem] md:top-[0%] lg:top-[0%] xl:top-[2%] 2xl:left-[-2rem] 2xl:top-[5%]", rightClass: "right-[-6%] md:right-[15%] top-[4%] md:top-[-4%] xl:right-[4rem] lg:top-[0%] xl:top-[12%] 2xl:right-[-1rem] 2xl:top-[9%]" },
+{ title: "RELENTLESS", desc: "We don’t stop at launch, we optimize, iterate, and evolve. Every activation is measured, refined, and strengthened in real time. Because impact isn’t accidental, it’s engineered.", leftClass: "left-[2%] md:left-[18%] top-[1%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[5.5rem] xl:top-[1%] 2xl:left-[-3rem] 2xl:top-[6%]", rightClass: "right-[-6%] md:right-[16%] lg:right-[13%] top-[5%] md:top-[-3%] xl:right-[3.5rem] lg:top-[0%] xl:top-[3%] 2xl:right-[-2rem] 2xl:top-[8.5%]" },
 { title: "NATIVE", desc: "We don’t borrow gaming culture, we live inside it. From creators to communities, everything we build feels authentic by design. That’s what earns trust, time, and loyalty.", leftClass: "left-[10%] md:left-[28%] lg:left-[26%] top-[4%] md:top-[0%] lg:top-[0%] rotate-[-20deg] xl:left-[10rem] xl:top-[1%] 2xl:left-[4rem] 2xl:top-[6%]", rightClass: "right-[8%] lg:right-[20%] md:right-[25%] top-[4%] md:top-[-4%] lg:top-[0%] lg:right-[11rem] xl:right-[8rem] lg:top-[0%] xl:top-[1%] 2xl:right-[4rem] 2xl:top-[7%]" }]
 
 
@@ -182,7 +182,7 @@ export default function FearlessProgress() {
     return (
         <div
             ref={containerRef}
-            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-1 md:pt-32 2xl:pt-52 -space-y-28 pb-4 md:pb-32"
+            className="rounded-[38px_0_0_0] md:rounded-[162px_0_0_0] relative w-full h-screen bg-[#091B56] text-white overflow-hidden flex flex-col items-center justify-center pt-1 md:pt-32 2xl:pt-52 -space-y-28 pb-4 md:pb-32 2xl:pb-40"
         >
             {/* Mobile-only fixed "We are" */}
             <div className="md:hidden absolute top-16 left-[20%] -translate-x-1/2 z-50 rotate-[-20deg]">
@@ -225,7 +225,7 @@ export default function FearlessProgress() {
                     </div>
 
                     <div className="text-center max-w-3xl flex items-center justify-center flex-col pb-16 md:pb-20">
-                        <h3 className="title text-[70px] md:text-7xl lg:text-[8vw] 2xl:text-[10vw] font-bold font-fks mb-1 opacity-30 tracking-[0.3px]">
+                        <h3 className="title text-[70px] md:text-7xl lg:text-[8vw] 2xl:text-[8vw] font-bold font-fks mb-1 opacity-30 tracking-[0.3px]">
                             {item.title}
                         </h3>
                         <p className="desc text-[15px] md:text-xl leading-relaxed opacity-0 max-w-[700px] mx-auto mb-8 md:mb-12 font-helvetica">

@@ -98,14 +98,14 @@ export default function AboutSection3() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#091B56]  mt-20  text-white pb-10 lg:pb-40 xl:pt-40 pt-20 relative"
+      className="bg-[#091B56]  mt-20  text-white pb-10 lg:pb-40 xl:pt-40 2xl:pt-0 pt-20 relative"
     >
       <div className="2xl:max-w-[1440px] w-[90%] lg:w-[85%] mx-auto">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left Column */}
           <div
             ref={leftRef}
-            className="w-[96vw] lg:w-[40%] xl:w-[50%] md:sticky top-0 lg:top-20 z-[20] lg:bg-transparent h-fit"
+            className="w-[96vw] lg:w-[40%] xl:w-[50%] md:sticky top-0 lg:top-20 2xl:top-[18rem] z-[20] lg:bg-transparent h-fit"
           >
             <div>
               <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
@@ -131,7 +131,7 @@ export default function AboutSection3() {
           </div>
 
           {/* Right Column */}
-          <div className="w-full lg:w-[60%] xl:w-[50%] space-y-6 md:space-y-20 xl:mt-[68px]">
+          <div className="w-full lg:w-[60%] xl:w-[50%] space-y-6 md:space-y-20 xl:mt-[68px] 2xl:mt-[280px] ">
             {cards.map((card, index) => (
               <div
                 key={index}

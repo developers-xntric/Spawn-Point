@@ -50,7 +50,7 @@ export default function CaseStudySection() {
 
                         {/* Stat 3 */}
                         <div className="bg-white/5 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none md:border-none md:p-0 p-4 md:rounded-none rounded-xl border border-white/10">
-                            <p className="text-white font-bold tracking-wide text-4xl md:text-7xl font-fks">15 GMAES</p>
+                            <p className="text-white font-bold tracking-wide text-4xl md:text-7xl font-fks">15 GAMES</p>
                             {/* <p className="text-[#FFF] text-md font-semibold mt-1">Peak CCU</p> */}
                             <p className="text-white font-hel text-sm 2xl:text-lg mt-2 leading-relaxed">
                                This included the activation of 7 streamers in 15 games.
