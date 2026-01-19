@@ -14,7 +14,7 @@ export default function MapSection() {
         {
             id: 2,
             name: 'JUMANJI "THE MOTION"',
-            image: '/home/map-man-2.svg',
+            image: '/home/map-man2.svg',
             position: 'top-[-250px] 2xl:top-[-140px] lg:right-[12%] xl:right-[20%] right-[6vw] md:right-[0%]',
             pinPosition: 'bottom-[-30px] right-[100%]'
         },
