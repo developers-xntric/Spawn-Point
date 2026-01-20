@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -15,12 +16,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.png" />
+      <Script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key="w172BGIIA6u1tiBba5DZ1Q"
+      />
       <body
         className={`antialiased`}
       >
         <Navbar />
         {children}
         <Footer />
+
       </body>
     </html>
   );
