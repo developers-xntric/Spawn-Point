@@ -4,10 +4,10 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { title, firstName, lastName, email, country, subject, messageTitle, message } = body;
+    const { fullName, email, message, services } = body;
 
     // Validate required fields
-    if (!title || !firstName || !lastName || !email || !country || !subject || !messageTitle || !message) {
+    if (!fullName || !email || !message || !services || services.length === 0) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -34,20 +34,22 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    // Build recipients list from CONTACT_EMAIL and ADMIN_EMAIL
+    const recipients = [
+      process.env.CONTACT_EMAIL,
+      process.env.ADMIN_EMAIL,
+    ].filter(Boolean).join(', ');
+
     // Prepare email content
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL,
-      subject: `New Contact Form Submission: ${messageTitle}`,
+      to: recipients,
+      subject: `New Contact Form Submission from ${fullName}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Title:</strong> ${title}</p>
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Last Name:</strong> ${lastName}</p>
+        <p><strong>Full Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Country:</strong> ${country}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message Title:</strong> ${messageTitle}</p>
+        <p><strong>Services:</strong> ${services.join(', ')}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
     };

@@ -3,13 +3,8 @@ import { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    firstName: '',
-    lastName: '',
+    fullName: '',
     email: '',
-    country: '',
-    subject: '',
-    messageTitle: '',
     message: '',
     services: [] as string[],
   });
@@ -56,13 +51,8 @@ const ContactForm = () => {
         setSubmitSuccess(true);
         // Reset form
         setFormData({
-          title: '',
-          firstName: '',
-          lastName: '',
+          fullName: '',
           email: '',
-          country: '',
-          subject: '',
-          messageTitle: '',
           message: '',
           services: [],
         });
@@ -101,8 +91,8 @@ const ContactForm = () => {
                 <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold">Full Name</label>
                 <input
                   type="text"
-                  name="fullname"
-                  value={formData.firstName}
+                  name="fullName"
+                  value={formData.fullName}
                   onChange={handleChange}
                   placeholder="John"
                   className="w-full p-3 text-white text-base placeholder:text-[#D5D5D5] opacity-60 md:h-18 bg-white/5 rounded-[10px] md:rounded-xl border-2 border-white/10 backdrop-blur-xl"
