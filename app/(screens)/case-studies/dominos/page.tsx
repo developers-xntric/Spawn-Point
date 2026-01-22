@@ -6,6 +6,7 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
@@ -13,7 +14,12 @@ const resultsData = [
     { title: "Achieved ~800K video views across multiple gaming categories." },
     { title: "Achieved a 4.52% clickthrough rate (CTR), dramatically exceeding the industry average for the format." },
 ];
-          
+
+export const metadata: Metadata = {
+    title: "Domino’s Pizza Brand Activation Case Study | Spawn Point",
+    description:
+        "See how we delivered a high-impact Domino’s brand activation, using innovative in-game marketing and interactive experiences to boost brand love and sales.",
+};
 
 const Dominos = () => {
     return (
@@ -25,7 +31,7 @@ const Dominos = () => {
                 buttonLink="/contact"
                 leftImage="/icons/pizza.png"
                 rightImage="/icons/man.png"
-                 isVodafone
+                isVodafone
                 vodafoneClass=" absolute right-[8%] md:right-[33%] top-[62%] md:top-[68%] 2xl:top-[70%] 2xl:right-[34.5%]"
             />
             <CaseSecond
@@ -66,7 +72,7 @@ const Dominos = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "A partnership program recruited top 321 gaming streamers to play popular titles like League of Legends, VALORANT, GTA V, and FIFA. These were less visible overlay formats that filled the space during the stream, not on top.",
                         points: [

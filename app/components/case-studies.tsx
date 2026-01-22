@@ -170,7 +170,7 @@ export function CaseStudies({ isabout }: { isabout: boolean }) {
 
 
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black via-[#000]/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent" />
 
               {/* Content Overlay */}
               <div className="absolute inset-0 p-5 md:p-10 flex flex-col justify-end space-y-4 md:space-y-6">

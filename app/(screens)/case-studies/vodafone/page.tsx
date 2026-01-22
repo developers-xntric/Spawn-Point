@@ -6,16 +6,22 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
     { title: "Had over 1 million views." },
     { title: "Integrated Vodafone branding into a high-performance esports experience." },
     { title: "Vodafone also established itself as a provider of technology and infrastructure to the competitive gaming community." },
-]; 
-            
+];
 
-const Vodafone = () => { 
+export const metadata: Metadata = {
+    title: "Vodafone Brand Experience Case Study | Spawn Point Studio",
+    description:
+        "Explore the Vodafone brand experience, where Spawn Point Studio utilized in-game marketing and tech-driven activations to connect the brand with real people.",
+};
+
+const Vodafone = () => {
     return (
         <div className="space-y-10 md:space-y-20">
             <CaseHero
@@ -34,8 +40,8 @@ const Vodafone = () => {
                 titleClass="text-white text-[35px] md:text-[50px] lg:text-[60px] 2xl:text-[70px] font-fks font-bold uppercase  md:text-center mb-10 tracking-[1.5px] leading-[40px] md:leading-[65px] 2xl:leading-[80px]"
                 sectionClass="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto bg-[#031347] flex flex-col items-center justify-center"
                 videoClass="w-full  rounded-xl shadow-xl h-[250px] md:h-[400px] lg:h-[600px]"
-            /> 
- 
+            />
+
             <div className="rounded-[60px_0_0_0] md:rounded-[162px_0_0_0] bg-[#091B56] py-10 md:py-20">
                 <CaseIntro
                     sectionClass="2xl:max-w-[1440px] w-[95%] md:w-[85%] mx-auto flex md:flex-row flex-col justify-between md:gap-5 "
@@ -50,7 +56,7 @@ const Vodafone = () => {
                                 "Vodafone sought relevance by sponsoring an official tournament for its 5G offering to stay in the competitive gaming space.",
                             videoSrc: "/vodafone/left-1.gif",
                         },
-                        { 
+                        {
                             title: "THE CHALLENGE",
                             description:
                                 "Esports audiences are highly discerning about brand involvement. Vodafone needed to promote an esports tournament while showcasing 5G performance. The brand had to feel authentic within competitive gaming. ",
@@ -65,14 +71,14 @@ const Vodafone = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "Native integrations were deployed during official tournament livestreams. Advertising appeared seamlessly across Twitch and YouTube broadcasts. Brand messaging was tied directly to speed, performance, and competition.",
                         points: [
                             "Twitch and YouTube livestreams reached many esports fans.",
                             "Integrated non-intrusive advertising formats throughout the tournament.",
                             "The brand messaging focused on performance, speed, and connectivity, core esports values.",
-                        ], 
+                        ],
                         imageSrc: "/vodafone/logo.svg",
                     },
                 ]} />
@@ -101,4 +107,4 @@ const Vodafone = () => {
     )
 }
 
-export default Vodafone ;
+export default Vodafone;

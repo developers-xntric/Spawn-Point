@@ -6,16 +6,22 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
     { title: "Achieved 667K views." },
     { title: "Achieved a 2.84% CTR, considerably engaging the target market." },
     { title: "Branding live streams by game genre." },
-]; 
-          
+];
 
-const Mentos = () => { 
+export const metadata: Metadata = {
+    title: "Mentos Experiential Game Marketing Case Study | Spawn Point",
+    description:
+        "Discover the Mentos experiential marketing campaign: a fresh brand activation by Spawn Point Studio that utilized in-game marketing to drive social buzz.",
+};
+
+const Mentos = () => {
     return (
         <div className="space-y-10 md:space-y-20">
             <CaseHero
@@ -48,7 +54,7 @@ const Mentos = () => {
                                 "In an effort to market a new candy, Mentos wanted to create engaging, visually appealing creatives to attract streamers and gamers.",
                             videoSrc: "/mentos/left-1.gif",
                         },
-                        { 
+                        {
                             title: "THE CHALLENGE",
                             description:
                                 "Gamers are resistant to overt advertising during live streams. Attention spans are short in high-intensity gaming environments. Mentos needed to remain visible without feeling intrusive.",
@@ -63,14 +69,14 @@ const Mentos = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "Custom, playful overlays were designed to match gaming aesthetics. Brand moments were kept lightweight and visually engaging. This approach aligned Mentos’ tone with gaming culture.",
                         points: [
                             "Developed custom overlay creatives for gaming-related content.",
                             "Communications focused on being upbeat and playful. They appealed to younger audiences.",
                             "Ran across gaming streams to remain on-topic.",
-                        ], 
+                        ],
                         imageSrc: "/mentos/logo.svg",
                     },
                 ]} />
@@ -99,4 +105,4 @@ const Mentos = () => {
     )
 }
 
-export default Mentos ;
+export default Mentos;

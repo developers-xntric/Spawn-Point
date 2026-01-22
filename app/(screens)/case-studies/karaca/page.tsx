@@ -6,16 +6,22 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
     { title: "380K+ views with 1.16% CTR." },
     { title: "Activated 722 creators and 275 categories for maximum discovery and reach." },
     { title: "Karaca rebranded itself as a tech-integrated lifestyle brand, attracting a wider audience beyond its original clientele." },
-]; 
-          
+];
 
-const Karaca = () => { 
+export const metadata: Metadata = {
+    title: "Karaca Brand Experience Design Case Study | Spawn Point",
+    description:
+        "Discover the Karaca brand experience: a strategic activation by Spawn Point Studio that blended premium design with interactive in-game marketing elements.",
+};
+
+const Karaca = () => {
     return (
         <div className="space-y-10 md:space-y-20">
             <CaseHero
@@ -48,7 +54,7 @@ const Karaca = () => {
                                 "Karaca introduced their 'Çaysever Robotea' product to gamers. Karaca is a lifestyle and homeware brand, and wanted to produce a tech-enabled product to target a younger audience on gaming platforms.",
                             videoSrc: "/karaca/left-1.gif",
                         },
-                        { 
+                        {
                             title: "THE CHALLENGE",
                             description:
                                 "Karaca wanted to introduce a tech-enabled product to younger consumers. The brand needed to move beyond traditional lifestyle marketing channels. Building credibility in digital-first environments was essential.",
@@ -63,7 +69,7 @@ const Karaca = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "Gaming livestreams were used to reach tech-savvy audiences. Interactive overlays and creator integrations showcased innovation. The product was positioned naturally within gaming and tech contexts.",
                         points: [

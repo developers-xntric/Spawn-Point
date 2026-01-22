@@ -6,6 +6,7 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
@@ -13,9 +14,14 @@ const resultsData = [
     { title: "It received a 1.10% CTR within 5 million views." },
     { title: "Doritos proved beyond doubt that gaming campaigns that cater to specific genres can be more effective than a one-size-fits-all approach." },
 ];
-          
 
-const Doritos = () => { 
+export const metadata: Metadata = {
+    title: "Doritos Experiential Game Marketing Campaign | Spawn Point",
+    description:
+        "Explore our bold Doritos experiential campaign, where in-game marketing and high-energy brand activations merged to create an unforgettable fan experience.",
+};
+
+const Doritos = () => {
     return (
         <div className="space-y-10 md:space-y-20">
             <CaseHero
@@ -63,7 +69,7 @@ const Doritos = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "Streamers were segmented by game genre and audience type. Overlay creatives were customized to match each gaming environment. This ensured relevance while activating a large creator network.",
                         points: [

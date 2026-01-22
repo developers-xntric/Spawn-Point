@@ -6,16 +6,23 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
 
 const resultsData = [
     { title: "216,414 viewers reached" },
     { title: "1.49% CTR, 148% above industry benchmark" },
     { title: "Strong engagement driven by genre-brand alignment" },
-]; 
-            
+];
 
-const Shell = () => { 
+export const metadata: Metadata = {
+    title: "Shell Brand Activation and Case Study | Spawn Point Studio",
+    description:
+        "Learn how Spawn Point Studio executed a strategic brand activation for Shell, leveraging immersive environments and in-game marketing to drive engagement.",
+};
+
+
+const Shell = () => {
     return (
         <div className="space-y-10 md:space-y-20">
             <CaseHero
@@ -25,7 +32,7 @@ const Shell = () => {
                 buttonLink="/contact"
                 leftImage="/icons/pizza.png"
                 rightImage="/icons/man.png"
-                
+
             />
             <CaseSecond
                 title="Extended real-world motorsport credibility into racing and simulation games through performance-aligned live stream branding."
@@ -49,7 +56,7 @@ const Shell = () => {
                                 "Shell targeted racing and simulation gaming audiences by activating streamers playing performance-driven titles such as iRacing, Euro Truck Simulator 2, and Rocket League. The campaign leveraged gaming environments where speed, engineering, and realism naturally align with Shell’s brand values.",
                             videoSrc: "/shell/left-1.gif",
                         },
-                        { 
+                        {
                             title: "THE CHALLENGE",
                             description:
                                 "Shell wanted to engage younger audiences beyond traditional motorsports. Entering gaming risked feeling disconnected from core brand values. Authenticity and relevance were critical to success.",
@@ -64,14 +71,14 @@ const Shell = () => {
 
                 descClass="text-white text-base 2xl:text-[20px] font-hel mb-4 mt-4" solutions={[
                     {
-                        title: "SOLUTION", 
+                        title: "SOLUTION",
                         description:
                             "The campaign focused on racing and simulation games aligned with performance. Creators playing driving-focused titles were activated. Shell branding was integrated contextually into gameplay environments.",
-                        points: [ 
+                        points: [
                             "Partnered with 135 streamers within the racing and simulation game categories",
                             "Used non-intrusive live stream overlays to integrate Shell branding seamlessly into gameplay",
                             "Focused on contextual relevance rather than broad, generic gaming exposure",
-                        ], 
+                        ],
                         imageSrc: "/shell/logo.svg",
                     },
                 ]} />
@@ -100,4 +107,4 @@ const Shell = () => {
     )
 }
 
-export default Shell ;
+export default Shell;
