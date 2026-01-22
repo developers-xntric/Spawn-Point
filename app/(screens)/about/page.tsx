@@ -7,11 +7,18 @@ import CelebrationSection from '@/app/components/about/celeberaitng-section';
 import Fearless from '@/app/components/about/fearless';
 import ContactSection from '@/app/components/contact-section';
 import NewsletterSection from '@/app/components/newsletter';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "About Spawn Point | In-Game Marketing & Streamers Agency",
+    description:
+        "Learn how Spawn Point Studio leads the way in in-game marketing and brand activations, blending creative strategy with technology to build impactful campaigns.",
+};
 
 const About = () => {
     return (
         <div>
-            <HeroSection   />
+            <HeroSection />
             <GamingHero />
             <Achievements />
             <CelebrationSection />

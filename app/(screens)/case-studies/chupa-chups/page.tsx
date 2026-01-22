@@ -6,14 +6,19 @@ import ReviewsCarousel from "@/app/components/case-studies/reviews";
 import Solutions from "@/app/components/case-studies/solutions";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: "Chupa Chups Brand Activation Case Study | Spawn Point Studio",
+    description:
+        "See how our in-game marketing expertise powered the Chupa Chups brand activation, using creative storytelling to engage younger audiences in immersive worlds.",
+};
 
 const resultsData = [
     { title: "It stressed humor and gamer habits, increasing relevance." },
     { title: "Achieved ~800K video views across multiple gaming categories." },
     { title: "Achieved a 4.52% clickthrough rate (CTR), dramatically exceeding the industry average for the format." },
 ];
-
 
 const ChupaChups = () => {
     return (

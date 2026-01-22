@@ -4,6 +4,13 @@ import CaseStudiesGrid from '@/app/components/common/case-study-grid';
 import HeroSection from '@/app/components/common/hero';
 import PartnersSection from '@/app/components/common/partners-section';
 import ContactSection from '@/app/components/contact-section';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Case Studies | Experiential Gaming Marketing by Spawn Point",
+    description:
+        "Explore our portfolio of successful in-game marketing campaigns and brand activations. See how we help brands engage audiences through immersive experiences.",
+};
 
 const CaseStudies = () => {
     return (
