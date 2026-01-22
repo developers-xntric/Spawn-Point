@@ -94,7 +94,7 @@ export default function MapSection() {
                 <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] font-hel">
                     TEAM SPAWN POINT
                 </p>
-                <h2 className="md:w-full w-[90%] lg:text-[60px] text-[40px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] leading-[40px] md:leading-[45px] tracking-[2px]">
+                <h2 className="md:w-full w-[90%] lg:text-[60px] text-[40px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] leading-10 md:leading-[45px] tracking-[2px]">
                     Your Brand’s <span className="text-[#BBFC00]">Gaming Task</span> Force
                 </h2>
             </div>
