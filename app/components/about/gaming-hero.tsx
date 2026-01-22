@@ -12,14 +12,7 @@ export default function GamingHero() {
             <div className="relative w-full max-w-lg 2xl:max-w-[620px]">
 
               {/* Background behind ONLY the girl image */}
-              <div className="absolute top-8 lg:top-12 left-0 w-full xl:h-[540px] 2xl:h-[670px] rounded-xl overflow-hidden ">
-                <Image
-                  alt="gaming-bg"
-                  width={1200}
-                  height={1200}
-                  src="/about/gaming-bg.jpg"
-                  className="w-full h-full object-cover"
-                />
+              <div className="absolute top-8 lg:top-12 left-0 w-full xl:h-[540px] 2xl:h-[670px] rounded-xl overflow-hidden">
                 <div className="absolute inset-0 bg-white/10 backdrop-blur-xl" />
               </div>
 
@@ -60,7 +53,7 @@ export default function GamingHero() {
             <div className=" pt-0 md:pt-4">
               <Link href="/contact">
                 <button className=" bg-[#BBFC00] text-[#031347] font-bold text-ms px-4 md:px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white  transition-colors">
-                 Get in Touch
+                  Get in Touch
                 </button>
               </Link>
             </div>
