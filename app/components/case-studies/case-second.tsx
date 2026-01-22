@@ -23,7 +23,7 @@ export default function CaseSecond({
       {title && <h2 className={titleClass}>{title}</h2>}
 
       <div className={videoClass}>
-        {isVideo ? ( 
+        {isVideo ? (
           <video
             src={videoSrc}
             className="w-full h-full object-cover rounded-xl"
@@ -35,7 +35,7 @@ export default function CaseSecond({
         ) : (
           <Image
             src={videoSrc}
-            alt="Case visual"
+            alt={videoSrc}
             width={2000}
             height={2000}
             className="w-full h-full object-cover rounded-xl"
