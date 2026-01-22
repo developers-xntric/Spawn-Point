@@ -5,7 +5,7 @@ export default function SecondSection() {
         <section id="second-section" className="w-full pt-16 pb-16 md:pb-[120px] text-black">
             <div className="2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto flex flex-col items-center justify-center space-y-10">
                 <div className="flex flex-col items-center justify-center space-y-3">
-                    <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white md:max-w-[570px] mx-auto text-center leading-[40px] md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
+                    <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white md:max-w-[570px] mx-auto text-center leading-10 md:leading-[45px] lg:leading-[65px] text-balance tracking-[1.5px]">
                         Most <span className="text-[#BBFC00]">Brands </span> Play Around Gaming. We Play {" "}
                         <span className="text-[#BBFC00]">Inside It.</span>
                     </h2>
