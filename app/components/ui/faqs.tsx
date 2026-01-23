@@ -45,17 +45,17 @@ export default function FAQSection() {
 
     return (
         <section className="bg-[#031347] pb-16 px-4">
-            <div className="max-w-[1440px] mx-auto w-[90%]">
+            <div className="max-w-[1440px] mx-auto w-[95%] lg:w-[90%]">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Side - Header and Description */}
                     <div>
                         <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                             FAQ'S
                         </p>
-                        <h1 className="text-7xl font-bold mb-8 font-fks text-white">
+                        <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-fks text-white">
                             FREQUENTLY <br /><span className="text-[#BBFC00]">ASKED</span> QUESTIONS
                         </h1>
-                        <p className="text-white text-lg leading-relaxed font-hel text-balance pe-4">
+                        <p className="text-white lg:text-lg lg:leading-relaxed font-hel text-balance pe-4 mb-10">
                             Here, we answer the most common questions about our approach to gaming, digital strategies, tactics, or
                             how we measure success. This FAQ gives you a clear understanding of how we work and what makes our
                             approach unique.
@@ -74,7 +74,7 @@ export default function FAQSection() {
                                     onClick={() => toggleExpand(index)}
                                     className="w-full px-6 py-4 flex items-start justify-between gap-4 transition-colors text-left"
                                 >
-                                    <span className="text-white font-fks font-bold text-[28px] tracking-wider leading-8">{faq.question}</span>
+                                    <span className="text-white font-fks font-bold text-xl lg:text-[28px] tracking-wider leading-8">{faq.question}</span>
                                     <span className="shrink-0 text-white mt-1">
                                         {expandedIndex === index ? <Minus size={25} /> : <Plus size={25} />}
                                     </span>
@@ -83,7 +83,7 @@ export default function FAQSection() {
                                 {/* Expanded Answer */}
                                 {expandedIndex === index && (
                                     <div className="px-6 pb-4">
-                                        <p className="text-white text-lg leading-tight">{faq.answer}</p>
+                                        <p className="text-white text-sm lg:text-lg leading-tight">{faq.answer}</p>
                                     </div>
                                 )}
                             </div>
