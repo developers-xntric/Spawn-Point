@@ -11,6 +11,7 @@ import ContactSection from "./components/contact-section";
 import NewsletterSection from "./components/newsletter";
 import SecondSection from "./components/second-section";
 import { Metadata } from "next";
+import FAQSection from "./components/ui/faqs";
 
 export const metadata: Metadata = {
   title: "In-Game Marketing & Brand Activation Agency | Spawn Point",
@@ -30,6 +31,7 @@ export default function Home() {
       <CaseStudies isabout={false} />
       <StickyCards />
       <MapSection />
+      <FAQSection />
       <ContactSection />
       <NewsletterSection />
     </div>

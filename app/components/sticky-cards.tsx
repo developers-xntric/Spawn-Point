@@ -105,13 +105,13 @@ export default function AboutSection3() {
           {/* Left Column */}
           <div
             ref={leftRef}
-            className="w-[96vw] lg:w-[40%] xl:w-[50%] md:sticky top-0 lg:top-20 2xl:top-[18rem] z-[20] lg:bg-transparent h-fit"
+            className="w-[96vw] lg:w-[40%] xl:w-[50%] md:sticky top-0 lg:top-20 2xl:top-72 z-20 lg:bg-transparent h-fit"
           >
             <div>
               <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                 How We Work
               </p>
-              <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-[40px] md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] md:max-w-[650px] max-w-[90%] font-fks">
+              <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-10 md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] md:max-w-[650px] max-w-[90%] font-fks">
                 From <span className="text-[#BBFC00]">Insight </span> to
                 Immortality: Our 4-Quarter
                 <span className="text-[#BBFC00]"> System</span>
@@ -135,7 +135,7 @@ export default function AboutSection3() {
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="card-item relative md:rounded-[20px] rounded-[15px] bg-white/5 backdrop-blur-[30px] p-3 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
+                className="card-item relative md:rounded-4xl rounded-[15px] bg-white/5 backdrop-blur-[30px] p-3 md:p-5 overflow-hidden border border-[#FFFFFF1A]"
               >
                 {/* SVG Background */}
                 <svg
@@ -183,7 +183,7 @@ export default function AboutSection3() {
                     {styleAmpersand(card.heading)}
                   </h2>
 
-                  <p className="text-white text-[13px] md:text-[18px] lg:text-[18px] 2xl:text-[20px] md:tracking-[1px] md:tracking-[0.5px] font-hel w-[90%] xl:w-[90%] 2xl:w-[87%]">
+                  <p className="text-white text-[13px] md:text-[18px] lg:text-[18px] 2xl:text-[20px] md:tracking-[0.5px] font-hel w-[90%] xl:w-[90%] 2xl:w-[87%]">
                     {card.para}
                   </p>
                 </div>
