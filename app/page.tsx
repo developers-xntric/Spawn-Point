@@ -72,20 +72,6 @@ const organizationSchema = {
   },
 };
 
-/* -------------------- SCHEMA: BREADCRUMB -------------------- */
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://spawnpointstudio.com/",
-    },
-  ],
-};
 
 /* -------------------- SCHEMA: PERSON -------------------- */
 
@@ -185,15 +171,6 @@ export default function Home() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
-        }}
-      />
-
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 
