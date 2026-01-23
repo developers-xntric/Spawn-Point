@@ -1,3 +1,4 @@
+import BlogCardsSection from "@/app/components/blog-cards-section"
 import HeroSection from "@/app/components/common/hero"
 import PartnersSection from "@/app/components/common/partners-section"
 import ContactSection from "@/app/components/contact-section"
@@ -21,6 +22,7 @@ const Blogs = () => {
             <div className="-mt-28">
                 <PartnersSection isSecond={false} />
             </div>
+            <BlogCardsSection />
             <ContactSection />
             <NewsletterSection />
         </div>
