@@ -45,8 +45,8 @@ export default function FAQSection() {
 
     return (
         <section className="bg-[#031347] pb-16 px-4">
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="max-w-[1440px] mx-auto w-[90%]">
+                <div className="grid grid-cols-1 lg:grid-cols-2">
                     {/* Left Side - Header and Description */}
                     <div>
                         <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
@@ -55,7 +55,7 @@ export default function FAQSection() {
                         <h1 className="text-7xl font-bold mb-8 font-fks text-white">
                             FREQUENTLY <br /><span className="text-[#BBFC00]">ASKED</span> QUESTIONS
                         </h1>
-                        <p className="text-white text-lg leading-relaxed font-hel">
+                        <p className="text-white text-lg leading-relaxed font-hel text-balance pe-4">
                             Here, we answer the most common questions about our approach to gaming, digital strategies, tactics, or
                             how we measure success. This FAQ gives you a clear understanding of how we work and what makes our
                             approach unique.
@@ -67,23 +67,23 @@ export default function FAQSection() {
                         {faqs.map((faq, index) => (
                             <div
                                 key={index}
-                                className={`border rounded-lg overflow-hidden transition-all duration-300 ${expandedIndex === index ? 'border-[#BBFC00] bg-[#0a1f5c]' : 'border-[#0a3f7f]'
+                                className={`border rounded-lg grad overflow-hidden transition-all duration-300 ${expandedIndex === index ? 'border-[#BBFC00] bg-[#0a1f5c]' : 'border-[#0a3f7f]'
                                     }`}
                             >
                                 <button
                                     onClick={() => toggleExpand(index)}
-                                    className="w-full px-6 py-4 flex items-start justify-between gap-4 hover:bg-[#0a1f5c] transition-colors text-left"
+                                    className="w-full px-6 py-4 flex items-start justify-between gap-4 transition-colors text-left"
                                 >
-                                    <span className="text-white font-bold text-sm leading-tight">{faq.question}</span>
-                                    <span className="shrink-0 text-[#BBFC00] mt-1">
-                                        {expandedIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+                                    <span className="text-white font-fks font-bold text-[28px] tracking-wider leading-8">{faq.question}</span>
+                                    <span className="shrink-0 text-white mt-1">
+                                        {expandedIndex === index ? <Minus size={25} /> : <Plus size={25} />}
                                     </span>
                                 </button>
 
                                 {/* Expanded Answer */}
                                 {expandedIndex === index && (
-                                    <div className="px-6 py-4 border-t border-[#0a3f7f] bg-[#0a1f5c]">
-                                        <p className="text-gray-300 text-sm leading-relaxed">{faq.answer}</p>
+                                    <div className="px-6 pb-4">
+                                        <p className="text-white text-lg leading-tight">{faq.answer}</p>
                                     </div>
                                 )}
                             </div>
