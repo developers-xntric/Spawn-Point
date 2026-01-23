@@ -217,7 +217,7 @@ export default function FearlessProgress() {
                     >
                         <Image
                             src="/icons/about-sp.svg"
-                            alt=""
+                            alt="spawn point logo"
                             width={2000}
                             height={2000}
                             className="2xl:w-full 2xl:h-full md:w-[100px] md:h-[100px] w-[50px] h-[50px]"
