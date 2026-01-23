@@ -6,6 +6,7 @@ import HeroSection from "@/app/components/common/hero";
 import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
 import NewsletterSection from "@/app/components/newsletter";
+import FAQSection from "@/app/components/ui/faqs";
 
 const BrandExperience = () => {
     return (
@@ -28,6 +29,7 @@ const BrandExperience = () => {
             <ExpertiseSection />
             <TechStackSection />
             <NumbersTalkSection />
+            <FAQSection />
             <ContactSection />
             <NewsletterSection />
         </div>
