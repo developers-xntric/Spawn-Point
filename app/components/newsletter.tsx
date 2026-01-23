@@ -56,7 +56,7 @@ export default function NewsletterSection() {
                         <div key={index} className="flex items-center shrink-0 mx-3">
                             {/* SP Logo */}
                             <div className="relative w-12 h-12 md:w-20 md:h-20 mr-2">
-                                <Image src={"/spn.png"} alt="" width={400} height={400} />
+                                <Image src={"/spn.png"} alt="Spawn Point" width={400} height={400} />
                             </div>
                             <span className="text-[#FFF] text-3xl md:text-7xl font-bold tracking-wider whitespace-nowrap font-fks">
                                 NEWSLETTER
