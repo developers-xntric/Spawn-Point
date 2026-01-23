@@ -8,34 +8,49 @@ export default function FAQSection() {
 
     const faqs = [
         {
-            question: 'WHAT MAKES YOUR APPROACH TO GAMING DIFFERENT FROM TRADITIONAL MARKETING?',
+            question: 'Why is Spawn Point a top gaming design agency?',
             answer:
-                'Our approach is rooted in understanding gaming culture deeply. We don\'t treat games as just another ad space—we integrate brands authentically into the gaming experience itself.',
+                'Spawn Point combines a game-native way of thinking and brand strategy to create player-friendly and player-driven experiences. We are designing within gaming culture, not around it. That feeling is what makes our work real, playable, and memorable.',
         },
         {
-            question: 'WHAT SERVICES DO YOU OFFER?',
+            question: 'What is an in-game marketing company?',
             answer:
-                'Our teams work across AI, data analytics, creator ecosystems, esports, and virtual production to build engaging experiences that drive measurable results. We partner with players and brands to create authentic connections.',
+                'An in-game marketing company connects brands to consumers in games and virtual environments. This includes branded environments, interactive mechanics as well as live activations. Engagement is the goal, not interruption.',
         },
         {
-            question: 'ARE YOUR SERVICES LIMITED TO MENA?',
+            question: 'Which gaming platforms do you work with?',
             answer:
-                'While we specialize in the MENA region, our expertise and services extend globally. We understand regional nuances while leveraging international best practices.',
+                'We develop games across PC, console, mobile and emerging virtual platforms. Our experiences were built using Roblox, Fortnite Creative, Minecraft, and dedicated custom-built experiences. We adapt our design to fit the way each platform is played.',
         },
         {
-            question: 'HOW DO YOU MEASURE SUCCESS?',
+            question: 'What is the "4-Quarter System"?',
             answer:
-                'We measure success through multiple metrics including engagement rates, brand lift, community growth, and business outcomes. Every campaign is backed by data-driven insights.',
+                'We call this the 4-Quarter System, the basis for how we build a long-term, sustainable presence. It breaks campaigns into four phases: entry, engagement, expansion, and retention. This keeps brands fresh instead of just during launch windows.',
         },
         {
-            question: 'HOW DO YOU ENSURE EXPERIENCES RESONATE WITH GAMERS?',
+            question: 'Do you only work with gaming brands?',
             answer:
-                'We work directly with gaming communities and use data analytics to understand what resonates. Our approach is iterative and always informed by player feedback.',
+                'No- actually, a lot of our clients are non-gaming and are entering into gaming for the first time. We help them translate their identity into playable, interactive formats.Gaming is merely a medium, a risk.',
         },
         {
-            question: 'CAN BRANDS COLLABORATE WITH CREATORS THROUGH YOUR PLATFORM?',
+            question: 'What is the difference between an "activation" and a "virtual world"?',
             answer:
-                'Yes, our platform facilitates authentic collaborations between brands and creators. We ensure partnerships feel natural and deliver value to both parties.',
+                'An activation is a short-lived, time-limited event, usually associated with a campaign or moment. A virtual world is a world that a player returns to over time. Both can work to different calculated ends, and can be complementary.',
+        },
+        {
+            question: 'How do you integrate creators and streamers into your strategy?',
+            answer:
+                'We partner with creators and co-create, rather than just place media. They inform experiences, narratives, and live interactions. This builds credibility and organic reach within gaming communities.',
+        },
+        {
+            question: 'Is Spawn Point Studio focused on specific regions?',
+            answer:
+                'While Spawn Point Studio operates with a global perspective, our core expertise lies in the MENA and GCC regions. We combine local cultural insights with a "platform-first" approach, ensuring that while gaming knows no borders, your content resonates deeply within the local landscape.',
+        },
+        {
+            question: 'How do "In-Stream AdTech" solutions work?',
+            answer:
+                'In-Stream AdTech incorporates brands into the experience of the digital live stream. The ads are integrated into the gameplay or appear as overlays. It allows for real-time measurable engagement with viewers.',
         },
     ]
 
