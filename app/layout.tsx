@@ -20,11 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Google Tag Manager */}
-      <Script
-        id="gtm-script"
-        strategy="afterInteractive"
-      >{`
+      <head>
+        {/* Google Tag Manager */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+        >{`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -32,27 +33,28 @@ export default function RootLayout({
           })(window,document,'script','dataLayer','GTM-PRQJGGQZ');
         `}</Script>
 
-      {/* GTM noscript fallback */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-PRQJGGQZ"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PRQJGGQZ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
 
-      {/* Ahrefs Analytics */}
-      <Script
-        src="https://analytics.ahrefs.com/analytics.js"
-        data-key="w172BGIIA6u1tiBba5DZ1Q"
-        strategy="afterInteractive"
-      />
-      <link rel="icon" href="/favicon.png" />
-      <Script
-        src="https://analytics.ahrefs.com/analytics.js"
-        data-key="w172BGIIA6u1tiBba5DZ1Q"
-      />
+        {/* Ahrefs Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="w172BGIIA6u1tiBba5DZ1Q"
+          strategy="afterInteractive"
+        />
+        <link rel="icon" href="/favicon.png" />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="w172BGIIA6u1tiBba5DZ1Q"
+        />
+      </head>
       <body
         className={`antialiased`}
       >
