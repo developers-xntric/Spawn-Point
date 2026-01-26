@@ -7,7 +7,14 @@ import PartnersSection from "@/app/components/common/partners-section";
 import ContactSection from "@/app/components/contact-section";
 import NewsletterSection from "@/app/components/newsletter";
 import FAQSection from "@/app/components/ui/faqs";
+import { Metadata } from "next";
 import Script from "next/script";
+
+export const metadata: Metadata = {
+    title: "Branding Experience & Game Marketing Services | Spawn Point",
+    description:
+        "We design world-class brand experiences and in-game marketing strategies that drive deep engagement, interaction, and lasting recall for industry-leading brands.",
+};
 
 /* -------------------- SCHEMA: ORGANIZATION -------------------- */
 
