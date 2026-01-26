@@ -43,7 +43,7 @@ export default function Hero() {
             {/* Content */}
             <div className="relative z-20 w-full max-w-[1440px] px-5 flex flex-col items-center justify-center h-full text-center mt-10 md:mt-0">
                 {/* Headline */}
-                <h1 className="font-fks font-bold uppercase text-white  leading-[40px] lg:leading-[90px] mb-8 md:mb-8
+                <h1 className="font-fks font-bold uppercase text-white  leading-10 lg:leading-[90px] mb-8 md:mb-8
           text-[35px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[90px] tracking-wide">
                     WHERE <span className="text-[#BBFC00]">GAMING</span> ATTENTION{" "}
                     <br className="hidden lg:block" />
@@ -73,7 +73,7 @@ export default function Hero() {
                     <div className="grid-cols-2 md:grid-cols-4 gap-y-8 relative md:hidden grid">
 
                         {/* Horizontal divider */}
-                        <div className="absolute left-0 right-0 bottom-2 top-[47%] h-[1px] bg-[#FFFFFF]/30" />
+                        <div className="absolute left-0 right-0 bottom-2 top-[47%] h-px bg-[#FFFFFF]/30" />
 
                         {stats.map((stat, index) => (
                             <div

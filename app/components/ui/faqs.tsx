@@ -67,9 +67,9 @@ export default function FAQSection() {
                         <p className="mb-4 text-[16px] md:text-[20px] tracking-[10px] md:tracking-[12px] text-[#FF1586] uppercase">
                             FAQ'S
                         </p>
-                        <h1 className="text-5xl lg:text-7xl font-bold mb-8 font-fks text-white">
+                        <h2 className="text-5xl lg:text-7xl font-bold mb-8 font-fks text-white">
                             FREQUENTLY <br /><span className="text-[#BBFC00]">ASKED</span> QUESTIONS
-                        </h1>
+                        </h2>
                         <p className="text-white lg:text-lg lg:leading-relaxed font-hel text-balance pe-4 mb-10">
                             Here, we answer the most common questions about our approach to gaming, digital strategies, tactics, or
                             how we measure success. This FAQ gives you a clear understanding of how we work and what makes our
