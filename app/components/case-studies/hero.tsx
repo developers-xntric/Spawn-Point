@@ -70,10 +70,13 @@ export default function CaseHero({
       <div className="text-center z-10 lg:mb-10">
         <h1 className="text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">
           {title}
-        </h1>
-        <h2 className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative bottom-3">
+         
+           <span className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative bottom-3 block">
           {subtitle}
-        </h2>
+        </span>
+
+        </h1>
+       
 
         <Link href={buttonLink}>
           <button className="mt-6 bg-[#BBFC00] text-[#031347] text-ms px-8 py-2.5 rounded-[5px] hover:border hover:bg-transparent hover:border-white hover:text-white transition-colors font-bold">
