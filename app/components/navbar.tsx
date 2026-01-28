@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Branded Experiences", href: "/brand-experience" },
     { name: "Case Studies", href: "/case-studies" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact us", href: "/contact" },
   ];
 

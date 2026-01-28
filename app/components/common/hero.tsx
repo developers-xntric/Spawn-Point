@@ -20,9 +20,11 @@ interface HeroSectionProps {
     icon2Height?: number;
     hWidth?: string;
     paraclass?: string;
+    h1class?: string;
+    heroclass?: string;
 }
 
-export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, icon1Style, icon2Style, icon1Width, icon1Height, icon2Width, icon2Height, hWidth, paraclass }: HeroSectionProps) {
+export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, icon1Style, icon2Style, icon1Width, icon1Height, icon2Width, icon2Height, hWidth, paraclass, h1class, heroclass }: HeroSectionProps) {
     const icon1Ref = useRef(null)
     const icon2Ref = useRef(null)
 
@@ -48,7 +50,7 @@ export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, ic
     }, [])
 
     return (
-        <section className="bg-[#031347] min-h-[500px] lg:min-h-[600px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-28 mb-12">
+        <section className={` ${heroclass ? heroclass : "bg-[#031347] min-h-[500px] lg:min-h-[600px] 2xl:min-h-[600px] flex items-center justify-center relative pt-22 md:pt-28"}`}>
             {/* Pizza image - left side */}
             <div ref={icon1Ref} className={`${icon1Style ? icon1Style : "absolute left-[10%]  md:left-[15%] xl:left-[30%] top-[20%] md:top-[30%]"}`}>
                 <Image src={icon1 ? icon1 : "/icons/yes.png"} alt="Pizza decoration" width={icon1Width ? icon1Width : 55} height={icon1Height ? icon1Height : 50} className="object-contain" />
@@ -61,7 +63,7 @@ export default function HeroSection({ h1, h2, icon1, icon2, para, buttonText, ic
 
             {/* Center content */}
             <div className="text-center z-10 lg:mb-10">
-                <h1 className="text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide">{h1 ? h1 : "Real Results"}</h1>
+                <h1 className={` ${h1class ? h1class : "text-white text-[45px] md:text-[70px] lg:text-[100px] font-fks font-bold uppercase tracking-wide"}`}>{h1 ? h1 : "Real Results"}</h1>
                 <h2 className="text-[#BBFC00] text-[60px] md:text-[100px] lg:text-[130px] font-fks font-bold uppercase tracking-wide leading-[60px] md:leading-20 relative md:bot  bottom-3">{h2 ? h2 : "Real Engagement"}</h2>
                 <p className={`text-white text-md mt-2 md:mt-6 ${paraclass} ${hWidth ? hWidth : "max-w-2xl"} mx-auto`}>
                     {para ? para : "See how we’ve helped brands connect with gaming audiences through immersive, measurable activations."}

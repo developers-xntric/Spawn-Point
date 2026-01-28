@@ -12,6 +12,7 @@ export default function Footer() {
         { label: "About", href: "/about" },
         { label: "Branded Experiences", href: "/brand-experience" },
         { label: "Case Studies", href: "/case-studies" },
+        { label: "Blog", href: "/blog" },
     ]
 
     return (
