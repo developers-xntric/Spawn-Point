@@ -111,6 +111,25 @@ body {
   background-color: #031347;
 }
 
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 90 !important;
+}
+
+@media(max-width: 768px) {
+  .swiper-pagination {
+    bottom: 50 !important;
+  }
+}
+
+.swiper {
+  padding-bottom: 0px; /* fixed, no shift */
+}
+
+
+
+
 /* <CHANGE>  custom animations for scrolling lines left to right */
 
 @keyframes scroll-left {

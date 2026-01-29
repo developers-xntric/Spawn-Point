@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
 
 export default function FAQSection() {
-    const [expandedIndex, setExpandedIndex] = useState(1)
+    const [expandedIndex, setExpandedIndex] = useState(0)
 
     const faqs = [
         {

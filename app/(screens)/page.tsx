@@ -1,18 +1,19 @@
 import { Metadata } from "next";
 import Script from "next/script";
 
-import Hero from "./components/hero-new";
-import SecondSection from "./components/second-section";
-import HOMEGSP from "./components/home-gsp";
-import { ServicesCarousel } from "./components/services-carousel";
-import PartnersSection from "./components/common/partners-section";
-import GameCardsSection from "./components/game-brands";
-import { CaseStudies } from "./components/case-studies";
-import StickyCards from "./components/sticky-cards";
-import MapSection from "./components/map-section";
-import FAQSection from "./components/ui/faqs";
-import ContactSection from "./components/contact-section";
-import NewsletterSection from "./components/newsletter";
+import Hero from "../components/hero-new";
+import SecondSection from "../components/second-section";
+import HOMEGSP from "../components/home-gsp";
+import { ServicesCarousel } from "../components/services-carousel";
+import PartnersSection from "../components/common/partners-section";
+import GameCardsSection from "../components/game-brands";
+import { CaseStudies } from "../components/case-studies";
+import StickyCards from "../components/sticky-cards";
+import MapSection from "../components/map-section";
+import FAQSection from "../components/ui/faqs";
+import ContactSection from "../components/contact-section";
+import NewsletterSection from "../components/newsletter";
+import BlogCarousel from "../components/blog-slider";
 
 /* -------------------- METADATA -------------------- */
 
@@ -196,6 +197,7 @@ export default function Home() {
         <StickyCards />
         <MapSection />
         <FAQSection />
+        <BlogCarousel/>
         <ContactSection />
         <NewsletterSection />
       </div>

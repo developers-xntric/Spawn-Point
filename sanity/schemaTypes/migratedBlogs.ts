@@ -50,9 +50,9 @@ export const MigratedBlogType = defineType({
             title: 'Blog Category',
             type: 'string',
             options: {
-                list: ['xntric ae', 'xntric me', 'xntric ca', 'plenum', 'LPS'],
+                list: ['spawnpoint'],
             },
-            initialValue: 'plenum',
+            initialValue: 'spawnpoint',
             validation: (Rule) => Rule.required(),
         }),
 

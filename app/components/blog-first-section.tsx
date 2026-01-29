@@ -49,7 +49,7 @@ const BlogFirstSection = ({ data }: { data: any }) => {
             />
             <div className="flex flex-col gap-2">
               <span className="text-gray-400 text-sm font-hel">Written By</span>
-              <div className=" gap-4 items-center text-white font-fks text-xl md:text-2xl tracking-wider leading-">
+              <div className=" gap-4 items-center text-white font-fks text-xl md:text-2xl tracking-wider  font-semibold">
                 <span>Tehreem Fazal Qureshi</span> <br />
                 <span className="mt-2">{new Date(data.publishedDate).toDateString()}</span>
                 <span>{data.min}</span>

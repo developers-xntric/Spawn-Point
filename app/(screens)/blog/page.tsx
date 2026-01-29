@@ -1,4 +1,4 @@
-import BlogCardsSection from "@/app/components/blog-cards-section"
+import BlogSecond from "@/app/components/blog-second"
 import HeroSection from "@/app/components/common/hero"
 import PartnersSection from "@/app/components/common/partners-section"
 import ContactSection from "@/app/components/contact-section"
@@ -40,14 +40,14 @@ const Blogs = () => {
                     paraclass="hidden"
                     buttonText="Let’s Started"
                     hWidth='max-w-md'
-                    icon1Style="absolute left-[13%] md:left-[15%] xl:left-[40%] top-[24%] md:top-[40%] 2xl:top-[28%] 2xl:left-[33.5%]"
-                    icon2Style="absolute right-[4%] md:right-[37%] top-[70%] md:top-[65%] 2xl:right-[30%] 2xl:top-[65%]"
+                    icon1Style="absolute left-[13%] md:left-[15%] xl:left-[40%] top-[24%] md:top-[40%] 2xl:top-[28%] 2xl:left-[40.5%]"
+                    icon2Style="absolute right-[4%] md:right-[37%] top-[70%] md:top-[65%] 2xl:right-[35%] 2xl:top-[65%]"
                     icon1Width={55}
                 />
-                <div className="-mt-28">
+                <div className="-mt-28 pt-10">
                     <PartnersSection isSecond={false} />
                 </div>
-                <BlogCardsSection />
+                <BlogSecond/>
                 <ContactSection />
                 <NewsletterSection />
             </div>

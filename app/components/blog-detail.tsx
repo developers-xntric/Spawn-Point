@@ -127,42 +127,53 @@ interface Blog {
     category: string;
 }
 
-const BlogDetail = ({ ids }: { ids: string }) => {
-    const id = ids;
+interface BlogDetailProps {
+    blog: any;
+}
+
+const BlogDetail = ({ blog }: BlogDetailProps) => {
+    // const id = ids;
     const [loading, setLoading] = useState(true);
-    const [blog, setBlog] = useState<any>(null);
+    // const [blog, setBlog] = useState<any>(null);
     const [relatedBlogs, setRelatedBlogs] = useState<any[]>([]);
+   
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                setLoading(true);
+    // useEffect(() => {
 
-                // Main blog
-                const blogData = await client.fetch(BLOG_DETAIL_QUERY, {
-                    slug: id,
-                });
+    //     const fetchData = async () => {
+    //         try {
+    //             setLoading(true);
 
-                if (!blogData) {
-                    setBlog(null);
-                    return;
-                }
+    //             // Main blog
+    //             const blogData = await client.fetch(BLOG_DETAIL_QUERY, {
+    //                 slug: id,
+    //             });
 
-                setBlog(blogData);
+    //             if (!blogData) {
+    //                 setBlog(null);
+    //                 return;
+    //             }
 
-                // Related blogs
-                const allBlogs = await client.fetch(RELATED_BLOGS_QUERY);
-                setRelatedBlogs(allBlogs?.slice(0, 2) || []);
-            } catch (error) {
-                console.error("Sanity blog fetch error:", error);
-                setBlog(null);
-            } finally {
-                setLoading(false);
-            }
-        };
+    //             setBlog(blogData);
 
-        fetchData();
-    }, [id]);
+    //             // Related blogs
+    //             const allBlogs = await client.fetch(RELATED_BLOGS_QUERY);
+    //             setRelatedBlogs(allBlogs?.slice(0, 2) || []);
+    //         } catch (error) {
+    //             console.error("Sanity blog fetch error:", error);
+    //             setBlog(null);
+    //         } finally {
+    //             setLoading(false);
+    //         }
+    //     };
+
+    //     fetchData();
+
+        
+
+    // }, []);
+    
+
     const tableOfContents: { id: string; title: string }[] = [];
     if (blog?.title) {
         tableOfContents.push({ id: "main-title", title: blog.title });
@@ -184,7 +195,7 @@ const BlogDetail = ({ ids }: { ids: string }) => {
         tableOfContents.push({ id: "faqs", title: "Frequently Asked Questions" });
     }
 
-    if (!loading && !blog) {
+    if (!blog) {
         return (
             <div className="p-10 text-red-500 h-screen flex items-center justify-center">
                 Blog not found
@@ -193,10 +204,11 @@ const BlogDetail = ({ ids }: { ids: string }) => {
     }
 
 
+
     return (
         <>
-            {loading ? (
-                <div className="flex justify-center h-screen items-center py-20">
+            {!loading ? (
+                <div className="flex justify-center h-screen items-center py-20 mb-10">
                     <div className="w-12 h-12 border-4 border-[#BBFC00] border-t-transparent rounded-full animate-spin"></div>
                 </div>
             ) : (
@@ -241,7 +253,7 @@ const BlogDetail = ({ ids }: { ids: string }) => {
                                 },
                                 mainEntityOfPage: {
                                     "@type": "WebPage",
-                                    "@id": `https://spawnpointstudio.com/blog/${id}`,
+                                    "@id": `https://spawnpointstudio.com/blog/${blog?.slug?.current}`,
                                 },
                             }),
                         }}
@@ -294,7 +306,7 @@ const BlogDetail = ({ ids }: { ids: string }) => {
                                         "@type": "ListItem",
                                         position: 3,
                                         name: blog.title || "Blog Post",
-                                        item: `https://spawnpointstudio.com/blog/${id}`,
+                                        item: `https://spawnpointstudio.com/blog/${blog?.slug?.current}`,
                                     },
                                 ],
                             }),
@@ -441,7 +453,7 @@ const BlogDetail = ({ ids }: { ids: string }) => {
                             {/* Conclusion */}
                             {blog.conclusion && (
                                 <div>
-                                    <h6 className="lg:text-3xl text-2xl lg:max-w-[80%] text-white mt-6 mb-3">
+                                    <h6 className="lg:text-3xl text-3xl lg:max-w-[80%] text-white mt-6 mb-3 font-semibold font-fks tracking-wide ">
                                         Conclusion
                                     </h6>
                                     <span
@@ -460,7 +472,7 @@ const BlogDetail = ({ ids }: { ids: string }) => {
                                     </h2>
                                     {blog.faqs.map((faq: any, i: number) => (
                                         <div key={i} className="space-y-2">
-                                            <h3 className="text-[19px] md:text-xl font-medium text-white tracking-wider ">
+                                            <h3 className="text-[19px] md:text-[32px] font-medium text-white tracking-wide  font-fks">
                                                 {i + 1}. {faq.question}
                                             </h3>
                                             <div
