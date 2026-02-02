@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     title: "About Spawn Point | In-Game Marketing & Streamers Agency",
     description:
         "Learn how Spawn Point Studio leads the way in in-game marketing and brand activations, blending creative strategy with technology to build impactful campaigns.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/about",
+    },
 };
 
 const About = () => {

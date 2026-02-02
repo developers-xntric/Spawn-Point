@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     title: "Case Studies | Experiential Gaming Marketing by Spawn Point",
     description:
         "Explore our portfolio of successful in-game marketing campaigns and brand activations. See how we help brands engage audiences through immersive experiences.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies",
+    },
 };
 
 const CaseStudies = () => {

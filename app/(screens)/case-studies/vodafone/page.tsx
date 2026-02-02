@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Vodafone Brand Experience Case Study | Spawn Point Studio",
     description:
         "Explore the Vodafone brand experience, where Spawn Point Studio utilized in-game marketing and tech-driven activations to connect the brand with real people.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/vodafone",
+    },
 };
 
 const Vodafone = () => {

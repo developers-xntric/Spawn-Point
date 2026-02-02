@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact Spawn Point Studio | Let’s Build Gaming Experiences",
   description:
     "Partner with Spawn Point Studio for expert in-game marketing and brand activations. Contact our creative agency today to start building your next big campaign.",
+  alternates: {
+    canonical: "https://spawnpointstudio.com/contact",
+  },
 };
 
 const Contact: React.FC = () => {

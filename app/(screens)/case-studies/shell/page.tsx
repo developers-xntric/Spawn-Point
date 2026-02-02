@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Shell Brand Activation and Case Study | Spawn Point Studio",
     description:
         "Learn how Spawn Point Studio executed a strategic brand activation for Shell, leveraging immersive environments and in-game marketing to drive engagement.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/shell",
+    },
 };
 
 

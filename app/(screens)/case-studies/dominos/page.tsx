@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Domino’s Pizza Brand Activation Case Study | Spawn Point",
     description:
         "See how we delivered a high-impact Domino’s brand activation, using innovative in-game marketing and interactive experiences to boost brand love and sales.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/dominos",
+    },
 };
 
 const Dominos = () => {

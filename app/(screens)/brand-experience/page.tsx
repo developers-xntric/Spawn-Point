@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     title: "Branding Experience & Game Marketing Services | Spawn Point",
     description:
         "We design world-class brand experiences and in-game marketing strategies that drive deep engagement, interaction, and lasting recall for industry-leading brands.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/brand-experience",
+    },
 };
 
 /* -------------------- SCHEMA: ORGANIZATION -------------------- */
@@ -21,13 +24,13 @@ export const metadata: Metadata = {
 const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Spawn Point",
+    name: "SpawnPoint Studio",
     url: "https://spawnpointstudio.com/",
     logo: "https://spawnpointstudio.com/logo.png",
     email: "play@spawnpointstudio.com",
     contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+971523456789",
+        telephone: "+971 5456 17052",
         contactType: "service",
         areaServed: "AE",
         availableLanguage: "en",
@@ -44,7 +47,7 @@ const organizationSchema = {
         opens: "09:00",
         closes: "18:00",
     },
-    priceRange: "$$",
+    priceRange: "AED",
     areaServed: {
         "@type": "Place",
         name: "Dubai, UAE",
@@ -52,7 +55,6 @@ const organizationSchema = {
     sameAs: [
         "https://www.linkedin.com/company/spawn-point",
         "https://www.instagram.com/spawnpointstudio",
-        "https://www.tiktok.com/@spawnpointstudio",
     ],
     aggregateRating: {
         "@type": "AggregateRating",

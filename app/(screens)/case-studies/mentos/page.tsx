@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Mentos Experiential Game Marketing Case Study | Spawn Point",
     description:
         "Discover the Mentos experiential marketing campaign: a fresh brand activation by Spawn Point Studio that utilized in-game marketing to drive social buzz.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/mentos",
+    },
 };
 
 const Mentos = () => {

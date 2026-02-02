@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     title: "Chupa Chups Brand Activation Case Study | Spawn Point Studio",
     description:
         "See how our in-game marketing expertise powered the Chupa Chups brand activation, using creative storytelling to engage younger audiences in immersive worlds.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/chupa-chups",
+    },
 };
 
 const resultsData = [

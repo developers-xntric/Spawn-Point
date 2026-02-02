@@ -203,7 +203,7 @@ const ContactForm = () => {
             Dubai, United Arab Emirates
           </p>
 
-          <a href="tel:+971523456789" className="m-0 text-base">+971 52 345 6789</a>
+          <a href="tel:+971545617052" className="m-0 text-base">+971 5456 17052</a>
           <a href="mailto:play@spawnpointstudio.com" className="m-0 text-base tracking-[1px]">play@spawnpointstudio.com</a>
 
           <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none" className="w-full md:w-56">

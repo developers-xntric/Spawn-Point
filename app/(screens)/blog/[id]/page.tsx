@@ -59,6 +59,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: blog.title,
     description: blog.metaDescription || blog.description,
+    alternates: {
+      canonical: `https://spawnpointstudio.com/blog/${id}`,
+    },
     openGraph: {
       title: blog.title,
       description: blog.metaDescription || blog.description,

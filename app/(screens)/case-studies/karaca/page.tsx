@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Karaca Brand Experience Design Case Study | Spawn Point",
     description:
         "Discover the Karaca brand experience: a strategic activation by Spawn Point Studio that blended premium design with interactive in-game marketing elements.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/karaca",
+    },
 };
 
 const Karaca = () => {

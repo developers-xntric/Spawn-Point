@@ -68,8 +68,8 @@ const schemaData = {
     "name": "Blogs",
     "description": "Blogs from Spawn Point",
     "provider": {
-        "@type": "Organization",
-        "name": "Spawn Point",
+    "@type": "Organization",
+    "name": "SpawnPoint Studio",
         "url": "https://spawnpointstudio.com/",
         logo: "link",
         contactPoint: {
@@ -244,7 +244,7 @@ const BlogDetail = ({ blog }: BlogDetailProps) => {
                                     : undefined,
                                 publisher: {
                                     "@type": "Organization",
-                                    name: "Spawn Point",
+                                    name: "SpawnPoint Studio",
                                     url: "https://spawnpointstudio.com/",
                                     logo: {
                                         "@type": "ImageObject",

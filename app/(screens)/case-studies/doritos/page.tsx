@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     title: "Doritos Experiential Game Marketing Campaign | Spawn Point",
     description:
         "Explore our bold Doritos experiential campaign, where in-game marketing and high-energy brand activations merged to create an unforgettable fan experience.",
+    alternates: {
+        canonical: "https://spawnpointstudio.com/case-studies/doritos",
+    },
 };
 
 const Doritos = () => {
