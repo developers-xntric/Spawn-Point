@@ -27,8 +27,6 @@ export const metadata: Metadata = {
 };
 
 
-
-
 /* -------------------- PAGE COMPONENT -------------------- */
 const schema = {
   "@context": "https://schema.org",
@@ -222,12 +220,8 @@ const schema = {
 
 export default function Home() {
 
-
-
   return (
     <>
-      {/* ----------- SEO SCHEMAS ----------- */}
-
       <Script
         id="schema"
         type="application/ld+json"
@@ -236,11 +230,6 @@ export default function Home() {
           __html: JSON.stringify(schema),
         }}
       />
-
-
-
-      {/* ----------- PAGE CONTENT ----------- */}
-
       <div className="overflow-x-hidden">
         <Hero />
         <SecondSection />
