@@ -96,19 +96,18 @@ const getSchemaData = (blog: any, slug: string) => {
                 "articleSection": blog.category || blog.blogCategory,
                 "keywords": blog.keywords || "",
             },
-
-            // AUTHOR (You can edit name here)
+            // Person
             {
                 "@type": "Person",
-                "@id": "https://spawnpointstudio.com/#person",
-                "name": blog.authorName || "SpawnPoint Content Team",
-                "description":
-                    blog.authorBio ||
-                    "SpawnPoint Studio is a leading game marketing and creative strategy agency helping brands grow through powerful storytelling, design, and immersive experiences.",
-                "url": blog.authorURL || "https://www.linkedin.com/company/spawnpointstudio/",
-                "jobTitle": blog.authorRole || "Writer & Content Strategist",
+                "@id": "https://spawnpointstudio.com/#tehreem",
+                "name": "Tehreem Fazal Qureshi",
+                "description": "Tehreem Fazal is a creative strategist and content marketer with over six years of experience crafting impactful stories for leading brands like Master Group, LUMS, and Metropolitan Properties UAE.",
+                "url": "https://www.linkedin.com/in/tehreem-fazal-592902192/",
+                "jobTitle": "Creative Strategist & Content Marketer",
+                "worksFor": {
+                    "@id": "https://spawnpointstudio.com/#organization"
+                }
             },
-
             // ORGANIZATION SCHEMA
             {
                 "@type": "Organization",
@@ -117,21 +116,9 @@ const getSchemaData = (blog: any, slug: string) => {
                 "url": "https://spawnpointstudio.com",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://spawnpointstudio.com/logo.png",
-                },
-                "email": "play@spawnpointstudio.com",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+971 5456 17052",
-                    "contactType": "customer support",
-                    "availableLanguage": "en",
-                },
-                "sameAs": [
-                    "https://www.linkedin.com/company/spawnpointstudio/",
-                    "https://www.instagram.com/spawnpointstudio.play/"
-                ]
+                    "url": "https://spawnpointstudio.com/home/spawn-logo.png"
+                }
             },
-
             // BREADCRUMBS
             {
                 "@type": "BreadcrumbList",
