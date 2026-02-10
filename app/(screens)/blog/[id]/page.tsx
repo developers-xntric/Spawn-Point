@@ -69,13 +69,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       url: `https://spawnpointstudio.com/blog/${id}`,
       images: blog.bannerImageURL
         ? [
-            {
-              url: blog.bannerImageURL,
-              width: 1200,
-              height: 630,
-              alt: blog.title,
-            },
-          ]
+          {
+            url: blog.bannerImageURL,
+            width: 1200,
+            height: 630,
+            alt: blog.title,
+          },
+        ]
         : [],
     },
   };
@@ -91,5 +91,5 @@ export default async function BlogDetailsPage({ params }: { params: Promise<{ id
     return <div className="p-10 text-red-500 h-screen flex items-center justify-center">Blog not found</div>;
   }
 
-  return <BlogDetail blog={blogData} />;
+  return <BlogDetail blog={blogData} slug={id} />;
 }

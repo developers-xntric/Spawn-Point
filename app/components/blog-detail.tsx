@@ -1,66 +1,16 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { client } from "@/sanity/client";
 import FirstSection from "../components/blog-first-section";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 import Script from "next/script";
-
-
-import Link from "next/link";
+import { useState } from "react";
 import { LinkedinIcon } from "lucide-react";
+import Link from "next/link";
 import HeroSection from "./common/hero";
 import ContactSection from "./contact-section";
 import NewsletterSection from "./newsletter";
-
-
 export const dynamic = "force-dynamic";
-
-
-const BLOG_DETAIL_QUERY = `
-*[_type == "blog" && slug.current == $slug][0]{
-  title,
-  description,
-  metaDescription,
-  publishedDate,
-  readTime,
-  category,
-  "bannerImageURL": bannerImage.asset->url,
-  blogCategory,
-  subsections[]{
-    subtitle,
-    subdescription,
-    lists[]{
-      listTitle,
-      listDescription,
-      items[]{
-        title,
-        description
-      }
-    }
-  },
-  conclusion,
-  faqs[]{
-    question,
-    answer
-  }
-}
-`;
-
-const RELATED_BLOGS_QUERY = `
-*[_type == "blog"] | order(publishedDate desc){
-  title,
-  description,
-  publishedDate,
-  readTime,
-  blogCategory,
-  category,
-  "bannerImageURL": bannerImage.asset->url,
-  "slug": slug.current
-}
-`;
-
 
 const schemaData = {
     "@context": "https://schema.org",
@@ -68,8 +18,8 @@ const schemaData = {
     "name": "Blogs",
     "description": "Blogs from Spawn Point",
     "provider": {
-    "@type": "Organization",
-    "name": "SpawnPoint Studio",
+        "@type": "Organization",
+        "name": "SpawnPoint Studio",
         "url": "https://spawnpointstudio.com/",
         logo: "link",
         contactPoint: {
@@ -116,63 +66,124 @@ const schemaData = {
     }
 };
 
-interface Blog {
-    slug: string;
-    title: string;
-    description: string;
-    publishedDate: string;
-    readTime: string;
-    bannerImageURL: string;
-    blogCategory: string;
-    category: string;
-}
+const getSchemaData = (blog: any, slug: string) => {
+    if (!blog) return null;
+
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            // BLOG POSTING SCHEMA
+            {
+                "@type": "BlogPosting",
+                "@id": `https://spawnpointstudio.com/blog/${slug}#article`,
+                "headline": blog.title,
+                "description": blog.metaDescription || blog.description,
+                "datePublished": blog.publishedDate,
+                "dateModified": blog.publishedDate,
+                "mainEntityOfPage": {
+                    "@id": `https://spawnpointstudio.com/blog/${slug}`,
+                },
+                "image": blog.bannerImageURL
+                    ? {
+                        "@type": "ImageObject",
+                        "url": blog.bannerImageURL,
+                        "width": 1200,
+                        "height": 600,
+                    }
+                    : undefined,
+                "author": { "@id": "https://spawnpointstudio.com/#person" },
+                "publisher": { "@id": "https://spawnpointstudio.com/#organization" },
+                "articleSection": blog.category || blog.blogCategory,
+                "keywords": blog.keywords || "",
+            },
+
+            // AUTHOR (You can edit name here)
+            {
+                "@type": "Person",
+                "@id": "https://spawnpointstudio.com/#person",
+                "name": blog.authorName || "SpawnPoint Content Team",
+                "description":
+                    blog.authorBio ||
+                    "SpawnPoint Studio is a leading game marketing and creative strategy agency helping brands grow through powerful storytelling, design, and immersive experiences.",
+                "url": blog.authorURL || "https://www.linkedin.com/company/spawnpointstudio/",
+                "jobTitle": blog.authorRole || "Writer & Content Strategist",
+            },
+
+            // ORGANIZATION SCHEMA
+            {
+                "@type": "Organization",
+                "@id": "https://spawnpointstudio.com/#organization",
+                "name": "SpawnPoint Studio",
+                "url": "https://spawnpointstudio.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://spawnpointstudio.com/logo.png",
+                },
+                "email": "play@spawnpointstudio.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+971 5456 17052",
+                    "contactType": "customer support",
+                    "availableLanguage": "en",
+                },
+                "sameAs": [
+                    "https://www.linkedin.com/company/spawnpointstudio/",
+                    "https://www.instagram.com/spawnpointstudio.play/"
+                ]
+            },
+
+            // BREADCRUMBS
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://spawnpointstudio.com/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://spawnpointstudio.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blogs",
+                        "item": "https://spawnpointstudio.com/blog"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": blog.title,
+                        "item": `https://spawnpointstudio.com/blog/${slug}`
+                    }
+                ]
+            },
+
+            // OPTIONAL: FAQ SCHEMA
+            blog.faqs?.length
+                ? {
+                    "@type": "FAQPage",
+                    "mainEntity": blog.faqs.map((faq: any) => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                }
+                : null
+        ].filter(Boolean)
+    };
+};
+
 
 interface BlogDetailProps {
     blog: any;
+    slug: string;
 }
 
-const BlogDetail = ({ blog }: BlogDetailProps) => {
-    // const id = ids;
+const BlogDetail = ({ blog, slug }: BlogDetailProps) => {
     const [loading, setLoading] = useState(true);
-    // const [blog, setBlog] = useState<any>(null);
-    const [relatedBlogs, setRelatedBlogs] = useState<any[]>([]);
-   
-
-    // useEffect(() => {
-
-    //     const fetchData = async () => {
-    //         try {
-    //             setLoading(true);
-
-    //             // Main blog
-    //             const blogData = await client.fetch(BLOG_DETAIL_QUERY, {
-    //                 slug: id,
-    //             });
-
-    //             if (!blogData) {
-    //                 setBlog(null);
-    //                 return;
-    //             }
-
-    //             setBlog(blogData);
-
-    //             // Related blogs
-    //             const allBlogs = await client.fetch(RELATED_BLOGS_QUERY);
-    //             setRelatedBlogs(allBlogs?.slice(0, 2) || []);
-    //         } catch (error) {
-    //             console.error("Sanity blog fetch error:", error);
-    //             setBlog(null);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
-
-    //     fetchData();
-
-        
-
-    // }, []);
-    
 
     const tableOfContents: { id: string; title: string }[] = [];
     if (blog?.title) {
@@ -203,8 +214,6 @@ const BlogDetail = ({ blog }: BlogDetailProps) => {
         );
     }
 
-
-
     return (
         <>
             {!loading ? (
@@ -215,117 +224,11 @@ const BlogDetail = ({ blog }: BlogDetailProps) => {
                 <main className="font-hel ">
                     {/* Schema Scripts */}
                     <Script
-                        id="schema-service"
-                        type="application/ld+json"
-                        strategy="afterInteractive"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-                    />
-
-                    <Script
-                        id="schema-blogposting"
+                        id="dynamic-schema"
                         type="application/ld+json"
                         strategy="afterInteractive"
                         dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                                "@context": "https://schema.org",
-                                "@type": "BlogPosting",
-                                headline: blog.title,
-                                description: blog.metaDescription || blog.description,
-                                datePublished: blog.publishedDate,
-                                image: blog.bannerImageURL
-                                    ? {
-                                        "@type": "ImageObject",
-                                        url: blog.bannerImageURL,
-                                        width: 1200,
-                                        height: 600,
-                                        caption: blog.title,
-                                        contentUrl: blog.bannerImageURL,
-                                    }
-                                    : undefined,
-                                publisher: {
-                                    "@type": "Organization",
-                                    name: "SpawnPoint Studio",
-                                    url: "https://spawnpointstudio.com/",
-                                    logo: {
-                                        "@type": "ImageObject",
-                                        url: "https://spawnpointstudio.com/spn.png",
-                                    },
-                                },
-                                mainEntityOfPage: {
-                                    "@type": "WebPage",
-                                    "@id": `https://spawnpointstudio.com/blog/${blog?.slug?.current}`,
-                                },
-                            }),
-                        }}
-                    />
-                    {blog.faqs?.length > 0 && (
-                        <Script
-                            id="schema-faq"
-                            type="application/ld+json"
-                            strategy="afterInteractive"
-                            dangerouslySetInnerHTML={{
-                                __html: JSON.stringify({
-                                    "@context": "https://schema.org",
-                                    "@type": "FAQPage",
-                                    mainEntity: blog.faqs.map((faq: any) => ({
-                                        "@type": "Question",
-                                        name: faq.question,
-                                        acceptedAnswer: {
-                                            "@type": "Answer",
-                                            text: faq.answer,
-                                        },
-                                    })),
-                                }),
-                            }}
-                        />
-                    )}
-
-                    {/* Breadcrumb schema */}
-                    <Script
-                        id="schema-breadcrumb"
-                        type="application/ld+json"
-                        strategy="afterInteractive"
-                        dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                                "@context": "https://schema.org",
-                                "@type": "BreadcrumbList",
-                                itemListElement: [
-                                    {
-                                        "@type": "ListItem",
-                                        position: 1,
-                                        name: "Home",
-                                        item: "https://spawnpointstudio.com/",
-                                    },
-                                    {
-                                        "@type": "ListItem",
-                                        position: 2,
-                                        name: "Blog",
-                                        item: "https://spawnpointstudio.com/blog/",
-                                    },
-                                    {
-                                        "@type": "ListItem",
-                                        position: 3,
-                                        name: blog.title || "Blog Post",
-                                        item: `https://spawnpointstudio.com/blog/${blog?.slug?.current}`,
-                                    },
-                                ],
-                            }),
-                        }}
-                    />
-
-                    {/* Author Person schema */}
-                    <Script
-                        id="schema-person"
-                        type="application/ld+json"
-                        strategy="afterInteractive"
-                        dangerouslySetInnerHTML={{
-                            __html: JSON.stringify({
-                                "@context": "http://schema.org",
-                                "@type": "Person",
-                                name: "Tehreem Fazal Qureshi",
-                                description: "Tehreem Fazal is a creative strategist, content marketer, and freelance writer with over six years of experience crafting impactful stories for local and international brands. She specializes in content strategy, brand storytelling, and SEO-driven writing across industries like fashion, real estate, food, digital marketing, lifestyle, and automotive etc. Her words have shaped the voice of leading names including Master Group, LUMS, Metropolitan Properties UAE, and more. With a background in English Literature, Tehreem blends creativity with strategy to make every piece of content resonate and convert. When she’s not writing, she’s exploring new ideas, brands, and narratives that inspire.",
-                                url: "https://www.linkedin.com/in/tehreem-fazal-592902192/",
-                            }),
+                            __html: JSON.stringify(getSchemaData(blog, slug)),
                         }}
                     />
 
