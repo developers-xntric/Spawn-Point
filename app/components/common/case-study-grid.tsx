@@ -121,16 +121,8 @@ export default function CaseStudiesSection() {
                     <div className="lg:col-span-6 xl:col-span-7 bg-white/5 p-3 md:p-5 rounded-lg md:rounded-2xl border border-white/20 h-full w-full">
 
                         <div className=" relative rounded-lg md:rounded-2xl overflow-hidden group h-[300px] md:h-[350px]  2xl:h-[400px]">
-                            <video
-                                src="/shell/feature.webm"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="absolute inset-0 h-full w-full object-cover"
-                            >
-                                Your browser does not support the video tag.
-                            </video>
+
+                            <Image alt="shell" src={"/shell/feature.gif"} width={2000} height={2000} className="absolute inset-0 h-full w-full object-cover" />
 
                             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent" />
                             <div className="absolute bottom-4 md:bottom-4 md:left-4 left-4 right-4 z-10">

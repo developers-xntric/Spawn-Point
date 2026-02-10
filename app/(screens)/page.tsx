@@ -26,162 +26,218 @@ export const metadata: Metadata = {
   },
 };
 
-/* -------------------- SCHEMA: ORGANIZATION -------------------- */
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "SpawnPoint Studio",
-  url: "https://spawnpointstudio.com/",
-  logo: "https://spawnpointstudio.com/logo.png",
-  email: "play@spawnpointstudio.com",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+971 5456 17052",
-    contactType: "service",
-    areaServed: "AE",
-    availableLanguage: "en",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-    ],
-    opens: "09:00",
-    closes: "18:00",
-  },
-  priceRange: "AED",
-  areaServed: {
-    "@type": "Place",
-    name: "Dubai, UAE",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/spawn-point",
-    "https://www.instagram.com/spawnpointstudio",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.5",
-    reviewCount: "30",
-    bestRating: "5",
-    worstRating: "1",
-  },
-};
 
 
-/* -------------------- SCHEMA: PERSON -------------------- */
-
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Tehreem Fazal Qureshi",
-  description:
-    "Tehreem Fazal is a creative strategist, content marketer, and freelance writer with over six years of experience crafting impactful stories for local and international brands. She specializes in content strategy, brand storytelling, and SEO-driven writing across industries including fashion, real estate, food, digital marketing, lifestyle, and automotive.",
-  url: "https://www.linkedin.com/in/tehreem-fazal-5",
-  sameAs: [
-    "https://www.linkedin.com/in/tehreem-fazal-5",
-  ],
-};
 
 /* -------------------- PAGE COMPONENT -------------------- */
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://spawnpointstudio.com/#organization",
+      "name": "SpawnPoint Studio",
+      "url": "https://spawnpointstudio.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://spawnpointstudio.com/#logo",
+        "url": "https://spawnpointstudio.com/home/spawn-logo.png",
+        "contentUrl": "https://spawnpointstudio.com/home/spawn-logo.png",
+        "width": "600",
+        "height": "60",
+        "caption": "SpawnPoint Studio Logo"
+      },
+      "image": {
+        "@id": "https://spawnpointstudio.com/#logo"
+      },
+      "email": "play@spawnpointstudio.com",
+      "telephone": "+971 5456 17052",
+      "sameAs": [
+        "https://www.linkedin.com/company/spawn-point",
+        "https://www.instagram.com/spawnpointstudio"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+971 5456 17052",
+          "contactType": "Gaming service",
+          "areaServed": "AE",
+          "availableLanguage": "en"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://spawnpointstudio.com/#website",
+      "url": "https://spawnpointstudio.com/",
+      "name": "SpawnPoint Studio",
+      "publisher": {
+        "@id": "https://spawnpointstudio.com/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://spawnpointstudio.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://spawnpointstudio.com/#webpage",
+      "url": "https://spawnpointstudio.com/",
+      "name": "In-Game Marketing Agency | SpawnPoint Studio",
+      "isPartOf": {
+        "@id": "https://spawnpointstudio.com/#website"
+      },
+      "about": {
+        "@id": "https://spawnpointstudio.com/#organization"
+      },
+      "description": "Spawn Point Studio is a premier in-game marketing and brand activation agency creating immersive experiences in Roblox, Fortnite, and Minecraft.",
+      "breadcrumb": {
+        "@id": "https://spawnpointstudio.com/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://spawnpointstudio.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://spawnpointstudio.com/"
+        }
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "SpawnPoint Studio - Gaming Marketing Agency",
+      "@id": "https://spawnpointstudio.com/",
+      "url": "https://spawnpointstudio.com/",
+      "telephone": "+971 5456 17052",
+      "priceRange": "AED 10,000 - AED 500,000",
+      "image": "https://spawnpointstudio.com/home/spawn-logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "30",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is Spawn Point a top gaming design agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spawn Point combines a game-native way of thinking and brand strategy to create player-friendly and player-driven experiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an in-game marketing company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An in-game marketing company connects brands to consumers in games and virtual environments like Roblox and Fortnite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which gaming platforms do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We develop games across PC, console, mobile and virtual platforms including Roblox, Fortnite Creative, and Minecraft."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 4-Quarter System?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It breaks campaigns into four phases: entry, engagement, expansion, and retention to keep brands fresh long-term."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only work with gaming brands?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, we help non-gaming brands translate their identity into playable, interactive formats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an activation and a virtual world?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An activation is a short-lived event, while a virtual world is a persistent environment players return to over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you integrate creators and streamers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We partner with creators to co-create experiences that build credibility and organic reach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Spawn Point Studio focused on specific regions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our core expertise lies in the MENA and GCC regions, combining local cultural insights with global platform strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do In-Stream AdTech solutions work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They incorporate brands directly into digital live streams via gameplay integration or real-time overlays."
+          }
+        }
+      ]
+    }
+  ]
+}
 
-const faqs = [
-  {
-    question: 'Why is Spawn Point a top gaming design agency?',
-    answer:
-      'Spawn Point combines a game-native way of thinking and brand strategy to create player-friendly and player-driven experiences. We are designing within gaming culture, not around it. That feeling is what makes our work real, playable, and memorable.',
-  },
-  {
-    question: 'What is an in-game marketing company?',
-    answer:
-      'An in-game marketing company connects brands to consumers in games and virtual environments. This includes branded environments, interactive mechanics as well as live activations. Engagement is the goal, not interruption.',
-  },
-  {
-    question: 'Which gaming platforms do you work with?',
-    answer:
-      'We develop games across PC, console, mobile and emerging virtual platforms. Our experiences were built using Roblox, Fortnite Creative, Minecraft, and dedicated custom-built experiences. We adapt our design to fit the way each platform is played.',
-  },
-  {
-    question: 'What is the "4-Quarter System"?',
-    answer:
-      'We call this the 4-Quarter System, the basis for how we build a long-term, sustainable presence. It breaks campaigns into four phases: entry, engagement, expansion, and retention. This keeps brands fresh instead of just during launch windows.',
-  },
-  {
-    question: 'Do you only work with gaming brands?',
-    answer:
-      'No- actually, a lot of our clients are non-gaming and are entering into gaming for the first time. We help them translate their identity into playable, interactive formats.Gaming is merely a medium, a risk.',
-  },
-  {
-    question: 'What is the difference between an "activation" and a "virtual world"?',
-    answer:
-      'An activation is a short-lived, time-limited event, usually associated with a campaign or moment. A virtual world is a world that a player returns to over time. Both can work to different calculated ends, and can be complementary.',
-  },
-  {
-    question: 'How do you integrate creators and streamers into your strategy?',
-    answer:
-      'We partner with creators and co-create, rather than just place media. They inform experiences, narratives, and live interactions. This builds credibility and organic reach within gaming communities.',
-  },
-  {
-    question: 'Is Spawn Point Studio focused on specific regions?',
-    answer:
-      'While Spawn Point Studio operates with a global perspective, our core expertise lies in the MENA and GCC regions. We combine local cultural insights with a "platform-first" approach, ensuring that while gaming knows no borders, your content resonates deeply within the local landscape.',
-  },
-  {
-    question: 'How do "In-Stream AdTech" solutions work?',
-    answer:
-      'In-Stream AdTech incorporates brands into the experience of the digital live stream. The ads are integrated into the gameplay or appear as overlays. It allows for real-time measurable engagement with viewers.',
-  },
-]
 
 export default function Home() {
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+
 
   return (
     <>
       {/* ----------- SEO SCHEMAS ----------- */}
 
       <Script
-        id="organization-schema"
+        id="schema"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
+          __html: JSON.stringify(schema),
         }}
       />
 
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
 
-      <Script
-        id="person-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
-        }}
-      />
 
       {/* ----------- PAGE CONTENT ----------- */}
 
@@ -196,7 +252,7 @@ export default function Home() {
         <StickyCards />
         <MapSection />
         <FAQSection />
-        <BlogCarousel/>
+        <BlogCarousel />
         <ContactSection />
         <NewsletterSection />
       </div>

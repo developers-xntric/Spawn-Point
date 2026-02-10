@@ -1,9 +1,4 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
-Host: https://spawnpointstudio.com
-
-# Sitemaps
-Sitemap: https://spawnpointstudio.com/sitemap.xml
+Sitemap: https://spawnpointstudio.com/sitemap-0.xml
