@@ -7,28 +7,64 @@ import Script from "next/script"
 
 /* -------------------- SCHEMA: BREADCRUMB -------------------- */
 
-const breadcrumbSchema = {
+const schemaData = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
+    "@graph": [
         {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://spawnpointstudio.com/",
+            "@type": "Blog",
+            "@id": "https://spawnpointstudio.com/blog/#blog",
+            "name": "SpawnPoint Studio Blog",
+            "url": "https://spawnpointstudio.com/blog",
+            "description": "Insights, trends, and strategies about in-game marketing, brand activations, and the future of gaming in Roblox, Fortnite, and Minecraft.",
+            "publisher": {
+                "@id": "https://spawnpointstudio.com/#organization"
+            },
+            "inLanguage": "en-US"
         },
-    ],
-};
+        {
+            "@type": "WebPage",
+            "@id": "https://spawnpointstudio.com/blog/#webpage",
+            "url": "https://spawnpointstudio.com/blog",
+            "name": "In-Game Marketing Insights & News | SpawnPoint Studio Blog",
+            "isPartOf": {
+                "@id": "https://spawnpointstudio.com/#website"
+            },
+            "description": "Stay updated with the latest in-game marketing trends and strategies from SpawnPoint Studio.",
+            "breadcrumb": {
+                "@id": "https://spawnpointstudio.com/blog/#breadcrumb"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://spawnpointstudio.com/blog/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://spawnpointstudio.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://spawnpointstudio.com/blog"
+                }
+            ]
+        }
+    ]
+}
+
 
 const Blogs = () => {
     return (
         <>
             <Script
-                id="breadcrumb-schema"
+                id="schema"
                 type="application/ld+json"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(breadcrumbSchema),
+                    __html: JSON.stringify(schemaData),
                 }}
             />
             <div>
@@ -47,7 +83,7 @@ const Blogs = () => {
                 <div className="-mt-28 pt-10">
                     <PartnersSection isSecond={false} />
                 </div>
-                <BlogSecond/>
+                <BlogSecond />
                 <ContactSection />
                 <NewsletterSection />
             </div>
