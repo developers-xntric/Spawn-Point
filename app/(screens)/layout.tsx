@@ -8,8 +8,7 @@ export const metadata: Metadata = {
   title: "Spawn Point",
   description: "Spawn Point Studio is a premier in-game marketing and brand activation agency creating immersive experiences that connect global brands with modern audiences.",
   robots: {
-    index: true,
-    follow: true,
+    index: true,follow: true,
   },
 };
 
