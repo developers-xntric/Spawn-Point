@@ -38,6 +38,9 @@ export async function POST(request: NextRequest) {
     const recipients = [
       process.env.CONTACT_EMAIL,
       process.env.ADMIN_EMAIL,
+      "yasir@xntric.ae",
+      "ahmed@xntric.ae",
+      "farrukh@xntric.ca"
     ].filter(Boolean).join(', ');
 
     // Prepare email content
