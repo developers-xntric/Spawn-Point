@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKR4w5KRWmh_uI0N0ABaWvvqypkZ-jPHFUswdPJDST9SOlD4E69EkZ7hCs1vXqQVJ5vQ/exec';
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -57,17 +59,32 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    // Send email and save to Google Sheets in parallel
+    await Promise.all([
+      transporter.sendMail(mailOptions),
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          message,
+          services: services.join(', '),
+          timestamp: new Date().toISOString(),
+        }),
+      }),
+    ]);
 
     return NextResponse.json(
-      { message: 'Email sent successfully' },
+      { message: 'Email sent successfully and data saved to Google Sheets' },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email or saving to Google Sheets:', error);
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: 'Failed to process contact form submission' },
       { status: 500 }
     );
   }
