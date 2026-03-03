@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare email content
     const mailOptions = {
-      from: process.env.SMTP_USER,
+      from: "SpawnPoint Contact Form",
       to: recipients,
       subject: `New Contact Form Submission from ${fullName}`,
       html: `

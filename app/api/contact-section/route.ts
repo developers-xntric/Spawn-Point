@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
 
     // Prepare email content
     const mailOptions = {
-      from: process.env.SMTP_USER,
+      from: "Spawnpoint Form",
       to: process.env.COLLAB_EMAIL,
       subject: 'New Collaboration Request from Contact Section',
       html: `
