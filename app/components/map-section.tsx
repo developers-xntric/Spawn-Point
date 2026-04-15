@@ -73,9 +73,6 @@ export default function MapSection() {
         return `${hrs}:${pad(mins)}:${pad(secs)}`
     }
 
-
-
-
     return (
         <div className="relative w-full  bg-[#031347] overflow-hidden pt-16 flex flex-col items-center justify-center gap-80 2xl:gap-60">
 
@@ -95,7 +92,7 @@ export default function MapSection() {
                     TEAM SPAWN POINT
                 </p>
                 <h2 className="md:w-full w-[90%] lg:text-[60px] text-[40px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] leading-10 md:leading-[45px] tracking-[2px]">
-                    Your Brand’s <span className="text-[#BBFC00]">Gaming Task</span> Force
+                    The Architecture of Play: <span className="text-[#BBFC00]">Roblox & Fortnite</span>
                 </h2>
             </div>
 
