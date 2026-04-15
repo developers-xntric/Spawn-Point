@@ -11,7 +11,7 @@ const services = [
         id: 1,
         title: "CAMPAIGNS & ACTIVATIONS",
         description:
-            "Creator-led storytelling, hybrid events, and in-stream ad campaigns build awareness ",
+            "We create creator-led storytelling and hybrid events‚ building brand awareness from high-impact digital moments to in-stream campaigns‚ that slot effortlessly into the gaming world․",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-1.svg",
@@ -21,7 +21,7 @@ const services = [
         id: 2,
         title: "ESPORTS PARTNERSHIPS",
         description:
-            "High value IP integrations and strategic sponsorships that leverage community  competition ",
+            "Gain entry into the competitive arena․ We ease high-value IP integrations with and sponsorships of esports‚ where players are intensely loyal, and the competition is largely regional․",
         borderColor: "from-[#E81B8E]",
         accentColor: "border-[#E81B8E]",
         image: "/home/service-2.svg",
@@ -31,7 +31,7 @@ const services = [
         id: 3,
         title: "Virtual Worlds",
         description:
-            "Sustained, persistent, and playable branded economies that drive conversion & retention",
+            "We build sustainable branded economies․ Whether it's on Roblox‚ Fortnite‚ Minecraft‚ or all of the above‚ we create worlds that drive long-term conversion and retention․",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-3.svg",
@@ -41,7 +41,7 @@ const services = [
         id: 4,
         title: "In-Stream AdTech",
         description:
-            "Sustained, persistent, and playable branded economies that drive conversion & retention",
+            "Harness our proprietary AI Ad Engine․ Non-disruptive contextual stream triggers placed at natural breaks in the game make your brand feel like a part of the 'win'․",
         borderColor: "from-[#CCFF00]",
         accentColor: "border-[#CCFF00]",
         image: "/home/service-4.svg",
@@ -73,11 +73,11 @@ export function ServicesCarousel() {
             <div className="2xl:max-w-[1440px] w-full md:w-[85%] mx-auto">
 
                 {/* HEADER (UNCHANGED) */}
-                <div className="mb-10 md:text-center 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto"> 
-                    <p className="mb-4 md:text-[20px] text-[16px] tracking-[12px] text-[#FF1586] font-hel"> SERVICES </p>
-                 <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] md:leading-[45px] leading-10 md:tracking-[2px] tracking-[1.5px]"> Your <span className="text-[#BBFC00]">Brand, Inside </span>  the World of Play. Where Culture Meets{" "} <span className="text-[#BBFC00]">Conversion</span> 
-                 </h2> 
-                 </div>
+                <div className="mb-10 md:text-center 2xl:max-w-[1440px] w-[90%] md:w-[85%] mx-auto">
+                    <p className="mb-4 md:text-[20px] text-[16px] tracking-[12px] uppercase text-[#FF1586] font-hel"> Our Core Services </p>
+                    <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white max-w-[770px] mx-auto lg:leading-[65px] md:leading-[45px] leading-10 md:tracking-[2px] tracking-[1.5px]"> The New Standard for <span className="text-[#BBFC00]">Gaming Marketing</span> in the GCC
+                    </h2>
+                </div>
 
 
                 <div className="">
