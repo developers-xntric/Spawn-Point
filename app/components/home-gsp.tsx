@@ -131,7 +131,7 @@ export default function HOMEGSP() {
         />
       </div>
 
-      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-32 -right-10 xl:right-16 w-40 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img rounded-[20px]">
+      <div className="absolute bottom-28 md:bottom-10 2xl:bottom-32 -right-10 xl:right-16 w-40 md:w-64 lg:w-80 2xl:w-90 z-10 floating-img rounded-4xl">
         <Image
           width={2000}
           height={2000}
@@ -189,23 +189,19 @@ export default function HOMEGSP() {
         </p>
 
         <h2 className="text-[37px] lg:text-[60px] font-fks font-black uppercase leading-10 md:leading-[65px] mb-10 md:px-10 tracking-[1.5px] md:tracking-wide">
-          <span className="text-[#BBFC00]">Spawn Point Crafts</span>{" "}
+          <span className="text-[#BBFC00]">Spawn Point understands</span>{" "}
           <span className="text-white">
-            Brand Playbooks, Live-Stream Experiences, and
+            that in a region where video games are the primary form of entertainment‚ a
           </span>{" "}
-          <span className="text-[#BBFC00]">AI-Driven</span>{" "}
+          <span className="text-[#BBFC00]">hype-generating‚</span>{" "}
           <span className="text-white">
-            Audience Pipelines That Turn Games Into Measurable
-          </span>{" "}
-          <span className="text-[#BBFC00]">Business Channels</span>{" "}
-          <span className="text-white">Across</span>{" "}
-          <span className="text-[#BBFC00]">MENA</span>{" "}
-          <span className="text-white">and Beyond</span>
+            run-of-the-mill gaming marketing agency in the GCC isn't enough․
+          </span>
         </h2>
 
         <Link href="/contact">
           <button className="md:flex hidden bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white">
-            Build My Campaign
+            Help Me With My Campaign
           </button>
         </Link>
       </div>
