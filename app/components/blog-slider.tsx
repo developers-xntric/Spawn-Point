@@ -63,9 +63,11 @@ export default function BlogCarousel() {
                         </p>
 
                         <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-[1.1] tracking-[2px] font-fks mb-6 max-w-[650px]">
-                            Recent <span className="text-[#BBFC00]">Blogs</span>
+                            Our Recent <span className="text-[#BBFC00]">Blogs</span>
                         </h2>
-
+                        <p className="text-white lg:text-lg lg:leading-relaxed max-w-md font-hel text-balance mb-10">
+                            Deep dives into the AI-driven gaming ecosystems of the MENA region. No fluff. Just the blueprints for the next era of brand participation.
+                        </p>
                     </div>
 
                     <Link href="/blog">

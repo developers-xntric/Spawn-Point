@@ -22,7 +22,7 @@ export default function Footer() {
                     {/* Left Side - Main Heading */}
                     <div className="flex-1 max-w-md">
                         <h2 className="font-fks font-bold text-white text-[40px] md:text-[60px] xl:text-[95px] leading-[50px] md:leading-[60px] xl:leading-[95px] uppercase max-w-[400px]">
-                            Engineering The New Age Of Brand Play
+                            Where High Tech Meets High Culture
                         </h2>
                     </div>
 
