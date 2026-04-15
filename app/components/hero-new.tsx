@@ -45,9 +45,9 @@ export default function Hero() {
                 {/* Headline */}
                 <h1 className="font-fks font-bold uppercase text-white  leading-10 lg:leading-[90px] mb-8 md:mb-8
           text-[35px] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[90px] tracking-wide">
-                    WHERE <span className="text-[#BBFC00]">GAMING</span> ATTENTION{" "}
+                    THE <span className="text-[#BBFC00]">GAMING</span> First Strategy{" "}
                     <br className="hidden lg:block" />
-                    BECOMES BRAND <span className="text-[#BBFC00]">MOMENTUM</span>
+                    Beyond Impressions <span className="text-[#BBFC00]">Authentic </span>Play
                 </h1>
 
                 {/* Stats Grid */}
