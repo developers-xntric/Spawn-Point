@@ -8,24 +8,24 @@ export default function FAQSection() {
 
     const faqs = [
         {
-            question: 'Why is Spawn Point a top gaming design agency?',
+            question: 'How do brands advertise in gaming?',
             answer:
-                'Spawn Point combines a game-native way of thinking and brand strategy to create player-friendly and player-driven experiences. We are designing within gaming culture, not around it. That feeling is what makes our work real, playable, and memorable.',
+                'Advertising in gaming has moved from a mere "pause menu" to being in the middle of the players journey․ From skins in games where players interact directly with your brand‚ to dedicated game modes or organic shoutouts from trusted streamers‚ we help identify the right product for your brand․',
         },
         {
-            question: 'What is an in-game marketing company?',
+            question: 'What is live stream ad tech?',
             answer:
-                'An in-game marketing company connects brands to consumers in games and virtual environments. This includes branded environments, interactive mechanics as well as live activations. Engagement is the goal, not interruption.',
+                'Our video stream advertising technology allows brands to "live" inside a creators stream․ Gone are the stale pre-roll videos that players skip‚ as dynamic overlays and interactive triggers recognize events within the game․ A brand can even revel with the viewer every time the streamer wins a match․',
         },
         {
-            question: 'Which gaming platforms do you work with?',
+            question: 'How do brand activations happen on Roblox?',
             answer:
-                'We develop games across PC, console, mobile and emerging virtual platforms. Our experiences were built using Roblox, Fortnite Creative, Minecraft, and dedicated custom-built experiences. We adapt our design to fit the way each platform is played.',
+                'Roblox is a social ecosystem․ This would mean creating a custom-made "Experience" (game or world) that users can earn branded UGC‚ complete quests, and hang out to deliver value to the player while also creating brand loyalty․',
         },
         {
-            question: 'What is the "4-Quarter System"?',
+            question: 'How is gaming media measured?',
             answer:
-                'We call this the 4-Quarter System, the basis for how we build a long-term, sustainable presence. It breaks campaigns into four phases: entry, engagement, expansion, and retention. This keeps brands fresh instead of just during launch windows.',
+                'Gaming media is measured with real-time metrics such as average watch time‚ sentiment analysis of a broadcasts live chat‚ virtual item redemption rates‚ and click-throughs of interactive stream elements‚ as opposed to estimated views․ Each campaign is accompanied by a data-led performance report․',
         },
         {
             question: 'Do you only work with gaming brands?',
@@ -71,9 +71,7 @@ export default function FAQSection() {
                             FREQUENTLY <br /><span className="text-[#BBFC00]">ASKED</span> QUESTIONS
                         </h2>
                         <p className="text-white lg:text-lg lg:leading-relaxed font-hel text-balance pe-4 mb-10">
-                            Here, we answer the most common questions about our approach to gaming, digital strategies, tactics, or
-                            how we measure success. This FAQ gives you a clear understanding of how we work and what makes our
-                            approach unique.
+                            We don't just buy media; we build playbooks․ Spawnpoint Studio connects brands to high-intent audiences through live stream technology‚ virtual worlds, and measurable esports ecosystems․ Based in Dubai‚ we are a gaming and technology studio․
                         </p>
                     </div>
 
