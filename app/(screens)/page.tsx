@@ -18,9 +18,8 @@ import BlogCarousel from "../components/blog-slider";
 /* -------------------- METADATA -------------------- */
 
 export const metadata: Metadata = {
-  title: "In-Game Marketing & Brand Activation Agency | Spawn Point",
-  description:
-    "Spawn Point Studio is a premier in-game marketing and brand activation agency creating immersive experiences that connect global brands with modern audiences.",
+  title: "In-Game Marketing & Brand Activation Agency GCC | Spawn Point",
+  description: "Spawn Point Studio is a premier in-game marketing and brand activation agency in GCC creating immersive experiences that connect global brands with modern audiences.",
   alternates: {
     canonical: "https://spawnpointstudio.com/",
   },
