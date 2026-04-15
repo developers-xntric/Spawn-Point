@@ -10,24 +10,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
-    heading: "Audience Capture & Optimization.",
-    para: "Creator-led storytelling and immediate audience acquisition, fueled by our AI Ad Engine and in-stream AdTech implementation.",
+    heading: "Audience Capture & Optimization ",
+    para: "Creator-led storytelling meets immediate audience acquisition‚ fueled by our AI Ad Engine and smooth in-stream AdTech implementation․",
     title: "Ignition",
   },
   {
     heading: "Asset Development & IP Ownership.",
     title: "Scaling",
-    para: "Conceptualization and development of major Esports IP partnerships alongside the build-out of persistent, branded Virtual Worlds.",
+    para: "We move from attention to ownership by conceptualizing major Esports IP partnerships‚ and building persistent Virtual Worlds․",
   },
   {
     heading: "High-Impact Visibility & Growth.",
     title: "Momentum",
-    para: "Strategic Seasonal Gaming Events and hybrid activations, focusing on high-dwell time engagement and expansive partnerships.",
+    para: "We lean into the calendar with Calculated Seasonal Gaming Events and hybrid activations designed for high-dwell time and wide-ranging reach․",
   },
   {
     heading: "Retention & Value Maximization.",
     title: "Sustained Growth",
-    para: "Implementation of the Audience Reinforcement Engine and operationalizing commerce/loyalty missions within persistent Virtual Worlds.",
+    para: "We close the loop with our Audience Reinforcement Engine, which operationalizes your commerce and loyalty missions through your persistent digital ecosystem․",
   },
 ];
 
@@ -112,15 +112,12 @@ export default function AboutSection3() {
                 How We Work
               </p>
               <h2 className="text-[40px] lg:text-[60px] font-bold uppercase text-white leading-10 md:leading-[60px] lg:leading-[65px] tracking-[2px] md:tracking-[2px] md:max-w-[650px] max-w-[90%] font-fks">
-                From <span className="text-[#BBFC00]">Insight </span> to
-                Immortality: Our 4-Quarter
+
+                Our Framework: The 4 Quarter
                 <span className="text-[#BBFC00]"> System</span>
               </h2>
               <p className="text-white text-sm md:text-[16px] xl:text-[20px] font-hel mt-5 w-[95%] md:w-full">
-                We implement a proprietary 4-Phase annual framework to ensure
-                continuous relevance, maximize audience commitment, and deliver
-                measurable Lifetime Lift. We transform short-term activations
-                into long-term, compounding value.
+                We have an annual rhythm that helps us turn short-term activation into long-term compounding value․
               </p>
               <Link href="/brand-experience">
                 <button className="px-5 md:px-8 py-3 rounded-[5px] bg-[#BBFC00] text-[#031347] font-bold hover:bg-transparent hover:text-white hover:border-white border border-transparent transition cursor-pointer mt-5 font-hel md:text-base text-[14px]">
