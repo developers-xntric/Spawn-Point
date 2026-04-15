@@ -7,9 +7,9 @@ import Link from "next/link"
 const caseStudies = [
   {
     id: 1,
-    title: "Chupa Chups",
+    title: "Chupa Chups: Integrated Contextual Triggers",
     description:
-      "Integrated contextual in-game stream triggers to engage gamers at key gameplay moments without disrupting the viewing experience.",
+      "We integrated real-time in-game stream triggers that reveled in the game's emotional high points‚ that spoke to viewers but didn't interrupt the viewing experience‚ turning a passive stream into an active brand moment․",
     // stat: "+114% in-store traffic, proving virtual fandom can drive real-world flavor.",
     video: "/chupa-chups/feature.webm",
     brandName: "Chupa Chups",
@@ -110,8 +110,8 @@ export function CaseStudies({ isabout }: { isabout: boolean }) {
                 :
 
                 <h2 className="text-[40px] lg:text-[60px] font-fks font-bold uppercase text-white text-left 2xl:leading-[65px] md:leading-[60px] leading-10 tracking-[1.5px] md:tracking-[2px]">
-                  <span className="text-[#BBFC00]">Strategic </span> Case Studies <span className="font-hel">&</span> Measurable
-                  <span className="text-[#BBFC00]"> Growth</span>
+                  Proof of Concept
+                  <span className="text-[#BBFC00]"> Our Case Studies</span>
                 </h2>
 
 
