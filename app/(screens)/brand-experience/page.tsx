@@ -84,7 +84,7 @@ const schemaData = {
                 "addressLocality": "Dubai",
                 "addressCountry": "AE"
             },
-            "telephone": "+971 5456 17052",
+            
             "priceRange": "AED 10000 - AED 500000",
             "aggregateRating": {
                 "@type": "AggregateRating",

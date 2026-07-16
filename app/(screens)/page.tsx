@@ -48,7 +48,7 @@ const schema = {
         "@id": "https://spawnpointstudio.com/#logo"
       },
       "email": "play@spawnpointstudio.com",
-      "telephone": "+971 5456 17052",
+      
       "sameAs": [
         "https://www.linkedin.com/company/spawn-point",
         "https://www.instagram.com/spawnpointstudio"
@@ -56,7 +56,7 @@ const schema = {
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+971 5456 17052",
+         
           "contactType": "Gaming service",
           "areaServed": "AE",
           "availableLanguage": "en"
@@ -112,7 +112,7 @@ const schema = {
       "name": "SpawnPoint Studio - Gaming Marketing Agency",
       "@id": "https://spawnpointstudio.com/",
       "url": "https://spawnpointstudio.com/",
-      "telephone": "+971 5456 17052",
+      
       "priceRange": "AED 10,000 - AED 500,000",
       "image": "https://spawnpointstudio.com/home/spawn-logo.png",
       "address": {

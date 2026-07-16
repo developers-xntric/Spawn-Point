@@ -36,7 +36,7 @@ const schemaData =
       "name": "SpawnPoint Studio",
       "url": "https://spawnpointstudio.com/",
       "image": "https://spawnpointstudio.com/home/spawn-logo.png",
-      "telephone": "+971 5456 17052",
+      
       "email": "play@spawnpointstudio.com",
       "priceRange": "AED",
       "address": {
@@ -46,7 +46,7 @@ const schemaData =
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+971 5456 17052",
+      
         "contactType": "customer service",
         "areaServed": "AE",
         "availableLanguage": "en"

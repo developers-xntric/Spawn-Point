@@ -46,7 +46,7 @@ const schemaData = {
                 "addressLocality": "Dubai",
                 "addressCountry": "AE"
             },
-            "telephone": "+971 5456 17052"
+           
         },
         {
             "@type": "Person",

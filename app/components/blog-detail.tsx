@@ -24,7 +24,7 @@ const schemaData = {
         logo: "link",
         contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+971 5456 17052",
+          
             contactType: "service",
             areaServed: "AE",
             availableLanguage: "en"
