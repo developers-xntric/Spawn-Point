@@ -37,7 +37,7 @@ const schemaData =
       "url": "https://spawnpointstudio.com/",
       "image": "https://spawnpointstudio.com/home/spawn-logo.png",
       
-      "email": "play@spawnpointstudio.com",
+      "email": "sammas@spawnpointstudio.com",
       "priceRange": "AED",
       "address": {
         "@type": "PostalAddress",

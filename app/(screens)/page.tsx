@@ -47,7 +47,7 @@ const schema = {
       "image": {
         "@id": "https://spawnpointstudio.com/#logo"
       },
-      "email": "play@spawnpointstudio.com",
+      "email": "sammas@spawnpointstudio.com",
       
       "sameAs": [
         "https://www.linkedin.com/company/spawn-point",

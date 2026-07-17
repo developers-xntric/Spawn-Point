@@ -29,7 +29,7 @@ const schemaData = {
             areaServed: "AE",
             availableLanguage: "en"
         },
-        "email": "play@spawnpointstudio.com",
+        "email": "sammas@spawnpointstudio.com",
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": [

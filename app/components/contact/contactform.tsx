@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import { useState } from "react";
+import { Phone, Mail } from "lucide-react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    message: '',
+    fullName: "",
+    email: "",
+    message: "",
     services: [] as string[],
   });
 
@@ -13,23 +14,26 @@ const ContactForm = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleServiceChange = (service: string) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
+        ? prev.services.filter((s) => s !== service)
         : [...prev.services, service],
     }));
   };
-
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,10 +41,10 @@ const ContactForm = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch('/api/contact-form', {
-        method: 'POST',
+      const response = await fetch("/api/contact-form", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -51,17 +55,17 @@ const ContactForm = () => {
         setSubmitSuccess(true);
         // Reset form
         setFormData({
-          fullName: '',
-          email: '',
-          message: '',
+          fullName: "",
+          email: "",
+          message: "",
           services: [],
         });
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
-        setErrorMessage(data.error || 'Failed to send message');
+        setErrorMessage(data.error || "Failed to send message");
       }
     } catch (error) {
-      setErrorMessage('Network error. Please try again.');
+      setErrorMessage("Network error. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -88,7 +92,9 @@ const ContactForm = () => {
             {/* Row 1: Title, First name, Last name */}
             <div className="flex flex-col md:flex-row gap-5">
               <div className="flex-2">
-                <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold">Full Name</label>
+                <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold">
+                  Full Name
+                </label>
                 <input
                   type="text"
                   name="fullName"
@@ -100,7 +106,9 @@ const ContactForm = () => {
               </div>
 
               <div className="flex-2">
-                <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold ">Email address</label>
+                <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold ">
+                  Email address
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -137,10 +145,12 @@ const ContactForm = () => {
                     />
 
                     {/* Custom box */}
-                    <div className="w-4 h-4 rounded-xs border border-white 
+                    <div
+                      className="w-4 h-4 rounded-xs border border-white 
                   bg-transparent flex items-center justify-center
                   peer-checked:bg-[#BBFC00] peer-checked:border-[#BBFC00]
-                  transition">
+                  transition"
+                    >
                       <svg
                         className="w-3 h-3 text-[#031347] opacity-0 peer-checked:opacity-100"
                         fill="none"
@@ -156,14 +166,15 @@ const ContactForm = () => {
                       {service}
                     </span>
                   </label>
-
                 ))}
               </div>
             </div>
 
             {/* Message */}
             <div>
-              <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold">Message</label>
+              <label className="block mb-2 text-[16px] relative left-1 tracking-wide font-bold">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -175,13 +186,15 @@ const ContactForm = () => {
 
             {/* Footer: Mandatory and Button */}
             <div className="flex-col md:flex-row flex md:items-center gap-5 md:gap-20 mt-5 ">
-              <span className="text-md tracking-wide font-bold">All fields are mandatory</span>
+              <span className="text-md tracking-wide font-bold">
+                All fields are mandatory
+              </span>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''} bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white w-full md:w-fit`}
+                className={`${isSubmitting ? "opacity-50 cursor-not-allowed" : ""} bg-[#BBFC00] text-[#031347] font-bold px-6 py-2 rounded-[5px] font-hel border border-transparent hover:bg-transparent hover:border-white hover:text-white w-full md:w-fit`}
               >
-                {isSubmitting ? 'SENDING...' : 'Send Message'}
+                {isSubmitting ? "SENDING..." : "Send Message"}
               </button>
             </div>
           </form>
@@ -194,25 +207,32 @@ const ContactForm = () => {
           </h2>
           <p className="m-0 text-base  ">
             <span className="font-helvetica font-bold tracking-wide text-xl whitespace-nowrap ">
-              Spawn Point Creative Labs 
+              Spawn Point Creative Labs
             </span>
-
             <br />
             Level 14, Marina Plaza, Dubai Marina
             <br />
             Dubai, United Arab Emirates
           </p>
 
-          <a href="tel:+971566161405" className="m-0 text-base">+971 5661 61405</a>
-          <a href="mailto:play@spawnpointstudio.com" className="m-0 text-base tracking-[1px]">play@spawnpointstudio.com</a>
+          <div className="flex gap-4">
+            <a
+              href="tel:+971566161405"
+              className="m-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#BBFC00] text-[#031347] hover:opacity-80 transition-opacity"
+            >
+              <Phone className="w-6 h-6" />
+            </a>
+            <a
+              href="mailto:sammas@spawnpointstudio.com"
+              className="m-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#BBFC00] text-[#031347] hover:opacity-80 transition-opacity"
+            >
+              <Mail className="w-6 h-6" />
+            </a>
+          </div>
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="224" height="1" viewBox="0 0 442 1" fill="none" className="w-full md:w-56">
-            <path d="M0 0.5H441.5" stroke="#273561" />
-          </svg>
-
+          
         </div>
       </div>
-
     </div>
   );
 };
