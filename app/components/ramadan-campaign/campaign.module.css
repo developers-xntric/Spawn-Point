@@ -1290,10 +1290,12 @@
     padding: 60px 0;
   }
   .categories {
+    padding-top: 36px;
     padding-bottom: 24px;
   }
   .dashboard {
     padding-top: 24px;
+    padding-bottom: 30px;
   }
   .results h2 {
     margin: 0 0 32px;
@@ -1320,7 +1322,7 @@
     margin-left: -28%;
   }
   .audienceChart > .source {
-    margin-left: -22%;
+    margin-left: -28%;
   }
   .columns {
     height: 58vw;
@@ -1411,12 +1413,15 @@
   }
   .offersIntro {
     max-width: 100%;
-    margin-top: 20px !important;
+    margin-top: 12px !important;
+  }
+  .offers {
+    padding: 40px 0 24px;
   }
   .offerLayout {
     grid-template-columns: 1fr;
-    gap: 25px;
-    margin-top: 25px;
+    gap: 18px;
+    margin-top: 16px;
   }
   .tabs {
     padding: 0;
@@ -1477,9 +1482,10 @@
     gap: 10px;
   }
   .dashboardHeading h2 {
+    text-align: left;
     width: auto;
     padding-bottom: 20px;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
   }
   .dashboardStage {
     padding-top: 20vw;
@@ -1504,9 +1510,11 @@
   .dashboardMetrics article {
     padding: 13px;
     gap: 10px;
+    align-items: flex-start;
+    text-align: left;
   }
   .dashboardMetrics strong {
-    font-size: 28px;
+    font-size: 22px;
   }
   .dashboardMetrics span {
     font-size: 11px;
@@ -1551,6 +1559,7 @@
     margin-top: 25px;
   }
   .pilot {
+    padding-top: 36px;
     padding-bottom: 90px;
   }
   .pilotCross {
