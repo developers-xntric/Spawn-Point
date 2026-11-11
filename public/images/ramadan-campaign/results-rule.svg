@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1246.63" height="1.55" viewBox="0 0 1246.63 1.55" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-32.8682" y="-32.8682" width="1312.37" height="67.2865"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(16.43px);height:100%;width:100%"></div></foreignObject><path id="Vector 6" data-figma-bg-blur-radius="32.8682" d="M0 0.484375C0 0.678125 0 0.871875 0 1.06562C20.7772 1.09792 41.5544 1.12859 62.3317 1.15766C249.327 1.41922 436.322 1.55 623.317 1.55C810.311 1.55 997.307 1.41922 1184.3 1.15766C1205.08 1.12859 1225.86 1.09792 1246.63 1.06562C1246.63 0.871875 1246.63 0.678125 1246.63 0.484375C1225.86 0.452083 1205.08 0.421406 1184.3 0.392344C997.307 0.130781 810.312 0 623.317 0C436.322 0 249.327 0.130781 62.3317 0.392344C41.5544 0.421406 20.7772 0.452083 0 0.484375Z" fill="url(#paint0_linear_0_45)"/>
+<defs>
+<linearGradient id="paint0_linear_0_45" x1="27.814" y1="0.75068" x2="27.8696" y2="8.90304" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.5"/>
+<stop offset="0.5" stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>

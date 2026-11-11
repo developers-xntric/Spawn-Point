@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="54.9969" height="54.9969" viewBox="0 0 54.9969 54.9969" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 1261153794">
+<foreignObject x="-23.2111" y="-23.2111" width="101.419" height="101.419"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(11.61px);clip-path:url(#bgblur_0_0_25_clip_path);height:100%;width:100%"></div></foreignObject><g id="Rectangle 61" data-figma-bg-blur-radius="23.2111">
+<use xlink:href="#stroke0_0_25" fill="white" fill-opacity="0.05"/>
+<mask id="stroke1_0_25" fill="white">
+<use xlink:href="#stroke0_0_25"/>
+</mask>
+<path d="M10.5505 54.9969H44.4464C50.2733 54.9969 54.9969 50.2733 54.9969 44.4464V10.5505C54.9969 4.72363 50.2733 0 44.4464 0H10.5505C4.72363 0 0 4.72362 0 10.5505V44.4464C0 50.2733 4.72362 54.9969 10.5505 54.9969Z" stroke-width="2.1101" stroke="white" stroke-opacity="0.1" mask="url(#stroke1_0_25)"/>
+</g>
+<path id="Vector" d="M19.5748 26.2802L27.4985 18.3564L35.4223 26.2802M27.4985 18.3564V36.6421" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#BBFC00"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_0_25_clip_path" transform="translate(23.2111 23.2111)"><path d="M0 10.5505C0 4.72362 4.72363 0 10.5505 0H44.4464C50.2733 0 54.9969 4.72363 54.9969 10.5505V44.4464C54.9969 50.2733 50.2733 54.9969 44.4464 54.9969H10.5505C4.72362 54.9969 0 50.2733 0 44.4464V10.5505Z"/>
+</clipPath><path id="stroke0_0_25" d="M0 10.5505C0 4.72362 4.72363 0 10.5505 0H44.4464C50.2733 0 54.9969 4.72363 54.9969 10.5505V44.4464C54.9969 50.2733 50.2733 54.9969 44.4464 54.9969H10.5505C4.72362 54.9969 0 50.2733 0 44.4464V10.5505Z"/>
+</defs>
+</svg>
