@@ -1298,6 +1298,9 @@
   .results h2 {
     margin: 0 0 32px;
   }
+  .results h2 em {
+    margin-left: 0;
+  }
   .audienceGrid {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -1315,6 +1318,9 @@
   }
   .audienceChart > p {
     margin-left: -28%;
+  }
+  .audienceChart > .source {
+    margin-left: -22%;
   }
   .columns {
     height: 58vw;
@@ -1348,7 +1354,7 @@
   }
   .sectionHeading h2 em,
   .offers h2 em {
-    margin-left: 0.7em;
+    margin-left: 0;
   }
   .channels {
     min-height: 0;
@@ -1372,6 +1378,10 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 15px;
+    scrollbar-width: none;
+  }
+  .channelViewport::-webkit-scrollbar {
+    display: none;
   }
   .channelTrack {
     gap: 16px;
