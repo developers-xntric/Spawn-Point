@@ -52,7 +52,7 @@ export default function CampaignHero({ film }: { film?: string }) {
             start: "bottom bottom",
             end: () => `+=${window.innerHeight * 1.4}`,
             pin: true,
-            scrub: true,
+            scrub: 0.8,
             anticipatePin: 1,
             invalidateOnRefresh: true,
           },
@@ -67,8 +67,19 @@ export default function CampaignHero({ film }: { film?: string }) {
           frame,
           {
             width: "100%",
-            height: () => window.innerHeight,
-            top: () => Math.max(0, section.offsetHeight - window.innerHeight),
+            height: () =>
+              Math.min(window.innerHeight, (window.innerWidth * 9) / 16),
+            top: () => {
+              const height = Math.min(
+                window.innerHeight,
+                (window.innerWidth * 9) / 16,
+              );
+              const pinOffset = Math.max(
+                0,
+                section.offsetHeight - window.innerHeight,
+              );
+              return pinOffset + (window.innerHeight - height) / 2;
+            },
             left: 0,
             xPercent: 0,
             borderRadius: 0,
@@ -137,6 +148,7 @@ export default function CampaignHero({ film }: { film?: string }) {
           poster="film-reference.png"
           label="Ramadan Night Drops campaign film"
           priority
+          autoPlay
         />
       </div>
       <div className={styles.heroLeftHand} data-hero-art aria-hidden="true">

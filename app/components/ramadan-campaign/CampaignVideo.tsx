@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { asset } from "./data";
 
-export default function CampaignVideo({ src, poster, label, priority = false }: { src?: string; poster: string; label: string; priority?: boolean }) {
+export default function CampaignVideo({ src, poster, label, priority = false, autoPlay = false }: { src?: string; poster: string; label: string; priority?: boolean; autoPlay?: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [failed, setFailed] = useState(false);
   const [playing, setPlaying] = useState(false);
@@ -16,6 +16,19 @@ export default function CampaignVideo({ src, poster, label, priority = false }: 
     const video = ref.current;
     if (!video || !src) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (autoPlay) {
+      const syncMotionPreference = () => {
+        if (motion.matches) video.pause();
+        else void video.play().catch(() => {});
+      };
+      syncMotionPreference();
+      motion.addEventListener("change", syncMotionPreference);
+      return () => {
+        video.pause();
+        motion.removeEventListener("change", syncMotionPreference);
+      };
+    }
+
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !motion.matches && !manuallyPaused.current && !document.hidden) void video.play().catch(() => {});
       else video.pause();
@@ -25,7 +38,7 @@ export default function CampaignVideo({ src, poster, label, priority = false }: 
     document.addEventListener("visibilitychange", pause);
     motion.addEventListener("change", pause);
     return () => { observer.disconnect(); video.pause(); document.removeEventListener("visibilitychange", pause); motion.removeEventListener("change", pause); };
-  }, [src]);
+  }, [autoPlay, src]);
 
   return <div className={styles.media}>
     {src && !failed ? <>
