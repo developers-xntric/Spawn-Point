@@ -80,8 +80,6 @@ export default function CampaignHero({ film }: { film?: string }) {
               );
               return pinOffset + (window.innerHeight - height) / 2;
             },
-            left: 0,
-            xPercent: 0,
             borderRadius: 0,
             duration: 0.88,
             ease: "none",
