@@ -212,7 +212,7 @@
   position: absolute;
   left: 8.38%;
   top: 29.2vw;
-  width: 20%;
+  width: 22%;
   font-size: clamp(11px, 0.9375vw, 18px);
   z-index: 2;
 }
@@ -496,21 +496,56 @@
 .channelCard:last-child {
   width: 48.2vw;
 }
-.channelCard h3 {
-  font-size: clamp(28px, 2.6vw, 50px);
+.channelCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62%;
+  height: 100%;
   z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at top left,
+    rgba(3, 19, 71, 0.94) 0%,
+    rgba(3, 19, 71, 0.72) 38%,
+    transparent 78%
+  );
+}
+.channelCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at top right,
+    rgba(3, 19, 71, 0.94) 0%,
+    rgba(3, 19, 71, 0.72) 38%,
+    transparent 78%
+  );
+}
+.channelCard h3 {
+  position: relative;
+  font-size: clamp(28px, 2.6vw, 50px);
+  z-index: 2;
 }
 .firstCard h3 {
   color: white;
 }
 .channelCard p {
   position: relative;
+  z-index: 2;
   margin: 0;
   line-height: 1.7;
   max-width: 900px;
 }
 .outlineTitle {
   position: absolute;
+  z-index: 0;
   top: 8%;
   left: 5%;
   font-family: CampaignHeading, sans-serif;
@@ -527,6 +562,9 @@
   width: 90.9%;
   margin-top: 25px;
   background: #ffffff18;
+}
+.categoryProgress {
+  display: none;
 }
 .scrollProgress span {
   display: block;
@@ -1134,11 +1172,20 @@
   }
 }
 @media (max-width: 767px) {
+  .results,
+  .offers,
+  .pilot,
+  .campaignFooter {
+    background-size: cover;
+  }
+  .dashboardFrame {
+    background-size: cover;
+  }
   .page {
     font-size: 13px;
   }
   .page h2 {
-    font-size: clamp(29px, 7.2vw, 48px);
+    font-size: clamp(27px, calc(7.2vw - 2px), 46px);
   }
   .campaignHeader {
     align-items: center;
@@ -1146,22 +1193,17 @@
     gap: 14px;
     padding: 16px 6%;
   }
+  .page .headerCta,
+  .page .cta {
+    min-height: 36px;
+    padding: 9px 12px;
+    font-size: 10px;
+  }
   .brand img {
     width: 64px;
   }
-  .headerCta {
-    font-size: 11px;
-    padding: 12px 16px;
-  }
   .campaignNav {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
-    gap: 6px;
-    padding: 10px;
-  }
-  .campaignNav a {
-    font-size: 9px;
+    display: none;
   }
   .hero {
     height: auto;
@@ -1172,7 +1214,7 @@
   .heroTitle {
     position: relative;
     top: auto;
-    font-size: clamp(42px, 9.8vw, 72px);
+    font-size: clamp(40px, calc(9.8vw - 2px), 70px);
     line-height: 0.95;
   }
   .heroTitle em {
@@ -1236,6 +1278,12 @@
   .steps,
   .offers {
     padding: 60px 0;
+  }
+  .categories {
+    padding-bottom: 24px;
+  }
+  .dashboard {
+    padding-top: 24px;
   }
   .results h2 {
     margin: 0 0 32px;
@@ -1327,7 +1375,7 @@
     scroll-snap-align: start;
   }
   .channelCard h3 {
-    font-size: 32px;
+    font-size: 30px;
   }
   .outlineTitle {
     font-size: 90px;
@@ -1335,13 +1383,11 @@
     left: 20px;
   }
   .scrollProgress {
-    display: none;
+    width: 88%;
+    margin-top: 12px;
   }
-  .swipeHint {
-    display: block;
-    color: var(--lime);
-    font-size: 11px;
-    margin-top: 12px !important;
+  .channels .swipeHint {
+    display: none;
   }
   .offersIntro {
     max-width: 100%;
@@ -1356,9 +1402,9 @@
     padding: 0;
   }
   .tabs button {
-    padding: 14px 0;
+    padding: 8px 0;
     gap: 12px;
-    font-size: 22px;
+    font-size: 20px;
   }
   .tabs button .glassIcon {
     width: 28px;
@@ -1367,20 +1413,35 @@
     margin-bottom: 20px;
   }
   .offerPanel h3 {
-    font-size: 27px;
+    font-size: 25px;
     margin-bottom: 16px;
   }
   .categoryGrid {
+    display: flex;
     gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .categoryGrid::-webkit-scrollbar {
+    display: none;
   }
   .categoryCard {
+    flex: 0 0 88%;
     padding: 13px;
+    scroll-snap-align: start;
+  }
+  .categoryProgress {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
   }
   .categoryCard > img {
     height: 120px;
   }
   .categoryCard h3 {
-    font-size: 19px;
+    font-size: 17px;
   }
   .categoryCard small {
     font-size: 10px;
@@ -1413,7 +1474,7 @@
     border-radius: 15px;
   }
   .dashboardFrame h3 {
-    font-size: 19px;
+    font-size: 17px;
     margin-bottom: 20px;
   }
   .dashboardMetrics {
@@ -1448,15 +1509,19 @@
   }
   .proofGrid {
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(135px, auto);
     gap: 12px;
     margin-top: 35px;
   }
   .proofGrid article {
-    padding: 18px;
-    min-height: 180px;
+    padding: 14px;
+    min-height: 0;
   }
   .proofGrid strong {
-    font-size: 31px;
+    font-size: 29px;
+  }
+  .proofGrid .proofLead strong {
+    font-size: 24px;
   }
   .proofGrid p,
   .proofGrid small {
@@ -1475,9 +1540,17 @@
   }
   .selectors {
     max-width: 100%;
-    display: grid;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     margin: 30px 0;
+  }
+  .selectors fieldset {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .selectors fieldset:last-child {
+    flex: 1 1 100%;
   }
   .selectors legend {
     font-size: 18px;
@@ -1485,10 +1558,18 @@
   }
   .choiceGroup {
     padding: 6px;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+  .choiceGroup label {
+    min-width: 0;
+    max-width: 100%;
   }
   .choiceGroup span {
     font-size: 13px;
     padding: 6px;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .pilotCard {
     width: 100%;
@@ -1498,15 +1579,19 @@
     padding: 24px;
   }
   .pilotDetails h3 {
-    font-size: 25px;
+    font-size: 19px;
     max-width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
   .pilotFacts {
     gap: 18px;
   }
+  .pilotFacts p {
+    font-size: 12px;
+  }
   .limeNote {
     margin-top: 25px !important;
+    font-size: 11px;
   }
   .pilotPrice {
     padding: 24px;
@@ -1514,11 +1599,12 @@
     min-height: 220px;
   }
   .pilotPrice strong {
-    font-size: 40px;
+    font-size: 34px;
   }
   .pilotPrice p {
     max-width: 65%;
     margin-top: 12px;
+    font-size: 12px;
   }
   .pilotCharacter {
     height: 240px;
@@ -1577,8 +1663,8 @@
   .channelCard {
     scroll-snap-align: start;
   }
-  .scrollProgress {
-    display: none;
+  .channels .scrollProgress {
+    display: block;
   }
   .swipeHint {
     display: block;

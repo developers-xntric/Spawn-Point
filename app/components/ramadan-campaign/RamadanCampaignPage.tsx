@@ -119,6 +119,120 @@ function Results() {
 }
 
 function Categories() {
+  const carousel = useRef<HTMLDivElement>(null);
+  const progress = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const element = carousel.current;
+    if (!element) return;
+
+    const mobile = window.matchMedia("(max-width: 767px)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let isVisible = false;
+    let interval: number | undefined;
+    let resumeTimeout: number | undefined;
+
+    const stopAutoplay = () => {
+      if (interval !== undefined) window.clearInterval(interval);
+      interval = undefined;
+    };
+
+    const startAutoplay = () => {
+      stopAutoplay();
+      if (
+        !mobile.matches ||
+        reducedMotion.matches ||
+        !isVisible ||
+        document.hidden
+      ) {
+        return;
+      }
+
+      interval = window.setInterval(() => {
+        const cards = Array.from(element.children) as HTMLElement[];
+        if (cards.length < 2) return;
+
+        const viewportLeft = element.getBoundingClientRect().left;
+        const currentIndex = cards.reduce(
+          (closestIndex, card, index) =>
+            Math.abs(card.getBoundingClientRect().left - viewportLeft) <
+            Math.abs(
+              cards[closestIndex].getBoundingClientRect().left - viewportLeft,
+            )
+              ? index
+              : closestIndex,
+          0,
+        );
+        const nextCard = cards[(currentIndex + 1) % cards.length];
+        const targetLeft =
+          element.scrollLeft +
+          nextCard.getBoundingClientRect().left -
+          viewportLeft;
+
+        element.scrollTo({
+          left: targetLeft,
+          behavior: "smooth",
+        });
+      }, 1500);
+    };
+
+    const pauseForInteraction = () => {
+      stopAutoplay();
+      if (resumeTimeout !== undefined) window.clearTimeout(resumeTimeout);
+      resumeTimeout = window.setTimeout(startAutoplay, 5000);
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (!isVisible && resumeTimeout !== undefined) {
+        window.clearTimeout(resumeTimeout);
+        resumeTimeout = undefined;
+      }
+      startAutoplay();
+    });
+    observer.observe(element);
+
+    mobile.addEventListener("change", startAutoplay);
+    reducedMotion.addEventListener("change", startAutoplay);
+    document.addEventListener("visibilitychange", startAutoplay);
+    element.addEventListener("pointerdown", pauseForInteraction);
+    element.addEventListener("keydown", pauseForInteraction);
+
+    return () => {
+      stopAutoplay();
+      if (resumeTimeout !== undefined) window.clearTimeout(resumeTimeout);
+      observer.disconnect();
+      mobile.removeEventListener("change", startAutoplay);
+      reducedMotion.removeEventListener("change", startAutoplay);
+      document.removeEventListener("visibilitychange", startAutoplay);
+      element.removeEventListener("pointerdown", pauseForInteraction);
+      element.removeEventListener("keydown", pauseForInteraction);
+    };
+  }, []);
+
+  useEffect(() => {
+    const element = carousel.current;
+    const progressBar = progress.current;
+    if (!element || !progressBar) return;
+
+    const updateProgress = () => {
+      const maxScroll = element.scrollWidth - element.clientWidth;
+      progressBar.style.transform = `scaleX(${
+        maxScroll > 0 ? element.scrollLeft / maxScroll : 0
+      })`;
+    };
+
+    const resizeObserver = new ResizeObserver(updateProgress);
+    resizeObserver.observe(element);
+    element.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+    return () => {
+      resizeObserver.disconnect();
+      element.removeEventListener("scroll", updateProgress);
+    };
+  }, []);
+
   return (
     <section className={styles.categories} aria-labelledby="categories-title">
       <div className={styles.container}>
@@ -133,7 +247,7 @@ function Categories() {
             priority. Offer values are agreed with you and funded by you.
           </p>
         </div>
-        <div className={styles.categoryGrid}>
+        <div className={styles.categoryGrid} ref={carousel}>
           {categories.map((item) => (
             <article className={styles.categoryCard} key={item.name}>
               <Image
@@ -149,6 +263,12 @@ function Categories() {
               <i>{item.action}</i>
             </article>
           ))}
+        </div>
+        <div
+          className={`${styles.scrollProgress} ${styles.categoryProgress}`}
+          aria-hidden="true"
+        >
+          <span ref={progress} />
         </div>
       </div>
     </section>
