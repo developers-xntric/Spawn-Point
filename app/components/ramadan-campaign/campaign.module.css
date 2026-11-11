@@ -80,8 +80,8 @@
   outline-offset: 5px;
 }
 .container {
-  width: 83.333%;
-  max-width: 1600px;
+  width: 90%;
+  max-width: 1440px;
   margin-inline: auto;
   position: relative;
 }
@@ -216,6 +216,9 @@
   font-size: clamp(11px, 0.9375vw, 18px);
   z-index: 2;
 }
+.page p.heroIntro {
+  font-size: clamp(11px, 0.9375vw, 16px);
+}
 .heroCharacter {
   position: absolute;
   z-index: 2;
@@ -337,7 +340,7 @@
 }
 .results h2 {
   margin-left: 16%;
-  margin-bottom: 4vw;
+  margin-bottom: 1vw;
 }
 .results h2 em {
   margin-left: 1.1em;
@@ -350,15 +353,19 @@
 }
 .resultLead strong {
   font-size: clamp(100px, 11.45vw, 220px);
-  line-height: 1.1;
+  line-height: 1;
   white-space: nowrap;
+}
+.metricSuffix {
+  color: var(--lime);
+  font-size: 0.32em;
 }
 .resultLead strong em {
   font-size: 0.5em;
 }
 .resultLead p {
   max-width: 34vw;
-  margin-top: 1.8vw;
+  margin-top: 1vw;
 }
 .source {
   display: block;
@@ -371,11 +378,11 @@
   padding-top: 1.8vw;
 }
 .audienceChart > p {
-  margin-bottom: 1.3em;
+  margin-bottom: 0.4em;
 }
 .columns {
-  height: 35vw;
-  max-height: 674px;
+  height: 30vw;
+  max-height: 580px;
   display: flex;
   align-items: flex-end;
   gap: 12%;
@@ -384,7 +391,7 @@
 .column {
   position: relative;
   width: 44%;
-  height: 100%;
+  height: 90%;
 }
 .column + .column {
   height: 71%;
@@ -397,38 +404,41 @@
 }
 .column > div {
   position: absolute;
-  left: 12%;
+  left: 7%;
   top: 15%;
   color: #202b00;
 }
+.column + .column > div {
+  top: 20%;
+}
 .column strong {
-  font-size: clamp(34px, 3.9vw, 75px);
+  font-size: clamp(34px, 3.9vw, 50px);
   line-height: 1;
 }
 .column span {
   display: block;
   font-family: CampaignHeading, sans-serif;
   font-style: italic;
-  font-size: clamp(10px, 1.14vw, 22px);
+  font-size: clamp(10px, 1.14vw, 18px);
   text-transform: uppercase;
 }
 .standingCharacter {
   position: absolute;
   bottom: 0;
   left: -34%;
-  height: 29vw;
+  height: 34vw;
   width: 44%;
   object-fit: contain;
 }
 .resultSquare {
   position: absolute;
   right: -1%;
-  top: 18%;
+  top: 28%;
 }
 .resultTriangle {
   position: absolute;
   left: 14%;
-  bottom: 10%;
+  bottom: 20%;
 }
 .channels {
   position: relative;
@@ -445,17 +455,17 @@
 }
 .channels .sectionHeading {
   padding-right: 8.333%;
-  margin-bottom: 5vw;
+  margin-bottom: 4vw;
 }
 .channelCross {
   position: absolute;
   left: 14%;
-  top: -6vw;
+  top: -10vw;
 }
 .channelCircle {
   position: absolute;
   right: 4%;
-  top: 1vw;
+  top: 6vw;
   width: 5vw;
 }
 .channelViewport {
@@ -473,7 +483,7 @@
   width: 48.2vw;
   height: 21.78vw;
   min-height: 270px;
-  padding: 3.12vw 2.6vw;
+  padding: 2vw 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -484,14 +494,14 @@
   backdrop-filter: blur(16px);
 }
 .channelCard:last-child {
-  width: 91.666vw;
+  width: 48.2vw;
 }
 .channelCard h3 {
   font-size: clamp(28px, 2.6vw, 50px);
   z-index: 1;
 }
 .firstCard h3 {
-  color: var(--lime);
+  color: white;
 }
 .channelCard p {
   position: relative;
@@ -533,8 +543,8 @@
     100% no-repeat;
 }
 .offersIntro {
-  max-width: 34vw;
-  margin-top: 2vw !important;
+  max-width: 36vw;
+  margin-top: 1.5vw !important;
 }
 .offerLayout {
   display: grid;
@@ -555,6 +565,7 @@
   color: white;
   background: none;
   font-size: clamp(17px, 1.98vw, 38px);
+  white-space: nowrap;
   line-height: 1.15;
   text-align: left;
   cursor: pointer;
@@ -577,10 +588,10 @@
 }
 .offerMedia {
   aspect-ratio: 16/9;
-  margin-bottom: 1.8vw;
+  margin-bottom: 1vw;
 }
 .offerPanel h3 {
-  margin-bottom: 1.5vw;
+  margin-bottom: 1vw;
 }
 .offerPanel p {
   line-height: 1.4;
@@ -594,20 +605,18 @@
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #ffffff0d;
-  padding: 1.04vw;
+  padding: 0.9vw;
   transition: border-color 0.2s;
 }
-.categoryCard:first-child,
 .categoryCard:hover {
   border-color: var(--lime);
 }
 .categoryCard > img {
   width: 100%;
-  height: 12vw;
+  height: 9vw;
   object-fit: contain;
-  margin: 1vw 0;
-}
-.categoryCard h3 {
+  margin: 0.45vw 0 0.65vw;
+}.categoryCard h3 {
   font-size: clamp(17px, 1.3vw, 25px);
   margin-bottom: 0.5vw;
 }
@@ -620,7 +629,10 @@
   text-transform: uppercase;
   margin-bottom: 1.5vw;
 }
-.categoryCard p,
+.categoryCard p {
+  font-size: 14px !important;
+  line-height: 1.4;
+}
 .categoryCard i {
   font-size: clamp(11px, 0.78vw, 15px);
   line-height: 1.4;
@@ -653,12 +665,13 @@
 }
 .dashboardCharacter {
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 1.5%;
-  width: 55%;
+  width: 43%;
   height: 15.4vw;
   object-fit: contain;
   object-position: bottom;
+  z-index: 2;
 }
 .dashboardFrame {
   position: relative;
@@ -666,6 +679,7 @@
     center/100% 100% no-repeat;
   padding: 4vw 4.16vw 2vw;
   border-radius: 0 0 28px 28px;
+  z-index: 1;
 }
 .dashboardFrame h3 {
   font-size: clamp(19px, 1.56vw, 30px);
@@ -680,7 +694,7 @@
   background: #ffffff0d;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 1.3vw;
+  padding: 1vw;
   display: flex;
   flex-direction: column;
   gap: 1vw;
@@ -695,10 +709,13 @@
 .dashboardMetrics article:first-child strong {
   color: var(--lime);
 }
+.dashboardMetrics article:first-child  {
+  border-color: var(--lime);
+}
 .chartCaption {
   margin: 2.3vw 0 1.5vw !important;
   font-style: italic;
-  font-size: clamp(12px, 1.3vw, 25px);
+  font-size: clamp(12px, 1.3vw, 20px);
 }
 .hourChart {
   height: 24vw;
@@ -735,28 +752,28 @@
 .dashboardTriangle {
   position: absolute;
   right: 5%;
-  top: 5vw;
+  top: 6vw;
   width: 9vw;
   max-width: 200px;
 }
 .proofGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.3vw;
+  gap: 15px;
   margin-top: 4.7vw;
 }
 .proofGrid article {
-  min-height: 16vw;
+  min-height: 12.5vw;
   padding: 1.3vw;
   background: #ffffff0d;
-  border: 1px solid #ffffff08;
+  border: 1px solid var(--line);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .proofGrid strong {
-  font-size: clamp(28px, 2.6vw, 50px);
+  font-size: clamp(28px, 2.6vw, 40px);
   line-height: 1.15;
 }
 .proofGrid p,
@@ -771,6 +788,9 @@
   grid-column: span 2;
   background: var(--lime);
   color: var(--navy);
+}
+.proofLead p {
+  font-weight: 700;
 }
 .proofNotes {
   margin-top: 3vw;
@@ -791,7 +811,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-  margin: 3.5vw 0 5vw;
+  margin: 2vw 0 2vw;
   max-width: 72%;
 }
 .selectors fieldset {
@@ -855,38 +875,38 @@
 }
 .pilotDetails h3 {
   font-size: clamp(22px, 1.82vw, 35px);
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
   max-width: 70%;
   line-height: 1.3;
 }
 .pilotFacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.3vw 2vw;
+  gap: 1.3vw 1vw;
 }
 .pilotFacts p {
   margin: 0;
+  font-size: 17px;
 }
 .limeNote {
-  margin: 2.5vw 0 0 !important;
+  margin: 2vw 0 0 !important;
   color: var(--lime);
   font-style: italic;
 }
 .pilotPrice {
   background: var(--lime);
   color: var(--navy);
-  padding: 2vw;
+  padding: 1.5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 0 10px 10px 0;
 }
 .pilotPrice strong {
-  font-size: clamp(32px, 3.65vw, 70px);
+  font-size: clamp(32px, 3vw, 70px);
   white-space: nowrap;
 }
 .pilotPrice p {
-  margin-top: 1vw;
   max-width: 90%;
 }
 .darkCta {
@@ -896,9 +916,9 @@
 }
 .pilotCharacter {
   position: absolute;
-  right: -7%;
-  bottom: 0;
-  width: 16%;
+  right: -16%;
+  bottom: -10%;
+  width: 20%;
   height: 110%;
   pointer-events: none;
 }
@@ -910,8 +930,8 @@
 .pilotTriangle {
   position: absolute;
   bottom: -10vw;
-  left: 8%;
-  width: 12vw;
+  left: 6%;
+  width: 10vw;
   max-width: 230px;
 }
 .steps {
@@ -933,7 +953,7 @@
   position: absolute;
   right: -3%;
   top: 60%;
-  width: 8vw;
+  width: 6vw;
   max-width: 165px;
 }
 .campaignFooter {
@@ -959,11 +979,14 @@
 }
 .footerWord {
   font-family: Mortend, sans-serif !important;
-  font-size: 9.19vw;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 3rem auto !important;
   color: transparent;
   -webkit-text-stroke: 1px #ffffff16;
   line-height: 1.4;
-  margin: 1vw 0 0 !important;
+  margin: 2vw 0 0 !important;
 }
 .campaignFooter small {
   display: block;
@@ -971,6 +994,7 @@
   font:
     clamp(9px, 0.73vw, 14px) Helvetica,
     sans-serif;
+  margin-top: 1.5vw;  
 }
 .backToTop {
   position: absolute;
@@ -981,6 +1005,11 @@
   width: 44px;
   height: 44px;
 }
+@keyframes glassFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(8deg); }
+}
+.glassIcon { animation: glassFloat 4s ease-in-out infinite; }
 @keyframes offerIn {
   from {
     opacity: 0;
@@ -989,6 +1018,19 @@
   to {
     opacity: 1;
     transform: none;
+  }
+}
+@media (min-width: 1536px) {
+  .page p {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+  .proofGrid p, .proofGrid small { font-size: 18px; }
+}
+@media (min-width: 1024px) and (max-width: 1535px) {
+  .page p {
+    font-size: 16px;
+    opacity: 0.8;
   }
 }
 @media (min-width: 1921px) {
@@ -1033,7 +1075,7 @@
     padding: 20px 6%;
   }
   .container {
-    width: 88%;
+    width: 90%;
   }
   .page {
     font-size: 13px;
@@ -1080,7 +1122,7 @@
     font-size: 20px;
   }
   .proofGrid article {
-    min-height: 210px;
+    min-height: 230px;
   }
   .footerContacts {
     flex-wrap: wrap;
@@ -1147,7 +1189,7 @@
     top: auto;
     bottom: 24px;
     left: 6%;
-    width: 88%;
+    width: 90%;
     margin: 0 !important;
     text-align: center;
     font-size: 12px;
@@ -1157,7 +1199,7 @@
     top: auto;
     left: auto;
     transform: none;
-    width: 88%;
+    width: 90%;
     height: auto;
     aspect-ratio: 16/9;
     margin: calc(26.7vw - 37px) auto 0;
@@ -1217,7 +1259,7 @@
     margin-left: -28%;
   }
   .columns {
-    height: 68vw;
+    height: 58vw;
   }
   .standingCharacter {
     left: -9%;
@@ -1553,4 +1595,8 @@
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+
+.columns[data-reveal="true"] {
+  animation: none;
 }

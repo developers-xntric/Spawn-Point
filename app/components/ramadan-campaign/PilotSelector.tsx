@@ -1,10 +1,11 @@
 "use client";
 
+import styles from "./campaign.module.css";
+
 import Image from "next/image";
 import { useState } from "react";
 import { asset, categories } from "./data";
 import GlassIcon from "./GlassIcon";
-import styles from "./campaign.module.css";
 
 export default function PilotSelector() {
   const [market, setMarket] = useState("Saudi Arabia");

@@ -5,11 +5,20 @@ import RamadanCampaignPage from "@/app/components/ramadan-campaign/RamadanCampai
 
 export const metadata: Metadata = {
   title: "Ramadan Night Drops Gaming Campaign | Spawn Point",
-  alternates: { canonical: "https://spawnpointstudio.com/Ramdan-nights-drops-gaming-campaign" },
+  alternates: {
+    canonical:
+      "https://spawnpointstudio.com/Ramdan-nights-drops-gaming-campaign",
+  },
   openGraph: {
     title: "Ramadan Night Drops | Spawn Point",
     description: "One night. Two channels. Your Ramadan offer, inside gaming.",
-    images: [{ url: "/images/ramadan-campaign/film-poster.png", width: 1027, height: 578 }],
+    images: [
+      {
+        url: "/images/ramadan-campaign/film-poster.png",
+        width: 1027,
+        height: 578,
+      },
+    ],
   },
 };
 
@@ -22,5 +31,13 @@ function video(name: string) {
 }
 
 export default function Page() {
-  return <RamadanCampaignPage media={{ film: video("film-loop"), stream: video("loop-offer"), world: video("loop-souq") }} />;
+  return (
+    <RamadanCampaignPage
+      media={{
+        film: video("film-loop"),
+        stream: video("loop-offer"),
+        world: video("loop-souq"),
+      }}
+    />
+  );
 }

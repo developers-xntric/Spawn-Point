@@ -1,6 +1,6 @@
+import styles from "./campaign.module.css";
 import Image from "next/image";
 import { asset } from "./data";
-import styles from "./campaign.module.css";
 
 export type GlassShape = "square" | "triangle" | "cross" | "circle";
 

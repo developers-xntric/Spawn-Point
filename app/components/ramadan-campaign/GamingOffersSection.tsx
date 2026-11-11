@@ -1,10 +1,11 @@
 "use client";
 
+import styles from "./campaign.module.css";
+
 import { useRef, useState } from "react";
 import CampaignVideo from "./CampaignVideo";
 import GlassIcon from "./GlassIcon";
 import { offers, type CampaignMedia } from "./data";
-import styles from "./campaign.module.css";
 
 export default function GamingOffersSection({ media }: { media: CampaignMedia }) {
   const [active, setActive] = useState(0);

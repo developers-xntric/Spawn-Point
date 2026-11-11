@@ -1,11 +1,15 @@
+"use client";
+
+import styles from "./campaign.module.css";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import CampaignHero from "./CampaignHero";
 import GamingOffersSection from "./GamingOffersSection";
 import OneNightTwoChannels from "./OneNightTwoChannels";
 import PilotSelector from "./PilotSelector";
 import GlassIcon from "./GlassIcon";
 import { asset, categories, proof, type CampaignMedia } from "./data";
-import styles from "./campaign.module.css";
 
 function Header() {
   return (
@@ -54,9 +58,7 @@ function Results() {
         </h2>
         <div className={styles.audienceGrid}>
           <div className={styles.resultLead}>
-            <strong>
-              33.7<em>M</em>
-            </strong>
+            <strong data-count="33.7" data-suffix="M">33.7<span className={styles.metricSuffix} data-count-suffix>M</span></strong>
             <p>
               Gamers across the GCC in 2023, and still growing: 38.9 million are
               forecast by 2028. After iftar they go straight to the streams, the
@@ -73,7 +75,7 @@ function Results() {
             <span className={styles.source}>
               Source: Adjust, Ramadan app trends 2026
             </span>
-            <div className={styles.columns}>
+            <div className={styles.columns} data-columns>
               <div className={styles.column}>
                 <Image
                   src={asset("saudi-column.svg")}
@@ -82,7 +84,7 @@ function Results() {
                   height={673}
                 />
                 <div>
-                  <strong>+32%</strong>
+                  <strong data-count="32" data-prefix="+" data-suffix="%">+32%</strong>
                   <span>Saudi Arabia</span>
                 </div>
               </div>
@@ -94,7 +96,7 @@ function Results() {
                   height={478}
                 />
                 <div>
-                  <strong>+24%</strong>
+                  <strong data-count="24" data-prefix="+" data-suffix="%">+24%</strong>
                   <span>UAE</span>
                 </div>
               </div>
@@ -215,7 +217,7 @@ function Dashboard() {
               ].map(([label, value]) => (
                 <article key={label}>
                   <span>{label}</span>
-                  <strong>{value}</strong>
+                  <strong data-count={value.replace(/[^0-9.]/g, "")} data-prefix={value.startsWith("+") ? "+" : ""} data-suffix={value.replace(/[0-9.]/g, "")}>{value}</strong>
                 </article>
               ))}
             </div>
@@ -250,7 +252,7 @@ function Dashboard() {
           </article>
           {proof.map(([value, label, detail]) => (
             <article key={label}>
-              <strong>{value}</strong>
+              <strong data-count={value.replace(/[^0-9.]/g, "")} data-prefix={value.startsWith("+") ? "+" : ""} data-suffix={value.replace(/[0-9.]/g, "")}>{value}</strong>
               <div>
                 <p>{label}</p>
                 <small>{detail}</small>
@@ -320,9 +322,7 @@ function Closing() {
               </a>
             ))}
           </div>
-          <p className={styles.footerWord} aria-hidden="true">
-            SPAWNPOINT
-          </p>
+          <Image src="/Spawnpoint_name.svg" alt="Spawn Point" width={620} height={80} className={styles.footerWord} />
           <small>© ALL RIGHTS RESERVED, SPAWNPOINTSTUDIO 2026</small>
           <a href="#top" className={styles.backToTop} aria-label="Back to top">
             <Image
@@ -343,8 +343,17 @@ export default function RamadanCampaignPage({
 }: {
   media: CampaignMedia;
 }) {
+  const root = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const scope = root.current; if (!scope) return;
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return; const element = entry.target as HTMLElement; const target = Number(element.dataset.count); const prefix = element.dataset.prefix || ""; const suffix = element.dataset.suffix || ""; const suffixElement = element.querySelector<HTMLElement>("[data-count-suffix]"); const valueNode = suffixElement?.previousSibling; const start = performance.now();
+      const render = (now: number) => { const progress = Math.min(1, (now - start) / 1500); const value = target * (1 - Math.pow(1 - progress, 3)); const formattedValue = `${prefix}${target % 1 ? value.toFixed(1) : Math.round(value).toLocaleString("en-US")}`; if (suffixElement && valueNode) valueNode.textContent = formattedValue; else element.textContent = `${formattedValue}${suffix}`; if (progress < 1) requestAnimationFrame(render); }; requestAnimationFrame(render);
+    }), { threshold: 0.45 }); scope.querySelectorAll("[data-count]").forEach(element => observer.observe(element));
+    const columnObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { const element = entry.target as HTMLElement; element.dataset.reveal = "false"; requestAnimationFrame(() => { element.dataset.reveal = "true"; }); } }), { threshold: 0.3 }); scope.querySelectorAll("[data-columns]").forEach(element => columnObserver.observe(element)); return () => { observer.disconnect(); columnObserver.disconnect(); };
+  }, []);
   return (
-    <main id="top" className={styles.page}>
+    <main ref={root} id="top" className={styles.page}>
       <Header />
       <CampaignHero film={media.film} />
       <Results />

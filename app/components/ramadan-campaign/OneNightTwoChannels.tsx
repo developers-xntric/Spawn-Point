@@ -1,11 +1,12 @@
 "use client";
 
+import styles from "./campaign.module.css";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassIcon from "./GlassIcon";
 import { channels } from "./data";
-import styles from "./campaign.module.css";
 
 export default function OneNightTwoChannels() {
   const root = useRef<HTMLElement>(null);

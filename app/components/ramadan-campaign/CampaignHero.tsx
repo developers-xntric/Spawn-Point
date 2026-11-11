@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "./campaign.module.css";
+
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -7,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CampaignVideo from "./CampaignVideo";
 import GlassIcon from "./GlassIcon";
 import { asset } from "./data";
-import styles from "./campaign.module.css";
 
 export default function CampaignHero({ film }: { film?: string }) {
   const root = useRef<HTMLElement>(null);
