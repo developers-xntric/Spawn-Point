@@ -17,7 +17,7 @@ export default function PilotBookingModal({ markets: selectedMarkets, pilots, dr
   const [errors, setErrors] = useState<BookingErrors>({});
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
   const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
