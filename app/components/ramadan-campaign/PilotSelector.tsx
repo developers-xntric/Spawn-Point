@@ -13,6 +13,7 @@ export default function PilotSelector() {
   const [drop, setDrop] = useState("Night Meal");
   const combined = pilot === "Livestream + in-game";
   const referencePackage = combined && market === "Saudi Arabia";
+  const price = pilot === "Livestream" ? "US$8,000" : "US$16,000";
   const subject = encodeURIComponent(`Ramadan Night Drops — ${market} — ${pilot} — ${drop}`);
   const choices = [
     { legend: "Market", value: market, values: ["Saudi Arabia", "UAE"], select: setMarket },
@@ -32,7 +33,7 @@ export default function PilotSelector() {
           {referencePackage ? <div className={styles.pilotFacts}><p>150,000 guaranteed livestream impressions</p><p>1,500 guaranteed clicks</p><p>1.75M guaranteed viewable in-game impressions, 2 to 4 weeks</p><p>{drop === "Night Meal" ? "The Night Meal: one evening window after iftar, in nights 1 to 20" : `${drop}: offer and timing agreed with your team`}</p></div> : <div className={styles.pilotFacts}><p>{pilot} in {market}</p><p>{drop}</p><p>Creator mix, delivery and timing agreed with your team.</p><p>Request a tailored pilot proposal.</p></div>}
           <p className={styles.limeNote}>Lead with the value of the offer: a strong, exclusive deal wins.</p>
         </div>
-        <div className={styles.pilotPrice}><div><strong>{referencePackage ? "US$16,000" : "Let’s talk"}</strong><p>{referencePackage ? "In-stream and in-game, one market" : "A pilot tailored to your market and channel"}</p></div><a className={`${styles.cta} ${styles.darkCta}`} href={`mailto:sammas@spawnpointstudio.com?subject=${subject}`}>Book This Drop</a></div>
+        <div className={styles.pilotPrice}><div><strong>{price}</strong><p>In-stream and in-game, one market</p></div><a className={`${styles.cta} ${styles.darkCta}`} href={`mailto:sammas@spawnpointstudio.com?subject=${subject}`}>Book This Drop</a></div>
         <div className={styles.pilotCharacter} aria-hidden="true"><Image src={asset("character-pilot.png")} alt="" width={1024} height={1536} sizes="20vw" /></div>
       </div>
       <GlassIcon shape="triangle" className={styles.pilotTriangle} />

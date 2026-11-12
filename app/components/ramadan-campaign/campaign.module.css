@@ -454,7 +454,7 @@
   padding-left: 8.333%;
 }
 .channels .sectionHeading {
-  padding-right: 8.333%;
+  padding-right: 10.333%;
   margin-bottom: 4vw;
 }
 .channelCross {
@@ -476,14 +476,16 @@
   display: flex;
   gap: 1.56vw;
   width: max-content;
+  /* Keep the final Next Morning card clear of the viewport edge. */
+  padding-right: 8.333vw;
   will-change: transform;
 }
 .channelCard {
   position: relative;
-  width: 48.2vw;
+  width: 46.2vw;
   height: 21.78vw;
   min-height: 270px;
-  padding: 2vw 2vw;
+  padding: 2.5vw 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -549,7 +551,7 @@
   z-index: 2;
   margin: 0;
   line-height: 1.7;
-  max-width: 900px;
+  max-width: 950px;
 }
 .outlineTitle {
   position: absolute;
