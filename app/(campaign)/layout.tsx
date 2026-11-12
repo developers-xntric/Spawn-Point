@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.png" },
 };
 
+
 // A separate root layout keeps campaign chrome and typography isolated.
 export default function CampaignLayout({
   children,
